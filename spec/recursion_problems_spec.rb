@@ -6,17 +6,17 @@ describe "#sum_recur" do
   #the sum of the integers.
   
   it "returns 0 if blank array" do
-    sum_recur([]) == 0
+    expect(sum_recur([])).to eq(0)
   end
 
   it "returns the sum of all numbers in array" do
-    sum_recur([1, 3, 5, 7, 9, 2, 4, 6, 8]).should == 45
+    expect(sum_recur([1, 3, 5, 7, 9, 2, 4, 6, 8])).to eq(45)
   end
 
   it "should not modify original array" do
     original = [1, 3, 5, 7, 9, 2, 4, 6, 8]
     sum_recur(original)
-    original.should == [1, 3, 5, 7, 9, 2, 4, 6, 8]
+    expect(original).to eq([1, 3, 5, 7, 9, 2, 4, 6, 8])
   end
 
   it "calls itself recursively" do
@@ -32,17 +32,17 @@ describe "#includes?" do
   #determine whether or not the array contains a specific value.
 
   it "returns false if target isn't found" do
-    includes?([1, 3, 5, 7, 9, 2, 4, 6, 8], 11).should == false
+    expect(includes?([1, 3, 5, 7, 9, 2, 4, 6, 8], 11)).to be(false)
   end
 
-  it "returns true if target isn't found" do
-    includes?([1, 3, 5, 7, 9, 2, 4, 6, 8], 9).should == true
+  it "returns true if target is found" do
+    expect(includes?([1, 3, 5, 7, 9, 2, 4, 6, 8], 9)).to be(true)
   end
 
   it "should not modify original array" do
     original = [1, 3, 5, 7, 9, 2, 4, 6, 8]
     includes?(original, 9)
-    original.should == [1, 3, 5, 7, 9, 2, 4, 6, 8]
+    expect(original).to eq([1, 3, 5, 7, 9, 2, 4, 6, 8])
   end
 
   it "calls itself recursively" do    
@@ -56,17 +56,17 @@ describe "#num_occur" do
   #solution to count the number of occurrences of a specific value.
 
   it "returns number of times the target occurs in the array" do
-    num_occur([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6], 5).should == 4
+    expect(num_occur([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6], 5)).to eq(4)
   end
 
   it "returns zero if target doesn't occur" do
-    num_occur([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6], 13).should == 0
+    expect(num_occur([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6], 13)).to eq(0)
   end
 
   it "should not modify original array" do
     original = [1, 3, 5, 7, 9, 2, 4, 6, 8]
     num_occur(original, 9)
-    original.should == [1, 3, 5, 7, 9, 2, 4, 6, 8]
+    expect(original).to eq([1, 3, 5, 7, 9, 2, 4, 6, 8])
   end
 
   it "calls itself recursively" do    
@@ -80,17 +80,17 @@ describe "#add_to_twelve?" do
   #determine whether or not two adjacent elements of the array add to 12.
 
   it "returns true if two adjacent numbers add to twelve" do
-    add_to_twelve?([1, 1, 2, 3, 4, 5, 7, 4, 5, 6, 7, 6, 5, 6]).should == true
+    expect(add_to_twelve?([1, 1, 2, 3, 4, 5, 7, 4, 5, 6, 7, 6, 5, 6])).to be(true)
   end
 
   it "returns false if target doesn't occur" do
-    add_to_twelve?([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6]).should == false
+    expect(add_to_twelve?([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6])).to be(false)
   end
 
   it "should not modify original array" do
     original = [1, 3, 5, 7, 9, 2, 4, 6, 8]
     add_to_twelve?(original)
-    original.should == [1, 3, 5, 7, 9, 2, 4, 6, 8]
+    expect(original).to eq([1, 3, 5, 7, 9, 2, 4, 6, 8])
   end
 
   it "calls itself recursively" do    
@@ -104,25 +104,25 @@ describe "#sorted?" do
   #determine if the array is sorted.
 
   it "returns true if array has only one value" do
-  sorted?([1]).should == true
+    expect(sorted?([1])).to be(true)
   end
   
   it "returns [] if array is empty" do
-    sorted?([]).should == []
+    expect(sorted?([])).to eq([])
   end
   
   it "returns true if array is sorted" do
-    sorted?([1, 2, 3, 4, 4, 5, 6, 7]).should == true
+    expect(sorted?([1, 2, 3, 4, 4, 5, 6, 7])).to be(true)
   end
 
   it "returns false if array is not sorted" do
-    sorted?([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6]).should == false
+    expect(sorted?([1, 1, 2, 3, 4, 5, 5, 4, 5, 6, 7, 6, 5, 6])).to be(false)
   end
 
   it "should not modify original array" do
     original = [1, 3, 5, 7, 9, 2, 4, 6, 8]
     sorted?(original)
-    original.should == [1, 3, 5, 7, 9, 2, 4, 6, 8]
+    expect(original).to eq([1, 3, 5, 7, 9, 2, 4, 6, 8])
   end
 
   it "calls itself recursively" do    
@@ -136,17 +136,17 @@ describe "#reverse" do
   #reversed. (Don't use any #reverse methods!)
 
   it "returns same number if only one digit" do
-    reverse(1).should == 1
+    expect(reverse(1)).to eq(1)
   end
 
   it "returns reversed number if more than one digit" do
-    reverse(12345).should == 54321
+    expect(reverse(12345)).to eq(54321)
   end
 
   it "should not modify original number" do
     original = 123456
     reverse(original)
-    original.should == 123456
+    expect(original).to eq(123456)
   end
 
   it "calls itself recursively" do    
