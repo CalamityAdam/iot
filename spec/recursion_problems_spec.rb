@@ -107,8 +107,8 @@ describe "#sorted?" do
     expect(sorted?([1])).to be(true)
   end
   
-  it "returns [] if array is empty" do
-    expect(sorted?([])).to eq([])
+  it "returns true if array is empty" do
+    expect(sorted?([])).to eq(true)
   end
   
   it "returns true if array is sorted" do
