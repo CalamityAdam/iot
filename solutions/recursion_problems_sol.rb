@@ -41,7 +41,7 @@ end
 
 #Problem 6: Write the code to give the value of a number after it is reversed. (Don't use any #reverse methods!)
 
-def reverse(number, reversed = [])
+def reverse(number)
   return number if number < 10
   "#{number % 10}#{reverse(number / 10)}".to_i
 end
