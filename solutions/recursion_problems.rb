@@ -16,7 +16,7 @@ end
 
 #Problem 3: You have an unsorted array of integers. Write a recursive solution to count the number of occurrences of a specific value.
 
-def num_occur(array, target, counter = 0, &blk)
+def num_occur(array, target)
   return 0 if array.empty?
   count_update = array.first == target ? 1 : 0
   count_update + num_occur(array.drop(1), target)
@@ -33,8 +33,7 @@ end
 #Problem 5: You have array of integers. Write a recursive solution to determine if the array is sorted.
 
 def sorted?(array)
-  return [] if array.empty?
-  return true if array.length == 1
+  return true if array.length <= 1
   return false if array[0] > array[1]
   sorted?(array.drop(1))
 end

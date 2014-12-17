@@ -18,7 +18,7 @@ end
 #solution to count the number of occurrences of a specific value.
 
 def num_occur(array, target)
-  
+
 end
 
 
@@ -42,6 +42,6 @@ end
 #reversed. Must use recursion. (Don't use any #reverse methods!)
 
 def reverse(number)
-  
+
 end
 
