@@ -1,4 +1,5 @@
-#Problem 1: You have array of integers. Write a recursive solution to find the sum of the integers.
+#Problem 1: You have array of integers. Write a recursive solution to find the
+#sum of the integers.
 
 def sum_recur(array)
   return 0 if array.empty?
@@ -14,7 +15,8 @@ def includes?(array, target)
   includes?(array.drop(1), target)
 end
 
-#Problem 3: You have an unsorted array of integers. Write a recursive solution to count the number of occurrences of a specific value.
+# Problem 3: You have an unsorted array of integers. Write a recursive solution
+# to count the number of occurrences of a specific value.
 
 def num_occur(array, target)
   return 0 if array.empty?
@@ -22,7 +24,8 @@ def num_occur(array, target)
   count_update + num_occur(array.drop(1), target)
 end
 
-#Problem 4: You have array of integers. Write a recursive solution to determine whether or not two adjacent elements of the array add to 12.
+# Problem 4: You have array of integers. Write a recursive solution to determine
+# whether or not two adjacent elements of the array add to 12.
 
 def add_to_twelve?(array)
   return false if array.length <= 1
@@ -30,7 +33,8 @@ def add_to_twelve?(array)
   add_to_twelve?(array.drop(1))
 end
 
-#Problem 5: You have array of integers. Write a recursive solution to determine if the array is sorted.
+# Problem 5: You have array of integers. Write a recursive solution to determine
+# if the array is sorted.
 
 def sorted?(array)
   return true if array.length <= 1
@@ -38,10 +42,10 @@ def sorted?(array)
   sorted?(array.drop(1))
 end
 
-#Problem 6: Write the code to give the value of a number after it is reversed. (Don't use any #reverse methods!)
+# Problem 6: Write a recursive function to reverse a string. Don't use any
+# built-in #reverse methods!
 
-def reverse(number)
-  return number if number < 10
-  "#{number % 10}#{reverse(number / 10)}".to_i
+def reverse(string)
+  return string if string.length <= 1
+  string[-1] + reverse(string.slice(1, string.length - 2)) + string[0]
 end
-
