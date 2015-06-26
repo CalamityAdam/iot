@@ -115,22 +115,24 @@ describe "#sorted?" do
 end
 
 describe "#reverse" do
-  it "returns the same number if it is only one digit" do
-    expect(reverse(1)).to eq(1)
+  it "reverses strings of length <= 1" do
+    expect(reverse("")).to eq("")
+    expect(reverse("a")).to eq("a")
   end
 
-  it "returns the reversed number if it is more than one digit" do
-    expect(reverse(12345)).to eq(54321)
+  it "reverses longer strings" do
+    expect(reverse("laozi")).to eq("izoal")
+    expect(reverse("kongfuzi")).to eq("izufgnok")
   end
 
-  it "does not modify the original number" do
-    original = 123456
+  it "does not modify the original string" do
+    original = "fhqwhgads"
     reverse(original)
-    expect(original).to eq(123456)
+    expect(original).to eq("fhqwhgads")
   end
 
   it "calls itself recursively" do
     should_receive(:reverse).at_least(:twice).and_call_original
-    reverse(123456)
+    reverse("fhqwhgads")
   end
 end
