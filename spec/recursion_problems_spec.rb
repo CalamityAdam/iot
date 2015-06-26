@@ -17,7 +17,7 @@ describe "#sum_recur" do
   end
 
   it "calls itself recursively" do
-    should_receive(:sum_recur).at_least(:twice).and_call_original
+    expect(self).to receive(:sum_recur).at_least(:twice).and_call_original
     sum_recur([1, 3, 5, 7, 9, 2, 4, 6, 8])
   end
 end
@@ -38,7 +38,7 @@ describe "#includes?" do
   end
 
   it "calls itself recursively" do
-    should_receive(:includes?).at_least(:twice).and_call_original
+    expect(self).to receive(:includes?).at_least(:twice).and_call_original
     includes?([1, 3, 5, 7, 9, 2, 4, 6, 8], 9)
   end
 end
@@ -59,7 +59,7 @@ describe "#num_occur" do
   end
 
   it "calls itself recursively" do
-    should_receive(:num_occur).at_least(:twice).and_call_original
+    expect(self).to receive(:num_occur).at_least(:twice).and_call_original
     num_occur([1, 3, 5, 7, 9, 2, 4, 6, 8], 9)
   end
 end
@@ -80,7 +80,7 @@ describe "#add_to_twelve?" do
   end
 
   it "calls itself recursively" do
-    should_receive(:add_to_twelve?).at_least(:twice).and_call_original
+    expect(self).to receive(:add_to_twelve?).at_least(:twice).and_call_original
     add_to_twelve?([1, 3, 5, 7, 9, 2, 4, 6, 8])
   end
 end
@@ -109,7 +109,7 @@ describe "#sorted?" do
   end
 
   it "calls itself recursively" do
-    should_receive(:sorted?).at_least(:twice).and_call_original
+    expect(self).to receive(:sorted?).at_least(:twice).and_call_original
     sorted?([1, 3, 5, 7, 9, 2, 4, 6, 8])
   end
 end
@@ -132,7 +132,7 @@ describe "#reverse" do
   end
 
   it "calls itself recursively" do
-    should_receive(:reverse).at_least(:twice).and_call_original
+    expect(self).to receive(:reverse).at_least(:twice).and_call_original
     reverse("fhqwhgads")
   end
 end
