@@ -58,3 +58,9 @@ Please raise an issue on this repo and we will resolve it in a day or two.  If m
 
 [notes]: ./release-notes.md
 
+<<<<<<< HEAD
+=======
+Recursion exercises originally by
+[kevincolten](https://github.com/kevincolten), updated for App Academy
+use.
+>>>>>>> Update author username and link
