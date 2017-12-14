@@ -15,7 +15,6 @@ const pokemonReducer = (state = {}, action) => {
       return merge({}, state, action.pokemon);
     case RECEIVE_SINGLE_POKEMON:
       poke = action.payload.pokemon;
-      poke.item_ids = Object.keys(action.payload.items);
 
       return merge({}, state, { [poke.id]: poke });
     default:

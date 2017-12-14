@@ -1,5 +1,5 @@
 import { 
-  RECEIVE_SINGLE_POKEMON 
+  RECEIVE_SINGLE_POKEMON
 } from '../actions/pokemon_actions';
 
 const pokemonDisplayReducer = (state = null, action) => {
