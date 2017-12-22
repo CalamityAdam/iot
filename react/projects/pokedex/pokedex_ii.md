@@ -166,7 +166,6 @@ Hint: Your state shape will look something like this:
     }
   },
   ui: {
-    pokeDisplay: 2,
     errors: {},
     loading: {},
   }
@@ -181,14 +180,14 @@ This requires defining a new constant and action creator.
 * Update the `pokemonReducer` to handle receiving a single pokemon.
 * Create an `itemsReducer` for an items slice of state. Just like `pokemonReducer` this should also be nested under the `entities` slice of state.
   * Remember: multiple reducers can respond to the same action! How will you add a pokemon's items to state?
-* Create a `uiReducer` that will be nested under the `rootReducer` for a `ui` slice of state. This slice will hold information that affects how the user interacts with your app, but is *not* relational data from your database. In this slice, update a `pokeDisplay` id whenever you receive a single pokemon.
+* Create a `uiReducer` that will be nested under the `rootReducer` for a `ui` slice of state. This slice will hold information that affects how the user interacts with your app, but is *not* relational data from your database.
 * Create a `requestSinglePokemon` thunk action creator.
 * Create a `PokemonDetailContainer` that maps props to `PokemonDetail`.
 * Create a class `PokemonDetail` component that returns information of the pokemon.
 * Add a `Route` that renders the `PokemonDetailContainer` component when the url matches the path `"/pokemon/:pokemonId`".
   * We'll add the `Route` to the end of our `PokemonIndex` render function.
   * Inside of `PokemonDetail` on `componentDidMount`, call `this.props.requestSinglePokemon`.
-  Pass it the pokemon's id from the `this.props.match.params.pokemonId`.
+  * Pass it the pokemon's id from the `this.props.match.params.pokemonId`.
 
 Once it works, try navigating to the route of a different pokemon.
 Your detail view won't update.
@@ -198,7 +197,7 @@ We need to trigger a request on the props changing.
 There is a lifecycle method we can tap into to accomplish this: `componentWillReceiveProps(newProps)`.
 
 * In your `PokemonDetail` component, on `componentWillReceiveProps(newProps)`, call `this.props.requestSinglePokemon(newProps.match.params.pokemonId)`, but only if  the `pokemonId` has changed.
-You can check your current props to find out the previous value.
+  * You can check your current props to find out the previous value.
 
 **Test your `PokemonDetail` redux cycle and route!** Does it behave like
 the [live demo][live-demo]? Show a TA before moving on.
