@@ -6,8 +6,7 @@ import ReviewShow from './review_show';
 const reviewList = (reviews = []) => (
   reviews.map(review => (
     <ReviewShow
-      rating={review.rating}
-      body={review.body}
+      review={review}
       key={review.id}
     />
   ))
