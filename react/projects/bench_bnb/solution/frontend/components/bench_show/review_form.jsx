@@ -23,7 +23,7 @@ class ReviewForm extends React.Component {
     const review = Object.assign({}, this.state, {
       bench_id: benchId
     });
-    this.props.createReview({review});
+    this.props.createReview(review);
     this.navigateToBenchShow();
   }
 
