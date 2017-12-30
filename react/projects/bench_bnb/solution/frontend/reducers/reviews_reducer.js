@@ -19,3 +19,5 @@ const reviewsReducer = (state = {}, action) => {
       return state;
   }
 }
+
+export default reviewsReducer;
