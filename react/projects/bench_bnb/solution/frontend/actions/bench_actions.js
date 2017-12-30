@@ -6,17 +6,18 @@ export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 
 export const receiveBenches = benches => ({
   type: RECEIVE_BENCHES,
-  benches
+  benches,
 });
 
-export const receiveBench = bench => ({
+export const receiveBench = ({ bench, reviews }) => ({
   type: RECEIVE_BENCH,
-  bench
+  bench,
+  reviews,
 });
 
 export const receiveReview = review => ({
   type: RECEIVE_REVIEW,
-  review
+  review,
 });
 
 export const createReview = review => dispatch => (
@@ -32,8 +33,8 @@ export const fetchBenches = filters => dispatch => (
 );
 
 export const fetchBench = id => dispatch => (
-  APIUtil.fetchBench(id).then(bench => (
-    dispatch(receiveBench(bench))
+  APIUtil.fetchBench(id).then(payload => (
+    dispatch(receiveBench(payload))
   ))
 );
 
