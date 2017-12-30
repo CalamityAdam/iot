@@ -103,7 +103,7 @@ window.fetchBenches = fetchBenches;
 dispatch(fetchBenches()).then(console.log); //=> { "1": { id: 1, description: ... } }
 ```
 
-Remember to require `fetchBenches` for testing.
+Remember to import `fetchBenches` for testing.
 
 ### Benches Reducer
 In this step, we're going to create a reducer that manages the `benches` section of our application state.
@@ -799,7 +799,7 @@ Reviews for a bench should comprise:
 * A comment field.
 
 Add a `ReviewIndex` and `ReviewForm`. `ReviewIndex` should show the average score for a bench and also list the reviews for that bench.
-Modify and add the appropriate API endpoints, actions, utils, and components.
+Modify and add the appropriate API endpoints, actions, reducers, utils, and components.
 
 ## Phase 14: Pictures!
 When you create a new bench, allow a user to also add a photo.
