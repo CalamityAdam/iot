@@ -69,15 +69,17 @@ we highly encourage you to read the whole book.
 [mdn-js-doc]: readings/mdn-js.md
 
 ### Projects
+* [CSS Friends Phases 3-4][css-friends]
 * [Intro JavaScript Exercises][intro-javascript-problems]
 * [Reversi][reversi]
 
+[css-friends]: ../html-css/micro-projects/css-friends/
 [intro-javascript-problems]: projects/intro_js_exercises
 [reversi]: projects/js_reversi
 
 ## w5d5
 
-### :clock10: Class will start at 10am! :clock10:
+### (SF ONLY) :clock10: Class will start at 10am! :clock10:
 * **Progress Tracker reports are still due at 9am.**
 
 ### Materials (105 min)
@@ -122,6 +124,7 @@ we highly encourage you to read the whole book.
 [taggings]: readings/tagged-templates.md
 
 ### Projects
+* [CSS Friends Phases 5-6][css-friends]
 * [Intro to Callbacks Exercises][functions_exercises]
 * [Towers of Hanoi][hanoi_node]
 * [Tic-Tac-Toe][ttt_node]
@@ -146,10 +149,10 @@ we highly encourage you to read the whole book.
 [proto-inherit-vid]: https://vimeo.com/162131042
 [inherit-demo-vid]: https://vimeo.com/162115223
 [js-browser-vid]: https://vimeo.com/162115224
-[chrome-debugging-vid]: http://vimeo.com/groups/appacademy/videos/95551777
+[chrome-debugging-vid]: https://vimeo.com/95551777
 [prototypal-inheritance]: readings/prototypal-inheritance.md
 [browser-modules]: readings/browser-modules.md
-[basic-canvas-drawing]: https://web-beta.archive.org/web/20170201183210/joshondesign.com/p/books/canvasdeepdive/chapter01.html
+[basic-canvas-drawing]: https://joshondesign.com/p/books/canvasdeepdive/chapter01.html
 
 ### Homeworks (55 min)
 * [Webpack Tutorial][webpack] (20 min)
@@ -182,6 +185,7 @@ we highly encourage you to read the whole book.
 [client-side-js]: readings/client-side-javascript.md
 
 ### Projects  
+* [CSS Friends Phases 7-8][css-friends]
 * [`arguments` Exercises][arguments-exercises]
 * [Prototypal Inheritance Exercises][inheritance-exercises]
 * [Asteroids][asteroids-project]
@@ -217,7 +221,7 @@ possible.
 [jquery-03-ready]: readings/jquery-03-ready.md
 [jquery-04-all-the-ways]: readings/jquery-04-all-the-ways.md
 [jquery-05-data-attributes]: readings/jquery-05-data-attributes.md
-[backbone-14-vid]: https://vimeo.com/groups/appacademy/videos/85221706
+[backbone-14-vid]: https://vimeo.com/85221706
 [jquery-06-event-delegation]: readings/jquery-06-event-delegation.md
 
 ### Homeworks (45 min)
@@ -240,6 +244,7 @@ possible.
 [jquery-fundamentals]: http://jqfundamentals.com/
 
 ### Projects
+* [CSS Friends Phases 9-10][css-friends]
 * [jQuery Tic Tac Toe][ttt-jquery]
 * [jQuery Towers of Hanoi][hanoi-jquery]
 * **(BONUS)** [Snake][snake-project]
@@ -280,6 +285,7 @@ possible.
 [jquery-fundamentals-ajax]: http://jqfundamentals.com/chapter/ajax-deferreds
 
 ### Projects
+* [CSS Friends Phase 11][css-friends]
 * [AJAXTwitter][ajax-twitter]
 
 [ajax-twitter]: projects/ajax_twitter

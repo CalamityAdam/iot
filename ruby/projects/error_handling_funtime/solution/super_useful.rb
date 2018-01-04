@@ -12,7 +12,7 @@ def convert_to_int(str)
 end
 
 # PHASE 3
-FRUITS = ["apple", "banana", "orange"]
+FRUITS = ["apple", "banana", "orange"].freeze
 
 class CoffeeError < StandardError
   def message
@@ -55,7 +55,7 @@ end
 class BestFriend
   def initialize(name, yrs_known, fav_pastime)
     raise ArgumentError.new("'name' cannot be blank") if name.empty?
-    raise ArgumentError.new("'yrs_known' must be a positive number") if yrs_known.to_i < 1
+    raise ArgumentError.new("'yrs_known' must be greater than or equal to 5 (best friendships take time)") if yrs_known.to_i < 5
     raise ArgumentError.new("'fav_pasttime' cannot be blank") if fav_pastime.empty?
 
     @name = name

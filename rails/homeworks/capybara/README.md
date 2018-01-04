@@ -13,7 +13,7 @@ NB: use Atom's ⌘-t shortcut to quickly navigate around your rails project
   # Gemfile
 
   group :test do
-    gem 'factory_girl_rails', :require => false
+    gem 'factory_bot_rails', :require => false
     gem 'faker'
     gem 'capybara'
     gem 'launchy'
@@ -140,7 +140,6 @@ end
 Congrats! You are on your way to becoming a master of Capybara! Make sure to review the solutions.
 
 [rspec-rails]: ../../readings/rspec-and-rails-setup.md
-[shoulda-matchers]: ../../readings/shoulda-matchers.md
 [shoulda-matchers-docs]: https://github.com/thoughtbot/shoulda-matchers
 [capybara]: ../../readings/capybara.md
 [users-solutions]: ../../projects/music_app/solution/spec/models/user_spec.rb

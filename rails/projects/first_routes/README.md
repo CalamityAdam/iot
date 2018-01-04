@@ -53,10 +53,13 @@ you'll probably be missing some names for some of the routes (they're
 listed in the left-most column); You can name your routes by adding an
 `as` option. `get 'users/new', to:  'users#new', as: 'new_user'`.
 
-Remember that all a route does is match on the **HTTP method** and the
-**url path** (it does this with a **regular expression**, if you know
-what that is already). The controller then sends the request on to the
-specified action on the specified controller.
+To give a little background, starting your Rails server creates an instance of
+a `Router`. This `Router` holds instances of `Route`s that are defined by your
+`routes.rb`. When a request comes in, the `Router` tries to match a `Route`
+based on the **HTTP method** and the **url path** (it does this with a
+**regular expression**, if you know what that is already). The _first_ matched
+`Route` then instantiates an instance of the specified controller, and calls
+the specified action on it.
 
 We have our initial routes now and have the endpoints necessary to
 manage a `User` resource. Notice though that our routes point to a
@@ -435,7 +438,7 @@ end
 ```
 
 Go ahead and make a POST request to create a new user with Postman. Make
-sure to nest your params currently! The `UsersController#create` method is
+sure to nest your params correctly! The `UsersController#create` method is
 written expecting that all user params will be nested under the key `:user`
 in the params hash.
 

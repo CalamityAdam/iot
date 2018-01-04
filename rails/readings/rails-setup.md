@@ -30,14 +30,13 @@ When using PostgreSQL, you should also run the command `bundle exec rails db:cre
 
 ## Stop the Loading of Unused Assets
 
-In `app/views/layouts/application.html.erb`, remove the lines indicated below.
+In `app/views/layouts/application.html.erb`, remove the line indicated below.
 
 ```html
-<%= stylesheet_link_tag    "application", :media => "all" %>
 <%= javascript_include_tag "application" %>
 ```
 
-We're not using JavaScript or CSS yet, so there's no need to load in the default JS and CSS that Rails comes with. This will clean up your log if you're not already using the `quiet_assets` gem. Additionally, Rails comes with some dubious JS tricks you can use, but we want you to learn the better way. For example, the built-in Rails JS allows you to use plain links to delete resources:
+We're not using JavaScript yet, so there's no need to load in the default JS that Rails comes with. This will clean up your log if you're not already using the `quiet_assets` gem. Additionally, Rails comes with some dubious JS tricks you can use, but we want you to learn the better way. For example, the built-in Rails JS allows you to use plain links to delete resources:
 
 ```ruby
 link_to 'Delete Me', post_url(@post), method: :delete
@@ -52,11 +51,11 @@ Links in HTML are only supposed to issue `GET` requests, but Rails's JS will use
 </form>
 ```
 
-Removing the default Rails JS for now will help you get used to doing things the right way. We will tell you to put these back when we hit the JS & CSS portion of our course.
+Removing the default Rails JS for now will help you get used to doing things the right way. We will tell you to put these back when we hit the JS portion of our course.
 
 ## Add Common Debugging Gems
 
-You want to use `better_errors` and `binding_of_caller`, which will make it much easier to see what is going on in your Rails app. You also want to use `pry-rails`, which will provide a nicer console than IRB when you run `rails console`. Lastly, you can use the `quiet_assets` gem, which will reduce excessive logging of requests for CSS/JavaScript files, making it easier for you to read your Rails logs:
+You want to use `better_errors` and `binding_of_caller`, which will make it much easier to see what is going on in your Rails app. You also want to use `pry-rails`, which will provide a nicer console than IRB when you run `rails console`. 
 
 ```ruby
 # Gemfile

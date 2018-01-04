@@ -129,17 +129,17 @@
 
 ### Materials (20 min)
 * :book: [CSS Nontechnical Overview][css-nontech] (20 min)
-* :book: [CSS Resposive Design][css-responsive] (10 min)
+* :book: [CSS Responsive Design][css-responsive] (10 min)
 
 [css-nontech]: ../html-css/readings/css_nontech.md
 [css-responsive]: ../html-css/readings/responsive_design.md
 
 ### Homeworks (150 min)
 * [CSS Curriculum 6: Positioning & Media Queries][css-6] (90 min)
-* [CSS Warm Up][css-warmup] (60 min)
+* [CSS Review][css-review] (60 min)
 
 [css-6]: ../html-css/micro-projects/positioning_media_queries/exercise.md
-[css-warmup]: ../html-css/projects/css_warm_up
+[css-review]: ../html-css/projects/css_review
 
 ### Additional Resources
 * :movie_camera: [CSS Review][css-review-vid]
@@ -156,6 +156,8 @@
 [google-homepage]: ../html-css/projects/google_homepage
 
 ## w4d4
+
+### SF ONLY: Late Start - 10:00am
 
 ### Materials (2 hr, 38 min)
 :closed_lock_with_key: `go_video_go`
@@ -273,8 +275,11 @@
 
 ### Homeworks (45 min)
 * [Capybara][capybara-hw] (45 min)
+* [Read CSS Friends Intro][css-friends]
+* [CSS Friends Phase 0: Reset][css-friends]
 
 [capybara-hw]: homeworks/capybara
+[css-friends]: ../html-css/micro-projects/css-friends/
 
 ### Culture
 * [Have You Experienced Racism in the Workplace?][racism-stats] (3 min)
@@ -293,7 +298,7 @@
 * [Integration Testing][integration-testing]
 * [RSpec and Rails Setup][rspec-setup]
 * [Testing Models][rspec-models]
-* [FactoryGirl and Faker Gems][fac-grl-faker]
+* [FactoryBot and Faker Gems][fac-grl-faker]
 * [Testing Controllers][rspec-controllers]
 * [Testing with Capybara][capybara]
 * [Spring and Guard Setup][spring-guard]
@@ -302,11 +307,12 @@
 [rspec-setup]: readings/rspec-and-rails-setup.md
 [rspec-models]: readings/rspec-models.md
 [rspec-controllers]: readings/rspec-controllers.md
-[fac-grl-faker]: readings/factorygirl-and-faker.md
+[fac-grl-faker]: readings/factorybot-and-faker.md
 [capybara]: readings/capybara.md
 [spring-guard]: readings/guard-spring-setup.md
 
 ### Projects
+* [CSS Friends Phase 1][css-friends]
 * [Goal App][goal-app]
 * **(BONUS)** [Appacademy.io Tests][appacademyio-tests]
 
@@ -349,6 +355,7 @@
 [checkboxes-id-setters]: readings/checkboxes.md
 
 ### Projects
+* [CSS Friends Phase 2][css-friends]
 * [RedditClone][reddit-clone]
 
 [reddit-clone]: projects/reddit_on_rails
