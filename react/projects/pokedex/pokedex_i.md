@@ -552,7 +552,7 @@ Define them in a `selectors.js` file in your app's `frontend/reducers` folder.
 * Define and export a function, `selectAllPokemon(state)`, which accepts the application state as an argument and exports an array of all the pokemon objects.
 You can use [lodash's values][lodash-values] method.
 
-**Test your selector in the browser**. You should should be able to do the following:
+**Test your selector in the browser**. You should be able to do the following:
 
 ```javascript
 const initialState = getState();
