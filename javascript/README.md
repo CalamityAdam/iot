@@ -7,6 +7,9 @@
 ### Breakfast
 * :coffee: **Bagels @ 8:30am** :coffee:
 
+### (SF ONLY) :clock10: Class will start at 10am! :clock10:
+* **Progress Tracker reports are still due at 9am.**
+
 ### Materials (155 min)
 :closed_lock_with_key: `go_video_go`
 * :movie_camera: [Intro to JS][intro-js-video] (12 min)
@@ -78,9 +81,6 @@ we highly encourage you to read the whole book.
 [reversi]: projects/js_reversi
 
 ## w5d5
-
-### (SF ONLY) :clock10: Class will start at 10am! :clock10:
-* **Progress Tracker reports are still due at 9am.**
 
 ### Materials (105 min)
 * :book: [Arguments][arguments] (15 min)
