@@ -118,7 +118,7 @@ A GET request to `localhost:3000/api/pokemon/5` should render this:
     name: 'Rhydon',
     attack: 130,
     defense: 120,
-    image_url: "assets/5.svg",
+    image_url: "/assets/pokemon_snaps/5.svg",
     moves: [
       'horn attack',
       //...
@@ -159,7 +159,7 @@ As with previous projects, you will need to set up a `package.json` and a `webpa
   * redux-logger
   * babel-loader
   * babel-core
-  * babel-preset-es2015
+  * babel-preset-env
   * babel-preset-react
   * lodash
 

@@ -188,11 +188,12 @@
 [updating-normalized]: http://redux.js.org/docs/recipes/reducers/UpdatingNormalizedData.html
 [redux-nontech]: readings/redux_nontech.md
 
-### Homeworks (90 min)
+### Homeworks (105 min)
 * [Giphy Homework][giphy_homework] (90 min)
 * [Full-stack Proposal Prep: Component Hierarchy][prep-component-hierarchy] (15 min)
 
 [giphy_homework]: homeworks/giphy
+[prep-component-hierarchy]: ../full-stack-project/homeworks/proposal-prep/component-hierarchy.md
 
 ### Additional Resources
 * :book: [Redux Developer Tools][redux_dev_tools]
@@ -221,12 +222,11 @@
 [with_router]: readings/with_router.md
 [redirect]: readings/redirect.md
 
-### Homeworks (60 min)
+### Homeworks (45 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
 * [Full-stack Proposal Prep: State Shape][prep-state-shape] (15 min)
 
 [rainbow_routes]: homeworks/rainbow_routes
-[prep-component-hierarchy]: ../full-stack-project/homeworks/proposal-prep/component-hierarchy.md
 [prep-state-shape]: ../full-stack-project/homeworks/proposal-prep/state-shape.md
 
 

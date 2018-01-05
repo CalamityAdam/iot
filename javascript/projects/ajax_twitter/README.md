@@ -32,10 +32,12 @@ our HTML, except that Rails compiles them all into a single file for production.
 But unlike Webpack, Rails doesn't intelligently manage dependencies, so you still
 have to be extra careful about the load order.
 
-It's currently only requiring jQuery. Make it require `jquery.serializejson` (for submitting forms) and `bundle.js` (all the scripts!) as well. Now
-we shouldn't have to worry about compiling our JS files again because Webpack
-will do it for us as long as we remember to webpack (ie. run `webpack` or
-`webpack --watch`).
+It's currently only requiring `jquery` and `jquery_ujs`. After these, add 
+`require jquery.serializejson` (for submitting forms) and `require_tree .` (to
+include any files in `app/assets/javascripts`, for instance, our `bundle.js`).
+These are all included through `<script>` tags. Now we shouldn't have to worry
+about compiling our JS files again because Webpack will do it for us as long as we
+remember to webpack (ie. run `webpack` or `webpack --watch`).
 
 Before writing any code, run `rails s` and familiarize yourself with the
 skeleton!
@@ -79,7 +81,7 @@ variable.
 Using this class, we can now build a `FollowToggle` instance for each
 `follow-toggle` button on the page.
 
-**NB:** Though the follow state is stored in the our database as a **_row_** (or lack thereof) in a join table, on the
+**NB:** Though the follow state is stored in our database as a **_row_** (or lack thereof) in a join table, on the
 client side, we'll keep track of the follow state as a **_string_**. To do this we've bootstrapped the the user's `id` and `follow-state` to the `user-id` and `initial-follow-state` `data-` attributes respectively.
 Later we'll add more states in addition to `followed`/`unfollowed`.
 
@@ -111,18 +113,20 @@ re-render.
 you can have jQuery automatically parse the response as JSON. Read the
 documentation [here][$.ajax-docs]
 
-#### Content-Types and `respond_to`
+#### The `Accept` header and `respond_to`
 
 You may also be wondering what's going on with the `respond_to` inside the
 `FollowsController`. Well, when we make an HTTP request to a server, we can
-specify the `Content-Type` to ask for HTML, XML, JSON, text, etc. Until now, our
-controllers were serving HTML by default.
+specify a value for the `Accept` header to ask for HTML, XML, JSON, text, etc.
+Until now, our controllers were serving HTML by default.
 
-The browser sets this `Content-Type` header for us based on how we make the
-request. When we use the `$.ajax` method, we will (by default) request JSON. The
-controller can then react to this `Content-Type` request by using the
-[`respond_to` method][respond-to-docs].
+JQuery ajax ([by default][default]) sets the `Accept` header based on the
+`dataType` of the request. We can manually set the `dataType` to JSON. The
+controller can then react to this `Accept` header by using the
+[`respond_to` method][respond-to-docs]. If we do not specify a `dataType`,
+`$.ajax` will return the first `respond_to` type specified in the controller.
 
+[default]: http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings
 [respond-to-docs]: http://apidock.com/rails/ActionController/MimeResponds/InstanceMethods/respond_to
 [$.ajax-docs]: http://api.jquery.com/jquery.ajax/
 
