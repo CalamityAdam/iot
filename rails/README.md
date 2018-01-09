@@ -403,6 +403,7 @@
 * :book: [HTTP][http]
 * :book: [Rack][rack]
 * :book: [Rack Middleware Stack][middleware]
+* :book: [Class and Instance Eval][class_eval-instance_eval]
 
 [middleware-video]: https://vimeo.com/161382367
 [middleware-demo-video]: https://vimeo.com/161386029
@@ -415,6 +416,7 @@
 [http]: readings/http.md
 [rack]: readings/rack.md
 [middleware]: readings/middleware.md
+[class_eval-instance_eval]: readings/instance-eval-class-eval.md
 
 ### Projects (Solo)
 * [Rails Lite][rails-lite]
