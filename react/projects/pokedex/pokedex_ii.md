@@ -138,7 +138,7 @@ Hint: Your state shape will look something like this:
         name: 'Venusaur',
         image_url: '/assets/130.png',
       },
-      //... more pokemon
+      // ... more pokemon
     },
     items: {
       3: {
@@ -166,7 +166,6 @@ Hint: Your state shape will look something like this:
     }
   },
   ui: {
-    errors: {},
     loading: {},
   }
 }
@@ -270,12 +269,12 @@ class ControlledComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      //...
+      // ...
     };
 
     this.exampleMethod = this.exampleMethod.bind(this);
   }
-  //...
+  // ...
 }
 ```
 
@@ -284,13 +283,13 @@ For the input elements, use an `onChange` listener and write a single `update` f
 An basic example of an `update` method is below:
 ```javascript
 class ControlledComponent extends React.Component {
-  //...
+  // ...
 
   update(property) {
     return e => this.setState({ [property]: e.target.value });
   }
 
-  //...
+  // ...
 }
 ```
 
@@ -311,7 +310,7 @@ The final parts of the `PokemonForm` are redirecting callback and error handling
 ### Redirecting
 
 Once the posting is complete we want the application to redirect to the newly created Pokemon.
-We need to wait, however, because we need this Pokemon's ID in order to push to that URL.
+We need to wait, however, because we need this Pokemon's id in order to push to that URL.
 We will only have this id after the response has come back from the server, so we can tack on another `.then` after our promise resolves and redirect from there.
 
 Make sure that your `createPokemon` action creator returns the promise and that any `.then` calls you tack onto the end return the pokemon.
@@ -366,13 +365,12 @@ But so far, we have no way of letting our users know what happened. We need a wa
 // Sample State Shape
 {
   pokemon: {
-    //...
+    // ...
   },
-  pokemonDetail: {
-    //...
-  },
-
-  errors: [ 'message 1', 'message 2' ]
+  // ...
+  ui:
+    errors: [ 'message 1', 'message 2' ],
+    loading: {}
 }
 ```
 
@@ -428,7 +426,7 @@ This is not very dry. Let's employ a tactic called "bootstrapping" to tell our f
 * Open `application.html.erb`
   * Add a `<script>` tag; inside, set the value of `window.POKEMON_TYPES` to the `POKEMON_TYPES` constant used in the `PokemonModel`
   * Use the `#raw` method to tell Rails not to escape the symbols in our array
-* Update you `PokemonForm` to use `window.POKEMON_TYPES` instead
+* Update your `PokemonForm` to use `window.POKEMON_TYPES` instead
 
 ```javascript
 window.POKEMON_TYPES = <%= raw Pokemon::TYPES %>

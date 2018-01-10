@@ -280,7 +280,7 @@ Sample state shape:
         name: /*...*/,
         image_url: /*...*/
       },
-      //...
+      // ...
     }
   }
 }
@@ -385,7 +385,7 @@ Note how we are using `entities.pokemon` to manage _all_ the pokemon. At this po
         name: "Venusaur",
         image_url: "/assets/pokemon_snaps/130.png",
       },
-      //... more pokemon
+      // ... more pokemon
     },
     items: {
       3: {
