@@ -190,7 +190,7 @@ Next we need to configure Webpack to compile our `bundle.js` file.
           exclude: /(node_modules)/,
           loader: 'babel-loader',
           query: {
-            presets: ['react', 'es2015']
+            presets: ['env', 'react']
           }
         }
       ]
