@@ -136,14 +136,24 @@ Write the following functions:
   ```
 
 * `fibonacci(n)` - receives an integer, `n`, and returns the first `n` Fibonacci numbers
+* `deepDup(arr)` - deep dup of an `Array`!
+
+> #### :bulb: Aside: type-checking in javascript
+>
+> Type checking in JS can get a very strange at times and it is best practice to avoid it if at all possible. Check out the `Typeof operator` section of [this article][type-checking].
+> For this problem though, we will need to do it. Use the `getType` method from the `True Object types` section in that same article to see a clever way to type-check.
+> This method may not make a whole lot of sense now, but it will in a few days.
+
+[type-checking]: https://toddmotto.com/understanding-javascript-types-and-reliable-type-checking/
+
 * `bsearch(arr, target)` - receives a sorted array, returns the index of the target or `-1` if not found
 
->#### :bulb: Aside: Why `-1`?
+> #### :bulb: Another aside: Why `-1`?
 >
->In case you are wondering, returning `-1` is a common practice when returning the index of an element that does not exist.
->The reasoning behind this is to return the same type (`-1` is also a number) as if the element was found; that way we can still bracket into the array, but will get `undefined` back.
->Though this was not the case with Ruby, you will likely see this in other programming languages.
->Try this on your own if you are curious.
+> In case you are wondering, returning `-1` is a common practice when returning the index of an element that does not exist.
+> The reasoning behind this is to return the same type (`-1` is also a number) as if the element was found; that way we can still bracket into the array, but will get `undefined` back.
+> Though this was not the case with Ruby, you will likely see this in other programming languages.
+> Try this on your own if you are curious.
 
 * `mergesort(arr)` - recieves an array, returns a sorted copy of the array by implementing [`merge sort`][merge-sort] sorting algorithm
 * `subsets(arr)` - receives an array, returns an array containing all the subsets of the original array
