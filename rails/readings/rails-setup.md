@@ -36,7 +36,7 @@ In `app/views/layouts/application.html.erb`, remove the line indicated below.
 <%= javascript_include_tag "application" %>
 ```
 
-We're not using JavaScript yet, so there's no need to load in the default JS that Rails comes with. This will clean up your log if you're not already using the `quiet_assets` gem. Additionally, Rails comes with some dubious JS tricks you can use, but we want you to learn the better way. For example, the built-in Rails JS allows you to use plain links to delete resources:
+We're not using JavaScript yet, so there's no need to load in the default JS that Rails comes with. Additionally, Rails comes with some dubious JS tricks you can use, but we want you to learn the better way. For example, the built-in Rails JS allows you to use plain links to delete resources:
 
 ```ruby
 link_to 'Delete Me', post_url(@post), method: :delete
