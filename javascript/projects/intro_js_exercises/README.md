@@ -140,8 +140,8 @@ Write the following functions:
 
 > #### :bulb: Aside: type-checking in javascript
 >
-> Type checking in JS can get a very strange at times and it is best practice to avoid it if at all possible. Check out the `Typeof operator` section of [this article][type-checking].
-> For this problem though, we will need to do it. Use the `getType` method from the *True Object types* section in the above article to see a clever way to type-check.
+> Type checking in JS can get a very strange at times and it is best practice to avoid it if at all possible. Check out the **Typeof operator** section of [this article][type-checking].
+> For this problem though, we will need to do it. Use the `getType` method from the **True Object types** section in that same article to see a clever way to type-check.
 > This method may not make a whole lot of sense now, but it will in a few days.
 
 [type-checking]: https://toddmotto.com/understanding-javascript-types-and-reliable-type-checking/
