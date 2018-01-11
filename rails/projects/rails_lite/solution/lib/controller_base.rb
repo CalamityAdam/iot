@@ -23,15 +23,10 @@ class ControllerBase
 
   # Set the response status code and header
   def redirect_to(url)
-    raise "double render error" if already_built_response?
+    before_render_or_redirect
 
     @res.status = 302
     @res["Location"] = url
-
-    @already_built_response = true
-
-    session.store_session(@res)
-    flash.store_flash(@res)
 
     nil
   end
@@ -40,18 +35,24 @@ class ControllerBase
   # Set the response's content type to the given type.
   # Raise an error if the developer tries to double render.
   def render_content(content, content_type)
-    raise "double render error" if already_built_response?
+    before_render_or_redirect
 
     @res.write(content)
     @res['Content-Type'] = content_type
 
-    @already_built_response = true
-
-    session.store_session(@res)
-    flash.store_flash(@res)
-
     nil
   end
+
+  private  # Just this one; not the use of public below
+
+  def before_render_or_redirect
+    raise "double render error" if already_built_response?
+    @already_built_response = true
+    session.store_session(@res)
+    flash.store_flash(@res)
+  end
+
+  public
 
   # Phase 3
 
