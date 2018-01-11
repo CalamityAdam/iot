@@ -1,8 +1,10 @@
-Musicapp::Application.routes.draw do
-  root to: redirect("/bands")
+Rails.application.routes.draw do
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: redirect('/bands')
 
-  resource :session, only: [:create, :destroy, :new]
-  resources :users, only: [:create, :new, :show] do
+  resource :session, only: [:new, :create, :destroy]
+
+  resources :users, only: [:show, :new, :create] do
     get :activate, on: :collection
   end
 
@@ -10,11 +12,11 @@ Musicapp::Application.routes.draw do
     resources :albums, only: [:new]
   end
 
-  resources :albums, only: [:create, :destroy, :edit, :show, :update] do
+  resources :albums, only: [:show, :create, :edit, :update, :destroy] do
     resources :tracks, only: [:new]
   end
 
-  resources :tracks, only: [:create, :destroy, :edit, :show, :update]
+  resources :tracks, only: [:show, :create, :edit, :update, :destroy,]
 
   resources :notes, only: [:create, :destroy]
 end

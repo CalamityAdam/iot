@@ -1,23 +1,28 @@
 # Front-End Authentication
 
-Remember how much time we spent on authentication in weeks 4 and 5? Good news!
-We will continue to use that same pattern as we move toward front-end auth.
+Remember how much time we spent on authentication in weeks 4 and 5? Good
+news! We will continue to use that same pattern as we move toward
+front-end auth.
 
-The main difference is that we will use React components instead of Rails views,
-and all of our HTTP requests (for logging in, signing up, logging out) will be
-AJAX requests.
+The main difference is that we will use React components instead of
+Rails views, and all of our HTTP requests (for logging in, signing up,
+logging out) will be AJAX requests.
 
 **Your backend will look essentially the same!**
 
 As always:
   * A *session* is maintained by assigning a token to the user's cookie
-  * Cookies are sent by the browser to the server with every request (that includes AJAX requests!)
+  * Cookies are sent by the browser to the server with every request
+(that includes AJAX requests!)
 
 The new parts:
   * Session Reducer
+  * Errors Reducer (combineReducer)
+    * Session Errors Reducer
   * Session Actions / Constants
   * Session API Util
   * LoginForm / SignupForm Components
+  * Protected and Auth Routes
 
 ---
 
@@ -25,30 +30,57 @@ The new parts:
 
 ```js
 const _nullUser = {
-  currentUser: null,
-  errors: []
+  currentUser: null
 };
 
-const SessionReducer = (state = _nullUser, action) => {
+const sessionReducer = (state = _nullUser, action) => {
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
-      return merge({}, _nullUser, {currentUser});
+      return merge({}, { currentUser });
     case LOGOUT:
       return _nullUser;
-    case RECEIVE_ERRORS:
-      const errors = action.errors;
-      return merge({}, _nullUser, {errors});
     default:
       return state;
   }
 };
 ```
 
-The `currentUser` property will be used to show things like a custom welcome
-message and the profile picture. The `errors` property will be used to tell our
-users that they have filled out a form incorrectly. (e.g. 'Password is too
-short').
+The `currentUser` property will be used to show things like a custom welcome message and the profile picture.
+
+## `Session Errors Reducer`
+```js
+const _nullErrors = [];
+
+export default (state = _nullErrors, action) => {
+  Object.freeze(state);
+  switch(action.type) {
+    case RECEIVE_SESSION_ERRORS:
+      return action.errors;
+    case RECEIVE_CURRENT_USER:
+      return _nullErrors;
+    case CLEAR_ERRORS:
+      return _nullErrors;
+    default:
+      return state;
+  }
+};
+```
+
+The `errors` property will be used to tell our users that they have filled out a form incorrectly. (e.g. 'Password is too short'). We can clear the errors when we successfully receive the `currentUser` object or we can clear errors manually using the `CLEAR_ERRORS` action when we navigate away from the form.
+
+## `Errors Reducer`
+```js
+import { combineReducers } from 'redux';
+import sessionErrorsReducer from './chirps';
+
+export default combineReducers({
+  session: sessionErrorsReducer,
+  // We can add as many reducers as we need here.
+});
+```
+
+We'll nest the `sessionErrorsReducer` under the `errorsReducer`, so that we can add additional error reducers for other components in our app.
 
 ## Action-Creators & API
 
@@ -60,10 +92,10 @@ We'll need the following action-creators:
   * logout
 * Synchronous:
   * receiveCurrentUser
-  * receiveErrors
+  * receiveSessionErrors
 
-We'll also need some API utility functions that will actually make the AJAX
-requests:
+We'll also need some API utility functions that will actually make the
+AJAX requests:
   * signup
   * login
   * logout
@@ -79,49 +111,99 @@ login ------>  Thunk -----> login ------> receiveCurrentUser(currentUser)
 logout ----->  Thunk -----> logout -----> receiveCurrentUser(null)
 ```
 
-## Front End Routes
+## Protected and Auth Routes
 
-It is common to restrict certain front end routes from being accessed by users
-who are not logged in or who do not have proper credentials. Check out this `Router`:
+When we were creating apps with Rails views we had certain routes the
+user could only visit if they were logged in or if they were logged out.
+We still want to do the same thing, but we can no longer control this
+from the back end. Instead we will create special route components that
+trigger a redirect if the user shouldn't be allowed to see their
+component. We do this by placing a conditional in the `render` prop.
+Here is the code. Take a minute to look it over and make sure you
+understand it.  
 
-```js
-<Router history={ hashHistory }>
-  <Route path="/" component={ App }>
-    <Route path="/login" component={ Login } onEnter={ _redirectIfLoggedIn }/>
-    <Route path="/signup" component={ Signup } onEnter={ _redirectIfLoggedIn }/>
-    <Route path="/profile" component={ Profile } onEnter={ _ensureLoggedIn }/>
-  </Route>
-</Router>
+```jsx
+// /frontend/util/route_util.jsx
+
+// renders component if logged out, otherwise redirects to the root url
+const Auth = ({component: Component, path, loggedIn}) => (
+  <Route path={path} render={(props) => (
+    !loggedIn ? (
+      <Component {...props}/>
+    ) : (
+      <Redirect to="/" />
+    )
+  )}/>
+);
+
+// renders component if logged in, otherwise redirects to the login page
+const Protected = ({component: Component, path, loggedIn}) => (
+  <Route path={path} render={(props) => (
+     loggedIn ? (
+      <Component {...props}/>
+    ) : (
+      <Redirect to="/login"/>
+    )
+  )}/>
+);
+
+// access the Redux state to check if the user is logged in
+const mapStateToProps = state => {
+  return {loggedIn: Boolean(state.session.currentUser)};
+}
+
+// connect Auth to the redux state
+export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth));
+
+// connect Protected to the redux state
+export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protected));
 ```
 
-Here we have 3 routes that are all protected by React Router [onEnter
-hooks][onenter].
+In all your projects that use frontend auth you will want this code in a
+file `/frontend/util/route_util.jsx`. Then you can simply import these
+components and use them anywhere you need a protected route. For
+example, suppose we only want users to be able to write reviews if they
+are logged in.
 
-[onenter]: on_enter.md
+```jsx
+// Do this!
+import { ProtectedRoute } from '/file/path/to/rout_util';
+
+<ProtectedRoute component={ ReviewForm } path="/reviews/new" />
+
+// Instead of this
+<Route component={ ReviewForm } path="/reviews/new" />
+```
+
+See how easy that is? We have to do a little work to set up our auth
+and protected routes, but once we have them in place turning an ordinary
+route into a protected route is as simple as replacing `Route` with
+`ProtectedRoute`.
 
 ## Bootstrapping
 
-One of the biggest challenges of front end auth is telling our application to
-render in an initial state that reflects the status of our session. If we skip
-this step, it may be possible for a user to log in or sign up, refresh the page,
-and then the app will render in a non-logged in manner even though they have the
-right session token! This happens because our App will always render with the
-default application state unless we configure the `Store` to use a
-`preloadedState`.
+One of the biggest challenges of front end auth is telling our
+application to render in an initial state that reflects the status of
+our session. If we skip this step, it may be possible for a user to log
+in or sign up, refresh the page, and then the app will render in a
+non-logged in manner even though they have the right session token! This
+happens because our App will always render with the default application
+state unless we configure the `Store` to use a `preloadedState`.
 
 There are **several** ways we can meet this challenge:
 
-* *Issuing a separate request* -- Triggering a `fetchCurrentUser` AJAX request
-from the root route's `onEnter` hook
+* *Issuing a separate request* -- Triggering a `fetchCurrentUser` AJAX
+request from the root route's `onEnter` hook
 * *Persisting client-side data* -- using [local storage][local-storage]
 * *Bootstrapping* -- using the [gon gem][gon-video]
 
 We are going to suggest the following implementation:
 
-* In `application.html.erb`, add a script tag -- this is javascript code that
-we can tell the browser to run, and we can generate it dynamically using ruby!
-* Inside the script tag, assign a jsonified `current_user` to the property of
-`window.currentUser`
+* In `application.html.erb`, add a script tag -- this is javascript code
+that we can tell the browser to run, and we can generate it dynamically
+using ruby!
+* Inside the script tag, assign a jsonified `current_user` to the
+property of `window.currentUser`
 * Use a jbuilder template!
 
 ```html
@@ -135,15 +217,20 @@ we can tell the browser to run, and we can generate it dynamically using ruby!
 
 * Inside our entry point, within the doc-ready callback,
 check for the presence of `window.currentUser`
-* If `window.currentUser` exists, generate a `preloadedState` and pass it
-to `configureStore`
+* If `window.currentUser` exists, generate a `preloadedState` and pass
+it to `configureStore`
 
-```js
+```jsx
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };
     store = configureStore(preloadedState);
+
+    // Clean up after ourselves so we don't accidentally use the
+    // global currentUser instead of the one in the store
+    delete window.currentUser;
+
   } else {
     store = configureStore();
   }
@@ -153,7 +240,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-Now we should be able to log in, refresh, and not lose our session status!
+Now we should be able to log in, refresh, and not lose our session
+status!
 
 [local-storage]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 [gon-video]: https://vimeo.com/168132088

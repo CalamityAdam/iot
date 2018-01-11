@@ -37,7 +37,7 @@ information as it executes.
 
 ## Example
 
-### Static HTML Implementation (The old way)
+### Static HTML Implementation (The Old Way)
 
 Take a look at this `CatsController`:
 
@@ -45,10 +45,10 @@ Take a look at this `CatsController`:
 # app/controllers/cats_controller.rb
 
 class CatsController < ApplicationController
-	def index
-		@cats = Cat.all
-		render :index
-	end
+  def index
+    @cats = Cat.all
+    render :index
+  end
 end
 ```
 
@@ -57,9 +57,10 @@ It should render the following template whenever we visit `localhost:3000/cats`:
 ```erb
 <!-- app/views/cats/index.html.erb -->
 <h1> Cats </h1>
+
 <ul>
 <% @cats.each do |cat| %>
-	<li><%= cat.name %>: <%= cat.color %></li>
+  <li><%= cat.name %>: <%= cat.color %></li>
 <% end %>
 </ul>
 ```
@@ -74,7 +75,7 @@ to render a dynamic view.
 Our application needs to be able to respond to client-side requests for JSON.
 Lucky for us, Rails is smart enough to route HTTP requests for different data
 types to the corresponding views for that type. If a request with a header for
-`Content-Type: application/json` comes in, `CatsController#index` will
+[`Accept: application/json`][http-accept] comes in, `CatsController#index` will
 automatically try to render `app/views/cats/index.json.jbuilder` instead of the
 `app/views/cats/index.html.erb` view we wrote earlier. All we have to do is
 write that view:
@@ -90,8 +91,13 @@ the Jbuilder's `json.array!` method.
 
 Don't worry if you've never heard of [Jbuilder][jbuilder]. It's just a gem that
 lets us write Ruby code to create JSON objects, much like how ERB is used to
-create HTML. We'll continue learning more about and using it soon!
+create HTML. We'll be learning more about it soon!
 
+If you're interested in how Rails resolves the response type, check out
+[this blog post][blog].
+
+[http-accept]: https://github.com/rails/rails/blob/master/actionpack/lib/action_controller/metal/mime_responds.rb#L35
+[blog]: http://blog.bigbinary.com/2010/11/23/mime-type-resolution-in-rails.html
 [jbuilder]: https://github.com/rails/jbuilder
 
 ## Using the API
@@ -103,8 +109,8 @@ this:
 
 ```json
 [
-	{"id": 1, "name": "Amitabh", "color": "Gray"},
-	{"id": 2, "name": "Fabio", "color": "Calico"}
+  {"id": 1, "name": "Amitabh", "color": "Gray"},
+  {"id": 2, "name": "Fabio", "color": "Calico"}
 ]
 ```
 
@@ -125,14 +131,14 @@ which format our response should be populated in and then act accordingly.
 # app/controllers/cats_controller.rb
 
 class CatsController < ApplicationController
-	def index
-		@cats = Cat.all
-
-		respond_to do |format|
-			format.html { render :index }
-			format.json { render :index }
-		end
-	end
+  def index
+    @cats = Cat.all
+    
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render :index }
+    end
+  end
 end
 ```
 

@@ -133,7 +133,7 @@ inherits from `ActionController::Base`). Let's get started!
 We'll write our version of `ActionController::Base` in phases in the `lib`
 directory of the project. `ControllerBase#initialize` should take a
 `Rack::Request` and `Rack::Response` object as inputs and save them as instance variables (ivars) for later use. The stored
-request (will be used to help fill out the response in one of the actions (`:new`, `:edit`, etc.) defined within controllers that inherit from it.
+request will be used to help fill out the response in one of the actions (`:new`, `:edit`, etc.) defined within controllers that inherit from it.
 
 Consider this code from 99cats:
 
@@ -165,7 +165,7 @@ docs for how to set response header fields and statuses. Again, set
 `@already_built_response` to avoid a double render.
 
 Run `bundle exec ruby bin/p02_controller_server.rb`. Now look at the code to see
-what it does. By extending `BaseController`, `MyController` can test our `#render_content` and `#redirect_to` methods. Go to localhost:3000 and make sure
+what it does. By extending `ControllerBase`, `MyController` can test our `#render_content` and `#redirect_to` methods. Go to localhost:3000 and make sure
 it works correctly.
 
 Lastly, run the spec: `bundle exec rspec spec/p02_controller_spec.rb`.
@@ -249,12 +249,14 @@ Let's write a `#render(template_name)` method that will:
 We'll assume that any developers who use our framework are aware of our
 template naming convention, which is as follows:
 `"views/#{controller_name}/#{template_name}.html.erb"`. Use
-`ActiveSupport`'s `#underscore` (`require 'active_support/inflector'`)
+`ActiveSupport`'s [`#underscore`][underscore] (`require 'active_support/inflector'`)
 method to convert the controller's class name to snake case. We'll be
 lazy and not chop off the `_controller` bit at the end.
 
 Run the `bin/p03_template_server.rb` example and visit `http://localhost:3000`. Then
 run `spec/p03_template_spec.rb` to check your work.
+
+[underscore]: http://api.rubyonrails.org/v4.2/classes/ActiveSupport/Inflector.html#method-i-underscore
 
 ## Phase IV: Adding the Session
 
@@ -325,7 +327,7 @@ by 2 each time, don't worry - it means your session hash is working.
 ## Phase V: Routing
 
 In this section we'll be writing a `Router` class and a `Route` class.
-A `Route` object is like a single row of `rake routes`:
+A `Route` object is like a single row of `rails routes`:
 
 ```
 user    PUT     /users/:id      users#update
@@ -417,7 +419,7 @@ So when we hit the corresponding route (i.e., when we go to `localhost:3000/post
 * Add a method `Route#run(req, res)` that (1) instantiates an instance
   of the controller class, (2) calls `invoke_action`. For now, pass an empty
   hash as the third argument to `ControllerBase#initialize`.
-  This will serve as a stub for the route params which we will replace that with the real route params soon.
+  This will serve as a stub for the route params, which we will replace with the real route params soon.
 * Add a method `Router#run(req, res)` that calls `#run` on the first
   matching route. If none is found, return a `404` error by setting the
   response status. It's also nice to add a message body so the user

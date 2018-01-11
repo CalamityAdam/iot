@@ -17,7 +17,7 @@ we can use the `launchy` gem to pop open the original URL in a browser.
 
 Throughout this project you're going to be navigating through many files. Using
 the file tree to navigate will take a long time. Make sure to instead press ⌘+T
-and then type the file name to quickly find the files you are looking for.**
+and then type the file name to quickly find the files you are looking for.
 
 [goo-gl]: https://goo.gl
 [what-is-cli]: http://www.techopedia.com/definition/3337/command-line-interface-cli
@@ -31,7 +31,7 @@ and then type the file name to quickly find the files you are looking for.**
 * Be able to write associations
 * Understand the purpose of adding an index to columns in our database
 
-## Phase I: Setup
+## Phase 0: Setup
 
 Go ahead and create a new Rails project...
 
@@ -41,13 +41,13 @@ $ rails new URLShortener --database postgresql
 Create the database with the following command...
 
 ```
-$ bundle exec rake db:create
+$ bundle exec rails db:create
 ```
 
 You now have a working Rails app with database! We can now run migrations to
 add tables to our database.
 
-## Phase II: Users
+## Phase I: Users
 
 ### Overview
 
@@ -59,7 +59,7 @@ same person registering on our app with a duplicate email. That wouldn't make se
 
 The naming of your files is going to be essential. When you try to create an
 instance of a model, it looks in the models folder for a file that is the
-`snake_case`ified version of your model's name. Also, it will, by default,
+`snake_case`-ified version of your model's name. Also, it will, by default,
 infer that the name of the table is the pluralized, snake cased, version of your
 model. For example, if I had a `GoodStudent` model, Rails would look in the
 `app/models` folder for a file called `good_student.rb`. Upon finding and
@@ -86,7 +86,7 @@ can also enforce uniqueness of one or more columns at the database
 level using an index. [These docs][add-index-docs] will give you the syntax needed.
 
 Double check that your migration file syntax is correct and then setup your database
-by running your migrations with: `bundle exec rake db:migrate`.
+by running your migrations with: `bundle exec rails db:migrate`.
 
 Next, let's create a `User` model. No magic to this, just create a `user.rb`
 file in your `app/models` folder.
@@ -125,8 +125,8 @@ in `ShortenedUrl` should we add indices? Which index should be unique?
 Store both the `long_url` and `short_url` as string columns. Also store the id
 of the user who submitted the url.
 
-**NB:** `ShortenedUrl` is a model, `shortened_urls` is the table it's
-connected to, and `short_url` is the string column in the
+**NB:** `ShortenedUrl` is a model, `shortened_urls` is the table it
+_models_ to, and `short_url` is the string column in the
 `shortened_urls` table that contains the actual shortened url string.
 Confusing, I know, but this illustrates why good naming is so important.
 One bad name confuses every poor dev who tries to maintain the code
@@ -138,19 +138,17 @@ and presence validations on the model level as well.
 Once you have your migration and model written how you would like, make sure to
 run your migrations and test out ShortenedUrl in the Rails console.
 
-We **could** factor out the `long_url` to its own model, `LongUrl`,
-and store in the `ShortenedUrl` a key to the `LongUrl`. If the URLs
-are super long this would reduce memory usage by not repeating the
-long url in every shortened url. On the other hand, the long url is
-already an ID (in the sense that all URLs are identifiers for web pages), so
-it's not improper to duplicate, plus factoring it out into its own table will
-force two steps of lookup to resolve a short URL:
-
-0. Find the `ShortenedUrl` model
-0. Find the associated `LongUrl`.
-
-For this reason, we can expect better performance by storing the long
-url in the `shortened_urls` table.
+>#### :bulb: Aside: But Why No `LongUrl` Model?
+>We **could** factor out the `long_url` to its own model, `LongUrl`, and store in `ShortenedUrl` a foreign key to a `LongUrl`. If the URLs are super long this would reduce data usage by allowing multiple `ShortUrl` records to reference a single `LongUrl`, removing duplication of the long url string.
+>
+>On the other hand, factoring it out into its own table forces two steps of lookup to resolve a short URL:
+>
+>1. Find the `ShortenedUrl` record by matching `short_url`
+>2. Find the associated `LongUrl` record by matching to `long_url_id` to a `LongUrl` primary key, `id`
+>
+>**NB: ActiveRecord will still execute a single query, but SQL will be doing a bit more work under the hood**
+>
+>For this reason, we can expect better _performance_ by storing the long url in the `shortened_urls` table. Ultimately, for our implementation we have chosen to prefer performance over reducing our database size.
 
 Now it's time for us to actually shorten a URL for the users. We do this by
 generating a random, easy to remember, 16 character random code and storing
@@ -158,13 +156,10 @@ this code as the `short_url` in our table. Now, we can search for this record
 by the `short_url` and we get the `long_url`.
 
 We will be generating a random string with
-`SecureRandom::urlsafe_base64`. In [Base64 encoding][wiki-base64],
-each character of the string is chosen from one of 64 possible
-letters. That means there are `64**16` possible base64 strings of
-length 16.
+`SecureRandom::urlsafe_base64`. In [Base64 encoding][wiki-base64], a random number with a given byte-length is generated and returned as a string.
 
 Write a method, `ShortenedUrl::random_code` that uses
-`SecureRandom::urlsafe_base64` to generate a 16 letter random code.
+`SecureRandom::urlsafe_base64` to generate a random 16-byte string (**NOTE: 16-bytes != 16 characters**).
 Handle the vanishingly small possibility that a code has already been
 taken: keep generating codes until we find one that isn't the same as one
 already stored as the `short_url` of any record in our table. Return the
@@ -183,7 +178,7 @@ and `User`.
 
 At this point you should have a `shortened_urls` table and a `ShortenedUrl`
 model. The factory method you wrote that creates a shortened url and persists
-it to the database should use the `SecureRandom::random_code` method to provide
+it to the database should use the `ShortenedUrl::random_code` method to provide
 a unique `short_url`. Make sure that each `ShortenedUrl` has a unique 16
 letter `short_url` code.
 
@@ -202,7 +197,7 @@ the shortened urls a user has visited.
 
 To accomplish this, we'll need a `Visit` join table model. We'll use this join
 to link user visits to certain urls. We'll also add associations connecting
-`Visit`,`User`, and `ShortenedURL`.
+`Visit`,`User`, and `ShortenedUrl`.
 
 ### Instructions
 
@@ -227,7 +222,7 @@ Add the three following methods to the `ShortenedUrl` class:
 
 * `#num_clicks`
 * `#num_uniques`
-* `num_recent_uniques`
+* `#num_recent_uniques`
 
 `ShortenedUrl#num_clicks` should count the number of clicks on a `ShortenedUrl`.
 
@@ -260,12 +255,10 @@ clicks in a recent time period (say, `10.minutes.ago`). This involves throwing a
 You probably wrote a has_many association that looked like this:
 
 ```ruby
-class ShortenedUrl < ActiveRecord::Base
-  has_many(
-    :visitors,
+class ShortenedUrl < ApplicationRecord
+  has_many :visitors,
     through: :visits,
     source: :visitor
-  )
 end
 ```
 
@@ -273,18 +266,16 @@ To get this association to return each visitor exactly once, we can add a magic
 "scope block" to ask Rails to remove duplicates:
 
 ```ruby
-class ShortenedUrl < ActiveRecord::Base
-  has_many(
-    :visitors,
+class ShortenedUrl < ApplicationRecord
+  has_many :visitors,
     Proc.new { distinct }, #<<<
     through: :visits,
     source: :visitor
-  )
 end
 ```
 
 This will call `#distinct` on the visitors, returning only unique visitors. It
-is common to write `-> { distinct }` for `Proc.new { distinct }`, because it is
+is common to write a lambda literal like so `-> { distinct }` rather than `Proc.new { distinct }`, because it is
 a little shorter.
 
 Use a "distinct-ified" version of `visitors` to rewrite `num_uniques` simply.
@@ -308,10 +299,12 @@ Everything should be working before you move on.
 
 ### Overview
 
-Now we're going to write a very simple command-line interface in `bin/cli`
-(the convention for Rails scripts is to omit the extension `.rb`). You already
-know how to do this -- you have written programs that had CLIs using functions like
-`puts` and `gets.chomp` (e.g., Chess, Minesweeper, &c.).
+Now we're going to write a very simple command-line interface in `bin/cli`.
+We'll write this as a command-line script, we'll omit the `.rb` extension.
+Instead, we can write `#!/usr/bin/env ruby` on the first line of the file to tell the command-line interpreter that this is a ruby file. This is known as a [Shebang][shebang].
+You already know how to do this -- you have written programs that had CLIs using functions like `puts` and `gets.chomp` (e.g., Chess, Minesweeper, &c.).
+
+[shebang]: https://en.wikipedia.org/wiki/Shebang_(Unix)
 
 ### Instructions
 
@@ -390,7 +383,6 @@ shortened urls.
 
 ## Phase V: TagTopic and Tagging
 
-
 ### Overview
 
 In this phase we'll allow users to choose a set of predefined `TagTopic`'s
@@ -446,7 +438,7 @@ If your method is working correctly you shouldn't be able to! Now test that non-
 users cannot create more than 5 total URLs. Once everything is working move
 on to the next step!
 
-## Phase VIII: Pruning Stale URLs
+## Phase VII: Pruning Stale URLs
 
 ### Overview
 
@@ -463,34 +455,31 @@ query. Use the following code snippet in `rails console` to make sure
 your `prune` method is working as hoped.
 
 ```ruby
-u1 = User.create!(email: "jefferson@cats.com", premium: true)
-u2 = User.create!(email: "muenster@cats.com")
+u1 = User.create!(email: 'jefferson@cats.com', premium: true)
+u2 = User.create!(email: 'muenster@cats.com')
 
-su1 = ShortenedUrl.create_for_user_and_long_url!(u1, "www.boxes.com")
-su2 = ShortenedUrl.create_for_user_and_long_url!(u2, "www.meowmix.com")
-su3 = ShortenedUrl.create_for_user_and_long_url!(u2, "www.smallrodents.com")
+su1 = ShortenedUrl.create_for_user_and_long_url!(u1, 'www.boxes.com')
+su2 = ShortenedUrl.create_for_user_and_long_url!(u2, 'www.meowmix.com')
+su3 = ShortenedUrl.create_for_user_and_long_url!(u2, 'www.smallrodents.com')
 
 v1 = Visit.create!(user_id: u1.id, shortened_url_id: su1.id)
 v2 = Visit.create!(user_id: u1.id, shortened_url_id: su2.id)
-
 
 ShortenedUrl.all # should return su1, su2 and su3
 ShortenedUrl.prune(10)
 ShortenedUrl.all # should return su1, su2 and su3
 
-
 # wait at least one minute
 ShortenedUrl.prune(1)
 ShortenedUrl.all # should return only su1
 
-su2 = ShortenedUrl.create_for_user_and_long_url!(u2, "www.meowmix.com")
+su2 = ShortenedUrl.create_for_user_and_long_url!(u2, 'www.meowmix.com')
 v3 = Visit.create!(user_id: u2.id, shortened_url_id: su2.id)
 # wait at least two minutes
 v4 = Visit.create!(user_id: u1.id, shortened_url_id: su2.id)
 
 ShortenedUrl.prune(1)
 ShortenedUrl.all # should return su1 and su2
-
 ```
 
 Once you have `ShortenedUrl::prune` working, check out ActiveRecord's

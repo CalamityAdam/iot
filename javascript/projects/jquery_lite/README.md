@@ -1,4 +1,4 @@
-#jQuery Lite!
+# jQuery Lite!
 
 ## Overview
 
@@ -8,7 +8,7 @@ events, manipulating the DOM, and guaranteeing it works across browsers.
 
 We will implement most of this functionality using the native DOM API
 that is built right in to every browser. For a full list of API methods check
-out the the [MDN site][document-apis]. You will be surprised how little you
+out the [MDN site][document-apis]. You will be surprised how little you
 actually need jQuery when you finish this project! Use the [documentation on
 jQuery][jquery] if you need more info on the jQuery methods you are building.
 
@@ -55,7 +55,7 @@ convenient methods for traversal and manipulation. We will implement
 `children`, and `parent`.
 
 #### `$l(selector)`
-* The core function, as we know, recieves one argument. If that argument
+* The core function, as we know, receives one argument. If that argument
   is a string, it is expected to be a `CSS` selector that we can use to
   identify nodes in the page.
 * Use [this method][querySelectorAll] to get an *array like* object
@@ -215,7 +215,7 @@ objA //=> {a: 'a', b: 'b', c: 'c'}
   to get a sense of what the defaults should be. Provide defaults for
 `success`, `error`, `url`, `method`, `data`,  and `contentType`.
 * Merge the `options` onto the `defaults`
-* Review [this reading][vanilla_ajax] to learn how
+* Review [this reading][vanilla_javascript] to learn how
   to implement an AJAX request using the native JavaScript API. It's
   actually quite easy!
 * Using the options supplied by the user, make the request. Be sure to
@@ -223,9 +223,8 @@ objA //=> {a: 'a', b: 'b', c: 'c'}
   should be an object (use JSON.parse) and not a string.
 
 ## SUPER Bonus Phase (do this after the rest of the day's exercises)
-* Have your `ajax` function return a `Promise`
-* Use a [`Promise`][promise-reading] to pretty up the usage of your AJAX
-  function. [Read about promise usage here][promise_doc].
+* Have your `ajax` function return a [`Promise`][promise-reading]
+  * [Read about Promise usage here][promise_doc]
 
 [jquery]: http://api.jquery.com/
 [jquery-library]: https://developers.google.com/speed/libraries/#jquery
@@ -241,4 +240,4 @@ objA //=> {a: 'a', b: 'b', c: 'c'}
 [removeeventlistener]: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener
 [sample-ajax-request]: ../../readings/simple-ajax-example.md
 [jquery_ajax]: http://api.jquery.com/jquery.ajax/
-[vanilla_ajax]: ../../readings/vanilla_ajax.md
+[vanilla_javascript]: ../../readings/vanilla_javascript.md

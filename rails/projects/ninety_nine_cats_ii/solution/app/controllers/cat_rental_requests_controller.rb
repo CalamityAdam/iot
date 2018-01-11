@@ -1,6 +1,6 @@
 class CatRentalRequestsController < ApplicationController
-  before_action :require_user!, only: [:approve, :deny]
-  before_action :require_cat_ownership!, only: [:approve, :deny]
+  before_action :require_user!, only: %i(approve deny)
+  before_action :require_cat_ownership!, only: %i(approve deny)
 
   def approve
     current_cat_rental_request.approve!
@@ -24,10 +24,11 @@ class CatRentalRequestsController < ApplicationController
   end
 
   def new
-    @rental_request = CatRentalRequest.new
+    @rental_request = CatRentalRequest.new(cat_id: params[:cat_id])
   end
 
   private
+
   def current_cat_rental_request
     @rental_request ||=
       CatRentalRequest.includes(:cat).find(params[:id])

@@ -205,10 +205,10 @@ the event handler should be called whenever we mouseover any `li` in
 non-li items, but call our event handler for list items.
 
 Note that we use `event.currentTarget` here. When we use event
-delegation, jQuery will reset `event.currentTarget` to be the item
+delegation, jQuery will reset `event.currentTarget` to be the
 `li` item. jQuery will set `event.delegateTarget` to be
-`ul.cool-things`. `event.target` will be the item that was triggered
-the mouseover event: it could be an `li`, or it could be an item
+`ul.cool-things`. `event.target` will be the item that triggered the
+mouseover event: it could be an `li`, or it could be an item
 further nested in the `li`. For instance:
 
 ```html

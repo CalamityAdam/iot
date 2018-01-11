@@ -5,21 +5,23 @@ import {
   RECEIVE_POKEMON_ERRORS,
   CREATE_POKEMON,
   START_LOADING_ALL_POKEMON,
-  START_LOADING_SINGLE_POKEMON } from '../actions/pokemon_actions';
+  START_LOADING_SINGLE_POKEMON
+} from '../actions/pokemon_actions';
 
 const initialState = {
   indexLoading: false,
   detailLoading: false
 };
 
-export default (state = initialState, action) => {
+const loadingReducer = (state = initialState, action) => {
   Object.freeze(state);
   switch(action.type){
     case RECEIVE_ALL_POKEMON:
+      return Object.assign({}, state, { indexLoading: false });
     case RECEIVE_NEW_POKEMON:
     case RECEIVE_SINGLE_POKEMON:
     case RECEIVE_POKEMON_ERRORS:
-      return initialState;
+      return Object.assign({}, state, { detailLoading: false });
     case START_LOADING_ALL_POKEMON:
       return Object.assign({}, state, { indexLoading: true });
     case CREATE_POKEMON:
@@ -29,3 +31,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default loadingReducer;

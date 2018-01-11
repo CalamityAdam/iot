@@ -3,17 +3,17 @@
 In this project, we will refer to the [AuthVideoDemo][video-demo]
 project.
 
-## Phase I: bcrypt
+## Phase I: BCrypt
 
-### Don't store passwords in the DB
+### Don't Store Passwords In The DB
 
 Never store passwords in the database. This is bad, because if someone
 hacks your server and gains access to the database, they will be able
 to steal all of your user's passwords. Since your users probably use
 the same password across services, the hacker will be able to login to
-the user's gmail, facebook, etc.
+the user's Gmail, Facebook, etc.
 
-### What is a hash function?
+### What Is A Hash Function?
 
 The solution to this problem is to use a **hash function**. A hash
 function is a "one-way" function; it is easy to compute in one
@@ -33,21 +33,20 @@ the mathematicians), is to design a function where:
 * Even though the scrambling isn't truly random, it should still be
   difficult (that is, near impossible) to "unscramble".
 
-### Using a library
+### Using a Library
 
 Let's use a library called `bcrypt` to do the hashing for
 us. First `gem install bcrypt`. Now let's play in the console:
 
-```
-[1] pry(main)> require 'bcrypt'
-=> true
-[2] pry(main)> password_hash = BCrypt::Password.create("my_secret_password")
-
-=> "$2a$10$sl.3R32Paf64TqYRU3DBduNJkZMNBsbjyr8WIOdUi/s9TM4VmHNHO"
-[3] pry(main)> password_hash.is_password?("my_secret_password")
-=> true
-[4] pry(main)> password_hash.is_password?("not_my_secret_password")
-=> false
+```ruby
+require 'bcrypt'
+# => true
+password_hash = BCrypt::Password.create('my_secret_password')
+# => "$2a$10$sl.3R32Paf64TqYRU3DBduNJkZMNBsbjyr8WIOdUi/s9TM4VmHNHO"
+password_hash.is_password?('my_secret_password')
+# => true
+password_hash.is_password?('not_my_secret_password')
+# => false
 ```
 
 We use the `BCrypt::Password` class here; the `::create` factory
@@ -65,9 +64,9 @@ equal and `#is_password?` returns true; otherwise false is returned.
 
 Edit your `Gemfile`; add `gem 'bcrypt'`.
 
-## Phase II: `User` model
+## Phase II: `User` Model
 
-### Initial columns and indices
+### Initial Columns And Indices
 
 Let's start with `rails g model user`. Add string columns to the
 `users` table: `username` and `password_digest`. **Digest** is another
@@ -76,34 +75,34 @@ name for a hash. Toss on an index for `username` too (make it unique).
 Note that we **will not** store the password itself in the DB; we're
 going to store the hashed version.
 
-### Storing/verifying a password
+### Storing/Verifying A Password
 
 Let's create a `User` object:
 
-```
-[1] pry(main)> u = User.new
-=> #<User id: nil, username: nil, password_digest: nil, created_at: nil, updated_at: nil>
-[2] pry(main)> u.username = "earl"
-=> "earl"
-[4] pry(main)> u.password_digest = BCrypt::Password.create("i_love_breakfast")
-=> "$2a$10$oO6LUi.ikUl7rloGcZ.NFeURc0pNQhQA9MTaB89XX/kDNm.3vQVVu"
-[5] pry(main)> u.save
-   (0.3ms)  BEGIN
-  SQL (108.5ms)  INSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 14 Aug 2013 18:50:23 UTC +00:00], ["password_digest", "$2a$10$oO6LUi.ikUl7rloGcZ.NFeURc0pNQhQA9MTaB89XX/kDNm.3vQVVu"], ["updated_at", Wed, 14 Aug 2013 18:50:23 UTC +00:00], ["username", "earl"]]
-   (0.5ms)  COMMIT
-=> true
-[6] pry(main)> u.password_digest
-=> "$2a$10$oO6LUi.ikUl7rloGcZ.NFeURc0pNQhQA9MTaB89XX/kDNm.3vQVVu"
+```ruby
+u = User.new
+# => #<User id: nil, username: nil, password_digest: nil, created_at: nil, updated_at: nil>
+u.username = 'earl'
+# => "earl"
+u.password_digest = BCrypt::Password.create('i_love_breakfast')
+# => "$2a$10$oO6LUi.ikUl7rloGcZ.NFeURc0pNQhQA9MTaB89XX/kDNm.3vQVVu"
+u.save
+#   (0.3ms)  BEGIN
+#  SQL (108.5ms)  INSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 14 Aug 2013 18:50:23 UTC +00:00], ["password_digest", "$2a$10$oO6LUi.ikUl7rloGcZ.NFeURc0pNQhQA9MTaB89XX/kDNm.3vQVVu"], ["updated_at", Wed, 14 Aug 2013 18:50:23 UTC +00:00], ["username", "earl"]]
+#   (0.5ms)  COMMIT
+# => true
+u.password_digest
+# => "$2a$10$oO6LUi.ikUl7rloGcZ.NFeURc0pNQhQA9MTaB89XX/kDNm.3vQVVu"
 ```
 
 Let's see how to verify a password later:
 
-```
-[8] pry(main)> u = User.first
-  User Load (0.7ms)  SELECT "users".* FROM "users" LIMIT 1
-=> #<User id: 1, username: "earl", password_digest: "$2a$10$oO6LUi.ikUl7rloGcZ.NFeURc0pNQhQA9MTaB89XX/kD...", created_at: "2013-08-14 18:50:23", updated_at: "2013-08-14 18:50:23">
-[9] pry(main)> BCrypt::Password.new(u.password_digest).is_password?("i_love_breakfast")
-=> true
+```ruby
+u = User.first
+#  User Load (0.7ms)  SELECT "users".* FROM "users" LIMIT 1
+# => #<User id: 1, username: "earl", password_digest: "$2a$10$oO6LUi.ikUl7rloGcZ.NFeURc0pNQhQA9MTaB89XX/kD...", created_at: "2013-08-14 18:50:23", updated_at: "2013-08-14 18:50:23">
+BCrypt::Password.new(u.password_digest).is_password?('i_love_breakfast')
+# => true
 ```
 
 Okay, cool. Notice that when we pull down the `User`,
@@ -112,19 +111,19 @@ stores. We want to get a `BCrypt::Password` object back from the
 digest. Because the digest is **already hashed**, we use the `new`
 constructor rather than the `create` factory method; `create` creates
 a `Password` object by hashing the input, while `new` builds a
-`Password` object from an existing, stringified hash.
+`Password` object from an existing, string-ified hash.
 
 Anyway all this code is not very convenient. Let's add some
 helper-methods to `User`.
 
-### Write `User#password=` and `User#is_password?`
+### Write `User#password=` And `User#is_password?`
 
 Let's first write a method that will make it easier to set the
 `password_digest` column; right now, the programmer is required to
 hash the password themselves. Let's do it for them:
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
   end
@@ -141,7 +140,7 @@ Likewise, let's save the programmer from having to do the hard work of
 verifying a password:
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
   end
@@ -154,32 +153,32 @@ end
 
 Let's test it out!
 
-```
-[3] pry(main)> u = User.new
-=> #<User id: nil, username: nil, password_digest: nil, created_at: nil, updated_at: nil>
-[4] pry(main)> u.username = "Houdini"
-=> "Houdini"
-[5] pry(main)> u.password = "i_remember_kiki"
-=> "i_remember_kiki"
-[6] pry(main)> u.save
-   (0.3ms)  BEGIN
-  SQL (4.8ms)  INSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 14 Aug 2013 19:01:58 UTC +00:00], ["password_digest", "$2a$10$.cMnzIMCgh/VUZ1OF3dJUOf1zJSRBw2t6YMAcKeuIbYmx8KK3.u9G"], ["updated_at", Wed, 14 Aug 2013 19:01:58 UTC +00:00], ["username", "Houdini"]]
-   (2.6ms)  COMMIT
-=> true
-[7] pry(main)> u = User.last
-  User Load (0.8ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1
-=> #<User id: 2, username: "Houdini", password_digest: "$2a$10$.cMnzIMCgh/VUZ1OF3dJUOf1zJSRBw2t6YMAcKeuIbYm...", created_at: "2013-08-14 19:01:58", updated_at: "2013-08-14 19:01:58">
-[8] pry(main)> u.is_password?("i_remember_kiki")
-=> true
-[9] pry(main)> u.is_password?("random_password_guess")
-=> false
+```ruby
+u = User.new
+# => #<User id: nil, username: nil, password_digest: nil, created_at: nil, updated_at: nil>
+u.username = 'Houdini'
+# => "Houdini"
+u.password = 'i_remember_kiki'
+# => "i_remember_kiki"
+u.save
+#   (0.3ms)  BEGIN
+#  SQL (4.8ms)  INSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 14 Aug 2013 19:01:58 UTC +00:00], ["password_digest", "$2a$10$.cMnzIMCgh/VUZ1OF3dJUOf1zJSRBw2t6YMAcKeuIbYmx8KK3.u9G"], ["updated_at", Wed, 14 Aug 2013 19:01:58 UTC +00:00], ["username", "Houdini"]]
+#   (2.6ms)  COMMIT
+# => true
+u = User.last
+#  User Load (0.8ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1
+# => #<User id: 2, username: "Houdini", password_digest: "$2a$10$.cMnzIMCgh/VUZ1OF3dJUOf1zJSRBw2t6YMAcKeuIbYm...", created_at: "2013-08-14 19:01:58", updated_at: "2013-08-14 19:01:58">
+u.is_password?('i_remember_kiki')
+# => true
+u.is_password?('random_password_guess')
+# => false
 ```
 
 Whoa, object orientation for the win! Hey, did you know it's totally
 cool to write methods on your model objects? I grant thee the
 permission! Go forth, and multiply methods!
 
-## Phase III: Creating new users
+## Phase III: Creating New Users
 
 Let's add a `UsersController` and a `users` resource. Let's add a
 `new` view so that the user can sign up for the site.
@@ -200,9 +199,9 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-  
+
   private
-  
+
   def user_params
     params.require(:user).permit(:username, :password)
   end
@@ -264,7 +263,7 @@ toss some validations on:
 ```ruby
 class User < ActiveRecord::Base
   validates :username, presence: true
-  validates :password_digest, presence: { message: "Password can't be blank" }
+  validates :password_digest, presence: { message: 'Password can\'t be blank' }
 
   # ...
 end
@@ -298,11 +297,11 @@ not** try to save the password to the DB, however. Instead, the
 We can now validate the password:
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   attr_reader :password
 
   validates :username, presence: true
-  validates :password_digest, presence: { message: "Password can't be blank" }
+  validates :password_digest, presence: { message: 'Password can\'t be blank' }
   validates :password, length: { minimum: 6, allow_nil: true }
 
   # ...
@@ -315,26 +314,25 @@ to check only database columns; you can apply a validation to any
 attribute.
 
 I also added `allow_nil: true`. This means the validation will
-not run if the password attribute is blank. This is desirable, because
+pass if `@password` is `nil`. This is desirable, because
 the `@password` attribute is only set **if we change the password with
 `#password=`.**
 
 Let me give an example:
 
-```
-[7] pry(main)> User.create!(username: "houdini", password: "password")
-
-   (0.3ms)  BEGIN
-  SQL (0.6ms)  INSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 14 Aug 2013 20:53:14 UTC +00:00], ["password_digest", "$2a$10$88gQuHB0WxPa//tsI6pB4.xwrMWFGdtjnoMfSSfzgpzp5xIiQhM.6"], ["updated_at", Wed, 14 Aug 2013 20:53:14 UTC +00:00], ["username", "houdini"]]
-   (2.0ms)  COMMIT
-=> #<User id: 6, username: "houdini", password_digest: "$2a$10$88gQuHB0WxPa//tsI6pB4.xwrMWFGdtjnoMfSSfzgpzp...", created_at: "2013-08-14 20:53:14", updated_at: "2013-08-14 20:53:14">
-[8] pry(main)> u = User.last
-  User Load (0.5ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1
-=> #<User id: 6, username: "houdini", password_digest: "$2a$10$88gQuHB0WxPa//tsI6pB4.xwrMWFGdtjnoMfSSfzgpzp...", created_at: "2013-08-14 20:53:14", updated_at: "2013-08-14 20:53:14">
-[9] pry(main)> u.password
-=> nil
-[10] pry(main)> u.password_digest
-=> "$2a$10$88gQuHB0WxPa//tsI6pB4.xwrMWFGdtjnoMfSSfzgpzp5xIiQhM.6"
+```ruby
+User.create!(username: 'houdini', password: 'password')
+#   (0.3ms)  BEGIN
+#  SQL (0.6ms)  INSERT INTO "users" ("created_at", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 14 Aug 2013 20:53:14 UTC +00:00], ["password_digest", "$2a$10$88gQuHB0WxPa//tsI6pB4.xwrMWFGdtjnoMfSSfzgpzp5xIiQhM.6"], ["updated_at", Wed, 14 Aug 2013 20:53:14 UTC +00:00], ["username", "houdini"]]
+#   (2.0ms)  COMMIT
+# => #<User id: 6, username: "houdini", password_digest: "$2a$10$88gQuHB0WxPa//tsI6pB4.xwrMWFGdtjnoMfSSfzgpzp...", created_at: "2013-08-14 20:53:14", updated_at: "2013-08-14 20:53:14">
+u = User.last
+#  User Load (0.5ms)  SELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1
+# => #<User id: 6, username: "houdini", password_digest: "$2a$10$88gQuHB0WxPa//tsI6pB4.xwrMWFGdtjnoMfSSfzgpzp...", created_at: "2013-08-14 20:53:14", updated_at: "2013-08-14 20:53:14">
+u.password
+# => nil
+u.password_digest
+# => "$2a$10$88gQuHB0WxPa//tsI6pB4.xwrMWFGdtjnoMfSSfzgpzp5xIiQhM.6"
 ```
 
 Notice that after we fetch Houdini back from the DB, the password is
@@ -343,8 +341,10 @@ variable that was never going to get persisted to the DB.
 
 Let's try one more thing:
 
-    [11] pry(main)> u.valid?
-    => true
+```ruby
+u.valid?
+# => true
+```
 
 If we didn't `allow_nil: true`, then Houdini would be marked as
 invalid, because a `nil` `password` attribute would not meet the

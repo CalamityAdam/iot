@@ -1,4 +1,5 @@
 const path = require('path');
+
 module.exports = {
   context: __dirname,
   entry: './frontend/pokedex.jsx',
@@ -16,10 +17,10 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['env', 'react']
         }
       }
     ]
   },
-  devtool: 'source-maps'
+  devtool: 'source-map',
 };

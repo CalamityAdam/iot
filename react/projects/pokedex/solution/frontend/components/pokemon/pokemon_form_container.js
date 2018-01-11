@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
-import { createPokemon } from '../../actions/pokemon_actions';
-import PokemonForm from './pokemon_form';
 
-const mapStateToProps = ({ errors }) => ({
-  errors
+import PokemonForm from './pokemon_form';
+import { createPokemon } from '../../actions/pokemon_actions';
+
+const mapStateToProps = ({ ui }) => ({
+  errors: ui.errors
 });
 
 const mapDispatchToProps = dispatch => ({
-	createPokemon: pokemon => dispatch(createPokemon(pokemon))
+  createPokemon: pokemon => dispatch(createPokemon(pokemon))
 });
 
 export default connect(

@@ -16,7 +16,7 @@ def sum_rec(nums)
 end
 
 def exp1(base, power)
-  (power == 0) ? 1 : (base * exp1(base, power - 1))
+  power == 0 ? 1 : base * exp1(base, power - 1)
 end
 
 def exp2(base, power)
@@ -34,8 +34,6 @@ end
 
 class Array
   def deep_dup
-    # Argh! Mario and Kriti beat me with a one line version?? Must
-    # have used `inject`...
     new_array = []
     self.each do |el|
       new_array << (el.is_a?(Array) ? el.deep_dup : el)
@@ -43,13 +41,7 @@ class Array
     new_array
   end
 
-  # The renowned one-line inject version of deep_dup
-  # Beware inject!
-  def dd_inject
-    inject([]) { |dup, el| dup << (el.is_a?(Array) ? el.dd_inject : el) }
-  end
-
-  # Beware map! The ultimate one-liner.
+  # The ultimate one-liner!
   def dd_map
     map { |el| el.is_a?(Array) ? el.dd_map : el }
   end
@@ -107,7 +99,7 @@ def permutations(array)
   # gets added to total_permutations.
   perms.each do |perm|
     (0..perm.length).each do |i|
-      total_permutations << perm[0 ... i] + [first] + perm[i .. -1]
+      total_permutations << perm[0...i] + [first] + perm[i..-1]
     end
   end
   total_permutations
@@ -128,7 +120,7 @@ def bsearch(nums, target)
     # search in the right; don't forget that the right subarray starts
     # at `probe_index + 1`, so we need to offset by that amount.
     sub_answer = bsearch(nums.drop(probe_index + 1), target)
-    (sub_answer.nil?) ? nil : (probe_index + 1) + sub_answer
+    sub_answer.nil? ? nil : (probe_index + 1) + sub_answer
   end
 
   # Note that the array size is always decreasing through each
@@ -151,8 +143,7 @@ class Array
   def merge(left, right)
     merged_array = []
     until left.empty? || right.empty?
-      merged_array <<
-        ((left.first < right.first) ? left.shift : right.shift)
+      merged_array << ((left.first < right.first) ? left.shift : right.shift)
     end
 
     merged_array + left + right
@@ -200,7 +191,7 @@ def make_change(target, coins = [25, 10, 5, 1])
     this_change = [coin] + best_remainder
 
     # Is this better than anything we've seen so far?
-    if (best_change.nil? || (this_change.count < best_change.count))
+    if best_change.nil? || (this_change.count < best_change.count)
       best_change = this_change
     end
   end

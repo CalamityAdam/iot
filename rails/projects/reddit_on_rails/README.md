@@ -11,23 +11,31 @@
 + Know when to use regular associations and when to use join tables
 + Know how to avoid N+1 queries
 
+## Quick Review
+
+This is the last Rails project before building Rails Lite yourself tomorrow.
+Take a few minutes to talk through the whole request/response cycle with your
+partner before getting started. Feel free to reference this diagram as needed.
+
+![rails diagram](../../assets/rails_diagram.png)
+
 ## Phase I: Auth
 
 Write a basic Auth implementation
 (`User`, `UsersController`, `SessionsController`).
 
-**Do not looks at previous day's solutions.  Write Auth from scratch!**  It is important that you understand how each method works, and how to debug any errors you may encounter.  
+**Do not look at previous days' solutions.  Write Auth from scratch!**  It is important that you understand how each method works, and how to debug any errors you may encounter.  
 
 ## Phase II: `Sub` and `Post`
 
-A `Sub` is a topic-specific subforum to which users submit a
+A `Sub` is a topic-specific sub-forum to which users submit a
 `Post`. Start by writing a `Sub` model and `SubsController`. The
 `Sub` should have `title` and `description` attributes and a
 `moderator` association. The creator of the `Sub` is the
 `moderator`.
 
 Write all the standard seven routes for `SubsController`. You can leave
-out `destroy` if you like.
+out `destroy` if you'd like.
 
 Write an `edit` route where the moderator is allowed to
 update the `title` and `description`. Use a `before_action` to
@@ -42,7 +50,7 @@ consist of:
 * A `sub` association to the `Sub` the `Post` is submitted to (required)
 * An `author` association.
 
-Again, write all the standard `PostsController` actions, excepting
+Again, write all the standard `PostsController` actions, except for
 `index` (the `subs#show` can list `posts`).
 
 Write `posts#edit` and `posts#update` controller actions (and routes)
@@ -56,8 +64,9 @@ relationship. Add appropriate DB constraints and model validations to
 `PostSub`. Require that a `Post` has at least one associated sub.
 Create appropriate associations between `Post`, `PostSub`, and `Sub`.
 
-Edit your 'Post' new/edit views to allow the user to select multiple subs
-via checkboxes
+Edit your 'Post' new/edit views to allow the user to select multiple
+subs via checkboxes.
+
 * Structure your HTML form to upload an array of `sub_ids` nested under `post`
 * Update the `PostsController#post_params` to accept an array of `sub_ids`
 
@@ -86,11 +95,10 @@ Start by focusing on top-level comments. Write a `Comment` model with:
 * An `author` association,
 * A `post` association.
 
-Write a `CommentsController` and add a route to `create`
-`Comment`. The `new` route could have a url like
-`/posts/123/comments/new`. I recommend that your form post to a
-top-level `/comments` URL, though. These are the only two comments
-routes you need so far.
+Create `CommentsController` and a top-level `create` route.
+Also create a `new` route nested under `posts` (should look
+like: `/posts/:post_id/comments/new`).
+These are the only two comments routes you need so far.
 
 Edit your `PostsController#show` view to provide a link to a comment
 form and to display top-level comments.
@@ -104,6 +112,10 @@ comments should store a reference to their parent. **Nested-comments
 should still store a `post_id`, even though this may seem redundant**;
 later we'll see why. Write a `Comment#child_comments` association.
 Write a `Post#comments` association.
+
+Please note that Rails 5 automatically validates `belongs_to`
+associations, so you'll need to pass it `optional: true` when you want
+to allow for `nil` foreign keys.
 
 On your `PostsController#show` page, for each top level comment, add a
 link to the `show` page of the comment (e.g., to `/comments/123`). You

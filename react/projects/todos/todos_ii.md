@@ -10,7 +10,7 @@ We will also learn to use and implement thunk middleware to handle asynchronous 
 
 ## Phase 0
 
-If you haven't already, finish part one of the project through phase 5 (up to, but not including, steps). You will not need to have steps implemented to work with most of today's project, but you will need a working todo form.
+If you haven't already, finish [Part 1][todos-i] of the project through Phase 4 (up to, but not including, updating/deleting todos). You will not need to have update/delete functionality to work with most of today's project, but you will need a working todo form.
 
 ## Phase 1: Rails API
 
@@ -29,31 +29,35 @@ that either fire AJAX requests or render the newest application state.
 
 Let's get started!
 
-+ Create a new rails project using `--database=postgresql` and `--skip-turbolinks`
-+ Update your Gemfile with `pry-rails`, `binding_of_caller`, `better_errors` and `annotate`.
+* Create a new rails project using `--database=postgresql` and `--skip-turbolinks`
+* Update your `Gemfile` with `pry-rails`, `binding_of_caller`, `better_errors` and `annotate`.
+* As of `Rails 5.1.2`, Rails no longer includes JQuery by default. To allow us to use `$.ajax`, include the following:
+  * Include `gem 'jquery-rails'` in your `Gemfile`
+  * Include `//= require jquery` and `//= require jquery_ujs` in `application.js` above `//= require_tree .`
 
 ### Todos
-+ Create a `Todo` migration and model with a `title` string (required), a `body` string (required), and a `done` boolean (required).
-  + Add the necessary validations to the database and model.
-    + NB: Validating boolean fields at the model level can create interesting bugs. `presence: true` will
+* Create a `Todo` migration and model with a `title` string (required), a `body` string (required), and a `done` boolean (required).
+  * Add the necessary validations to the database and model.
+    * NB: Validating boolean fields at the model level can create interesting bugs. `presence: true` will
     fail because Rails checks for presence by calling `blank?` on the validated attribute.
     Since `false` is considered `blank` it will fail the validation. Instead, use
     `validates :boolean_field_name, inclusion: { in: [true, false] }`
     at the model level to validate boolean fields.
-+ Make sure Postgres is running on your machine
-  + Run `rake db:create`.
-  + Run `rake db:migrate`.
+* Make sure Postgres is running on your machine
+  * Run `rails db:create`.
+  * Run `rails db:migrate`.
 
 **Test your setup** - Try creating a couple of todos in your database using the
 Rails console (`rails c`).
 
-+ Create an `Api::TodosController` to handle our API requests for todos.
-  + It should create `app/controller/api/todos_controller.rb`.
-+ Define `show`, `index`, `create`, `update`, and `destroy` actions in your controller.
-+ Make your controller actions serve JSON-formatted responses.
-+ Define a private helper method for `todo_params`.
+* Create an `Api::TodosController` to handle our API requests for todos.
+  * It should create `app/controller/api/todos_controller.rb`.
+* Define `show`, `index`, `create`, `update`, and `destroy` actions in your controller.
+* Make your controller actions serve JSON-formatted responses.
+* Define a private helper method for `todo_params`.
 
 For example, your `show` and `create` actions should look like this:
+
 ```rb
 # app/controller/api/todos_controller.rb
 def show
@@ -71,30 +75,41 @@ end
 ```
 
 ### Routes
-+ Create routes for `:index`, `:show`, `:create`, `:destroy`, and `:update`.
-+ Nest your routes under [namespace][namespace-docs] `api`.
-+ In `config/routes.rb`, set `defaults: {format: :json}` for your `api` namespace.
 
-**Test your routes** - You should get the following when you run `rake routes`.
+* Create routes for `:index`, `:show`, `:create`, `:destroy`, and `:update`.
+* Nest your routes under [namespace][namespace-docs] `api`.
+* In `config/routes.rb`, set `defaults: {format: :json}` for your `api` namespace.
+
+**Test your routes** - You should get the following when you run `rails routes`.
+
 ```
-api_todos GET    /api/todos(.:format)     api/todos#index {:format=>:json}
-          POST   /api/todos(.:format)     api/todos#create {:format=>:json}
- api_todo GET    /api/todos/:id(.:format) api/todos#show {:format=>:json}
-          PATCH  /api/todos/:id(.:format) api/todos#update {:format=>:json}
-          PUT    /api/todos/:id(.:format) api/todos#update {:format=>:json}
-          DELETE /api/todos/:id(.:format) api/todos#destroy {:format=>:json}
+api_todos GET    /api/todos(.:format)     api/todos#index {format: :json}
+          POST   /api/todos(.:format)     api/todos#create {format: :json}
+ api_todo GET    /api/todos/:id(.:format) api/todos#show {format: :json}
+          PATCH  /api/todos/:id(.:format) api/todos#update {format: :json}
+          PUT    /api/todos/:id(.:format) api/todos#update {format: :json}
+          DELETE /api/todos/:id(.:format) api/todos#destroy {format: :json}
 ```
 
 ### StaticPages
-+ Create a `StaticPagesController` that will serve a `root` view with `<div id="content"></div>`.
-+ Update `routes.rb` to `root to: "static_pages#root"`.
 
+* Create a `StaticPagesController` that will serve a `root` view with `<div id="content"></div>`.
+* Update `routes.rb` to `root to: 'static_pages#root'`.
+
+Since Rails 5 doesn't include jQuery for us, we're going to need to do one more thing to get jQuery's `ajax` to work.
+To add jQuery to your project:
+
+1. Add `gem jquery-rails` to your `Gemfile`.
+2. Run `bundle install`.
+3. Add `//= require jquery` and `//= require jquery_ujs` to your `application.js`
+4. If your Rails server was previously running, restart it.
 
 You're almost ready to go!
-+ Seed your database with a few todos for testing.
-+ Start your server (`rails s`) so that it can respond to HTTP requests.
-+ Visit [http://localhost:3000/](http://localhost:3000/). It should render your root page.
-  + Inspect the page and double check that `<div id="content"></div>` is present.
+
+* Seed your database with a few todos for testing.
+* Start your server (`rails s`) so that it can respond to HTTP requests.
+* Visit [http://localhost:3000/](http://localhost:3000/). It should render your root page.
+  * Inspect the page and double check that `<div id="content"></div>` is present.
 
 **Test your API** - Try out your API endpoints using `$.ajax`. You should be able
 to send `POST`, `GET`, `PATCH`, and `DELETE` requests and receive the appropriate
@@ -102,8 +117,14 @@ responses in the console.
 
 For example, try:
 
-```
-$.ajax({ method: 'GET', url: 'api/todos' }).then(console.log, console.log);
+```js
+$.ajax({
+  method: 'GET',
+  url: '/api/todos'
+}).then(
+  todos => console.log(todos),
+  error => console.log(error)
+);
 ```
 
 [namespace-docs]: http://guides.rubyonrails.org/routing.html#controller-namespaces-and-routing
@@ -114,10 +135,6 @@ Your entire todos project from yesterday will function as the frontend folder fo
 You will also need your `package.json` and `webpack.config.js` which should be put in the root folder, but you do not need `index.html`.
 
 Modify the output path in your webpack config to create bundle in `app/assets/javascripts` rather than the root directory. Take a look at `application.js`: because it includes the line `//= require_tree .` and the bundled file is in `app/assets/javascripts`, the bundled file will be required for you.
-
-You no longer need `webpack-dev-server`, since we are using rails as our server.
-You can remove the `start` script from you `package.json` and replace it with
-the following scripts:
 
 ```json
 "scripts": {
@@ -146,8 +163,8 @@ so that the caller of the function can handle success and failure however they s
 
 Let's write our Todo API Util.
 
-+ Create a file `util/todo_api_util.js`.
-+ Write a function that takes no arguments, makes a request to `api/todos` with a method of `GET`, and returns a promise.
+* Create a file `util/todo_api_util.js`.
+* Write a function that takes no arguments, makes a request to `api/todos` with a method of `GET`, and returns a promise.
 
 **Test your code** - Try running your function in the console and make sure
 you can resolve the promise by passing a function to `then`.
@@ -214,8 +231,8 @@ Since our thunk middleware returns the promise back to the caller, we can take o
 
 ```js
 // inside of handleSubmit
-this.props.createTodo({ todo }).then(
-  () => this.setState({ title: "", body: "" })
+this.props.createTodo({todo}).then(
+  () => this.setState({title: '', body: ''})
 );
 ```
 
@@ -235,13 +252,13 @@ Now that we have somewhere to store errors, when todo creation fails, dispatch t
 You will need to update your `createTodo` action like this.
 
 ```js
-export function createTodo(todo) {
-  return (dispatch) => {
-    return APIUtil.createTodo(todo)
-      .then(todo => dispatch(receiveTodo(todo)),
-            err => dispatch(receiveErrors(err.responseJSON)));
-  };
-}
+const createTodo = todo => dispatch => (
+  APIUtil.createTodo(todo)
+    .then(
+      todo => dispatch(receiveTodo(todo)),
+      err => dispatch(receiveErrors(err.responseJSON))
+    )
+);
 ```
 
 Verify that your error state is populated if you try to create a todo with invalid params.
@@ -249,6 +266,9 @@ Then, inside your todo form component, display the errors. You will need to pass
 `mapStateToProps` of the top level component. Make sure to clear the errors when the todo is successfully created!
 
 #### Updating Todos
+
+**NB:** If you did not finish [Phase 5][todos-i-phase-5] from yesterday (Updating and Deleting Todos), please complete it. You will need the actions and reducer logic before proceeding.
+
 
 This will be very similar to creating todos, (the resulting action will still be `receiveTodo`)
 but we need a different action because we will hit a different route on the back end.
@@ -272,7 +292,6 @@ go through the same process with steps! You will have to write:
 * The API Util
 * The async actions
 
-
 ## Phase 4: Tags
 
 Let's add tags to our todos.
@@ -284,6 +303,7 @@ an array of tag ids, we will expect tags to be sent to the back end as an array 
 Let's write a model method to take care of settings the tags for a specific todo.
 It should create the tag names sent up that do not already exist and find the ones that do.
 It should remove old taggings and create new ones where appropriate. Active record allows you to do this by calling `collection=` and passing it a new collection. Our method looks like this.
+
 ```ruby
 def tag_names=(tag_names)
   self.tags = tag_names.map do |tag_name|
@@ -291,6 +311,7 @@ def tag_names=(tag_names)
   end
 end
 ```
+
 * Inside your todos controller, add `tag_names` to the `todo_params`.
 Remember the alternate syntax to allow the `tag_names` param to be an array.
 When we create/update a todo, Rails will automatically call `tag_names=` for us.
@@ -320,40 +341,39 @@ and logged out users are redirected from `root` to `sessions/new`.
 * Once you can sign up and sign in and out, associate todos with a user! Make a new migration to
 add a `user_id` column to the `todos` table.
 * In the todos controller, associate created todos with the `current_user` like so.
-
-```ruby
-def create
-  @todo = current_user.todos.new(todo_params)
-  # ... etc
-```
-  * Do the same for update and destory actions, searching only the current users todos.
-
-```ruby
-  @todo = current_user.todos.find(params[:id])
-```
+  ```ruby
+  def create
+    @todo = current_user.todos.new(todo_params)
+    # ... etc
+  ```
+  * Do the same for update and destroy actions, searching only the current users todos.
+  ```ruby
+    @todo = current_user.todos.find(params[:id])
+  ```
   * Lastly, modify the `index` action to only render the current user's todos.
 
   You now have a fully authenticated todo app! Celebrate!
 
 ## Bonus
 
-+ Disable your update and delete buttons while the dispatch is pending. Add a spinner!
+* Disable your update and delete buttons while the dispatch is pending. Add a spinner!
 Consider adding a `fetching` boolean to state and new sync actions like
 `requestTodos` to tell the reducer to set `fetching` to true.
-+ Expand tags
-  + Allow updating of tags from todo detail view
-  + Filter todos by tag (filter on the frontend, or send tags in a query string on `fetchTodos`).
-  + Tag suggestions (tag search on the back end) when inputing a new tag.
-  + Steps can have tags (make taggings polymorphic, consider using a concern)
-+ Steps can have sub-steps (polymorphic associations)
-+ Allow markdown or text styling in todos ([quill.js](https://quilljs.com/))
-+ Allow users to update todo title & body
-+ Sorting by priority
-+ Adding a time when something is due
-  + Sort by due date
-  + Item pops up when it is due
+* Expand tags
+  * Allow updating of tags from todo detail view
+  * Filter todos by tag (filter on the frontend, or send tags in a query string on `fetchTodos`).
+  * Tag suggestions (tag search on the back end) when inputing a new tag.
+  * Steps can have tags (make taggings polymorphic, consider using a concern)
+* Steps can have sub-steps (polymorphic associations)
+* Allow markdown or text styling in todos ([quill.js](https://quilljs.com/))
+* Allow users to update todo title & body
+* Sorting by priority
+* Adding a time when something is due
+  * Sort by due date
+  * Item pops up when it is due
 
-
+[todos-i]: ./todos_i.md
+[todos-i-phase-5]: ./todos_i.md#phase-5
 [store_reading]: ../../readings/store.md
 [thunks_reading]: ../../readings/thunks.md
 [middleware_reading]: ../../readings/middleware.md

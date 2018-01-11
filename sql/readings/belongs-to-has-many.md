@@ -15,15 +15,15 @@ When you create your migrations, you'll set up foreign key references
 between entities. For instance,
 
 ```ruby
-class CreateCoursesAndProfessorsTables < ActiveRecord::Migration
+class CreateCoursesAndProfessorsTables < ActiveRecord::Migration[5.1]
   def change
     create_table :professors do |t|
       t.string :name
       t.string :thesis_title
-      
+
       t.timestamps
     end
-    
+
     create_table :courses do |t|
       t.string :course_name
       t.integer :professor_id
@@ -46,31 +46,31 @@ Professor.find(course.professor_id)
 Likewise, to find the courses a professor is teaching:
 
 ```ruby
-Course.where("professor_id = ?", prof.id)
+Course.where('professor_id = ?', prof.id)
 ```
 
 This is tedious and low-level; we need to pull out the foreign key,
 then explicitly look it up in the `professors` table. ActiveRecord
-makes this easier through *associations*. Associations tell AR that
-there is a connection between the two models. Here we modify the
-associated model classes:
+makes this easier through *associations*. Associations tell
+`ActiveRecord` (through `ApplicationRecord`) that there is a connection
+between the two models. Here we modify the associated model classes:
 
 ```ruby
-class Course < ActiveRecord::Base
+class Course < ApplicationRecord
   belongs_to(
     :professor,
-    :class_name => "Professor",
-    :foreign_key => :professor_id,
-    :primary_key => :id
+    class_name: 'Professor',
+    foreign_key: :professor_id,
+    primary_key: :id
   )
 end
 
-class Professor < ActiveRecord::Base
+class Professor < ApplicationRecord
   has_many(
     :courses,
-    :class_name => "Course",
-    :foreign_key => :professor_id,
-    :primary_key => :id
+    class_name: 'Course',
+    foreign_key: :professor_id,
+    primary_key: :id
   )
 end
 ```
@@ -136,6 +136,21 @@ Note that when we defined the association, we used the singular form
 foreign key that refers to a single `Professor`. Name your association
 accordingly: in the singular.
 
+NB: As of Rails 5, `belongs_to` associations are validated for presence by default.
+You can opt-out of this behavior (ie. allow the association to be null) by adding the key-value pair `optional: true` to your association like so:
+
+```ruby
+class Course < ApplicationRecord
+  belongs_to(
+    :professor,
+    class_name: 'Professor',
+    foreign_key: :professor_id,
+    primary_key: :id,
+    optional: true
+  )
+end
+```
+
 ![belongs_to Association Diagram](http://guides.rubyonrails.org/images/belongs_to.png)
 
 ### `has_many`
@@ -182,7 +197,7 @@ column holds a reference to the other record (the foreign key), or
 whether the column is referred to by the other record (the primary
 key). That's why they are the same in both directions.
 
-Lastly **think about the SQL that will be
+Be sure to **think about the SQL that will be
 generated**. `belongs_to`/`has_many` are short-cuts to writing the SQL
 yourself, but you need to be able to write the SQL they would
 generate.

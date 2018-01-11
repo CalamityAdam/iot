@@ -10,13 +10,13 @@
 + Be able to change the backend of an app by sending an AJAX request
 + Be able to change the frontend of an app with data from an AJAX response
 + Be able to write AJAX requests in an API Util file
-+ Be able to write basic JBuilder views
++ Be able to write basic Jbuilder views
 + Know the basics of how promises work
 
 ## Phase 0: Setup
 
 Download the project [skeleton](skeleton.zip?raw=true). Start by running `bundle
-install`. To setup the database, run `rake db:setup` which creates, loads from
+install`. To setup the database, run `rails db:setup` which creates, loads from
 schema and seeds the db in one command. Run `webpack --watch` or `webpack -w` in a
 new tab to transpile the JavaScript.
 
@@ -32,10 +32,12 @@ our HTML, except that Rails compiles them all into a single file for production.
 But unlike Webpack, Rails doesn't intelligently manage dependencies, so you still
 have to be extra careful about the load order.
 
-It's currently only requiring jQuery. Make it require `bundle.js` as well. Now
-we shouldn't have to worry about compiling our JS files again because Webpack
-will do it for us as long as we remember to webpack (ie. run `webpack` or
-`webpack --watch`).
+It's currently only requiring `jquery` and `jquery_ujs`. After these, add 
+`require jquery.serializejson` (for submitting forms) and `require_tree .` (to
+include any files in `app/assets/javascripts`, for instance, our `bundle.js`).
+These are all included through `<script>` tags. Now we shouldn't have to worry
+about compiling our JS files again because Webpack will do it for us as long as we
+remember to webpack (ie. run `webpack` or `webpack --watch`).
 
 Before writing any code, run `rails s` and familiarize yourself with the
 skeleton!
@@ -55,10 +57,11 @@ that gets updated via our front-end JavaScript.
 * Replace the contents of the button form with a single `<button>`.  
 * Give the button a class of `follow-toggle`.  
 * We'll also need to let the button know the `user-id` and `initial-follow-state`
-("followed" or "unfollowed") by storing
-these in `data-*` attributes.
+("followed" or "unfollowed") by storing these in [`data-*`][data-*] attributes. We can determine the `initial-follow-state` using the `User#follows?` method.
 * Leave the inner HTML of the button empty: the FollowToggle class will be
 responsible for setting this.
+
+[data-*]: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*#Usage
 
 #### `FollowToggle` Class
 
@@ -78,9 +81,9 @@ variable.
 Using this class, we can now build a `FollowToggle` instance for each
 `follow-toggle` button on the page.
 
-**NB:** Though the follow state is stored in the Rails API as a **_boolean_**, on the
-client side, we'll keep track of the follow state as a **_string_**. This is
-because later we'll add more states in addition to followed/unfollowed.
+**NB:** Though the follow state is stored in our database as a **_row_** (or lack thereof) in a join table, on the
+client side, we'll keep track of the follow state as a **_string_**. To do this we've bootstrapped the the user's `id` and `follow-state` to the `user-id` and `initial-follow-state` `data-` attributes respectively.
+Later we'll add more states in addition to `followed`/`unfollowed`.
 
 You'll probably want to start testing this out about now. But if you run Webpack
 at this point, nothing will get transpiled because `twitter.js` (the entry point)
@@ -110,18 +113,20 @@ re-render.
 you can have jQuery automatically parse the response as JSON. Read the
 documentation [here][$.ajax-docs]
 
-#### Content-Types and `respond_to`
+#### The `Accept` header and `respond_to`
 
 You may also be wondering what's going on with the `respond_to` inside the
 `FollowsController`. Well, when we make an HTTP request to a server, we can
-specify the `Content-Type` to ask for HTML, XML, JSON, text, etc. Until now, our
-controllers were serving HTML by default.
+specify a value for the `Accept` header to ask for HTML, XML, JSON, text, etc.
+Until now, our controllers were serving HTML by default.
 
-The browser sets this `Content-Type` header for us based on how we make the
-request. When we use the `$.ajax` method, we will (by default) request JSON. The
-controller can then react to this `Content-Type` request by using the
-[`respond_to` method][respond-to-docs].
+JQuery ajax ([by default][default]) sets the `Accept` header based on the
+`dataType` of the request. We can manually set the `dataType` to JSON. The
+controller can then react to this `Accept` header by using the
+[`respond_to` method][respond-to-docs]. If we do not specify a `dataType`,
+`$.ajax` will return the first `respond_to` type specified in the controller.
 
+[default]: http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings
 [respond-to-docs]: http://apidock.com/rails/ActionController/MimeResponds/InstanceMethods/respond_to
 [$.ajax-docs]: http://api.jquery.com/jquery.ajax/
 
@@ -262,6 +267,14 @@ class FollowToggle {
 }
 ```
 
+#### Style it!
+
+Time to move our app styling into the 2010s. Let's make a few changes:
+
+- Change the default page font
+- Add headers for your app and the search results page
+- Style those buttons!
+
 ## Phase III: `TweetCompose`
 
 First, we're going to update our `TweetsController` to handle JSON requests,
@@ -301,7 +314,7 @@ information, and also information about each of that tweet's mentions.
 
 #### `TweetCompose` Class
 
-* Open `app/views/tweets/_form.HTML.erb` and give the form a class `tweet-compose`.
+* Open `app/views/tweets/_form.html.erb` and give the form a class `tweet-compose`.
 * Write a TweetCompose class that grabs this form and installs itself.
 * In the `TweetCompose` `constructor`, install a `submit` event handler.
 * Write a `TweetCompose#submit` method that uses `serializeJSON` to build JSON
@@ -340,6 +353,12 @@ for a tweet (starting at 140). Add a `strong` tag with class `.chars-left` to
 the form. In the `TweetCompose` `constructor`, add an `input` event handler on the
 `textarea`. In it, update the `strong` tag with the number of characters remaining.
 
+#### Style it!
+
+* Hide your `label` and use a `placeholder` attribute on your tweet form's `textarea`
+* Add some padding to your `textarea`
+* Center your form on the page and give it a fixed `height` and `width`
+
 **Call your TA over to check your work!**
 
 ## Phase IV: `TweetCompose`: Mentioned Users
@@ -350,68 +369,54 @@ more select tags so we can tag more users.
 
 #### Adding mentions
 
-Rather than have just one select tag visible all the time, we want to have no
-select tags to start. Instead, we want to show an "Add mention" link which will
-let us add multiple select tags to the page.
+Rather than have just one select tag visible all the time, we want to have no select tags to start.
+Instead, we want to show an "Add mention" link which will let us add multiple select tags to the page.
 
-To do this, first move the `select` tag into a `<script type="text/template">`
-tag. This tells the browser not to put the `select` in the DOM. If you reload,
-you should see no select tag.
+To do this, create a `newUserSelect` helper function to create a new `select` element with all of the users as `option`s. You can get the users by "bootstrapping" them to the global `window` from our backend.
 
-Write an "Add mention" anchor tag. Give it a placeholder `href`.
-`href="#"` is fine, but make sure to return `false` from the event handler to
-prevent being scrolled to the top of the page. Also give it a class
-`add-mentioned-user`. I also added a `div.mentioned-users` that will house all
-these newly generated select tags.
+In `application.html.erb`, inside a `<script>` and in JavaScript, assign a json array of all of our users (you will have to render a partial) to `window.users`. This will give us access to `window.users` from our frontend code.
 
-* In the `TweetCompose` `constructor`, add a listener for a click on
-`a.add-mentioned-user`.
-* Write a `TweetCompose#addMentionedUser` method.
-* Use jQuery to find the `script` tag, grab the HTML from within using
-`$scriptTag.html()`, then append it into the `mentioned-users` div.
-* Don't forget to return false from `addMentionedUser`!
+Now add a button below our `textarea` that will add a new `select` element. We can click it more than once to "mention" multiple users.
 
 Test this out and make sure you can create new `select` tags by clicking the link.
 
 #### Removing mentions
 
-Next, I also want to be able to **remove** select tags. Say we clicked "add"
-accidentally and want to remove the `select`.
+Next, we also want to be able to **remove** select tags.
+Say we clicked "add" accidentally and want to remove the `select`.
 * To do this, modify the script template by putting the `select` in a `div`.
 * Write an anchor tag inside with class `remove-mentioned-user`.
 * Give it a similar bogus `href` attribute.
 
-* In the `TweetCompose` `constructor`, listen for `click` events on
-`a.remove-mentioned-user`. **You have to use event delegation here: why?**
-* Write a `TweetCompose#removeMentionedUser` and use `event.currentTarget`
-to learn which remove anchor tag was clicked, and removed the parent `div`
-element. This removes both the anchor tag and the select, too.
+* In the `TweetCompose` `constructor`, listen for `click` events on `a.remove-mentioned-user`. **You have to use event delegation here: why?**
+* Write a `TweetCompose#removeMentionedUser` and use `event.currentTarget` to learn which remove anchor tag was clicked, and removed the parent `div` element. This removes both the anchor tag and the select, too.
 
 Make sure it works!
 
-Lastly, we want to update `TweetCompose#clearInput` to clear out all the selects
-after form submission succeeds.
+Lastly, we want to update `TweetCompose#clearInput` to clear out all the selects after form submission succeeds.
 * Put all your select tags into a div with class `.mentioned-users`.
 * In `#clearInput`, grab this div and `empty()` it.
 
+#### Style it!
+
+You know the drill. Pretty up your mentions by adding some styles to it.
+
 ## Phase V: Infinite Tweets
 
-Right now we send all the tweets down when the user requests `/feed`. If there
-are many, many tweets in the feed, this will send a huge amount of data to the
-user. Moreover, the user is likely to be interested in only the most recent
+Right now we send all the tweets down when the user requests `/feed`.
+If there are many, many tweets in the feed, this will send a huge amount of data to the user.
+Moreover, the user is likely to be interested in only the most recent
 tweets.
 
 #### User Model
 
-Let's **paginate** the sending of tweets. To start, open up
-`app/models/user.rb`. Modify the `#feed_tweets` method to send only up to
-`limit` tweets. Also, modify it not to return any tweets created after
-`max_created_at`. Test this out in your Rails console before moving to the
-JavaScript portion.
+Let's **paginate** the sending of tweets.
+To start, open up `app/models/user.rb`. Modify the `#feed_tweets` method to send only up to `limit` tweets.
+Also, modify it not to return any tweets created after `max_created_at`. Test this out in your Rails console before moving to the JavaScript portion.
 
 #### Views
 
-Next, let's begin modifying the `app/views/feeds/show.HTML.erb` template. You
+Next, let's begin modifying the `app/views/feeds/show.html.erb` template. You
 should have a `ul#feed` from phase III. Wrap that `ul` with a `div` with class
 `infinite-tweets`. You can empty out the contents of the `ul#feed` since we'll
 be adding the tweets inside dynamically with jQuery now. Also, write an anchor

@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  protect_from_forgery with: :exception
   helper_method :current_user, :current_user_name, :current_user_id
 
   def current_user
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
     current_user ? current_user.username : nil
   end
 
-  # before filters
+  # Before filters
 
   def require_current_user!
     redirect_to new_user_url unless current_user

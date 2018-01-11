@@ -31,7 +31,7 @@ Let's start by implementing the brute force solution. Write a method called `bad
 
 Make sure that you don't pair an element with itself. However, you don't need to bother checking for summing the same pair twice; that won't affect your result.
 
-(Note: you can cut the running-time significantly by returning early, and by not checking pairs more than once. Howevever, these micro-optimizations will not improve the time complexity of the solution. Do you see why?)
+(Note: you can cut the running-time significantly by returning early, and by not checking pairs more than once. However, these micro-optimizations will not improve the time complexity of the solution. Do you see why?)
 
 Once you're done, write a comment with your solution's time complexity.
 
@@ -54,5 +54,5 @@ See if you can solve the `two_sum?` problem in linear time now, using your hash 
 
 Once you're finished, make sure you understand the time complexity of your solutions and then call over your TA and show them what you've got. Defend to them why each of your solutions has the time complexity you claim it does.
 
-##### Bonus
+##### Bonus (come back to this once you have completed windowed max range exercises)
 See if you can extend your solution of `two_sum?` to solve `four_sum?`. Call over your TA once you think your implementation is optimal!

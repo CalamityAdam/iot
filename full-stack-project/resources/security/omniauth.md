@@ -30,7 +30,7 @@ OmniAuth uses uid, provider, token, secret (`Authorization`) and name (`User`) a
 ```sh
 rails g migration add_name_to_users name:string
 rails g model authorization provider:string uid:string user_id:integer token:string secret:string name:string link:string
-rake db:migrate
+rails db:migrate
 ```
 
 Ensure the `omniauth` gem and all of the supporting provider/strategy gems are also included (`omniauth-facebook`) in your *Gemfile*.
@@ -228,7 +228,7 @@ This allows us access to a variety of twitter resources. lets pull the timeline 
 * [OmniAuth part1 Railscast][omniauth-part1-railscast]
 * [OmniAuth part2 Railscast][omniauth-part2-railscast]
 
-[omniauth.org]: http://www.omniauth.org/
+[omniauth.org]: https://github.com/omniauth/omniauth
 [setup-gist]: https://gist.github.com/schleg/993566
 [omniauth-simple-railscast]: http://railscasts.com/episodes/241-simple-omniauth-revised
 [omniauth-devise-railscast]: http://railscasts.com/episodes/235-devise-and-omniauth-revised

@@ -2,7 +2,7 @@
 
 For sundry reasons, data saved to the database need to be
 validated. Model level validations are the most common, but
-validations can be created on the client side in javascript, or
+validations can be created on the client side in JavaScript, or
 controller level validations. Database constraints can also be added
 to the database to prevent bad input.
 
@@ -11,6 +11,7 @@ Performing the validations at the model level has these benefits:
 * Database agnostic
 * Convenient to test and maintain
 * Nice, specific, per-field error messages
+* Avoids reliance on database constraints (which throw nasty errors)
 
 ActiveRecord::Base instance methods that run validations:
 * `#create`
@@ -27,7 +28,7 @@ Lets consider the `User` class with basic validations for username and
 password.
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   validates :username, :password, presence: true
   validates :password, length: { minimum: 6 }
 end
@@ -36,7 +37,7 @@ end
 So if we run
 
 ```ruby
-u = User.new(username: "Billy Bob")
+u = User.new(username: 'Billy Bob')
 u.save
 ```
 
@@ -64,7 +65,7 @@ currently being rendered by the `render` method.
 
 One common way to render errors is to store them in `flash[:errors]`
 after running validation, then displaying them on the page by
-iterating through each of the errors displaying each of them.
+iterating through each of the errors displaying each of them. Note that `flash` can be used as a hash and `:errors` is just an arbitrary, though semantically meaningful, key we have chosen.
 
 By following the construct of always storing
 `obj.errors.full_messages` in `flash[:errors]` a partial can be
@@ -79,7 +80,7 @@ a `flash[:errors]` array.
 def create
   @user = User.new(params[:user])
   if @user.save
-    flash[:notice] = "Success!"
+    flash[:notice] = 'Success!'
     redirect_to user_url(@user)
   else
     # sweet! now my flash.now[:errors] will be full of informative errors!
@@ -103,10 +104,10 @@ the errors if any.
 <% end %>
 
 <!-- views/users/new.html.erb -->
-<%= render partial: "layouts/errors" %>
+<%= render partial: 'layouts/errors' %>
 
 <!-- views/users/edit.html.erb -->
-<%= render partial: "layouts/errors" %>
+<%= render partial: 'layouts/errors' %>
 ```
 
 Notice how trivial it is to add the list of errors to future new/edit

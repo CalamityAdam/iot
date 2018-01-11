@@ -49,7 +49,7 @@ Today's main focus will be integration tests, but we will write some model and c
  2. Write model specs for `User`. Remember, model specs should test your model's validations, associations, and class scope methods (eg. `User::find_by_credentials`). Use `shoulda-matchers` to write tests for each of the validations in your user model. You won't have any associations written on your user model to begin with; go back and fill these in as you go. Refer to the reading on [RSpec Model Testing](../../readings/rspec-models.md) and last night's homework as needed.
  3. Next, write controller tests for each action in your `UsersController`. Refer to the [RSpec Controller reading](../../readings/rspec-controllers.md) and last night's homework as needed.
 
-Run your specs and watch them fail. Now, implement `User` and `UsersController` and experience the joy of turning your specs green! 
+Run your specs and watch them fail. Now, implement `User` and `UsersController` and experience the joy of turning your specs green!
 
 Let's skip any other model or controller specs so we can move on to new material, writing integration tests.
 
@@ -70,29 +70,25 @@ For the remainder of the day, we'll be writing integration tests and utilizing t
   require 'spec_helper'
   require 'rails_helper'
 
-  feature "the signup process" do
+  feature 'the signup process' do
+    scenario 'has a new user page'
 
-    scenario "has a new user page"
+    feature 'signing up a user' do
 
-    feature "signing up a user" do
-
-      scenario "shows username on the homepage after signup"
+      scenario 'shows username on the homepage after signup'
 
     end
+  end
+
+  feature 'logging in' do
+    scenario 'shows username on the homepage after login'
 
   end
 
-  feature "logging in" do
+  feature 'logging out' do
+    scenario 'begins with a logged out state'
 
-    scenario "shows username on the homepage after login"
-
-  end
-
-  feature "logging out" do
-
-    scenario "begins with a logged out state"
-
-    scenario "doesn't show username on the homepage after logout"
+    scenario 'doesn\'t show username on the homepage after logout'
 
   end
 
@@ -100,10 +96,10 @@ For the remainder of the day, we'll be writing integration tests and utilizing t
 
 Start filling in the missing test logic, one test at a time.
 
- 0. After you fill in each test, implement enough of the application
+ 1. After you fill in each test, implement enough of the application
  logic to make the test pass. Then go back and write the next test.
 
- 0. Refactor any obvious bugs or flaws which remain.
+ 2. Refactor any obvious bugs or flaws which remain.
 
 This is the 'Red, Green, Refactor' approach.
 
@@ -185,8 +181,7 @@ same `Comment` model.
 
 This is nothing to be intimidated by, it only requires a few extra
 lines of code and an extra column in the `comments` table.
-Here's the [reading on polymorphic associations][poly-reading] if you
-need a refresher.
+Here's a [reading on polymorphic associations][poly-reading] you can reference.
 
 Think through what you will need to to make all this happen. Think about
 which associations you will need. Each `User` and `Goal` should have
@@ -207,7 +202,7 @@ very _dry_ if we're writing identical code for both `User` comments and
 
 Well funny you should mention that. It just so happens that we have
 these nice things called **Concerns** to factor out our association
-logic and _dry out_ our code. Go ahead and review the [concerns
+logic and _dry out_ our code. Go ahead and take a look at the [concerns
 reading][concerns-reading] and then create your own `Commentable`
 concern.
 
@@ -238,9 +233,9 @@ $ git merge "polymorphic-comments"
  * Leaderboards (whose goals have the most cheers?)
  * Go back and add integration tests to previous day's project
  * Write unit tests for your models using [shoulda-matchers][shoulda-matchers]
-   and [FactoryGirl][factory-girl].
- * Style your app. 
+   and [factory_bot_rails][factory-bot-rails].
+ * Style your app.
 
 [railsguides-polymorph-assoc]: http://guides.rubyonrails.org/v3.2.14/association_basics.html#polymorphic-associations
 [shoulda-matchers]: https://github.com/thoughtbot/shoulda-matchers
-[factory-girl]: https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md
+[factory-bot-rails]: https://github.com/thoughtbot/factory_bot_rails

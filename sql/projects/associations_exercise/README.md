@@ -4,7 +4,11 @@ To get started, download the [project skeleton][skeleton].  You will want to unz
 
 We are going to write active record associations to connect some models.
 A rails project has been created for your testing purposes with the database
-already set up for your convenience. In this project there are three models:
+migrations already set up for your convenience. 
+
+Run `rails db:setup` to create and migrate your database.
+
+In this project there are three models:
 `User`, `Course`, and `Enrollment`. It is your duty to connect them using
 active record associations.
 
