@@ -10,6 +10,7 @@
   * Gems
     * installation (`gem install ________`)
     * `require`
+    * `load`
   * Files
     * `load`
   * Enumerables
