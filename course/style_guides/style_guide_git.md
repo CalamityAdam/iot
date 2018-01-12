@@ -2,14 +2,14 @@
 
 ## **Name your branches reasonably.**
 
-Keep them short but descriptive: `${release_if_applicable}-${feature}-${typeof_change}`
+Keep them short but descriptive: `${release_if_applicable}-${feature}-${typeof_change}-${short_descriptor}`
 
 ```
-Good: `es6-widgets-update`
-Good: `pokedex-update`
+Good: `es6-widgets-fix-link`
+Good: `pokedex-update-state-shape`
 Good: `newproject-create`
 Bad: `fixes`
-Bad: `es6ify-react-widgets-including-solutions`
+Bad: `es6ify-the-tabs-phase-of-react-widgets-project`
 ```
 
 ##	**One feature per branch.**
