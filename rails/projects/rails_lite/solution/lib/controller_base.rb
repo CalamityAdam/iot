@@ -43,17 +43,6 @@ class ControllerBase
     nil
   end
 
-  private  # Just this one; not the use of public below
-
-  def before_render_or_redirect
-    raise "double render error" if already_built_response?
-    @already_built_response = true
-    session.store_session(@res)
-    flash.store_flash(@res)
-  end
-
-  public
-
   # Phase 3
 
   # use ERB and binding to evaluate templates
@@ -111,6 +100,13 @@ class ControllerBase
   private
 
   attr_accessor :already_built_response
+
+  def before_render_or_redirect
+    raise "double render error" if already_built_response?
+    @already_built_response = true
+    session.store_session(@res)
+    flash.store_flash(@res)
+  end
 
   def controller_name
     self.class.to_s.underscore
