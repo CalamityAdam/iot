@@ -1,3 +1,15 @@
+# Pre-Exercise Note
+
+From this point on, we will be using the command line and `pry` to test
+our code, navigate our computer, and perform many other amazing tasks.
+
+This means that we are **not** using repl.it anymore to test our code.
+
+Getting comfortable with these tools early will be very important in
+becoming an efficient developer. After learning them, these tools will
+make just about any operation you can think of faster than using a GUI
+and mouse.
+
 # Iteration Exercises
 
 We're going to implement some `Array` methods. There are descriptions
