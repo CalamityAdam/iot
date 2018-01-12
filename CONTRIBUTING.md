@@ -18,4 +18,4 @@ If you are feeling adventurous, make the change yourself.
 
 [issues]: https://github.com/appacademy/curriculum/issues
 [pulls]: https://github.com/appacademy/curriculum/pulls
-[style-guide]: https://github.com/appacademy/curriculum/tree/master/course/style_guides
+[style-guide]: ./course/style_guides
