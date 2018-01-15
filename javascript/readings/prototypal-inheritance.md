@@ -123,7 +123,7 @@ function Dog () {};
 
 Dog.prototype = Object.create(Animal.prototype); // Dog now inherits from Animal
 
-Dog.prototype.constructor = Dog // otherwise instances of Dog will have 'instance.prototype.constructor === Animal'
+Dog.prototype.constructor = Dog // otherwise instances of Dog will have 'instance.constructor === Animal'
 
 Dog.prototype.bark = function () {
   console.log("Bark!");
@@ -189,6 +189,9 @@ Surrogate.prototype = Animal.prototype;
 
 // Set `Dog.prototype` to a `Surrogate` instance.
 Dog.prototype = new Surrogate();
+
+// Make sure that instances of Dog have instance.constructor === Dog (rather than Animal)
+Dog.prototype.constructor = Dog; 
 
 const liesel = new Dog("Liesel", "Black");
 
