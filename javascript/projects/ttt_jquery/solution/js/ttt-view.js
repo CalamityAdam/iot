@@ -22,7 +22,7 @@ class View {
     try {
       this.game.playMove(pos);
     } catch (e) {
-      alert("Invalid move! Try again.");
+      alert("this " + e.msg.toLowerCase());
       return;
     }
 
