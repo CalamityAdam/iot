@@ -125,6 +125,7 @@
     @extend .bubble;
     height: 30px;
     cursor: pointer;
+    background-color: $teal;
   }
   .button:focus, a:focus {
     outline: none;
