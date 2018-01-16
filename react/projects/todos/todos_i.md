@@ -78,10 +78,11 @@ So the `todos` slice of our application might look something like this:
 
 ### Action Creators
 
-Let's write a couple action creators. These are functions that will create the Redux
-`actions` that will later tell your `todosReducer` how to update the state. The first
-one will receive `todos` and populate the store, and the second one will receive a
-single `todo` and either add or update a single todo in the store.
+Let's write a couple action creators. These are functions that will create the
+Redux `actions` that will later tell your `todosReducer` how to update the
+state. The first one will receive `todos` and populate the store, and the second
+one will receive a single `todo` and either add or update a single todo in the
+store.
 
 Remember that:
   * Redux actions are plain-old javascript objects that have a `type` property.
@@ -90,7 +91,8 @@ Remember that:
   * These returned action objects are passed through our
   `rootReducer` only when `store.dispatch(action)` is called.
 
-Create a file `actions/todo_actions.js` that will house our action creators and action type constants.
+Create a file `actions/todo_actions.js` that will house our action creators and
+action type constants.
 
 #### Action Type Constants
 
@@ -107,16 +109,18 @@ export const RECEIVE_TODO = 'RECEIVE_TODO';
 
 #### `receiveTodos`
 
-This action creator lets our reducer know to reset the list of `todos` and, as such, will
-also need to pass along a new set of `todos`. Write your `receiveTodos`
-action creator so that it accepts an array argument `todos`. It should return an action object with
-a `type` property pointing to `RECEIVE_TODOS` and a `todos` property pointing to the `todos`
-argument you're passing in. This represents all of our todos data.
+This action creator lets our reducer know to reset the list of `todos` and, as
+such, will also need to pass along a new set of `todos`. Write your
+`receiveTodos` action creator so that it accepts an array argument `todos`. It
+should return an action object with a `type` property pointing to
+`RECEIVE_TODOS` and a `todos` property pointing to the `todos` argument you're
+passing in. This represents all of our todos data.
 
 #### `receiveTodo`
 
-This action creator is formatted in the same way as `receiveTodos`, but accepts an argument/has a property of just
-a single `todo`. Write this out now. We will describe its function later.
+This action creator is formatted in the same way as `receiveTodos`, but accepts
+an argument/has a property of just a single `todo`. Write this out now. We will
+describe its function later.
 
 ### Reducers
 
@@ -136,10 +140,11 @@ Remember that reducers should:
 * Return the `state` if the reducer doesn't care about the action.
 * Return a new state object if the reducer cares about the `action`.
 
-**N.B.** The reducer must never mutate the previous state. Instead, it should return a brand new state object with the necessary changes.
+**N.B.** The reducer must never mutate the previous state. Instead, it should
+return a brand new state object with the necessary changes.
 
-Let's start by setting up our `todosReducer` to return its default
-state - an empty object with no todos. **Do not move on to the other cases just yet**:
+Let's start by setting up our `todosReducer` to return its default state - an
+empty object with no todos. **Do not move on to the other cases just yet**:
 
 ```js
 const todosReducer = (state = {}, action) => {
@@ -218,8 +223,8 @@ const todosReducer = (state = initialState, action) => {
 }
 ```
 
-It isn't typical to have so much data in the initial state,
-but it will speed up our development to have some real todos to test our code on.
+It isn't typical to have so much data in the initial state, but it will speed up
+our development to have some real todos to test our code on.
 
 **Test your code** - Try calling `window.store.getState()` again from the
 console. Does your store's initial state match the default state you defined?
@@ -227,20 +232,30 @@ console. Does your store's initial state match the default state you defined?
 
 #### Receiving and Reducing `todos`
 
-Now that you have a functioning store, let's test out those actions we created earlier. Inside of the `todosReducer`, implement the following.
+Now that you have a functioning store, let's test out those actions we created
+earlier. Inside of the `todosReducer`, implement the following.
 
 * Import action constants `RECEIVE_TODOS` and `RECEIVE_TODO`.
 * Add a new `case` to the `switch` statement in your `todosReducer`
   * This case should execute if the `action.type` is `RECEIVE_TODOS`
-  * The `todos` data in your store should be replaced by the data in `action.todos`
+  * The `todos` data in your store should be replaced by the data in
+`action.todos`
   * Do not merge the old `todos` state with the new `todos` coming in
 * Add another `case` to the `switch` statement to handle `RECEIVE_TODO`
-  * This case should return a new state object, either adding the `todo` in the `action` to
-  the previous state, or replacing a `todo` in the previous state at the same object key.
+  * This case should return a new state object, either adding the `todo` in the
+`action` to the previous state, or replacing a `todo` in the previous state at
+the same object key.
   * You do not need an if/else statement for this functionality.
 
-Remember, you must not mutate state! If you want to change a data structure you must copy it first.
-The built in `Object.assign` method is perfect for this. Just make sure the first argument is a new blank object to avoid mutations.
+**NB** Completely replacing state for the `RECEIVE_TODOS` action is a design
+decision we made for this app. Sometimes it makes sense to keep the old data and
+merge the new data into it, other times it makes sense to completely replace the
+old data with new data. Think about how this decision will affect how your user
+interacts with your app.
+
+Remember, you must not mutate state! If you want to change a data structure you
+must copy it first. The built in `Object.assign` method is perfect for this.
+Just make sure the first argument is a new blank object to avoid mutations.
 
 Your reducer should look something like this.
 
@@ -248,10 +263,11 @@ Your reducer should look something like this.
 const todosReducer = (state = initialState, action) => {
   switch(action.type) {
     case RECEIVE_TODOS:
-      // return the action.todos object
+      // return the todos from the action
     case RECEIVE_TODO:
       // Make a new object setting a single key value pair for action.todo
-      // Return a new state object by merging your previous state and your new object
+      // Return a new state object by merging your previous state and your
+      // new object
     default:
       return state;
   }
