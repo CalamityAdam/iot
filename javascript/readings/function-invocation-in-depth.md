@@ -2,8 +2,8 @@
 
 Let's review the various ways to call a function that we have encountered:
 
-* Function-style (`fun(arg1, arg2)`)
-    * `this` is set to the context that it is called in
+* Function-style when unbound (`fun(arg1, arg2)`)
+    * `this` is set to the global context (`global` or `window`)
 * Method-style (`obj.method(arg1, arg2)`)
     * `this` is set to `obj`
 * Constructor-style (`new ClassName(arg1, arg2)`).
