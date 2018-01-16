@@ -8,8 +8,6 @@ import {
 
 const benchesReducer = (state = {}, action) => {
   Object.freeze(state)
-  const newState = merge({}, state);
-
   switch(action.type) {
     case RECEIVE_BENCHES:
       return action.benches;
@@ -18,6 +16,7 @@ const benchesReducer = (state = {}, action) => {
       return merge({}, state, newBench);
     case RECEIVE_REVIEW:
       const { review } = action;
+      const newState = merge({}, state);
       newState[review.bench_id].reviewIds.push(review.id);
       return newState;
     default:
