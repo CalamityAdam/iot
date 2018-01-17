@@ -127,36 +127,6 @@
 
 ## w4d3
 
-### Materials (20 min)
-* :book: [CSS Nontechnical Overview][css-nontech] (20 min)
-* :book: [CSS Responsive Design][css-responsive] (10 min)
-
-[css-nontech]: ../html-css/readings/css_nontech.md
-[css-responsive]: ../html-css/readings/responsive_design.md
-
-### Homeworks (150 min)
-* [CSS Curriculum 6: Positioning & Media Queries][css-6] (90 min)
-* [CSS Review][css-review] (60 min)
-
-[css-6]: ../html-css/micro-projects/positioning_media_queries/exercise.md
-[css-review]: ../html-css/projects/css_review
-
-### Additional Resources
-* :movie_camera: [CSS Review][css-review-vid]
-* :book: **(BONUS)** [CSS Transform property][css-transform]
-
-[css-review-vid]: https://vimeo.com/214597789
-[css-transform]: http://css-tricks.com/almanac/properties/t/transform/
-
-### Projects (Solo in SF)
-* [AA Times][aa-times]
-* **(BONUS)** [Google Homepage][google-homepage]
-
-[aa-times]: ../html-css/projects/aa_times
-[google-homepage]: ../html-css/projects/google_homepage
-
-## w4d4
-
 ### SF ONLY: Late Start - 10:00am
 
 ### Materials (2 hr, 38 min)
@@ -212,7 +182,7 @@
 
 [99-cats-part-ii]: projects/ninety_nine_cats_ii
 
-## w4d5
+## w4d4
 
 ### Study Hall 9 - 10am
 
@@ -254,6 +224,36 @@
 * **Solo**: [Music App][music-app-project]
 
 [music-app-project]: projects/music_app
+
+## w4d5
+
+### Materials (20 min)
+* :book: [CSS Nontechnical Overview][css-nontech] (20 min)
+* :book: [CSS Responsive Design][css-responsive] (10 min)
+
+[css-nontech]: ../html-css/readings/css_nontech.md
+[css-responsive]: ../html-css/readings/responsive_design.md
+
+### Homeworks (150 min)
+* [CSS Curriculum 6: Positioning & Media Queries][css-6] (90 min)
+* [CSS Review][css-review] (60 min)
+
+[css-6]: ../html-css/micro-projects/positioning_media_queries/exercise.md
+[css-review]: ../html-css/projects/css_review
+
+### Additional Resources
+* :movie_camera: [CSS Review][css-review-vid]
+* :book: **(BONUS)** [CSS Transform property][css-transform]
+
+[css-review-vid]: https://vimeo.com/214597789
+[css-transform]: http://css-tricks.com/almanac/properties/t/transform/
+
+### Projects (Solo in SF)
+* [AA Times][aa-times]
+* **(BONUS)** [Google Homepage][google-homepage]
+
+[aa-times]: ../html-css/projects/aa_times
+[google-homepage]: ../html-css/projects/google_homepage
 
 ## w5d1
 
