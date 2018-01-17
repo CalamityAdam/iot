@@ -15,9 +15,10 @@ const benchesReducer = (state = {}, action) => {
       const newBench = { [action.bench.id]: action.bench };
       return merge({}, state, newBench);
     case RECEIVE_REVIEW:
-      const { review } = action;
+      const { review, average_rating } = action;
       const newState = merge({}, state);
       newState[review.bench_id].reviewIds.push(review.id);
+      newState[review.bench_id].average_rating = average_rating;
       return newState;
     default:
       return state;
