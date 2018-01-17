@@ -22,7 +22,7 @@ class View {
     try {
       this.game.playMove(pos);
     } catch (e) {
-      alert("this " + e.msg.toLowerCase());
+      alert("This " + e.msg.toLowerCase());
       return;
     }
 
