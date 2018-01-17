@@ -59,7 +59,7 @@
 [bias-product]: https://techcrunch.com/2016/11/16/when-bias-in-product-design-means-life-or-death/
 
 
-### Homeworks (125 min)
+### Homeworks (45 min)
 * [Library Controller][library-hw] (45 min)
 
 [library-hw]: homeworks/library
@@ -157,7 +157,7 @@
 [auth-07-csrf-protection]: https://vimeo.com/93114288
 [auth-08-csrf-methods]: https://vimeo.com/93114287
 
-### Homeworks (60 min)
+### Homeworks (30 min)
 * [Rails Auth][rails-auth-homework] (30 min)
 
 [rails-auth-homework]: homeworks/rails-auth
@@ -227,7 +227,7 @@
 
 ## w4d5
 
-### Materials (20 min)
+### Materials (30 min)
 * :book: [CSS Nontechnical Overview][css-nontech] (20 min)
 * :book: [CSS Responsive Design][css-responsive] (10 min)
 
