@@ -8,7 +8,8 @@
 ### :clock10: (SF Only!) Class will start at 10am! :clock10:
 * **Progress Tracker reports are still due at 9am.**
 
-### Materials (126 min)
+### Materials (141 min)
+* :book: [Nontechnical Overview of React][react-nontech] (15 min)
 :closed_lock_with_key: `go_video_go`
 * :book: [NPM][npm_configuration] (15 min)
 * :book: [Webpack][webpack_configuration] (10 min)
@@ -20,8 +21,9 @@
 * :movie_camera: [React: Transpilation][react-transpilation] (8 min)
 * :movie_camera: [React: Functional Components][react-func-comps] (22 min)
 * :movie_camera: [React: Lifecycle Methods][react-lifecycle] (11 min)
-  * :computer: [code from click counter demo][click-demo]
+* :computer: [code from click counter demo][click-demo]
 
+[react-nontech]: readings/react_nontech.md
 [npm_configuration]: readings/npm_configuration.md
 [webpack_configuration]: readings/webpack_configuration.md
 [import_export]: readings/import_export.md
@@ -74,8 +76,8 @@
 
 ## w7d1
 
-### Materials (105 min)
-* :book: [Nontechnical Overview of React][react-nontech] (15 min)
+### Materials (130 min)
+* :book: [Nontechnical Overview of Redux][redux-nontech] (15 min)
 * :book: [Lodash][lodash] (5 min)
 * :book: [Flux and Redux Intro][flux_redux] (10 min)
 * :book: [Store][store] (20 min)
@@ -95,7 +97,6 @@
 [connect]: readings/connect.md
 [containers]: readings/containers.md
 [selectors]: readings/selectors.md
-[react-nontech]: readings/react_nontech.md
 
 ### (optional) Fruit Stand App Demo (75 min)
 * :movie_camera: Fruit Stand Demo (75 min)
@@ -174,8 +175,7 @@
 
 ## w7d3
 
-### Materials (50 min)
-* :book: [Nontechnical Overview of Redux][redux-nontech] (15 min)
+### Materials (35 min)
 * :book: [Intro to Jbuilder][jbuilder-intro] (5 min)
 * :book: [Jbuilder][jbuilder_docs] (20 min)
 * :book: Normalizing Redux State Shape (from Redux docs)
