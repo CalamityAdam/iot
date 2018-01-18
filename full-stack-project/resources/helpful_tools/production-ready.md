@@ -54,7 +54,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['react', 'env']
         }
       }
     ]
@@ -97,7 +97,7 @@ Example `package.json`:
   "dependencies": {
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.11.1",
     "lodash": "^4.16.4",
     "react": "^15.3.0",
