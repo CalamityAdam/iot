@@ -75,6 +75,7 @@
 ## w7d1
 
 ### Materials (105 min)
+* :book: [Nontechnical Overview of React][react-nontech] (15 min)
 * :book: [Lodash][lodash] (5 min)
 * :book: [Flux and Redux Intro][flux_redux] (10 min)
 * :book: [Store][store] (20 min)
@@ -84,7 +85,6 @@
 * :book: [`connect()`][connect] (15 min)
 * :book: [Containers][containers] (10 min)
 * :book: [Selectors][selectors] (10 min)
-* :book: [Nontechnical Overview of React][react-nontech] (15 min)
 
 [lodash]: readings/lodash.md
 [store]: readings/store.md
@@ -125,7 +125,7 @@
 * [Is Ageism In Tech An Under-The-Radar Diversity Issue?][ageism] (5 min)
 * **[Building Accessibility Culture][accessibility]** (8 min)
 * [Building Better Tech Cultures for People with ADHD][adhd] (6 min)
-* **["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness]** (6 min) 
+* **["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness]** (6 min)
 
 [ageism]: https://www.fastcompany.com/3054204/is-ageism-in-tech-an-under-the-radar-diversity-issue
 [accessibility]: https://modelviewculture.com/pieces/building-accessibility-culture
@@ -175,12 +175,12 @@
 ## w7d3
 
 ### Materials (50 min)
+* :book: [Nontechnical Overview of Redux][redux-nontech] (15 min)
 * :book: [Intro to Jbuilder][jbuilder-intro] (5 min)
 * :book: [Jbuilder][jbuilder_docs] (20 min)
 * :book: Normalizing Redux State Shape (from Redux docs)
   * [Normalizing State Shape][normalizing] (5 min)
   * [Updating Normalized Data][updating-normalized] (5 min)
-* :book: [Nontechnical Overview of Redux][redux-nontech] (15 min)
 
 [jbuilder-intro]: readings/intro_to_jbuilder.md
 [jbuilder_docs]: https://github.com/rails/jbuilder

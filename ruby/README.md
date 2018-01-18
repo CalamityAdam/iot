@@ -8,8 +8,8 @@
 
 [day1-instructions]: https://github.com/appacademy/meta/blob/master/first-day-instructions/README.md
 
-### Materials (65 min)
-
+### Materials (80 min)
+* :book: [Nontechnical Overview of Ruby][ruby-nontech] (15 min)
 * :book: (**Review**) Review the readings and solutions from the Alpha Curriculum (45 min)
   * **Pay special attention to readings from the 'Writing Good Code' section!**
 * :book: Debugging
