@@ -15,7 +15,7 @@ const initialState = {
 
 const loadingReducer = (state = initialState, action) => {
   Object.freeze(state);
-  switch(action.type){
+  switch (action.type) {
     case RECEIVE_ALL_POKEMON:
       return Object.assign({}, state, { indexLoading: false });
     case RECEIVE_NEW_POKEMON:
