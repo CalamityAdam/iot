@@ -101,7 +101,7 @@ class ControllerBase
 
   attr_accessor :already_built_response
 
-  def before_render_or_redirect
+  def prepare_render_or_redirect
     raise "double render error" if already_built_response?
     @already_built_response = true
     session.store_session(@res)
