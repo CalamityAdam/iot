@@ -19,13 +19,13 @@ function Ship(options) {
   options.color = options.color || randomColor();
 
   MovingObject.call(this, options);
-};
+}
 
 Ship.RADIUS = 15;
 
 Util.inherits(Ship, MovingObject);
 
-Ship.prototype.fireBullet = function fireBullet() {
+Ship.prototype.fireBullet = function () {
   var norm = Util.norm(this.vel);
 
   if (norm === 0) {
@@ -52,12 +52,12 @@ Ship.prototype.fireBullet = function fireBullet() {
   this.game.add(bullet);
 };
 
-Ship.prototype.power = function power(impulse) {
+Ship.prototype.power = function (impulse) {
   this.vel[0] += impulse[0];
   this.vel[1] += impulse[1];
 };
 
-Ship.prototype.relocate = function relocate() {
+Ship.prototype.relocate = function () {
   this.pos = this.game.randomPosition();
   this.vel = [0, 0];
 };

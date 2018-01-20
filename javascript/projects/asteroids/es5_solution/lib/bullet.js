@@ -1,11 +1,11 @@
-const Util = require("./util");
-const MovingObject = require("./moving_object");
+var Util = require("./util");
+var MovingObject = require("./moving_object");
 
-const Bullet = function Bullet(options) {
+function Bullet(options) {
   options.radius = Bullet.RADIUS;
 
   MovingObject.call(this, options);
-};
+}
 
 Bullet.RADIUS = 2;
 Bullet.SPEED = 15;
