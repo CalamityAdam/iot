@@ -45,7 +45,7 @@ Refer to [the master checklist][checklist] during Bench BnB and your final proje
   * `babel-core`
   * `babel-loader`
   * `babel-preset-react`
-  * `babel-preset-es2015`
+  * `babel-preset-env`
 * Create a `webpack.config.js` file.
 * Set up your entry file (`bench_bnb.jsx`) to render your app into the `#root` container.
 
