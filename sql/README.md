@@ -34,7 +34,7 @@
 [case]: http://www.postgresqltutorial.com/postgresql-case/
 [coalesce]: http://www.postgresqltutorial.com/postgresql-coalesce/
 [postgres-setup]: readings/setup.md
-[rails-nontech]: readings/rails_nontech.md
+[sql-nontech]: readings/sql_nontech.md
 
 ### Homeworks (80 min)
 + Complete [SQL Bolt Tutorial][sql-bolt] sections 1 - 12 (80 min)
@@ -137,6 +137,7 @@
 [indices-video]: https://vimeo.com/167799431
 [css-inherits]: https://vimeo.com/151190179
 [css-reset]: https://vimeo.com/151190181
+[rails-nontech]: readings/rails_nontech.md
 
 ### Homeworks (45 min)
 + [Intro to Rails][intro-rails-homework] (45 min)
@@ -242,7 +243,6 @@
 [class-instance-variables]: readings/class-instance-variables.md
 [meta-send]: demos/send.rb
 [meta-macros]: demos/macros.rb
-[sql-nontech]: readings/sql_nontech.md
 [css-flex-video]: https://vimeo.com/170512344
 [css-display-types]: ../html-css/readings/display.md
 
