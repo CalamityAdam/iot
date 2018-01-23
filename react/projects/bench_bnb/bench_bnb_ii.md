@@ -715,7 +715,7 @@ You can use the `loggedIn` boolean like we did in our `AuthRoute` component.
 * Add the route to our `App` component like so:
 
  ```html
- <ProtectedRoute path="benches/new" component={BenchFormContainer} />
+ <ProtectedRoute path="benches/new" exact component={BenchFormContainer} />
 ```
 
 **Test that your routes are protected before moving on!**.
