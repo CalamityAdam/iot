@@ -113,29 +113,33 @@ A GET request to `localhost:3000/api/pokemon/5` should render this:
 
 ```javascript
 {
-  pokemon: {
-    id: 5,
-    name: 'Rhydon',
-    attack: 130,
-    defense: 120,
-    image_url: "/assets/pokemon_snaps/5.svg",
-    moves: [
-      'horn attack',
-      //...
+  "pokemon": {
+    "id": 5,
+    "name": "Rhydon",
+    "attack": 130,
+    "defense": 120,
+    "moves": [
+      "horn attack",
+      // ...
     ],
-    poke_type: 'ground',
-  }
-  items: [
-    {
-      id: 15,
-      name: 'Dark Vulcan',
-      pokemon_id: 5,
-      price: 12,
-      happiness: 58,
-      image_url: "/assets/pokeball.svg"
+    "poke_type": "ground",
+    "image_url": "/assets/pokemon_snaps/112-054fbbe24b26953dc0a44be531802d9a5351e19386c5aad125e36e1d3006fd66.svg",
+    "item_ids": [
+      642,
+      // ...
+    ]
+  },
+  "items": {
+    "640": {
+      "id": 640,
+      "name": "Small Concrete Wallet",
+      "pokemon_id": 214,
+      "price": 71,
+      "happiness": 20,
+      "image_url": "/assets/pokemon_potion.svg"
     },
-    //...
-  ]
+    // ...
+  }
 }
 ```
 
@@ -276,7 +280,7 @@ Sample state shape:
         name: /*...*/,
         image_url: /*...*/
       },
-      //...
+      // ...
     }
   }
 }
@@ -381,7 +385,7 @@ Note how we are using `entities.pokemon` to manage _all_ the pokemon. At this po
         name: "Venusaur",
         image_url: "/assets/pokemon_snaps/130.png",
       },
-      //... more pokemon
+      // ... more pokemon
     },
     items: {
       3: {

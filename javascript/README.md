@@ -135,6 +135,11 @@ we highly encourage you to read the whole book.
 
 ## w6d1
 
+### Assessment05 Practice
+* [Practice][assessment-prep-5]
+
+[assessment-prep-5]: http://github.com/appacademy/assessment-prep#assessment-5
+
 ### Materials (125 min)
 :closed_lock_with_key: `go_video_go`
 * :movie_camera: [Prototype Chain and Inheritance][proto-inherit-vid] (20 min)
@@ -195,13 +200,6 @@ we highly encourage you to read the whole book.
 [asteroids-project]: projects/asteroids
 
 ## w6d2
-
-### Assessment05 Practice
-+ In-class practice assessment at 9am. Please bring your own machine if
-possible.
-* [Practice][assessment-prep-5]
-
-[assessment-prep-5]: http://github.com/appacademy/assessment-prep#assessment-5
 
 ### Materials (115 min)
 * :book: [The Document Object Model][dom] (10 min)

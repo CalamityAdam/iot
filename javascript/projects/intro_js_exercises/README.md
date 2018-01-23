@@ -155,7 +155,7 @@ Write the following functions:
 > Though this was not the case with Ruby, you will likely see this in other programming languages.
 > Try this on your own if you are curious.
 
-* `mergesort(arr)` - recieves an array, returns a sorted copy of the array by implementing [`merge sort`][merge-sort] sorting algorithm
+* `mergesort(arr)` - receives an array, returns a sorted copy of the array by implementing [`merge sort`][merge-sort] sorting algorithm
 * `subsets(arr)` - receives an array, returns an array containing all the subsets of the original array
 
 ### Recap
