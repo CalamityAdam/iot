@@ -55,6 +55,11 @@ starting.
   * Next Steps: [Check out the Job Search Curriculum][jobsearch]
 * **W10D1**: [Culture Readings](#w10d1)
 
+**NB** You are **not** permitted to use Bootstrap for CSS. Learning true CSS
+now will allow you to easily pick up CSS frameworks, like Bootstrap, later.
+Bootstrap is a unique skill in itself and will take just as long to learn as
+normal CSS.
+
 [during-project]: project/during-the-project.md
 [peer-review]: project/peer-review.md
 [production-readme]: project/production-readme.md
