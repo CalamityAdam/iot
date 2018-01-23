@@ -39,14 +39,16 @@ The `defaults: { format: :json }` option tells the controller to first look for 
 Edit your `routes.rb`. Your routes table should look like the following:
 
 ```
-           Prefix Verb   URI Pattern                Controller#Action
-             root GET    /                          static_pages#root
-api_pokemon_index GET    /api/pokemon(.:format)     api/pokemon#index {:format=>:json}
-                  POST   /api/pokemon(.:format)     api/pokemon#create {:format=>:json}
-      api_pokemon GET    /api/pokemon/:id(.:format) api/pokemon#show {:format=>:json}
-                  PATCH  /api/pokemon/:id(.:format) api/pokemon#update {:format=>:json}
-                  PUT    /api/pokemon/:id(.:format) api/pokemon#update {:format=>:json}
-                  DELETE /api/pokemon/:id(.:format) api/pokemon#destroy {:format=>:json}
+           Prefix Verb   URI Pattern                     Controller#Action
+             root GET    /                               static_pages#root
+api_pokemon_index GET    /api/pokemon(.:format)          api/pokemon#index {:format=>:json}
+                  POST   /api/pokemon(.:format)          api/pokemon#create {:format=>:json}
+  new_api_pokemon GET    /api/pokemon/new(.:format)      api/pokemon#new {:format=>:json}
+ edit_api_pokemon GET    /api/pokemon/:id/edit(.:format) api/pokemon#edit {:format=>:json}
+      api_pokemon GET    /api/pokemon/:id(.:format)      api/pokemon#show {:format=>:json}
+                  PATCH  /api/pokemon/:id(.:format)      api/pokemon#update {:format=>:json}
+                  PUT    /api/pokemon/:id(.:format)      api/pokemon#update {:format=>:json}
+                  DELETE /api/pokemon/:id(.:format)      api/pokemon#destroy {:format=>:json}
 ```
 
 ### Pokemon Controller
