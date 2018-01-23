@@ -97,6 +97,8 @@
 [connect]: readings/connect.md
 [containers]: readings/containers.md
 [selectors]: readings/selectors.md
+[redux-nontech]: readings/redux_nontech.md
+
 
 ### (optional) Fruit Stand App Demo (75 min)
 * :movie_camera: Fruit Stand Demo (75 min)
@@ -186,7 +188,6 @@
 [jbuilder_docs]: https://github.com/rails/jbuilder
 [normalizing]: http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html
 [updating-normalized]: http://redux.js.org/docs/recipes/reducers/UpdatingNormalizedData.html
-[redux-nontech]: readings/redux_nontech.md
 
 ### Homeworks (105 min)
 * [Giphy Homework][giphy_homework] (90 min)
