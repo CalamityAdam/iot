@@ -358,7 +358,7 @@ Remember not to mutate `state`!
 We want to separate our app's data and presentational states.
 To do this we can create nested reducers, such that eventually our redux state might look something like this:
 
-Note how we are using `entities.pokemon` to manage _all_ the pokemon. At this point we have loaded the index and the detail of Ivysaur, which is why we see Ivysaur's attack, defense, item_ids, etc., see Ivysaur's `id` in `ui.pokedisplay`, and have also loaded Ivysaur's items in the `items` slice.
+Note how we are using `entities.pokemon` to manage _all_ the pokemon. At this point we have loaded the index, loaded the detail of Ivysaur, which is why we see Ivysaur's attack, defense, item_ids, etc., and we have also loaded Ivysaur's items in the `items` slice.
 
 ```javascript
 {
@@ -413,7 +413,6 @@ Note how we are using `entities.pokemon` to manage _all_ the pokemon. At this po
     }
   },
   ui: {
-    pokeDisplay: 2,
     errors: {},
     loading: {},
   }
