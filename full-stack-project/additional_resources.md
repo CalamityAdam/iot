@@ -15,8 +15,6 @@
   * [CSS transforms and transitions video][css-transitions]
   * [SASS reading][sass]
   * [Autoprefixer gem reading][autoprefixer]
-  * [React modal reading][react-modal]
-    * [React modal video][react-modal-video]
   * [Styling links reading][styling-links]
 * Useful web services
   * [Sendgrid reading][sendgrid]
@@ -47,8 +45,6 @@
 [css-transitions]: https://vimeo.com/164928587
 [sass]: resources/styling/sass-typography.md
 [autoprefixer]: resources/styling/autoprefixer.md
-[react-modal]: resources/styling/react-modals.md
-[react-modal-video]: https://vimeo.com/164336429
 [styling-links]: resources/styling/styling.md
 
 [sendgrid]: resources/apis/sendgrid.md
