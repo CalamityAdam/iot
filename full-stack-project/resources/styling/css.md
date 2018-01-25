@@ -152,8 +152,8 @@ width to a percentage without having to do extremely hard calculations
 for borders and paddings.
 
 Changing this property does have dramatic consequences, and might
-cause problems if you rely on pre-existing styles or frameworks like
-Bootstrap. Box sizing is also a CSS3 feature, so make sure to check
+cause problems if you rely on pre-existing styles or frameworks.
+Box sizing is also a CSS3 feature, so make sure to check
 [Can I Use](http://www.caniuse.com) and implement the necessary
 pre-fixes.
 
