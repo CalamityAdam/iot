@@ -6,6 +6,8 @@ import LoadingIcon from './loading_icon';
 import PokemonFormContainer from './pokemon_form_container';
 import PokemonDetailContainer from './pokemon_detail_container';
 
+import { requestAllPokemon } from '../../actions/pokemon_actions';
+
 class PokemonIndex extends Component {
   componentWillMount() {
     this.props.requestAllPokemon();
@@ -13,7 +15,7 @@ class PokemonIndex extends Component {
 
   render() {
     const { pokemon, loading } = this.props;
-    
+
     return (
       loading ?
       <LoadingIcon /> :

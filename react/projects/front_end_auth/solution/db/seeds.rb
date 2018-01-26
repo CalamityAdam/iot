@@ -20,12 +20,12 @@ user7 = User.create(username: Faker::Name.name, email: Faker::Internet.email, pa
 user8 = User.create(username: Faker::Name.name, email: Faker::Internet.email, password: 'password')
 user9 = User.create(username: Faker::Name.name, email: Faker::Internet.email, password: 'password')
 
-chirp1 = Chirp.create(body: Faker::RickAndMorty.quote, author_id: user1.id)
-chirp2 = Chirp.create(body: Faker::RickAndMorty.quote, author_id: user1.id)
-chirp3 = Chirp.create(body: Faker::RickAndMorty.quote, author_id: user1.id)
-chirp4 = Chirp.create(body: Faker::RickAndMorty.quote, author_id: user2.id)
-chirp5 = Chirp.create(body: Faker::RickAndMorty.quote, author_id: user2.id)
-chirp6 = Chirp.create(body: Faker::RickAndMorty.quote, author_id: user2.id)
+chirp1 = Chirp.create(body: Faker::HarryPotter.quote, author_id: user1.id)
+chirp2 = Chirp.create(body: Faker::HarryPotter.quote, author_id: user1.id)
+chirp3 = Chirp.create(body: Faker::HarryPotter.quote, author_id: user1.id)
+chirp4 = Chirp.create(body: Faker::HarryPotter.quote, author_id: user2.id)
+chirp5 = Chirp.create(body: Faker::HarryPotter.quote, author_id: user2.id)
+chirp6 = Chirp.create(body: Faker::HarryPotter.quote, author_id: user2.id)
 
 Like.create(user_id: user3.id, chirp_id: chirp1.id)
 Like.create(user_id: user4.id, chirp_id: chirp2.id)

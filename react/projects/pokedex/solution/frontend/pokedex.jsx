@@ -7,11 +7,9 @@ import configureStore from './store/store';
 import PokemonIndexContainer from './components/pokemon/pokemon_index_container';
 
 const Root = ({ store }) => (
-  <Provider store={store}>
-    <HashRouter>
-      <Route path="/" component={PokemonIndexContainer} />
+    <HashRouter store={store}>
+      <Route path="/" component={PokemonIndex} store={store}/>
     </HashRouter>
-  </Provider>
 );
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,3 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   ReactDOM.render(<Root store={store} />, root);
 });
+
+
+// <Provider store={store}>
+//   <HashRouter>
+//     <Route path="/" component={PokemonIndexContainer} />
+//   </HashRouter>
+// </Provider>
+//
