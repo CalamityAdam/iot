@@ -4,10 +4,10 @@ import PokemonDetail from './pokemon_detail';
 import { requestSinglePokemon } from '../../actions/pokemon_actions';
 import { selectPokeItems } from '../../reducers/selectors';
 
-const mapStateToProps = state => {
-  const pokemon = state.entities.pokemon[state.ui.pokeDisplay];
+const mapStateToProps = (state, ownProps) => {
+  const pokemon = state.entities.pokemon[ownProps.match.params.pokemonId];
 
-  return{
+  return {
     pokemon,
     items: selectPokeItems(state, pokemon),
     loading: state.ui.loading.detailLoading

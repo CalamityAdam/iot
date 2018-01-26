@@ -14,10 +14,10 @@ Webpack can be configured to transpile your JSX and ES6 source code into browser
 **Install the appropriate NPM packages**:
 
 ```
-npm install --save babel-core babel-preset-es2015 babel-preset-react
+npm install --save babel-core babel-preset-env babel-preset-react
 ```
 
-`babel-core` is the transpiling engine itself. `babel-preset-es2015` and `babel-preset-react` are configurations that tell the core transpiler how to interpret
+`babel-core` is the transpiling engine itself. `babel-preset-env` and `babel-preset-react` are configurations that tell the core transpiler how to interpret
 ES6 and JSX, respectively.
 
 **Configure the `module` key of your `webpack.config.js`:**
@@ -30,7 +30,7 @@ module: {
       exclude: /(node_modules)/, // Leaves dependencies alone
       loader: 'babel-loader', // Sets Babel as the transpiler
       query: {
-        presets: ['es2015', 'react'] // Tells Babel what syntaxes to translate
+        presets: ['env', 'react'] // Tells Babel what syntaxes to translate
       }
     }
   ]

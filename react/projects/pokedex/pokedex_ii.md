@@ -138,7 +138,7 @@ Hint: Your state shape will look something like this:
         name: 'Venusaur',
         image_url: '/assets/130.png',
       },
-      //... more pokemon
+      // ... more pokemon
     },
     items: {
       3: {
@@ -166,8 +166,6 @@ Hint: Your state shape will look something like this:
     }
   },
   ui: {
-    pokeDisplay: 2,
-    errors: {},
     loading: {},
   }
 }
@@ -181,14 +179,14 @@ This requires defining a new constant and action creator.
 * Update the `pokemonReducer` to handle receiving a single pokemon.
 * Create an `itemsReducer` for an items slice of state. Just like `pokemonReducer` this should also be nested under the `entities` slice of state.
   * Remember: multiple reducers can respond to the same action! How will you add a pokemon's items to state?
-* Create a `uiReducer` that will be nested under the `rootReducer` for a `ui` slice of state. This slice will hold information that affects how the user interacts with your app, but is *not* relational data from your database. In this slice, update a `pokeDisplay` id whenever you receive a single pokemon.
+* Create a `uiReducer` that will be nested under the `rootReducer` for a `ui` slice of state. This slice will hold information that affects how the user interacts with your app, but is *not* relational data from your database.
 * Create a `requestSinglePokemon` thunk action creator.
 * Create a `PokemonDetailContainer` that maps props to `PokemonDetail`.
 * Create a class `PokemonDetail` component that returns information of the pokemon.
 * Add a `Route` that renders the `PokemonDetailContainer` component when the url matches the path `"/pokemon/:pokemonId`".
   * We'll add the `Route` to the end of our `PokemonIndex` render function.
   * Inside of `PokemonDetail` on `componentDidMount`, call `this.props.requestSinglePokemon`.
-  Pass it the pokemon's id from the `this.props.match.params.pokemonId`.
+  * Pass it the pokemon's id from the `this.props.match.params.pokemonId`.
 
 Once it works, try navigating to the route of a different pokemon.
 Your detail view won't update.
@@ -198,7 +196,7 @@ We need to trigger a request on the props changing.
 There is a lifecycle method we can tap into to accomplish this: `componentWillReceiveProps(newProps)`.
 
 * In your `PokemonDetail` component, on `componentWillReceiveProps(newProps)`, call `this.props.requestSinglePokemon(newProps.match.params.pokemonId)`, but only if  the `pokemonId` has changed.
-You can check your current props to find out the previous value.
+  * You can check your current props to find out the previous value.
 
 **Test your `PokemonDetail` redux cycle and route!** Does it behave like
 the [live demo][live-demo]? Show a TA before moving on.
@@ -271,12 +269,12 @@ class ControlledComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      //...
+      // ...
     };
 
     this.exampleMethod = this.exampleMethod.bind(this);
   }
-  //...
+  // ...
 }
 ```
 
@@ -285,13 +283,13 @@ For the input elements, use an `onChange` listener and write a single `update` f
 An basic example of an `update` method is below:
 ```javascript
 class ControlledComponent extends React.Component {
-  //...
+  // ...
 
   update(property) {
     return e => this.setState({ [property]: e.target.value });
   }
 
-  //...
+  // ...
 }
 ```
 
@@ -312,7 +310,7 @@ The final parts of the `PokemonForm` are redirecting callback and error handling
 ### Redirecting
 
 Once the posting is complete we want the application to redirect to the newly created Pokemon.
-We need to wait, however, because we need this Pokemon's ID in order to push to that URL.
+We need to wait, however, because we need this Pokemon's id in order to push to that URL.
 We will only have this id after the response has come back from the server, so we can tack on another `.then` after our promise resolves and redirect from there.
 
 Make sure that your `createPokemon` action creator returns the promise and that any `.then` calls you tack onto the end return the pokemon.
@@ -367,13 +365,12 @@ But so far, we have no way of letting our users know what happened. We need a wa
 // Sample State Shape
 {
   pokemon: {
-    //...
+    // ...
   },
-  pokemonDetail: {
-    //...
-  },
-
-  errors: [ 'message 1', 'message 2' ]
+  // ...
+  ui:
+    errors: [ 'message 1', 'message 2' ],
+    loading: {}
 }
 ```
 
@@ -429,7 +426,7 @@ This is not very dry. Let's employ a tactic called "bootstrapping" to tell our f
 * Open `application.html.erb`
   * Add a `<script>` tag; inside, set the value of `window.POKEMON_TYPES` to the `POKEMON_TYPES` constant used in the `PokemonModel`
   * Use the `#raw` method to tell Rails not to escape the symbols in our array
-* Update you `PokemonForm` to use `window.POKEMON_TYPES` instead
+* Update your `PokemonForm` to use `window.POKEMON_TYPES` instead
 
 ```javascript
 window.POKEMON_TYPES = <%= raw Pokemon::TYPES %>

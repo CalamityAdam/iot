@@ -11,6 +11,7 @@ list.
   * `binding_of_caller`
   * `pry-rails`
   * `annotate`
+  * `bcrypt`
   * `jquery-rails` (When using rails 5.1+)
 * [ ] `bundle install`
 * [ ] When using Rails 5.1+, update your `application.js` manifest to include: 
@@ -35,7 +36,7 @@ list.
   * `babel-core`
   * `babel-loader`
   * `babel-preset-react`
-  * `babel-preset-es2015`
+  * `babel-preset-env`
   * `lodash` (optional)
 * [ ] Create a `webpack.config.js` file.
   * The entry point should be in frontend, e.g. `entry: 'frontend/index.jsx'`.

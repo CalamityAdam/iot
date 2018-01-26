@@ -36,7 +36,7 @@ In `app/views/layouts/application.html.erb`, remove the line indicated below.
 <%= javascript_include_tag "application" %>
 ```
 
-We're not using JavaScript yet, so there's no need to load in the default JS that Rails comes with. This will clean up your log if you're not already using the `quiet_assets` gem. Additionally, Rails comes with some dubious JS tricks you can use, but we want you to learn the better way. For example, the built-in Rails JS allows you to use plain links to delete resources:
+We're not using JavaScript yet, so there's no need to load in the default JS that Rails comes with. Additionally, Rails comes with some dubious JS tricks you can use, but we want you to learn the better way. For example, the built-in Rails JS allows you to use plain links to delete resources:
 
 ```ruby
 link_to 'Delete Me', post_url(@post), method: :delete
@@ -55,7 +55,7 @@ Removing the default Rails JS for now will help you get used to doing things the
 
 ## Add Common Debugging Gems
 
-You want to use `better_errors` and `binding_of_caller`, which will make it much easier to see what is going on in your Rails app. You also want to use `pry-rails`, which will provide a nicer console than IRB when you run `rails console`. Lastly, you can use the `quiet_assets` gem, which will reduce excessive logging of requests for CSS/JavaScript files, making it easier for you to read your Rails logs:
+You want to use `better_errors` and `binding_of_caller`, which will make it much easier to see what is going on in your Rails app. You also want to use `pry-rails`, which will provide a nicer console than IRB when you run `rails console`. 
 
 ```ruby
 # Gemfile

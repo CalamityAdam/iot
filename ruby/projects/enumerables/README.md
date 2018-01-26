@@ -1,3 +1,15 @@
+# Pre-Exercise Note
+
+From this point on, we will be using the command line and `pry` to test
+our code, navigate our computer, and perform many other amazing tasks.
+
+This means that we are **not** using repl.it anymore to test our code.
+
+Getting comfortable with these tools early will be very important in
+becoming an efficient developer. After learning them, these tools will
+make just about any operation you can think of faster than using a GUI
+and mouse.
+
 # Iteration Exercises
 
 We're going to implement some `Array` methods. There are descriptions
@@ -163,9 +175,9 @@ following methods:
 
 Although these exercises are from the prepwork and come with specs, use this opportunity to practice your own testing skills. Write out each method, think of a few different example cases, and test out your code in `pry`.
 
-If you are having a tough time thinking of example cases, check out the [specs][prep-iter-specs]. You can use those examples to test your solutions.
+If you are having a tough time thinking of example cases, check out the [specs][prep-iter-specs]. You can use those examples to test your solutions. Don't forget to move your `enumerables_array.rb` into a `lib` directory!
 
 [docs-enumerable]: http://ruby-doc.org/core-2.1.2/Enumerable.html
 [docs-array]: http://ruby-doc.org/core-2.1.2/Array.html
-[prep-iter-exercises]: https://github.com/appacademy/appacademy-prep/blob/master/w1/w1d2/exercises/lib/03_iteration.rb
-[prep-iter-specs]: https://github.com/appacademy/appacademy-prep/blob/master/w1/w1d2/exercises/spec/03_iteration_spec.rb
+[prep-iter-exercises]: https://github.com/appacademy/curriculum/blob/master/ruby/assets/prep_iteration_exercises.rb
+[prep-iter-specs]: https://github.com/appacademy/curriculum/blob/master/ruby/assets/w1d1_spec.zip?raw=true

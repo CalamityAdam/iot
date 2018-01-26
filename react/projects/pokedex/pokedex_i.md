@@ -113,29 +113,33 @@ A GET request to `localhost:3000/api/pokemon/5` should render this:
 
 ```javascript
 {
-  pokemon: {
-    id: 5,
-    name: 'Rhydon',
-    attack: 130,
-    defense: 120,
-    image_url: "/assets/pokemon_snaps/5.svg",
-    moves: [
-      'horn attack',
-      //...
+  "pokemon": {
+    "id": 5,
+    "name": "Rhydon",
+    "attack": 130,
+    "defense": 120,
+    "moves": [
+      "horn attack",
+      // ...
     ],
-    poke_type: 'ground',
-  }
-  items: [
-    {
-      id: 15,
-      name: 'Dark Vulcan',
-      pokemon_id: 5,
-      price: 12,
-      happiness: 58,
-      image_url: "/assets/pokeball.svg"
+    "poke_type": "ground",
+    "image_url": "/assets/pokemon_snaps/112-054fbbe24b26953dc0a44be531802d9a5351e19386c5aad125e36e1d3006fd66.svg",
+    "item_ids": [
+      642,
+      // ...
+    ]
+  },
+  "items": {
+    "640": {
+      "id": 640,
+      "name": "Small Concrete Wallet",
+      "pokemon_id": 214,
+      "price": 71,
+      "happiness": 20,
+      "image_url": "/assets/pokemon_potion.svg"
     },
-    //...
-  ]
+    // ...
+  }
 }
 ```
 
@@ -159,7 +163,7 @@ As with previous projects, you will need to set up a `package.json` and a `webpa
   * redux-logger
   * babel-loader
   * babel-core
-  * babel-preset-es2015
+  * babel-preset-env
   * babel-preset-react
   * lodash
 
@@ -190,7 +194,7 @@ Next we need to configure Webpack to compile our `bundle.js` file.
           exclude: /(node_modules)/,
           loader: 'babel-loader',
           query: {
-            presets: ['react', 'es2015']
+            presets: ['env', 'react']
           }
         }
       ]
@@ -276,7 +280,7 @@ Sample state shape:
         name: /*...*/,
         image_url: /*...*/
       },
-      //...
+      // ...
     }
   }
 }
@@ -354,7 +358,7 @@ Remember not to mutate `state`!
 We want to separate our app's data and presentational states.
 To do this we can create nested reducers, such that eventually our redux state might look something like this:
 
-Note how we are using `entities.pokemon` to manage _all_ the pokemon. At this point we have loaded the index and the detail of Ivysaur, which is why we see Ivysaur's attack, defense, item_ids, etc., see Ivysaur's `id` in `ui.pokedisplay`, and have also loaded Ivysaur's items in the `items` slice.
+Note how we are using `entities.pokemon` to manage _all_ the pokemon. At this point we have loaded the index, loaded the detail of Ivysaur, which is why we see Ivysaur's attack, defense, item_ids, etc., and we have also loaded Ivysaur's items in the `items` slice.
 
 ```javascript
 {
@@ -381,7 +385,7 @@ Note how we are using `entities.pokemon` to manage _all_ the pokemon. At this po
         name: "Venusaur",
         image_url: "/assets/pokemon_snaps/130.png",
       },
-      //... more pokemon
+      // ... more pokemon
     },
     items: {
       3: {
@@ -409,7 +413,6 @@ Note how we are using `entities.pokemon` to manage _all_ the pokemon. At this po
     }
   },
   ui: {
-    pokeDisplay: 2,
     errors: {},
     loading: {},
   }
@@ -552,7 +555,7 @@ Define them in a `selectors.js` file in your app's `frontend/reducers` folder.
 * Define and export a function, `selectAllPokemon(state)`, which accepts the application state as an argument and exports an array of all the pokemon objects.
 You can use [lodash's values][lodash-values] method.
 
-**Test your selector in the browser**. You should should be able to do the following:
+**Test your selector in the browser**. You should be able to do the following:
 
 ```javascript
 const initialState = getState();

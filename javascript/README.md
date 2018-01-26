@@ -7,6 +7,9 @@
 ### Breakfast
 * :coffee: **Bagels @ 8:30am** :coffee:
 
+### (SF ONLY) :clock10: Class will start at 10am! :clock10:
+* **Progress Tracker reports are still due at 9am.**
+
 ### Materials (155 min)
 :closed_lock_with_key: `go_video_go`
 * :movie_camera: [Intro to JS][intro-js-video] (12 min)
@@ -79,9 +82,6 @@ we highly encourage you to read the whole book.
 
 ## w5d5
 
-### (SF ONLY) :clock10: Class will start at 10am! :clock10:
-* **Progress Tracker reports are still due at 9am.**
-
 ### Materials (105 min)
 * :book: [Arguments][arguments] (15 min)
 * :book: [Function Invocation, in-depth][function-invocation-in-depth] (10 min)
@@ -134,6 +134,11 @@ we highly encourage you to read the whole book.
 [ttt_node]: projects/ttt_node
 
 ## w6d1
+
+### Assessment05 Practice
+* [Practice][assessment-prep-5]
+
+[assessment-prep-5]: http://github.com/appacademy/assessment-prep#assessment-5
 
 ### Materials (125 min)
 :closed_lock_with_key: `go_video_go`
@@ -195,13 +200,6 @@ we highly encourage you to read the whole book.
 [asteroids-project]: projects/asteroids
 
 ## w6d2
-
-### Assessment05 Practice
-+ In-class practice assessment at 9am. Please bring your own machine if
-possible.
-* [Practice][assessment-prep-5]
-
-[assessment-prep-5]: http://github.com/appacademy/assessment-prep#assessment-5
 
 ### Materials (115 min)
 * :book: [The Document Object Model][dom] (10 min)

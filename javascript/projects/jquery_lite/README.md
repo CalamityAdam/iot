@@ -8,7 +8,7 @@ events, manipulating the DOM, and guaranteeing it works across browsers.
 
 We will implement most of this functionality using the native DOM API
 that is built right in to every browser. For a full list of API methods check
-out the the [MDN site][document-apis]. You will be surprised how little you
+out the [MDN site][document-apis]. You will be surprised how little you
 actually need jQuery when you finish this project! Use the [documentation on
 jQuery][jquery] if you need more info on the jQuery methods you are building.
 
@@ -84,7 +84,7 @@ this array as an instance variable.
 * Back in `main.js`, require your DOMNodeCollection file and store it in a variable.
 
 #### `$l(HTMLElement)`
-* We are now going to modify the core `$l` function. It will recieve one argument,
+* We are now going to modify the core `$l` function. It will receive one argument,
   but let's make it flexible.
 * If the argument received is a HTML element, (i.e. an `instanceof`
   `HTMLElement`), you should put it into an array and return an instance of

@@ -30,8 +30,6 @@ class Post < ApplicationRecord
 end
 
 class Tagging < ApplicationRecord
-  # Validate post and tag rather than post_id or tag_id
-  validates :post, :tag, presence: true
   validates :tag_id, uniqueness: { scope: :post_id }
 
   belongs_to :post
@@ -44,13 +42,13 @@ class Tag < ApplicationRecord
 end
 ```
 
-Notice that **we validate the presence of `post` and `tag` rather than `post_id`
+Remember that Rails 5 automatically validates presence of `belongs_to` associations. But let's say you were working in an older codebase using Rails 4, which doesn't share this behavior. When validating the presence of `Tagging` fields, **we would have to validate the presence of `post` and `tag` rather than `post_id`
 and `tag_id`**. Why? Ultimately, we want to be able to create a `Tagging` at the
 same time we create a new `Post`. Since our post won't be saved to the database
 yet, it won't have an `id` and validating `post_id` would fail. We validate the
 existence of a `post` instead.
 
-In addition, notice that **in our associations for taggings, we use `dependent:
+Also, notice that **in our associations for taggings, we use `dependent:
 :destroy` and `inverse_of`**. The `dependent: :destroy` assures that we destroy
 taggings when we destroy their associated `Post`. The `inverse_of` allows us to
 find the associated `Tag` or `Post` for a tagging in memory, even if it has not yet
@@ -78,7 +76,7 @@ post.tag_ids = [1,2,3,4]
 ```
 
 This creates new `Tagging` objects linking the post to tags with IDs 1, 2, 3, and
-4 and deletes any `Tagging`s for `Post`s whose ids are not in the array.
+4 and deletes any `Tagging`s for `Tag`s whose ids are not in the array.
 
 We could also pass in an array of tag ids when we create a new post like such:
 
