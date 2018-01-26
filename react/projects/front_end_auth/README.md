@@ -1,6 +1,6 @@
 # Front-End Auth (React, Redux, React-Router)
 ## Step One
-Download the [skeleton]()
+Download the [skeleton](./skeleton.zip?raw=true)
 * `npm install`
 * `bundle install`
 * `bundle exec rails db:setup`
