@@ -4,7 +4,7 @@ Download the [skeleton](./skeleton.zip?raw=true)
 * `npm install`
 * `bundle install`
 * `bundle exec rails db:setup`
-* Start Webpack
+* `npm start` to start Webpack
 * Start the Rails server
 ## Step Two
 Follow along with these videos, coding as you watch.
