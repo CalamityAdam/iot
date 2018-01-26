@@ -126,8 +126,8 @@ understand it.
 // /frontend/util/route_util.jsx
 
 // renders component if logged out, otherwise redirects to the root url
-const Auth = ({component: Component, path, loggedIn}) => (
-  <Route path={path} render={(props) => (
+const Auth = ({component: Component, path, loggedIn, exact}) => (
+  <Route path={path} exact={exact} render={(props) => (
     !loggedIn ? (
       <Component {...props}/>
     ) : (
@@ -137,8 +137,8 @@ const Auth = ({component: Component, path, loggedIn}) => (
 );
 
 // renders component if logged in, otherwise redirects to the login page
-const Protected = ({component: Component, path, loggedIn}) => (
-  <Route path={path} render={(props) => (
+const Protected = ({component: Component, path, loggedIn, exact}) => (
+  <Route path={path} exact={exact} render={(props) => (
      loggedIn ? (
       <Component {...props}/>
     ) : (
@@ -169,10 +169,10 @@ are logged in.
 // Do this!
 import { ProtectedRoute } from '/file/path/to/rout_util';
 
-<ProtectedRoute component={ ReviewForm } path="/reviews/new" />
+<ProtectedRoute exact path="/reviews/new" component={ ReviewForm } />
 
 // Instead of this
-<Route component={ ReviewForm } path="/reviews/new" />
+<Route exact path="/reviews/new" component={ ReviewForm } />
 ```
 
 See how easy that is? We have to do a little work to set up our auth
