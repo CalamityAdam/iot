@@ -627,8 +627,8 @@ Your `<AuthRoute>` should look something like this:
 
 //...
 
-const Auth = ({component: Component, path, loggedIn}) => (
-  <Route path={path} render={(props) => (
+const Auth = ({component: Component, path, loggedIn, exact}) => (
+  <Route path={path} exact={exact} render={(props) => (
     !loggedIn ? (
       <Component {...props} />
     ) : (

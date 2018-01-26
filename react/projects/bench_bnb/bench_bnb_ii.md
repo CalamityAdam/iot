@@ -248,8 +248,8 @@ const App = () => (
       <GreetingContainer />
     </header>
 
-    <AuthRoute path="/login" component={ SessionFormContainer } />
-    <AuthRoute path="/signup" component={ SessionFormContainer } />
+    <AuthRoute exact path="/login" component={ SessionFormContainer } />
+    <AuthRoute exact path="/signup" component={ SessionFormContainer } />
     <Route exact path="/" component={ BenchIndexContainer } />
   </div>
 )
@@ -715,7 +715,7 @@ You can use the `loggedIn` boolean like we did in our `AuthRoute` component.
 * Add the route to our `App` component like so:
 
  ```html
- <ProtectedRoute path="benches/new" exact component={BenchFormContainer} />
+ <ProtectedRoute exact path="benches/new" component={BenchFormContainer} />
 ```
 
 **Test that your routes are protected before moving on!**.

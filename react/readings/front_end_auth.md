@@ -169,10 +169,10 @@ are logged in.
 // Do this!
 import { ProtectedRoute } from '/file/path/to/rout_util';
 
-<ProtectedRoute component={ ReviewForm } path="/reviews/new" />
+<ProtectedRoute exact path="/reviews/new" component={ ReviewForm } />
 
 // Instead of this
-<Route component={ ReviewForm } path="/reviews/new" />
+<Route exact path="/reviews/new" component={ ReviewForm } />
 ```
 
 See how easy that is? We have to do a little work to set up our auth
