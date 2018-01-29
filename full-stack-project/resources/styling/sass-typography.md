@@ -88,54 +88,6 @@ rest. But it looks something like this:
 [Bourbon][bourbon] is a library of helpful mixins. Read the source to learn more about SASS and CSS in general.
 [bourbon]: http://bourbon.io/
 
-### Bootstrap and Foundation and Skeleton and ...
-
-There are too many boilerplate css frameworks out there. Just pick one
-and go with it. I suggest [Bootstrap][bootstrap] as it's pretty full
-featured, popular, and well documented (but sometimes it can be a bit
-too forceful). Consider choosing Bootstrap 2.3.2 as 3.0 is pretty new
-and I'm not sure if all the kinks have been ironed out.  Others in the
-course have gone with [Foundation][foundation] to be unique as it's
-slightly less ubiquitous, but still pretty full-featured. I really
-like [Skeleton][skeleton] as it's minimal, and pretty easy to
-understand what it's doing. It really doesn't matter what you choose,
-as the most important feature, _a grid_ is supplied by all.
-
-All you have to do to use these systems is include the CSS stylesheet
-in your `vendor/assets` and your `application.css` manifest. They may
-come with a bunch of stuff in a folder (javascript, icons, fonts), in
-which case you're probably safe just including the whole `css` or
-`stylesheets` folder.
-
-[bootstrap]:http://getbootstrap.com/2.3.2/
-[foundation]:http://foundation.zurb.com/
-[skeleton]:http://www.getskeleton.com/
-
-#### Grid Systems
-
-In most frameworks that have a grid system, you deal with a container
-which contains rows, and rows which contain columns.
-
-There are typically a fixed number of total columns per row (12
-columns in a Bootstrap row), so you must specify how wide each of your
-columns is by giving it a class.
-
-In Bootstrap's case two rows, a header with two columns and a content
-area with a sidebar and tab, would look like this:
-
-```
-<div class="container">
-   <div class="row">
-      <div class="span2"> ... one of the header columns, really skinny, perhaps a logo? ...  </div>
-      <div class="span10"> ... another header column, maybe global navigation? ... </div>
-   </div>
-   <div class="row">
-      <div class="span4"> ... this is the sidebar with a tab list ... </div>
-      <div class="span7 offset1"> ... this is the tab area where the content goes ... </div>
-   </div>
-</div>
-```
-
 ### Typography
 
 Type is difficult, so try and keep the number of fonts and styles you

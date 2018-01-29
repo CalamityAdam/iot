@@ -55,6 +55,11 @@ starting.
   * Next Steps: [Check out the Job Search Curriculum][jobsearch]
 * **W10D1**: [Culture Readings](#w10d1)
 
+**NB** You are **not** permitted to use CSS frameworks, like Bootstrap or
+Material. Learning true CSS now will allow you to easily pick up CSS frameworks
+later. CSS frameworks are a unique skill in themselves and will take just as
+long to learn as normal CSS.
+
 [during-project]: project/during-the-project.md
 [peer-review]: project/peer-review.md
 [production-readme]: project/production-readme.md

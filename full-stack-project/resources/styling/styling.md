@@ -60,7 +60,6 @@ One of the drawbacks of our program is that we don't have enough time to teach o
 [css-overview]: ./css.md
 [css-demos]: https://github.com/appacademy/css-demos
 [styling-railscasts]: ./styling-railscasts.md
-[sass-bootstrap-type]: ./sass-bootstrap-typography.md
 [themes]: ./themes.md
 [30-selectors]: http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
 [parallax-blog]:http://keithclark.co.uk/articles/pure-css-parallax-websites/
