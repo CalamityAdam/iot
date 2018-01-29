@@ -146,33 +146,19 @@ def andrews_films_and_leads_joins
   # Andrews' played in.
   execute(<<-SQL)
     SELECT
-      DISTINCT m1.title,
-      a1.name
-    FROM (
-        SELECT
-          movies.*
-        FROM
-          movies
-        JOIN
-          castings ON castings.movie_id = movies.id
-        JOIN
-          actors ON actors.id = castings.actor_id
-        WHERE
-          actors.name = 'Julie Andrews'
-      ) AS m1
-    JOIN (
-        SELECT
-          actors.*,
-          castings.movie_id AS movie_id
-        FROM
-          actors
-        JOIN
-          castings ON castings.actor_id = actors.id
-        WHERE
-          castings.ord = 1
-      ) AS a1 ON m1.id = a1.movie_id
-    ORDER BY
-      m1.title;
+      movies.title, lead_actors.name
+    FROM
+      movies
+    JOIN
+      castings julie_castings ON julie_castings.movie_id = movies.id
+    JOIN
+      actors julie_actors ON julie_castings.actor_id = julie_actors.id
+    JOIN
+      castings lead_castings ON lead_castings.movie_id = movies.id
+    JOIN
+      actors lead_actors ON lead_castings.actor_id = lead_actors.id
+    WHERE
+      julie_actors.name = 'Julie Andrews' AND lead_castings.ord = 1;
   SQL
 end
 
