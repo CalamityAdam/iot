@@ -28,18 +28,18 @@
     * Binary Search
 
 # By Topic
-## Debugging
+* Debugging
   * W1D1: The pry REPL and the byebug debugger (reading)
   * W1D1: `display` and `where` (reading)
   * W1D4: Screwedoku (project)
   * W4D2: Debugging Rails (reading)
-## Enumerables
+* Enumerables
   * W1D1: Enumerables (project)
   * W5D4: Intro to JavaScript Exercises (project)
-## Library/Module Management
+* Library/Module Management
   * W1 + W2: Ruby Library Management (reading)
   * W5D5: Node Modules (reading)
-## Searches and Sorts
+* Searches and Sorts
   * W1D1: Enumerables (project)
   * W1D3: Recursion Excersises (project)
   * W1D5: Intro to Algorithms and Data Structures
