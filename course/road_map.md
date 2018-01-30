@@ -46,38 +46,3 @@
   * W2D4: Sorting Complexity (reading)
   * W5D4: Intro to JavaScript Exercises (project)
   * W5D5: Intro to Callbacks Exercises (project)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Debugging
-  * W1D4: Screwedoku (project)
-  * W1D4: Overriding_inspect (reading)
-  * W3D4: Active Record Warmup/Movie Buff: Rails console, `to_sql` and `as_json` (project)
-  * W4D1: Rails Setup/Debugging Gems
-  * W4D2: Debugging Rails (reading), Debugging a Rails Project (video)
-  * W5D1: CSS/temporary background color (project)
-  * W5D5: Chrome Dev Tools (reading)
-  * W6D1: Debugging JS in Dev Tools (video)
-  * W6D5: React Developer Tools (reading)
-  * W7D2: Middleware/Redux Logger (reading)
