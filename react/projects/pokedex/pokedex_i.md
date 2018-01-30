@@ -30,7 +30,7 @@ Like so:
 
 ```ruby
 namespace :api, defaults: {format: :json} do
-  resources :pokemon
+  resources :pokemon, except: [:new, :edit]
 end
 ```
 
