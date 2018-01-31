@@ -57,14 +57,9 @@ To guarantee **referential integrity**, you need to enforce a
 constraint at the DB level. As you know from the SQL readings, this
 means adding a FOREIGN KEY constraint.
 
-To add FK constraints in ActiveRecord, you can use a library like
-[foreigner][foreigner]. You don't have to worry about this for now;
-some Rails developers consider this to be overkill. Widowed records aren't the
-\#1 worst thing in the world, since they can usually be safely
-ignored. However, it is good for you to know about and understand the
-potential problems.
-
-[foreigner]: https://github.com/matthuhiggins/foreigner
+Widowed records aren't the \#1 worst thing in the world, since they can
+usually be safely ignored. However, it is good for you to know about and
+understand the potential problems.
 
 ## Callback Registration
 
