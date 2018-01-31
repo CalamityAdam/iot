@@ -309,12 +309,17 @@
 
 ## w2d2
 
-### Materials (35 min)
 
+
+
+### Materials (55 min)
+
+* :book: [CSS Nontechnical Overview][css-nontech] (20 min)
 * :book: [Nontechnical Overview of Ruby][ruby-nontech] (15 min)
 * :movie_camera: [CSS Intro][css-intro] (8 min)
 * :movie_camera: [CSS Workflow][css-workflow] (12 min)
 
+[css-nontech]: ../html-css/readings/css_nontech.md
 [ruby-nontech]: readings/ruby_nontech.md
 [css-intro]: https://vimeo.com/151188850
 [css-workflow]: https://vimeo.com/168826664
