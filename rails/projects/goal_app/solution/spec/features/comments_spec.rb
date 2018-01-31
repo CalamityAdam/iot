@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 feature "commenting" do
-  let!(:hello_world) { FactoryBot.create(:user_hw) }
-  let!(:foo_bar) { FactoryBot.create(:user, username: "foo_bar") }
-  let!(:foo_goal) do
+  given!(:hello_world) { FactoryBot.create(:user_hw) }
+  given!(:foo_bar) { FactoryBot.create(:user, username: "foo_bar") }
+  given!(:foo_goal) do
     FactoryBot.create(:goal, author: foo_bar)
   end
 
@@ -16,12 +16,12 @@ feature "commenting" do
   # have some docs:
   # https://www.relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples
   shared_examples "comment" do
-    it "should have a form for adding a new comment" do
+    scenario "should have a form for adding a new comment" do
       expect(page).to have_content "New Comment"
       expect(page).to have_field "Comment"
     end
 
-    it "should save the comment when a user submits one" do
+    scenario "should save the comment when a user submits one" do
       fill_in "Comment", with: "my magical comment!"
       click_on "Save Comment"
       expect(page).to have_content "my magical comment!"
