@@ -30,7 +30,7 @@
       $l.ajax({
         method: "GET",
         url:  "http://api.openweathermap.org/data/2.5/weather",
-        data: { appid: "6593357a84983f34982acc13f791e08d", q: "NY,NY" },
+        data: { appid: "6593357a84983f34982acc13f791e08d", q: "new%20york,US" },
         success(data) {
           const node = document.createElement("p");
           $l(node).append(data);
