@@ -190,9 +190,10 @@ re-render. Let's create our Redux store.
 * Export `configureStore`
 
 **Test your code** - Import the store to your entry file. Create your store by calling
-`configureStore`, set `window.store = store` and call `window.store.getState()` in
-your console. Make sure that this function returns the initial application state
-described above. Don't move on until it does!
+`configureStore`, set `window.store = store` in your entry file and then call
+`window.store.getState()` in your console. Make sure that this function
+returns the initial application state described above. Don't move on until it
+does!
 
 **NB**: Keeping your `store` on the `window` while working on a Redux app is a
 very handy and quick way to ensure that your state is changing the way you
