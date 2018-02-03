@@ -427,7 +427,7 @@ Check that clicking the logout button logs out the current user before moving on
 
 ### `SessionForm` Components
 
-To make our React components modular, we will reuse and render the same form component on login and signup.
+To make our React components modular, we will reuse and render the same presentational form component on login and signup. We'll keep this form component ["dumb"](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0), however, so that it doesn't need to know anything about the container or route rendering it.
 
 * Create a container `LoginFormContainer`, another container `SignupFormContainer`, and their controlled component `SessionForm`.
 
@@ -435,7 +435,6 @@ To make our React components modular, we will reuse and render the same form com
 
 Each of these containers should provide `SessionForm` with the following props:
 + From `mapStateToProps(state, ownProps)`:
-  * `loggedIn` (boolean) - representing whether a `currentUser` exists
   * `errors` (array) - list of errors from the state
   * `formType` (string): `'login'` or `'signup'`, for each respective container
 + From `mapDispatchToProps(dispatch, ownProps)`:
