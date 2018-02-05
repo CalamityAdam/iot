@@ -210,18 +210,20 @@
 
 ## w7d4
 
-### Materials (26 min)
+### Materials (41 min)
 * :book: [Intro to React Router][react_router_intro]  (15 min)
 * :book: [`<Link>`][link] (5 min)
 * :book: [`<Switch>`][switch] (2 min)
 * :book: [`withRouter`][with_router] (2 min)
 * :book: [`<Redirect>`][redirect] (2 min)
+* :book: [Advanced Containers][advanced-containers] (15 min)
 
 [react_router_intro]: readings/intro_to_react_router.md
 [link]: readings/link.md
 [switch]: readings/switch.md
 [with_router]: readings/with_router.md
 [redirect]: readings/redirect.md
+[advanced-containers]: readings/advanced_containers.md
 
 ### Homeworks (45 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
