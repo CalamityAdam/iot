@@ -133,9 +133,6 @@ class EditPostFormContainer extends React.Component {
 // now `connect` it to the Redux store
 export default connect(mapStateToProps, mapDispatchToProps)(EditPostFormContainer);
 ```
-
-You can see here that we have one presentational component that is being reused, and two different containers.
-This allows our presentational component to just concern itself with what the form will look like, while each container maps the necessary data and functionality for their respective use cases.
-
 The result here is that we can render a CreatePostFormContainer wherever we want a form to create a post, and an EditPostFormContainer wherever we want to edit a post.
 Both components will render a PostForm, but each will have different functions. This helps keep our code DRY and modular.
+We can use this pattern with any presentational component that needs to be connected to the store, but may need entirely different data to perform different functions. For instance, when we introduce frontend auth, we'll create a single `SessionForm` that has separate containers for `Login` and `Signup`.
