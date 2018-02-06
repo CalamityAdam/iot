@@ -1,6 +1,6 @@
 ## Advanced Containers
 
-While we said [earlier][containers] that you should aim to have very few containers, there are exceptions.
+While we said [earlier](containers.md) that you should aim to have very few containers, there are exceptions.
 Separating our concerns with presentational and container components allows us to reuse presentational components where it makes sense, rather than duplicating code.
 If a presentational component needs different data in each situation, though, we may need more containers.
 By creating more container components, we can render the same presentational component with each of those containers to suit different needs.
@@ -139,5 +139,3 @@ This allows our presentational component to just concern itself with what the fo
 
 The result here is that we can render a CreatePostFormContainer wherever we want a form to create a post, and an EditPostFormContainer wherever we want to edit a post.
 Both components will render a PostForm, but each will have different functions. This helps keep our code DRY and modular.
-
-[containers]: (containers.md)
