@@ -5,7 +5,7 @@ const Bullet = require("./bullet");
 function randomColor() {
   const hexDigits = "0123456789ABCDEF";
 
-  const color = "#";
+  let color = "#";
   for (let i = 0; i < 3; i++) {
     color += hexDigits[Math.floor((Math.random() * 16))];
   }
