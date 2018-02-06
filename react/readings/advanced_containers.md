@@ -140,4 +140,4 @@ This allows our presentational component to just concern itself with what the fo
 The result here is that we can render a CreatePostFormContainer wherever we want a form to create a post, and an EditPostFormContainer wherever we want to edit a post.
 Both components will render a PostForm, but each will have different functions. This helps keep our code DRY and modular.
 
-[containers]: [readings/containers.md]
+[containers]: [containers.md]
