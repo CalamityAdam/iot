@@ -1,14 +1,16 @@
 ## Advanced Containers
 
-While we said earlier that you should aim to have very few containers, there are exceptions.
-What if we want a component to do two different things, depending on where we're using it, and it therefore needs different data from the store?
+While we said [earlier][containers] that you should aim to have very few containers, there are exceptions.
 Separating our concerns with presentational and container components allows us to reuse presentational components where it makes sense, rather than duplicating code.
-This means, though, that we'll need multiple containers for each reusable presentational component.
+If a presentational component needs different data in each situation, though, we may need more containers.
+By creating more container components, we can render the same presentational component with each of those containers to suit different needs.
 
-Consider a form component that may either create or edit a post.
+Consider a form component that may either *create* or *edit* a post.
 The form itself looks and works the same in both cases; it has a few inputs and a submit button.
 Our use cases differ, though, in that the edit form needs to map state from the store to its props, while the create form does not.
-Furthermore, the edit form will need to dispatch a different action when the form submits than the create form will, as well as request the object from our backend.
+Furthermore, the edit form will need to dispatch a different action when the form submits than the create form will, as well as request the object from our backend. Let's see what this looks like in code.
+
+**As you go through the code snippets below, read the comments carefully.**
 
 Here's our presentational component, `PostForm`:
 
@@ -55,7 +57,8 @@ class PostForm extends React.Component {
 export default PostForm;
 ```
 
-We can see that PostForm is expecting two things in props: a post object, and a submit function. The container will have to define these, since right now, this form can't actually do anything. Let's give it the ability to create a post:
+We can see that PostForm is expecting two things in props: a `post` object, and a `submit` function. The container will have to define these, since right now, this form can't actually do anything. Let's give it the ability to create a post:
+
 ```js
 // create_post_form_container.js
 import PostForm from './post_form';
@@ -77,9 +80,11 @@ const mapDispatchToProps = dispatch => {
 export default connect(mapStateToProps, mapDispatchToProps)(PostForm);
 ```
 
-Simple enough, right?
+So far, this is nothing new.
 Now, wherever we need a form to create a post, we can render `CreatePostFormContainer` by importing from the above file.
-What about editing? This is a little trickier.
+
+But what about editing?
+This is a little trickier, because we need more information from the store - so we'll need a [higher-order component](https://spin.atomicobject.com/2017/03/02/higher-order-components-in-react/) to help us out. Higher-order components are a useful React pattern that essentially uses a component to render another component, usually to handle some sort of work and pass in data. This pattern allows us to keep our components small and modular. Here, we'll use a higher-order component to fetch the post we want to edit and pass it into the `PostForm`.
 
 ```js
 // edit_post_form_container.jsx
@@ -88,17 +93,20 @@ import { connect } from 'react-redux';
 import React from 'react';
 import PostForm from './post_form';
 import { fetchPost, updatePost } from '../actions/post_actions';
+import { selectPost } from '../selectors';
 
 const mapStateToProps = (state, ownProps) => {
-  const post = state.events[ownProps.match.params.postId];
+  const defaultPost = { title: '', body: '' };
+  const post = selectPost(ownProps.match.params.postId) || defaultPost;
   // get the post this route is asking for
   // (I'm assuming here that this component is being rendered by a route)
+  // if I don't have the post in state yet, give me a blank post so PostForm doesn't break
   return { post };
 };
 
 const mapDispatchToProps = dispatch => {
-  // an edit form will need to fetch the post, but my PostForm shouldn't worry about that
-  // we'll see how to handle this problem with a higher-order component
+  // an edit form will need to fetch the relevant post, but my PostForm shouldn't handle that
+  // we'll handle this problem with a higher-order component, EditPostFormContainer
   return {
     fetchPost: id => dispatch(fetchPost(id)),
     submit: post => dispatch(updatePost(post)),
@@ -106,8 +114,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 class EditPostFormContainer extends React.Component {
-  // Redux will give me a traditional container component when I call `connect`
-  // this is just a higher-order component made to handle the fetch
+  // this is the higher-order component made to handle the fetch
 
   componentDidMount() {
     // do my fetching here so that PostForm doesn't have to
@@ -123,8 +130,14 @@ class EditPostFormContainer extends React.Component {
   }
 }
 
+// now `connect` it to the Redux store
 export default connect(mapStateToProps, mapDispatchToProps)(EditPostFormContainer);
 ```
 
 You can see here that we have one presentational component that is being reused, and two different containers.
 This allows our presentational component to just concern itself with what the form will look like, while each container maps the necessary data and functionality for their respective use cases.
+
+The result here is that we can render a CreatePostFormContainer wherever we want a form to create a post, and an EditPostFormContainer wherever we want to edit a post.
+Both components will render a PostForm, but each will have different functions. This helps keep our code DRY and modular.
+
+[containers]: [./containers.md]
