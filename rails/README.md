@@ -70,7 +70,15 @@
 + :book: [Basic JSON API][basic-json-api]
 + :book: [Routing II: Nested Collections][routing-ii]
 + :book: [Routing III: Adding non-default routes][routing-iii]
-+ :movie_camera: [Rails Screencasts (3 thru 11)][rails-screencasts]
++ :movie_camera: [(cc) 03-basic-rails-routing][03-basic-rails-routing]
++ :movie_camera: [(cc) 04-strong-params][04-strong-params]
++ :movie_camera: [(cc) 05-nested-resources][05-nested-resources]
++ :movie_camera: [(cc) 06-erb-and-views][06-erb-and-views]
++ :movie_camera: [(cc) 07-basic-forms][07-basic-forms]
++ :movie_camera: [(cc) 08-form-request-cycle][08-form-request-cycle]
++ :movie_camera: [(cc) 09-select][09-select]
++ :movie_camera: [(cc) 10-form-partial][10-form-partial]
++ :movie_camera: [(cc) 11-form-encoding][11-form-encoding]
   + :computer: [Code from demos][rails-videos-code]
 
 [routing-i]: readings/routing-part-i.md
@@ -78,7 +86,15 @@
 [basic-json-api]: readings/basic-json-api.md
 [routing-ii]: readings/routing-part-ii.md
 [routing-iii]: readings/routing-part-iii.md
-[rails-screencasts]: https://vimeo.com/album/2953690/sort:alphabetical
+[03-basic-rails-routing]: https://vimeo.com/100267303
+[04-strong-params]: https://vimeo.com/100267304
+[05-nested-resources]: https://vimeo.com/100267305
+[06-erb-and-views]: https://vimeo.com/100267306
+[07-basic-forms]: https://vimeo.com/100358537
+[08-form-request-cycle]: https://vimeo.com/100359278
+[09-select]: https://vimeo.com/100729432
+[10-form-partial]: https://vimeo.com/100729434
+[11-form-encoding]: https://vimeo.com/100729435
 [rails-videos-code]: demos/intro_rails_video_demo
 
 ### Projects
