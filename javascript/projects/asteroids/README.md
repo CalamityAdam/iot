@@ -50,7 +50,7 @@ classes/sourcefiles:
 inheritance is a main focus of today's project. Because ES6 class syntax
 obscures how prototypal inheritance works, and has some incompatibilities with
 the instructions below, avoid using it while working today. After the project is
-over, review both the ES5 and ES6 solutions to see how they differ. Ask your TA
+over, review both the Prototypal Syntax and Class Syntax solutions to see how they differ. Ask your TA
 for a more nuanced explanation of this if you need more information.
 
 ## A Refresher on Vectors
@@ -115,7 +115,7 @@ Rather than pass all these as separate arguments, write your `MovingObject`
 constructor function so that you can pass in an options object:
 
 ```js
-var mo = new MovingObject(
+const mo = new MovingObject(
   { pos: [30, 30], vel: [10, 10], radius: 5, color: "#00FF00"}
 );
 ```
@@ -133,7 +133,7 @@ module.exports = MovingObject
 
 ```js
 // asteroids.js
-var MovingObject = require("./moving_object.js")
+const MovingObject = require("./moving_object.js")
 
 window.MovingObject = MovingObject;
 ```
@@ -167,7 +167,14 @@ a class or constructor function. We don't need to create instances of `Util`.
 
 ```js
 const Util = {
-  inherits: function(childClass, parentClass) {
+  inherits(childClass, parentClass) {
+    //...
+  }
+}
+
+// the above is the same as the below but ES6 allows for cleaner syntax
+const Util = {
+  inherits: function inherits(childClass, parentClass) {
     //...
   }
 }
@@ -190,12 +197,12 @@ helper functions from the Util object to help you create a random vector.
 ```js
 // Return a randomly oriented vector with the given length.
 const Util = {
-  randomVec: function(length) {
+  randomVec(length) {
     const deg = 2 * Math.PI * Math.random();
     return Util.scale([Math.sin(deg), Math.cos(deg)], length);
   },
   // Scale the length of a vector by the given amount.
-  scale: function(vec, m) {
+  scale(vec, m) {
     return [vec[0] * m, vec[1] * m];
   }
 }

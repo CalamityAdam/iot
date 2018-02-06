@@ -1,9 +1,9 @@
-var Util = require("./util");
-var MovingObject = require("./moving_object");
-var Ship = require("./ship");
-var Bullet = require("./bullet");
+const Util = require("./util");
+const MovingObject = require("./moving_object");
+const Ship = require("./ship");
+const Bullet = require("./bullet");
 
-var DEFAULTS = {
+const DEFAULTS = {
   COLOR: "#505050",
   RADIUS: 25,
   SPEED: 4
@@ -22,7 +22,7 @@ function Asteroid(options) {
 // Must inherit before adding any properties (usually functions) to the Asteroid prototype
 Util.inherits(Asteroid, MovingObject);
 
-Asteroid.prototype.collideWith = function (otherObject) {
+Asteroid.prototype.collideWith = function collideWith(otherObject) {
   if (otherObject instanceof Ship) {
     otherObject.relocate();
     return true;

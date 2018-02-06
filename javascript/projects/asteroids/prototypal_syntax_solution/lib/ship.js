@@ -1,12 +1,12 @@
-var MovingObject = require("./moving_object");
-var Util = require("./util");
-var Bullet = require("./bullet");
+const MovingObject = require("./moving_object");
+const Util = require("./util");
+const Bullet = require("./bullet");
 
 function randomColor() {
-  var hexDigits = "0123456789ABCDEF";
+  const hexDigits = "0123456789ABCDEF";
 
-  var color = "#";
-  for (var i = 0; i < 3; i++) {
+  const color = "#";
+  for (let i = 0; i < 3; i++) {
     color += hexDigits[Math.floor((Math.random() * 16))];
   }
 
@@ -25,24 +25,24 @@ Ship.RADIUS = 15;
 
 Util.inherits(Ship, MovingObject);
 
-Ship.prototype.fireBullet = function () {
-  var norm = Util.norm(this.vel);
+Ship.prototype.fireBullet = function fireBullet() {
+  const norm = Util.norm(this.vel);
 
   if (norm === 0) {
     // Can't fire unless moving.
     return;
   }
 
-  var relVel = Util.scale(
+  const relVel = Util.scale(
     Util.dir(this.vel),
     Bullet.SPEED
   );
 
-  var bulletVel = [
+  const bulletVel = [
     relVel[0] + this.vel[0], relVel[1] + this.vel[1]
   ];
 
-  var bullet = new Bullet({
+  const bullet = new Bullet({
     pos: this.pos,
     vel: bulletVel,
     color: this.color,
@@ -52,12 +52,12 @@ Ship.prototype.fireBullet = function () {
   this.game.add(bullet);
 };
 
-Ship.prototype.power = function (impulse) {
+Ship.prototype.power = function power(impulse) {
   this.vel[0] += impulse[0];
   this.vel[1] += impulse[1];
 };
 
-Ship.prototype.relocate = function () {
+Ship.prototype.relocate = function relocate() {
   this.pos = this.game.randomPosition();
   this.vel = [0, 0];
 };
