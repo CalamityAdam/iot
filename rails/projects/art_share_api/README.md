@@ -147,13 +147,17 @@ Remember to use `if user.save` to check if validations passed. On
 error, this action should render validation errors using
 `user.errors.full_messages`. Set the status code to indicate error.
 
-* `destroy` (DELETE `/users:id`)
+* `destroy` (DELETE `/users/:id`)
 
 Finds the user (we can lookup the id in `params[:id]`) and destroys the
-object. Best practice is to render the destroyed user after destroying
-it in the database. Use `dependent: :destroy` in the `artworks` and
-`artwork_shares` associations on `User`. This ensures that the
-associated records are also destroyed.
+object (using the [destroy](http://guides.rubyonrails.org/active_record_basics.html#delete) method on the user instance).
+Best practice is to render the destroyed user after destroying
+it in the database.
+Use `dependent: :destroy` in the `artworks` and
+`artwork_shares` associations on `User`.
+This ensures that the associated records are also destroyed.
+
+**N.B.** There is another ActiveRecord method that removes objects from your database, `delete`; however, this method does not run callbacks such as `dependent: :destroy`, and is therefore not the method we want to use.
 
 * `index` (GET `/users`)
 
