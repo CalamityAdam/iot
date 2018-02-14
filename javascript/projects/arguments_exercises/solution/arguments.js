@@ -89,12 +89,12 @@ Function.prototype.curry1 = function (numArgs) {
  * the `this` value of the enclosing execution context is used.
  */
 Function.prototype.curry2 = function (numArgs) {
-  const argArray = [];
+  const args = [];
   const _curriedFn = (arg) => {
-    argArray.push(arg);
-    if (argArray.length === numArgs) {
+    args.push(arg);
+    if (args.length === numArgs) {
       // spreading the array into individual arguments
-      return this(...argArray); 
+      return this(...args); 
     } else {
       return _curriedFn;
     }
