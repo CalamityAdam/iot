@@ -88,11 +88,11 @@ Function.prototype.curry1 = function (numArgs) {
  * An arrow function does not have its own `this`, 
  * the `this` value of the enclosing execution context is used.
  */
-Function.prototype.curry2 = function (nArg) {
+Function.prototype.curry2 = function (numArgs) {
   const argArray = [];
   const _curriedFn = (arg) => {
     argArray.push(arg);
-    if (argArray.length === nArg) {
+    if (argArray.length === numArgs) {
       // spreading the array into individual arguments
       return this(...argArray); 
     } else {
