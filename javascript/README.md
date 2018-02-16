@@ -10,12 +10,13 @@
 ### (SF ONLY) :clock10: Class will start at 10am! :clock10:
 * **Progress Tracker reports are still due at 9am.**
 
-### Materials (155 min)
+### Materials (210 min)
 :closed_lock_with_key: `go_video_go`
 * :movie_camera: [Intro to JS][intro-js-video] (12 min)
 * :movie_camera: [Object-Oriented JS: Intro][oo-js-intro] (15 min)
 * :movie_camera: [Object-Oriented JS: Demo][oo-js-demo] (8 min)
 * :movie_camera: [Closures and Callbacks][callbacks-video] (20 min)
+* :movie_camera: [Debugging JS in Dev Tools (cc)][chrome-debugging-vid] (15 min)
 * :book: [Intro to JavaScript][intro-js] (10 min)
 * :book: [Syntax and Useful Methods][syntax-and-methods] (10 min)
 * :book: [Data Types][data-types] (15 min)
@@ -29,6 +30,7 @@
 [oo-js-intro]: https://vimeo.com/169806088
 [oo-js-demo]: https://vimeo.com/169804475
 [callbacks-video]: https://vimeo.com/169898573
+[chrome-debugging-vid]: https://vimeo.com/95551777
 [intro-js]: readings/js-intro.md
 [syntax-and-methods]: readings/syntax-and-methods.md
 [data-types]: readings/data-types.md
@@ -140,12 +142,11 @@ we highly encourage you to read the whole book.
 
 [assessment-prep-5]: http://github.com/appacademy/assessment-prep#assessment-5
 
-### Materials (125 min)
+### Materials (110 min)
 :closed_lock_with_key: `go_video_go`
 * :movie_camera: [Prototype Chain and Inheritance][proto-inherit-vid] (20 min)
 * :movie_camera: [Inheritance Demo][inherit-demo-vid]  (20 min)
 * :movie_camera: [JS in Browser][js-browser-vid] (10 min)
-* :movie_camera: [Debugging JS in Dev Tools (cc)][chrome-debugging-vid] (15 min)
 * :book: [Prototypal Inheritance][prototypal-inheritance] (15 min)
 * :book: [Modules in the Browser][browser-modules] (15 min)
 * :book: [Basic Canvas Drawing][basic-canvas-drawing] (15 min)
@@ -154,7 +155,6 @@ we highly encourage you to read the whole book.
 [proto-inherit-vid]: https://vimeo.com/162131042
 [inherit-demo-vid]: https://vimeo.com/162115223
 [js-browser-vid]: https://vimeo.com/162115224
-[chrome-debugging-vid]: https://vimeo.com/95551777
 [prototypal-inheritance]: readings/prototypal-inheritance.md
 [browser-modules]: readings/browser-modules.md
 [basic-canvas-drawing]: https://joshondesign.com/p/books/canvasdeepdive/chapter01.html
