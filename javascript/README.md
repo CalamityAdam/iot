@@ -262,7 +262,6 @@ we highly encourage you to read the whole book.
 * :book: [AJAX Remote Forms][ajax-remote-forms] (10 min)
 * :book: [Using Rails as an API][rails-api] (10 min)
 * :book: [Promises][promises] (20 min)
-* :book: Effective JavaScript: Items 46, 50, 52 (15 min)
 
 [ajax-lecture]: https://vimeo.com/162860823
 [ajax-demo]: https://vimeo.com/162764008
