@@ -46,3 +46,23 @@ enforces a hierarchy/ordering of its methods, and you need to arrange
 your blocks within the context of that structure. If you simply keep
 this in mind and emulate the patterns illustrated in previous chapters,
 you will be fine.
+
+Below is an example of Rspec's written in correct order of operations:
+```ruby
+RSpec.describe Sloth do
+  describe "#run" do
+    context "When a valid direction is given" do
+      it "returns a string that includes the direction" do
+        expect(sloth.run("north")).to include("north")
+      end
+    end
+
+    context "when an incorrect direction is given" do
+      it "raises ArgumentError" do
+        expect { sloth.run("somewhere") }.to raise_error(ArgumentError)
+      end
+    end
+
+  end
+end 
+```
