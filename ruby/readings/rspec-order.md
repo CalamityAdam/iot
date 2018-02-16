@@ -30,7 +30,7 @@ your `it` blocks. This test will run successfully:
 ```ruby
 RSpec.describe Deck do
   describe '#initialize' do
-    subject(:deck) { Deck.new }
+    subject(:deck) { Deck.new } # yup
 
     it 'initializes with 52 cards' do
       expect(deck.count).to eq(52)
@@ -48,6 +48,7 @@ this in mind and emulate the patterns illustrated in previous chapters,
 you will be fine.
 
 Below is an example of Rspec's written in correct order of operations:
+
 ```ruby
 RSpec.describe Sloth do
   describe "#run" do
