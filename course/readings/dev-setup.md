@@ -70,7 +70,7 @@ git config --global user.email your_email_here
 ```
 
 ### Atom
-This one is super easy. Go to [atom.io](atom.io), then download and install Atom.
+This one is super easy. Go to [atom.io](http://atom.io), then download and install Atom.
 
 Next, use the Atom Package Manager (apm) to install a few packages that will provide linting and syntax highlighting:
 ```sh
