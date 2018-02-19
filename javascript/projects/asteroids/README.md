@@ -146,7 +146,7 @@ demo if you need a refresher on Canvas.
 
 Write a `MovingObject.prototype.move` method. Increment the `pos` by the `vel`.
 
-[drunken-circles]: ../../drunken_circles/lib/circle.js#L42
+[drunken-circles]: ../../demos/drunken_circles/lib/circle.js#L42
 
 ### `Util`
 
