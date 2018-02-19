@@ -51,8 +51,10 @@ Below is an example of Rspec's written in correct order of operations:
 
 ```ruby
 RSpec.describe Sloth do
+  subject(:sloth) { Sloth.new("Herald") }
+
   describe "#run" do
-    context "When a valid direction is given" do
+    context "when a valid direction is given" do
       it "returns a string that includes the direction" do
         expect(sloth.run("north")).to include("north")
       end
