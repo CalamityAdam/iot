@@ -8,8 +8,6 @@ Here at App Academy we work with a Ruby on Rails, JavaScript, React, Redux, and 
 
 As we progress through the course you will be prompted to complete a few installation and configuration steps to get your personal machine ready for the next phase.
 
-**NOTE: If anything goes wrong with any of these steps on your machine, DO NOT try to debug your machine yourself. Please contact us immediately so that we can resolve your issue and you can move on to the project for the day.**
-
 ## Phase 0: Preparing your machine
 
 Here we will install basic developer tools, such as [homebrew][homebrew] (a 3rd party package manager for MacOS), Xcode (a library of developer tools provided by Apple), git (a version control system we will be using throughout the course), and Atom (a full-featured text-editor).
