@@ -144,6 +144,10 @@ PostgreSQL is a fast, feature-rich, open-source database application. It is a sc
 
 Fortunately for MacOS X, we can use [Postgres.app][postgres-app], which provides the database application and a command line interface (CLI) so we can interact with it. To install Postgres.app, download and follow the installation instructions from the website.
 
+**Linux users:** The [Ubuntu wiki][pg-linux] can help. See especially "Alternative Server Setup".
+
+[pg-linux]: https://help.ubuntu.com/community/PostgreSQL
+
 Close and reopen your terminal to gain access to the `psql` command. Let's try it out.
 
 ```
