@@ -13,18 +13,22 @@ class PokemonIndex extends Component {
 
   render() {
     const { pokemon, loading } = this.props;
-    
-    return (
-      loading ?
-      <LoadingIcon /> :
-      <section className="pokedex">
-        <ul>
-          {pokemon.map(poke => <PokemonIndexItem key={poke.id} pokemon={poke} />)}
-        </ul>
 
-        <Route exact path="/" component={PokemonFormContainer} />
-        <Route path="/pokemon/:pokemonId" component={PokemonDetailContainer} />
-      </section>
+    return (
+      loading
+        ? <LoadingIcon />
+        : <section className="pokedex">
+          <Route exact path="/" component={PokemonFormContainer} />
+          <Route
+            path="/pokemon/:pokemonId"
+            component={PokemonDetailContainer}
+          />
+          <ul>
+            {pokemon.map(poke =>
+              <PokemonIndexItem key={poke.id} pokemon={poke} />
+            )}
+          </ul>
+        </section>
     );
   }
 }

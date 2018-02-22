@@ -2,6 +2,7 @@
 
 .pokedex {
   display: flex;
+  flex-direction: row-reverse;
   padding: 0;
   height: 100%;
   background-color: white;
