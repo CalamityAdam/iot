@@ -8,6 +8,8 @@ Here at App Academy we work with a Ruby on Rails, JavaScript, React, Redux, and 
 
 As we progress through the course you will be prompted to complete a few installation and configuration steps to get your personal machine ready for the next phase.
 
+**NOTE: If anything goes wrong with any of these steps on your machine, DO NOT try to debug your machine yourself. Please contact us immediately so that we can resolve your issue and you can move on to the project for the day.**
+
 ## Phase 0: Preparing your machine
 
 Here we will install basic developer tools, such as [homebrew][homebrew] (a 3rd party package manager for MacOS), Xcode (a library of developer tools provided by Apple), git (a version control system we will be using throughout the course), and Atom (a full-featured text-editor).
@@ -23,9 +25,13 @@ We have a custom Chrome Extension for new tabs that provides a dashboard with li
 This is not required, but feel free to give it a try. To install, follow the installation instructions on the [App Academy Chrome Tab Repo][aa-chrome-tab].
 
 ### Xcode
-Let's start with Xcode. First download and install [Xcode from the App Store][xcode].
 
-Next, install the command line tools, by running the following from the console.
+Let's start with Xcode. The Xcode command line tools are a requirement for installing the homebrew package manager in the next step. 
+
+**NOTE: If you are using a Linux machine you will not be able to install Xcode or homebrew. Instead please follow [these git installation directions][linux-git] and then [these rbenv installation directions][linux-rbenv] (up to and including "Installing Ruby versions") to download rbenv using git. Once you are finished, skip to the section on Git and ignore all commands involving homebrew.**
+
+Install the Xcode command line tools by running the following from the console.
+
 ```sh
 $ xcode-select --install
 ```
@@ -51,6 +57,8 @@ Check out the [Homebrew website][homebrew] to learn the basic commands.
 [homebrew]: https://brew.sh/
 [chrome-dl]: https://www.google.com/chrome/browser/desktop/index.html
 [aa-chrome-tab]: https://github.com/appacademy/app-academy-chrome-tab
+[linux-git]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+[linux-rbenv]: https://github.com/rbenv/rbenv#basic-github-checkout
 
 ### Git
 Git is a version control system that allows us to track, commit and revert changes to files within a directory. Here we will install it and add global user info.
@@ -70,13 +78,18 @@ git config --global user.email your_email_here
 ```
 
 ### Atom
-This one is super easy. Go to [atom.io](https://atom.io), then download and install Atom.
+This one is super easy. Go to [atom.io](http://www.atom.io), then download and install Atom.
 
 Next, use the Atom Package Manager (apm) to install a few packages that will provide linting and syntax highlighting:
-```sh
-# apm is the 'atom package manager'
-apm install linter linter-eslint linter-rubocop rspec
+
 ```
+# apm is the 'atom package manager'
+apm install linter linter-eslint
+```
+
+Make sure to install the shell commands by opening Atom and going to Atom > Install Shell commands. This allows you to easily open files in atom from the Terminal using the `atom` command followed by a file or directory (on Linux, you may have to open the Command Palette using `Ctrl+Shift+P` and search for `Window: Install Shell Commands`)
+
+To verify that the shell commands were installed correctly, run `which atom` in your terminal. If you see `/usr/bin/atom` or something similar, the installation was a success.
 
 ## Phase 1: Ruby
 
@@ -126,7 +139,7 @@ There are a few gems we will want to access globally.
 Let's install them.
 
 ```sh
-gem install bundler pry byebug rubocop
+gem install bundler pry byebug
 ```
 
 [rbenv]: https://github.com/rbenv/rbenv
