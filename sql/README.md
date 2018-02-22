@@ -54,7 +54,7 @@
 [allies-2]: https://medium.com/@hadrad1000/how-do-i-ally-being-an-ally-to-women-in-technology-73b70fb86a98
 [social-justice]: https://modelviewculture.com/pieces/getting-started-in-techs-social-justice-movement
 
-### Projects (Solo in SF)
+### Projects
 + [SQL Zoo][sqlzoo-readme]
 
 [sqlzoo-readme]: projects/sqlzoo

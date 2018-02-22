@@ -5,9 +5,6 @@
 
 ## w6d5
 
-### :clock10: (SF Only!) Class will start at 10am! :clock10:
-* **Progress Tracker reports are still due at 9am.**
-
 ### Materials (141 min)
 * :book: [Nontechnical Overview of React][react-nontech] (15 min)
 :closed_lock_with_key: `go_video_go`
