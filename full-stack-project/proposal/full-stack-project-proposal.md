@@ -42,8 +42,7 @@ Create these pages:
 * Database Schema
 * Routes
 * Sample State
-* Component Hierarchy
-* Wireframes
+* Component Hierarchy with Wireframes
 
 On the home page, create links to each of these pages.
 
