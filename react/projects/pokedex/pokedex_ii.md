@@ -184,7 +184,7 @@ This requires defining a new constant and action creator.
 * Create a `PokemonDetailContainer` that maps props to `PokemonDetail`.
 * Create a class `PokemonDetail` component that returns information of the pokemon.
 * Add a `Route` that renders the `PokemonDetailContainer` component when the url matches the path `"/pokemon/:pokemonId`".
-  * We'll add the `Route` to the end of our `PokemonIndex` render function.
+  * We'll add the `Route` to the top of our `PokemonIndex` render function.
   * Inside of `PokemonDetail` on `componentDidMount`, call `this.props.requestSinglePokemon`.
   * Pass it the pokemon's id from the `this.props.match.params.pokemonId`.
 
