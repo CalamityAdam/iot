@@ -21,8 +21,14 @@ import React from 'react';
 class PostForm extends React.Component {
   constructor(props) {
     super(props);
+    // set up initial state
     this.state = this.props.post; // a Post object has a title and a body
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    // if we get a different post in props, we'll need to set state
+    if (this.props.post.id !== nextProps.post.id) this.setState(nextProps.post);
   }
 
   update(field) {
@@ -57,7 +63,7 @@ class PostForm extends React.Component {
 export default PostForm;
 ```
 
-We can see that PostForm is expecting two things in props: a `post` object, and a `submit` function. The container will have to define these, since right now, this form can't actually do anything. Let's give it the ability to create a post:
+We can see that `PostForm` is expecting two things in props: a `post` object, and a `submit` function. The container will have to define these, since right now, this form can't actually do anything. Let's give it the ability to create a post:
 
 ```js
 // create_post_form_container.js
@@ -133,6 +139,7 @@ class EditPostFormContainer extends React.Component {
 // now `connect` it to the Redux store
 export default connect(mapStateToProps, mapDispatchToProps)(EditPostFormContainer);
 ```
-The result here is that we can render a CreatePostFormContainer wherever we want a form to create a post, and an EditPostFormContainer wherever we want to edit a post.
-Both components will render a PostForm, but each will have different functions. This helps keep our code DRY and modular.
+The result here is that we can render a `CreatePostFormContainer` wherever we want a form to create a post, and an `EditPostFormContainer` wherever we want to edit a post.
+Both components will render a `PostForm`, but each will have different functions. The `PostForm` also gets to be very simple and make almost no decisions. This helps keep our code DRY and modular.
+
 We can use this pattern with any presentational component that needs to be connected to the store, but may need entirely different data to perform different functions. For instance, when we introduce frontend auth, we'll create a single `SessionForm` that has separate containers for `Login` and `Signup`.
