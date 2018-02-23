@@ -97,18 +97,10 @@ api_todos GET    /api/todos(.:format)     api/todos#index {format: :json}
 * Create a `StaticPagesController` that will serve a `root` view with `<div id="content"></div>`.
 * Update `routes.rb` to `root to: 'static_pages#root'`.
 
-Since Rails 5 doesn't include jQuery for us, we're going to need to do one more thing to get jQuery's `ajax` to work.
-To add jQuery to your project:
-
-1. Add `gem jquery-rails` to your `Gemfile`.
-2. Run `bundle install`.
-3. Add `//= require jquery` and `//= require jquery_ujs` to your `application.js`
-4. If your Rails server was previously running, restart it.
-
 You're almost ready to go!
 
 * Seed your database with a few todos for testing.
-* Start your server (`rails s`) so that it can respond to HTTP requests.
+* Start your server (`bundle exec rails s`) so that it can respond to HTTP requests.
 * Visit [http://localhost:3000/](http://localhost:3000/). It should render your root page.
   * Inspect the page and double check that `<div id="content"></div>` is present.
 
