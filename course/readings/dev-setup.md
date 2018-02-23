@@ -78,13 +78,6 @@ git config --global user.email your_email_here
 ### Atom
 This one is super easy. Go to [atom.io](http://www.atom.io), then download and install Atom.
 
-Next, use the Atom Package Manager (apm) to install a few packages that will provide linting and syntax highlighting:
-
-```
-# apm is the 'atom package manager'
-apm install linter linter-eslint
-```
-
 Make sure to install the shell commands by opening Atom and going to Atom > Install Shell commands. This allows you to easily open files in atom from the Terminal using the `atom` command followed by a file or directory (on Linux, you may have to open the Command Palette using `Ctrl+Shift+P` and search for `Window: Install Shell Commands`)
 
 To verify that the shell commands were installed correctly, run `which atom` in your terminal. If you see `/usr/bin/atom` or something similar, the installation was a success.
@@ -245,11 +238,15 @@ which node # => /Users/username/.nvm/versions/node/v8.9.0/bin/node
 
 Node, like Ruby, comes with a package manager called [NPM][npm], which provides access to a whole ecosystem of libraries and tools we can use. NPM comes pre-bundled with Node, so there is no additional work for us to do. By default we don't need any additional packages installed and will be installing them on a per-project basis.
 
-### React and Atom
+### JavaScript and React linters
+
+Next, use the Atom Package Manager (apm) to install a few packages that will provide linting and syntax highlighting for JavaScript and React.
+
 React's JSX syntax is not a standard part of JavaScript, so without a little help it will make our Atom linter very angry with us. Let's install an additional Atom package, `react`, to provide JSX linting support.
 
 ```sh
-apm install react
+# apm is the 'atom package manager'
+apm install linter linter-eslint react
 ```
 
 **NB: The `react` Atom package is not listed in the graphical package interface, so you will have to use the `apm` command to install it.**
