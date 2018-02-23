@@ -240,9 +240,7 @@ Node, like Ruby, comes with a package manager called [NPM][npm], which provides 
 
 ### JavaScript and React linters
 
-Next, use the Atom Package Manager (apm) to install a few packages that will provide linting and syntax highlighting for JavaScript and React.
-
-React's JSX syntax is not a standard part of JavaScript, so without a little help it will make our Atom linter very angry with us. Let's install an additional Atom package, `react`, to provide JSX linting support.
+React's JSX syntax is not a standard part of JavaScript, so without a little help Atom won't know how to handle syntax highlighting for React code. Let's install some additional Atom packages to provide JSX and JavaScript linting support.
 
 ```sh
 # apm is the 'atom package manager'
