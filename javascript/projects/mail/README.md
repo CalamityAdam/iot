@@ -234,8 +234,8 @@ manipulating it.
         {to: "person@mail.com", subject: "zzz", body: "so booring"}
       ],
       inbox: [
-        {from: "grandma@mail.com", subject: "Fwd: Fwd: Fwd: Check this out", body:
-  "Stay at home mom discovers cure for leg cramps. Doctors hate her"},
+        {from: "grandma@mail.com", subject: "Fwd: Fwd: Fwd: Check this out",
+          body: "Stay at home mom discovers cure for leg cramps. Doctors hate her"},
         {from: "person@mail.com", subject: "Questionnaire", body: "Take this free quiz win $1000 dollars"}
       ]
     };
@@ -417,7 +417,7 @@ Update the message draft whenever the form changes:
     * Get the name of the field that changed through the `name` property of the `target` element.
     * Get the value of the field that changed through the `value` property of the `target` element.
     * Tell the `MessageStore` to update the contents of the `messageDraft` to
-      match the form by calling `MessageStore.updateDraftField`.  
+      match the form by calling `MessageStore.updateDraftField`.
       * Pass in the name of the field to change as the first argument and the value of the field to change as the second argument.
     * Test that if you fill out the form and click `Inbox` or `Sent` before
       submitting and then navigate back to compose form, the form is still filled
