@@ -78,9 +78,7 @@ git config --global user.email your_email_here
 ### Atom
 This one is super easy. Go to [atom.io](http://www.atom.io), then download and install Atom.
 
-Make sure to install the shell commands by opening Atom and going to Atom > Install Shell commands. This allows you to easily open files in atom from the Terminal using the `atom` command followed by a file or directory (on Linux, you may have to open the Command Palette using `Ctrl+Shift+P` and search for `Window: Install Shell Commands`)
-
-To verify that the shell commands were installed correctly, run `which atom` in your terminal. If you see `/usr/bin/atom` or something similar, the installation was a success.
+To verify that the shell commands were installed correctly, run `which atom` in your terminal. If `atom` is not a recognized command, open the Atom editor and go to Atom > Install Shell commands (on Linux, you may have to open the Command Palette using `Ctrl+Shift+P` and search for `Window: Install Shell Commands`). This allows you to easily open files in atom from the Terminal using the `atom` command followed by a file or directory.
 
 ## Phase 1: Ruby
 
