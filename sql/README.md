@@ -130,7 +130,7 @@
 [indices-video]: https://vimeo.com/167799431
 [css-inherits]: https://vimeo.com/151190179
 [css-reset]: https://vimeo.com/151190181
-[rails-nontech]: readings/rails_nontech.md
+[rails-nontech]: ../rails/readings/rails_nontech.md
 
 ### Homeworks (45 min)
 + [Intro to Rails][intro-rails-homework] (45 min)
