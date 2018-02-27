@@ -7,7 +7,6 @@
 
 ### Materials (141 min)
 * :book: [Nontechnical Overview of React][react-nontech] (15 min)
-:closed_lock_with_key: `go_video_go`
 * :book: [NPM][npm_configuration] (15 min)
 * :book: [Webpack][webpack_configuration] (10 min)
 * :book: [ES6 Syntax: Object Destructuring][object_destructuring] (10 min)
