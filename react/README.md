@@ -6,6 +6,7 @@
 ## w6d5
 
 ### Materials (141 min)
+:closed_lock_with_key: `go_video_go`
 * :book: [Nontechnical Overview of React][react-nontech] (15 min)
 * :book: [NPM][npm_configuration] (15 min)
 * :book: [Webpack][webpack_configuration] (10 min)
