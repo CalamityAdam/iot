@@ -430,7 +430,7 @@ interact with the database.
 ```ruby
 # app/controller/users_controller.rb
 def create
-  user = User.new(params[:user].permit(:user_attributes_here))
+  user = User.new(params.require(:user).permit(:user_attributes_here))
   # replace the `user_attributes_here` with the actual attribute keys
   user.save!
   render json: user
@@ -462,7 +462,7 @@ errors as JSON in the event of failure:
 
 ```ruby
 def create
-  user = User.new(params[:user].permit(:name, :email))
+  user = User.new(params.require(:user).permit(:name, :email))
   if user.save
     render json: user
   else
