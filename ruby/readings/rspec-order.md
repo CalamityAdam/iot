@@ -47,7 +47,7 @@ your blocks within the context of that structure. If you simply keep
 this in mind and emulate the patterns illustrated in previous chapters,
 you will be fine.
 
-Below is an example of Rspec's written in correct order of operations:
+Below is an example of RSpec written with the correct order of operations
 
 ```ruby
 RSpec.describe Sloth do
@@ -67,5 +67,5 @@ RSpec.describe Sloth do
     end
 
   end
-end 
+end
 ```
