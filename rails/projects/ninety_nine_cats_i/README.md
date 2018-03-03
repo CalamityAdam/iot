@@ -31,7 +31,7 @@ what that is yet!). Take a walk on the wild side by commenting out
 Build a `Cat` migration and model. Attributes should
 include:
 
-* `birth_date`
+* `birth_date` 
   * Use the `date` column type. This lets you take advantage of
     ActiveRecord magic that deserializes string input into a Ruby
     `Date` object. eg:
@@ -57,11 +57,13 @@ include:
   * Use a `text` column to store arbitrarily long text describing
     fond memories the user has of their time with the `Cat`.
 * Timestamps
-* Add database-level NOT NULL constraints and model-level presence validations.
+* Add database-level NOT NULL constraints and model-level presence [validations][validations].
+
 
 [date-docs]: http://ruby-doc.org/stdlib-2.1.2/libdoc/date/rdoc/Date.html
 [time-ago]: http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-time_ago_in_words
 [limit-docs]: http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/TableDefinition.html#method-i-column
+[validations]: ../../../sql/readings/validations.md
 
 ### Index/Show Pages
 
@@ -143,10 +145,10 @@ Build a `new` form page to create a new `Cat`:
     to `'APPROVED'` or `'DENIED'`. In your migration, set the default to
     `'PENDING'`.
 * Add an inclusion validation on `status`.
-* Add NOT NULL constraints and presence validations.
+* Add NOT NULL constraints and presence [validations][validations].
 * Add an index on `cat_id`, since it is a foreign key.
 * Add associations between `CatRentalRequest` and `Cat`.
-* Make sure that when a `Cat` is deleted, all of its requests are
+* Make sure that when a `Cat` is deleted, all of its rental requests are
   also deleted. Use `dependent: :destroy`.
 
 ### Custom Validation
@@ -165,7 +167,15 @@ two people at once! We will write a custom validation for this.
     chaining more methods onto it later.
   * The `CatRentalRequest` we are trying to validate should not appear
     in the list of `#overlapping_requests`
+  * The method returns the requests for the current cat.
   * The method should work for both saved and unsaved `CatRentalRequests`
+  * Consider the following cases:
+    * A cat rental request starting on 02/25/17 and ending on 02/27/17.
+    * There is a overlap if another cat rental also starts on the same day (02/25/17).
+    * There is a overlap if another cat rental request starts on the return day (02/27/17).
+    * There is a overlap if another cat rental request starts between the start and end dates (02/26/17).
+  * Hint: Consider the case(s) where requests would *NOT* overlap and then code the negation.
+
   * Beware of [SQL ternary logic][sql-ternary-logic])
 * Next, write a method `#overlapping_approved_requests`. You should
   be able to use your `#overlapping_requests` method.
@@ -192,17 +202,26 @@ two people at once! We will write a custom validation for this.
 ## Phase III: Approving/Denying Requests
 
 ### Write `approve!` And `deny!` Methods
+By the end of Phase III, any user can approve or deny a `Cat`'s
+`CatRentalRequest`.
 
-* Add a method `#approve!` to the rental request model:
-  * Move request status from PENDING to APPROVED.
-  * Save the model.
-  * Deny all conflicting rental requests.
+Currently, all `CatRentalRequest` statuses are set to `'PENDING'`.
+When approving a `CatRentalRequest` (changing the cat rental
+request's status to `'APPROVED'`), all other conflicting `CatRentalRequest`
+statuses will be denied (changing the cat rental request's status to `'DENIED'`).
+
+* Add a helper method `#overlapping_pending_requests`. You should
+  be able to use your `#overlapping_requests` method.
+* Add a method `#approve!` to the rental request model. When calling the
+  `#approve!` on an instance of `CatRentalRequest`:
+  * Change the current instance's status from `'PENDING'` to `'APPROVED'`.
+  * Save the instance into the database.
+  * Deny all conflicting rental requests by calling on 
+  `'overlapping_pending_requests'` by changing their statuses to `'DENIED'`.
 * All the work of `#approve!` should occur in a single
   **[transaction][transaction-api]**.
-* Most of the time, when you want to make several related updates to
-  the DB, you want to do them grouped in a transaction.
-* Have a chat with your TA about transactions. :-)
-* Write an `#overlapping_pending_requests` to help you.
+* Most of the time, when you want to make several related updates to the DB, 
+  you want to do them grouped in a transaction.
 * Write a `#deny!` method; this one is easier!
 
 [transaction-api]: http://api.rubyonrails.org/v3.2.16/classes/ActiveRecord/Transactions/ClassMethods.html
@@ -211,8 +230,13 @@ two people at once! We will write a custom validation for this.
 
 * On the `Cat` show page, make a button to approve or deny a cat
   request.
-* You may add two member routes to `cat_rental_requests`: `approve`
+* You may add two [member][member-routes] routes to `cat_rental_requests`: `approve`
   and `deny`.
 * Only show these buttons if a request is pending.
 * You may want to add a convenient `CatRentalRequest#pending?`
   method.
+
+[member-routes]: https://github.com/appacademy/curriculum/blob/master/rails/readings/routing-part-iii.md
+
+## Bonus
+* Style your website to look similar to the live demo.
