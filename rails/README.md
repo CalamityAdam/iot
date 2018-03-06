@@ -143,7 +143,7 @@
 
 ## w4d3
 
-### Materials (2 hr, 38 min)
+### Materials (2 hr, 40 min)
 :closed_lock_with_key: `go_video_go`
 * :movie_camera: [Secure State][auth-secure-state] (11 min)
 * :movie_camera: [Cookies and Authentication][auth-cookies] (17 min)
@@ -156,6 +156,7 @@
 * :movie_camera: [(cc) 06 CSRF Attack][auth-06-csrf-attack] (13 min)
 * :movie_camera: [(cc) 07 CSRF Protection][auth-07-csrf-protection] (12 min)
 * :movie_camera: [(cc) 08 CSRF Methods][auth-08-csrf-methods] (10 min)
+* :book: [Singular `resource`s][singular-resources] (2 min)
 
 [vimeo-double-speed]: https://chrome.google.com/webstore/detail/vimeo-repeat-speed/noonakfaafcdaagngpjehilgegefdima?hl=en
 [auth-secure-state]: https://vimeo.com/160819941
@@ -170,6 +171,7 @@
 [auth-06-csrf-attack]: https://vimeo.com/93114286
 [auth-07-csrf-protection]: https://vimeo.com/93114288
 [auth-08-csrf-methods]: https://vimeo.com/93114287
+[singular-resources]: readings/singular-resources.md 
 
 ### Homeworks (30 min)
 * [Rails Auth][rails-auth-homework] (30 min)
