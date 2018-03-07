@@ -1,6 +1,6 @@
 # React Redux Modal Demo
 
-In this demo we have implemented Login and Signup modals in our BenchBnB solution. You can compare the code in the folder to the solutions [here](https://github.com/appacademy/curriculum/tree/master/react/projects/bench_bnb/solution).
+In this demo we have implemented Login and Signup modals in our BenchBnB solution. You can compare the code to the standard solutions [here](https://github.com/appacademy/curriculum/tree/master/react/projects/bench_bnb/solution).
 
 ## Key Files
 
