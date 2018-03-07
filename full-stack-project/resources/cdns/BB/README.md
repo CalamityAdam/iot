@@ -109,7 +109,7 @@ The first thing that we should note is that we are exporting a connected version
 
 If our modal slice is null, we'll return null from our component, effectively making it non-existent. Otherwise, we have a switch statement which will choose what component we put inside of our `.modal-child` div which is inside of our `.modal-background` div.
 
-The `onClick` of our `.modal-background` is the `closeModal` prop that will send an action to our store to set our modal slice to null. The `onClick` of our `.modal-child` a callback that will stop the propagation of the click event. **This is of the utmost importance**. If we didn't stop the propagation of the click event, any time we clicked anywhere inside of our modal, it would close due to the way events bubble up to all containing elements.
+The `onClick` of our `.modal-background` is the `closeModal` prop that will send an action to our store to set our modal slice to null. The `onClick` of our `.modal-child` is a callback that will stop the propagation of the click event. **This is of the utmost importance**. If we didn't stop the propagation of the click event, our modal would close any time we clicked anywhere inside of our `modal-child` due to the way events bubble up through all containing elements. (Ask a TA for a further explanation)
 
 Another place where we've made major changes is in both of the containers for our `SessionForm`. Let's look at the `LoginFormContainer`:
 ```js
