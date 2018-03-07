@@ -171,6 +171,6 @@ The `.modal-background` class is fixed and has a high z-index so it will cover e
 
 A modal is just some information being displayed to the user. The user is forced to interact with this information, by either completing a task or consciously choosing to navigate away from it, before they can use the rest of the application. It is usually accompanied with a dimming effect over the rest of the application.
 
-Modals aren't just used for forms and the background doesn't have to be transparent. The logical switch for whether or not the modal is currently open doesn't have to be stored in your redux state but placing it there does flow well with the rest of our app.
+Modals aren't just used for forms and the background doesn't have to be transparent. The logical switch for whether or not the modal is currently open doesn't have to be stored in your redux state but placing it there does flow well with the rest of our app. It makes it easy for any of our components to get in on the fun of closing and opening modals by simply connecting to the store so that they can dispatch some very simple actions.
 
 Hopefully you find this extensible and applicable to many situations and find ways to improve upon it. For example, instead of just storing a string representing a component in your state, you can store the component itself and make the render method of your `Modal` component a lot simpler.
