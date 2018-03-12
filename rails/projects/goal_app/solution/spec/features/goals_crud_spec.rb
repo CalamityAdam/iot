@@ -3,7 +3,7 @@ require 'rails_helper'
 feature "CRUD of goals" do
   given!(:hello_world) { FactoryBot.create(:user_hw) }
 
-  before(:each) do
+  background(:each) do
     login_as(hello_world)
   end
 

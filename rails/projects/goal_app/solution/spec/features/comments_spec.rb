@@ -7,7 +7,7 @@ feature "commenting" do
     FactoryBot.create(:goal, author: foo_bar)
   end
 
-  before(:each) do
+  background(:each) do
     login_as(hello_world)
     visit user_url(foo_bar)
   end
@@ -33,7 +33,7 @@ feature "commenting" do
   end
 
   feature "goal comment" do
-    before(:each) do
+    background(:each) do
       click_on foo_goal.title
     end
 

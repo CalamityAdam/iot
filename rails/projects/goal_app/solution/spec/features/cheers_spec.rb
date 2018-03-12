@@ -7,7 +7,7 @@ feature "giving cheers" do
   given!(:hw_goal) { FactoryBot.create(:goal, author: hello_world) }
   given!(:foo_goal) { FactoryBot.create(:goal, author: foo_bar) }
 
-  before(:each) do
+  background(:each) do
     login_as(foo_bar)
   end
 
@@ -35,7 +35,7 @@ feature "viewing my cheers" do
   given!(:foo_bar) { FactoryBot.create(:user_foo) }
   given!(:hw_goal) { FactoryBot.create(:goal, author: hello_world) }
 
-  before(:each) do
+  background(:each) do
     FactoryBot.create(:cheer, giver: foo_bar, goal: hw_goal)
     login_as(hello_world)
   end
@@ -59,7 +59,7 @@ feature "limit on cheers" do
   given!(:foo_bar) { FactoryBot.create(:user_foo) }
   given!(:hw_goal) { FactoryBot.create(:goal, author: hello_world) }
 
-  before(:each) do
+  background(:each) do
     login_as(foo_bar)
     visit user_url(hello_world)
     @limit = page.find("#cheer-limit").text.to_i

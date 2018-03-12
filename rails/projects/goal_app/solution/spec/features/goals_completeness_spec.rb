@@ -5,7 +5,7 @@ feature "goal completeness tracking" do
   given(:foo_bar) { FactoryBot.create(:user_foo) }
   given!(:hw_goal) { FactoryBot.create(:goal, author: hello_world) }
 
-  before(:each) do
+  background(:each) do
     login_as(hello_world)
   end
 
