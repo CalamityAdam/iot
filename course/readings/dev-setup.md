@@ -101,6 +101,9 @@ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 # update current console window with new settings
 source ~/.bashrc
 
+# source .bashrc from .bash_profile (necessary on some machines)
+echo 'source ~/.bashrc' >> ~/.bash_profile
+
 # install Ruby version 2.3.1
 rbenv install 2.3.1
 
