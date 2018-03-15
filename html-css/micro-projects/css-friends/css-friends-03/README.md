@@ -31,5 +31,6 @@ Add a border to visually separate `.content-sidebar` and `.content-main`.
 [flex]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 [ss-03-a]: ../docs/screenshots/03-layout-a.png
 [live-03]: http://appacademy.github.io/css-friends/solution/03-layout.html
-
+[live-10]: http://appacademy.github.io/css-friends/solution/10-posts.html
+[t-positioning]: https://github.com/appacademy/css-demos/#positioning
 [t-pseudo-content]: https://github.com/appacademy/css-demos/#pseudo-content
