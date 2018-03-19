@@ -174,7 +174,7 @@ const Util = {
 
 module.exports = Util;
 ```
-The above is the same as the below but ES6 allows for cleaner syntax
+Below is the same above, but written with ES6 for cleaner syntax.
 ```js
 const Util = {
   inherits: function inherits(childClass, parentClass) {
