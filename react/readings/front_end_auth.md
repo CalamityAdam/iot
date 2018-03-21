@@ -149,7 +149,7 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
 
 // access the Redux state to check if the user is logged in
 const mapStateToProps = state => {
-  return {loggedIn: Boolean(state.session.currentUser)};
+  return { loggedIn: Boolean(state.session.currentUser) };
 }
 
 // connect Auth to the redux state
@@ -177,10 +177,10 @@ are logged in.
 // Do this!
 import { ProtectedRoute } from '/file/path/to/rout_util';
 
-<ProtectedRoute exact path="/reviews/new" component={ ReviewForm } />
+<ProtectedRoute exact path="/reviews/new" component={ReviewForm} />
 
 // Instead of this
-<Route exact path="/reviews/new" component={ ReviewForm } />
+<Route exact path="/reviews/new" component={ReviewForm} />
 ```
 
 See how easy that is? We have to do a little work to set up our auth
@@ -195,24 +195,24 @@ application to render in an initial state that reflects the status of
 our session. If we skip this step, it may be possible for a user to log
 in or sign up, refresh the page, and then the app will render in a
 non-logged in manner even though they have the right session token! This
-happens because our App will always render with the default application
-state unless we configure the `Store` to use a `preloadedState`.
+happens because our app will always render with the default application
+state unless we configure the `store` to use a `preloadedState`.
 
 There are **several** ways we can meet this challenge:
 
 * *Issuing a separate request* -- Triggering a `fetchCurrentUser` AJAX
-request from the root route's `onEnter` hook
+request from the root route (such as in a function passed to the `render` prop)
 * *Persisting client-side data* -- using [local storage][local-storage]
 * *Bootstrapping* -- using the [gon gem][gon-video]
 
 We are going to suggest the following implementation:
 
-* In `application.html.erb`, add a script tag -- this is javascript code
+* In `application.html.erb`, add a script tag -- this is JavaScript code
 that we can tell the browser to run, and we can generate it dynamically
-using ruby!
-* Inside the script tag, assign a jsonified `current_user` to the
+using Ruby!
+* Inside the script tag, assign a JSON-ified `current_user` to the
 property of `window.currentUser`
-* Use a jbuilder template!
+* Use a Jbuilder template!
 
 ```html
   <% if logged_in? %>
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const root = document.getElementById('root');
-  ReactDOM.render(<Root store={store}/>, root);
+  ReactDOM.render(<Root store={store} />, root);
 });
 ```
 
