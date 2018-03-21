@@ -126,10 +126,10 @@ understand it.
 // /frontend/util/route_util.jsx
 
 // renders component if logged out, otherwise redirects to the root url
-const Auth = ({component: Component, path, loggedIn, exact}) => (
+const Auth = ({ component: Component, path, loggedIn, exact }) => (
   <Route path={path} exact={exact} render={(props) => (
     !loggedIn ? (
-      <Component {...props}/>
+      <Component {...props} />
     ) : (
       <Redirect to="/" />
     )
@@ -137,12 +137,12 @@ const Auth = ({component: Component, path, loggedIn, exact}) => (
 );
 
 // renders component if logged in, otherwise redirects to the login page
-const Protected = ({component: Component, path, loggedIn, exact}) => (
+const Protected = ({ component: Component, path, loggedIn, exact }) => (
   <Route path={path} exact={exact} render={(props) => (
      loggedIn ? (
-      <Component {...props}/>
+      <Component {...props} />
     ) : (
-      <Redirect to="/login"/>
+      <Redirect to="/login" />
     )
   )}/>
 );
@@ -153,13 +153,21 @@ const mapStateToProps = state => {
 }
 
 // connect Auth to the redux state
-export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth));
+export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
 
 // connect Protected to the redux state
-export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protected));
+export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));
 ```
 
-In all your projects that use frontend auth you will want this code in a
+Let's dig into what this is doing.
+We create two functional React components, `Auth` and `Protected`, which will each render a route.
+To each of these components, we pass a few props: the `component` we want it to (conditionally) render, the `path` we want the route to have, the `loggedIn` status, and whether we want the route to be matched `exact`ly.
+ Note that we're destructuring these props, and then reassigning the `component` prop to a new variable `Component` - we do this because React demands that we use capitalized component names with JSX.
+
+Rather than giving the Route component a `component` prop, we use the `render` prop to pass it a function.
+This function will use the `loggedIn` prop we passed earlier to determine whether it should render the `Component` or `Redirect`.
+
+In all your projects that use frontend auth, you will want this code in a
 file `/frontend/util/route_util.jsx`. Then you can simply import these
 components and use them anywhere you need a protected route. For
 example, suppose we only want users to be able to write reviews if they
