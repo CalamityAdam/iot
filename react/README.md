@@ -18,6 +18,7 @@
 * :movie_camera: [React: Transpilation][react-transpilation] (8 min)
 * :movie_camera: [React: Functional Components][react-func-comps] (22 min)
 * :movie_camera: [React: Lifecycle Methods][react-lifecycle] (11 min)
+* :book: [Props and State][props_and_state]
 * :computer: [code from click counter demo][click-demo]
 
 [react-nontech]: readings/react_nontech.md
@@ -46,7 +47,6 @@
 * :book: [JSX][intro_to_jsx]
 * :book: [React Components][intro_to_react_components]
 * :book: [Declaration][component_declaration]
-* :book: [Props and State][props_and_state]
 * :book: [Lifecycle Methods][component_lifecycle]
 * :book: [Synthetic Events][synthetic_events]
 * :book: [Official React Documentation][react_docs]

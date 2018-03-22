@@ -1,6 +1,6 @@
 # Props and State
 
-React components keep track of data via two important instance variables:
+React components keep track of data via two important properties:
 `this.props` and `this.state`. Both are objects representing data that the
 component needs in order to render.
 
@@ -32,7 +32,7 @@ class Dog extends React.Component {
       <div>Name: {this.props.name}, Breed: {this.props.breed}</div>
     );
   }
-};
+}
 
 export default Dog;
 ```
@@ -48,9 +48,9 @@ It renders to HTML:
 
 ### Don't Change Props!
 
-A component should never change its own props. 
+A component should never change its own props.
 Props are intended to be used by a parent component to trigger a change or re-render in the child component.
-When new props are received by a component, lifecycle methods will be triggered to handle the change and (by default) a re-rendering of the component. If we need to trigger a re-render within the component, we will use component state. 
+When new props are received by a component, lifecycle methods will be triggered to handle the change and (by default) a re-rendering of the component. If we need to trigger a re-render within the component, we will use component state.
 
 # State
 
@@ -75,35 +75,33 @@ changes.
 
 ```javascript
 class WordInput extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       word: ''
     };
+    this.updateWord = this.updateWord.bind(this);
   }
 
-  linkState(key) {
-    // here we use '[key]' to set the key to be the value of the 'key' variable,
-    // as opposed to a string of 'key'
-    return (event => this.setState({[key]: event.currentTarget.value}));
+  updateWord(event) {
+    this.setState({word: event.currentTarget.value});
   }
 
   render () {
     return (
       <div>
-        <input onChange={this.linkState('word')} value={this.state.word}/>
+        <input onChange={this.updateWord} value={this.state.word}/>
         <span>The word is: {this.state.word}</span>
       </div>
     );
   }
-});
+}
 ```
 
 In this example `WordInput` has an initial state of `{word: ''}`. When it is
 rendered, we register an **event listener** on the `input` via its `onChange`
 prop. Whenever the `input` changes its value (via user input), it will call
-`onChange`, which in this case is set to the function returned by
-`linkState('word')`. That function, called a **change handler**, calls
+`onChange`, which in this case is set to `this.updateWord` which has been bound to ensure `this` is still our component when it is eventually invoked. That function, called a **change handler**, calls
 `this.setState()` and sets `this.state.word` to the input's current value. The
 component then re-renders with the new state, updating the text inside the
 `span`.
@@ -113,7 +111,49 @@ outside of your constructor, because `this.setState()` also re-renders your
 component, causing it to reflect the new state. Reassigning `this.state` alone
 won't trigger re-rendering, leaving your component out of sync.
 
-Note that because `setState()` triggers a re-render, it cannot be called during
+Note that because `setState()` triggers a re-render, it should not be called during
 a `render()`, as that would trigger an infinite loop. Here, `setState()` works
-because the change handler returned by `linkState()` is called by user-input
-*after* the element is rendered.
+because `this.updateWord` is called by user-input *after* the element is rendered.
+
+### Asynchronicity of setState
+As the React documentation states, "`this.state` may be updated asynchronously, you should not rely on [its] value for calculating the next state". Let's revisit our example from above and add a console log of our state.
+
+```javascript
+class WordInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      word: ''
+    };
+    this.updateWord.bind(this);
+  }
+
+  updateWord(event) {
+    this.setState({word: event.currentTarget.value});
+    console.log(this.state.word)
+  }
+
+
+  render () {
+    return (
+      <div>
+        <input onChange={this.updateWord} value={this.state.word}/>
+        <span>The word is: {this.state.word}</span>
+      </div>
+    );
+  }
+}
+```
+
+When our component mounts, `this.state.word` will be `''`. If we type the letter `'a'` into the input, the event handler will run and set `this.state.word` to `a` but it won't happen synchronously. So when we `console.log` on the next line we will see `''` instead of `'a'`.
+
+Luckily for us, `setState` takes an optional callback as a second argument. This callback doesn't run until the state has been updated so you can be assured that using `this.state` inside of the callback will actually reflect the changes that your call to `setState` hoped to create. With this knowledge, we can rewrite `updateWord` like this:
+
+```js
+updateWord(event) {
+  this.setState({word: event.currentTarget.value}, () => {
+    console.log(this.state.word);
+  });
+}
+```
+Now we'll actually log the value of our word including the letter we just added!
