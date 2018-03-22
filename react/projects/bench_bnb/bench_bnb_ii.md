@@ -179,7 +179,7 @@ Let's create a component that shows our benches.
 * First we'll start by making make two files:
 `components/bench_index.jsx` and `components/bench_index_container.js`
 
-After we've made both of these components, we'll add the container to our router in `root.jsx` to it's rendered when users visit our site.
+After we've made both of these components, we'll add the container to our `App` component with the rest of our routes so it's rendered when users visit our site.
 
 ### The Container Component
 
