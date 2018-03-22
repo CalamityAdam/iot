@@ -556,21 +556,21 @@ Make sure to use `<%= %>` so that the result of your ruby code is rendered into 
 Inside your erb expression, `render` your jbuilder `_user` partial, passing it the `current_user`.
 Specify the whole path, including `.json.jbuilder`, to prevent rails from automatically looking for a HTML partial.
 Mark your `render` result `html_safe` to avoid escaping certain characters.
-You should get a JS- compatible object to assign to `window.currentUser`.
-Add interpolation around your `window.currentUser=` assignment so that it only runs if someone is logged in.
+You should get a JS-compatible object to assign to `window.currentUser`.
+Add a conditional around your script so that it only runs if someone is logged in.
 You should have something like this:
 
 ```
 <!-- root.html.erb -->
 
-<script type="text/javascript">
-  <% if logged_in? %>
+<% if logged_in? %>
+  <script type="text/javascript">
     window.currentUser = <%= render(
       "api/users/user.json.jbuilder",
       user: current_user
     ).html_safe %>
-  <% end %>
-</script>
+  </script>
+<% end %>
 ```
 
 Log in, refresh your page, and check out your `elements` in the Dev Tools.
