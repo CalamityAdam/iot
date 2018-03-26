@@ -1,4 +1,4 @@
-# Full-Stack Design Documents 
+# Full-Stack Design Documents
 
 Welcome to full-stack projects! This is a hectic and exciting time, and it
 represents the culmination of your education at App Academy. Now that you've
@@ -21,7 +21,7 @@ it.
 
 [sample]: https://www.github.com/appacademy/bluebird/wiki
 
-## Fleshing Out the Design Docs
+## Creating Your Design Docs
 
 The Github wiki of your project repo MUST include the following:
 
@@ -69,7 +69,7 @@ See the sample for an example of this.
 
 **NB**: Your wireframes will be viewed not only by yourself and the App
 Academy staff, but potentially future employers. If you are going to use
-pen and paper, it should look great. Otherwise, we recommend
+pen and paper, it should look great. Otherwise, we recommend a site like
 [draw.io][draw.io].
 
 [draw.io]: https://www.draw.io/
@@ -105,7 +105,8 @@ This is crucial both here and in the industry. The truth is, one never knows
 how long implementing any particular phase will take. Constraints change.
 Timelines are shortened without warning. An app after any phase must be able
 to stand on its own. We call this building in 'slices' instead of 'layers'. To
-create your timeline, add due dates to each of your milestones on Github.
+create your timeline, add due dates to each feature of your MVP List on
+your project wiki.
 
 ## Submission
 
@@ -115,6 +116,7 @@ comments in issues on the project repo. Be prepared to respond to feedback, and
 keep your wiki up to date as you make progress. Happy hunting!
 
 ## Set up your Design Documents
+
 [Follow these instructions][fsp-instructions] to set up your Design
 Docs! You will complete Phases 1 and 2 for homework. You should complete
 the rest by **9am - W8D1**
