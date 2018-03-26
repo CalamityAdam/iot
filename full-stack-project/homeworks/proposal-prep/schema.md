@@ -2,7 +2,7 @@
 
 The foundation of any of the apps you will be cloning is the information that it represents. Making sure that our tables and their corresponding ActiveRecord models have the correct columns, constraints, and associations is an integral part of understanding how our app should work.
 
-Take some time to research the app you are cloning. While referring to your [MVPs][mvps] and making sure you're not going beyond the scope of this ten day full-stack project, try to break down and imagine the information you're seeing as tables. Keep in mind that some of the more abstract concepts, likes and follow for example, are usually represented by join tables.
+Take some time to research the app you are cloning. While referring to your [MVPs][mvps] and making sure you're not going beyond the scope of this ten day full-stack project, try to break down and imagine the information you're seeing as tables. Keep in mind that some of the more abstract concepts, likes and follows for example, are usually represented by join tables.
 
 
 [mvps]: ../../proposal/mvp-list.md

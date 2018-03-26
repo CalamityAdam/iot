@@ -222,12 +222,14 @@
 [redirect]: readings/redirect.md
 [advanced-containers]: readings/advanced_containers.md
 
-### Homeworks (45 min)
+### Homeworks (60 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
+* [Full-stack Proposal Prep: Schema][prep-schema]
 * [Full-stack Proposal Prep: State Shape][prep-state-shape] (15 min)
 
 [rainbow_routes]: homeworks/rainbow_routes
 [prep-state-shape]: ../full-stack-project/homeworks/proposal-prep/state-shape.md
+[prep-schema]: ../full-stack-project/homeworks/proposal-prep/schema.md
 
 
 ### Additional Resources
