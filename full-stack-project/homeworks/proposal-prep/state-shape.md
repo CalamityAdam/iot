@@ -3,7 +3,7 @@
 We've learned how important our state shape (and normalization) is to our keeping our application logic simple as our app scales.
 Following what we've done in class, let's work on structuring our redux state.
 
-Again, take some time to research the app you are clone. While referring to your [MVPs][mvps], keep these things in mind:
+Again, take some time to research the app you are cloning. While referring to your [MVPs][mvps], keep these things in mind:
 - What resources will I be fetching from the database?
 - What else do I need to keep track of in my app? (current user info, form errors, loading spinners, sorting strategies for lists, etc.)
 
