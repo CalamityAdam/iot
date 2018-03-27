@@ -207,12 +207,12 @@ property of `window.currentUser`
 * Use a jbuilder template!
 
 ```html
-<script type="text/javascript">
   <% if logged_in? %>
-  	window.currentUser =
-      <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
+    <script type="text/javascript">
+  	  window.currentUser =
+        <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
+    </script>
   <% end %>
-</script>
 ```
 
 * Inside our entry point, within the doc-ready callback,
