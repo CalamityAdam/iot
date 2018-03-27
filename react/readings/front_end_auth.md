@@ -72,7 +72,7 @@ The `errors` property will be used to tell our users that they have filled out a
 ## `Errors Reducer`
 ```js
 import { combineReducers } from 'redux';
-import sessionErrorsReducer from './chirps';
+import sessionErrorsReducer from './session_errors_reducer';
 
 export default combineReducers({
   session: sessionErrorsReducer,
@@ -215,12 +215,12 @@ property of `window.currentUser`
 * Use a Jbuilder template!
 
 ```html
-  <% if logged_in? %>
-    <script type="text/javascript">
-  	  window.currentUser =
+<% if logged_in? %>
+  <script type="text/javascript">
+      window.currentUser =
         <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
-    </script>
-  <% end %>
+  </script>
+<% end %>
 ```
 
 * Inside our entry point, within the doc-ready callback,
