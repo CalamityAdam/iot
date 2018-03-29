@@ -52,7 +52,7 @@ example, to render the `Red` component you will want
 Test that your code works!  Manually type in each URL we just created,
 and you should see the color component pop up.  Remember, these are
 React Routes, so the paths we created will come after the `#`.  For
-example, our red route will look like `<some-local-path>/skeleton/index.html/#/red`.
+example, our red route will look like `<some-local-path>/skeleton/index.html#/red`.
 
 We want to nest the `Orange` and `Yellow` components inside the `Red`
 component, and the `Indigo` component inside the `Blue` component.

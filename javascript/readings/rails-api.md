@@ -102,10 +102,34 @@ If you're interested in how Rails resolves the response type, check out
 
 ## Using the API
 
-If we now use our client-side rendering scripts to make an AJAX `GET` request
-(which sets a `Content-Type: application/json` header) to `localhost:3000/cats`,
-instead of our HTML view, we'll get a string of text that looks something like
-this:
+If we now use our client-side rendering scripts to make an AJAX `GET` request, AJAX will try to make an intelligent guess and set the `Accept` header in our request to xml, json, script, text or html.
+
+> The [`Accept` header][accept-header] advises which content types, expressed as MIME types, the client is able to understand.
+
+Let's take a look at the following request:
+
+```js
+$.get({
+  url: '/cats'
+})
+```
+The generated request will set the `Accept: '*/*'`, and effectively _**advises**_ our Rails server that any type of response will be OK. In this particular case, Rails will decide which response to return based on our controller's [respond_to](#respond_to) ordered values.
+
+If we **try** (and we say try because the server will **try to accommodate our request**) to get a JSON response rather than an HTML one, we need to specifically set the `dataType`.
+
+```js
+$.get({
+  url: '/cats',
+  dataType: 'json'
+})
+```
+The above will set our `Accept` header...
+
+```ruby
+  application/json, text/javascript, */*; q=0.01
+```
+
+...to successfully letting the server know that we prefer `JSON` responses. 
 
 ```json
 [
@@ -117,13 +141,14 @@ this:
 Our client-side JS can then parse and use the information easily to present our
 information dynamically (i.e. according to our instructions).
 
-**NB:** We can still get our old HTML view by making a `Content-Type: text/html`
+**NB:** We can still get our old HTML view by making an `Accept: text/html`
 request to `localhost:3000/cats`, but at this point, who'd want to?
 
+<a id="respond_to"></a>
 ## `respond_to`
 
 Fortunately, controllers are versatile. A single controller can handle both JSON
-and HTML requests. By looking at the requested `Content-Type` or the format of the
+and HTML requests. By looking at the requested `Accept` header or the format of the
 URI (i.e., going to `/cats.html` vs `/cats.json`), the controller can determine
 which format our response should be populated in and then act accordingly.
 
@@ -147,3 +172,4 @@ will hit the `index.json.jbuilder` view. The controller knows where to go based 
 the format.
 
 [wiki]: https://en.wikipedia.org/wiki/Web_API
+[accept-header]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept

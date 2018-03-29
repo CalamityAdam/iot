@@ -17,7 +17,7 @@
 
 Download the project [skeleton](skeleton.zip?raw=true). Start by running `bundle
 install`. To setup the database, run `rails db:setup` which creates, loads from
-schema and seeds the db in one command. Run `webpack --watch` or `webpack -w` in a
+schema and seeds the db in one command. Run `npm run webpack --watch` or `npm run webpack -w` in a
 new tab to transpile the JavaScript.
 
 Take a quick look at the `webpack.config.js`. Note that our entry point is
@@ -37,7 +37,7 @@ It's currently only requiring `jquery` and `jquery_ujs`. After these, add
 include any files in `app/assets/javascripts`, for instance, our `bundle.js`).
 These are all included through `<script>` tags. Now we shouldn't have to worry
 about compiling our JS files again because Webpack will do it for us as long as we
-remember to webpack (ie. run `webpack` or `webpack --watch`).
+remember to webpack (ie. run `npm run webpack` or `npm run webpack --watch`).
 
 Before writing any code, run `rails s` and familiarize yourself with the
 skeleton!

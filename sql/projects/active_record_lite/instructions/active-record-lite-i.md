@@ -37,10 +37,10 @@ $ PRINT_QUERIES=true rspec spec/01_sql_object_spec.rb
 
 ## Phase 0: Implement `my_attr_accessor`
 
-This phase will serve as a (relatively) easy warm up to
-metaprogramming. You already know what the standard Ruby method
-`attr_accessor` does. What if Ruby didn't provide this convenient
-method for you?
+This phase will get your gears turning on these new metaprogramming 
+concepts before we dive into the project. You already know what 
+the standard Ruby method `attr_accessor` does. What if Ruby didn't
+provide this convenient method for you?
 
 In the `lib/00_attr_accessor_object.rb` file, implement a
 `::my_attr_accessor` macro, which should do exactly the same thing as

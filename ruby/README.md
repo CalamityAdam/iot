@@ -8,16 +8,14 @@
 
 [day1-instructions]: https://github.com/appacademy/meta/blob/master/first-day-instructions/README.md
 
-### Materials (65 min)
-
+### Materials (80 min)
+* :book: [Nontechnical Overview of Ruby][ruby-nontech] (15 min)
 * :book: (**Review**) Review the readings and solutions from the Alpha Curriculum (45 min)
   * **Pay special attention to readings from the 'Writing Good Code' section!**
 * :book: Debugging
   * [the pry REPL and the byebug debugger][pry-and-byebug] (20 min)
   * [common error messages][common-error-messages] (15 min)
 
-[prep-w0]: https://github.com/appacademy/appacademy-prep/tree/master/w0
-[prep-w1]: https://github.com/appacademy/appacademy-prep/tree/master/w1
 [pry-and-byebug]: readings/debugger.md
 [common-error-messages]: readings/common-exceptions.md
 
@@ -63,7 +61,7 @@
 * :book: [Refactoring and Code Smells][code-smells] (5 min)
 * :book: [Overview of HTML/CSS Curriculum][html-css-overview] (2 min)
 * :book: [Intro to HTML][html-intro] (10 min)
-* :book: (Review) Readings from [week 2][prep-w2] of the App Academy Prep course (15 min)
+* :book: (Review) Input/Output readings from the Alpha Course (15 min)
 
 [references-video]: https://vimeo.com/165965713
 [speed-control]: https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk?hl=en
@@ -73,7 +71,6 @@
 [code-smells]: readings/refactoring.md
 [html-css-overview]: ../html-css/readings/overview.md
 [html-intro]: ../html-css/readings/introduction.md
-[prep-w2]: https://github.com/appacademy/appacademy-prep/tree/master/w2
 
 ### Additional Resources
 
@@ -95,7 +92,7 @@
 
 ## w1d3
 
-### Materials (92 min)
+### Materials (77 min)
 
 :closed_lock_with_key: `go_video_go`
 * :movie_camera: [Recursion Intro][recursion-intro-video] (20 min)
@@ -108,7 +105,6 @@
 * :movie_camera: [The Stack][the-stack-video] (10 min)
 * :book: [Recursion][recursion] (10 min)
 * :book: [Semantic HTML Containers][html-containers] (5 min)
-* :book: (Review) Readings from [week 3][prep-w3] of the App Academy Prep course (15 min)
 
 [recursion-intro-video]: https://vimeo.com/162569408
 [recursion-vs-iteration-video]: https://vimeo.com/162569439
@@ -120,7 +116,6 @@
 [the-stack-video]: https://vimeo.com/162571286
 [recursion]: readings/recursion.md
 [html-containers]: ../html-css/readings/containers.md
-[prep-w3]: https://github.com/appacademy/appacademy-prep/tree/master/w3
 
 ### Homeworks (50 min)
 * [Recursion][recursion-homework] (50 min)
@@ -309,12 +304,17 @@
 
 ## w2d2
 
-### Materials (35 min)
 
+
+
+### Materials (55 min)
+
+* :book: [CSS Nontechnical Overview][css-nontech] (20 min)
 * :book: [Nontechnical Overview of Ruby][ruby-nontech] (15 min)
 * :movie_camera: [CSS Intro][css-intro] (8 min)
 * :movie_camera: [CSS Workflow][css-workflow] (12 min)
 
+[css-nontech]: ../html-css/readings/css_nontech.md
 [ruby-nontech]: readings/ruby_nontech.md
 [css-intro]: https://vimeo.com/151188850
 [css-workflow]: https://vimeo.com/168826664

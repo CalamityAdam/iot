@@ -228,7 +228,7 @@ name.
   * It should contain an input field and an unordered list.
   * Create an `<li>` inside the `<ul>` for every name that begins with
     the value in the input box.
-  * You'll need to pass a [unique `key` property][react*keys] to each
+  * You'll need to pass a [unique `key` property][react-keys] to each
     `<li>` or React will grumble to all your console-reading users about
     its unfair working conditions. "How is one supposed to efficiently
     diff the DOM when one doesn't even know which list items match up
@@ -338,5 +338,5 @@ below and make sure to include them:
   you create?
 
 [react-transitions]: https://facebook.github.io/react/docs/animation.html
-[react-keys]: https://facebook.github.io/react/docs/reconciliation.html#list-wise-diff
+[react-keys]: https://reactjs.org/docs/reconciliation.html#keys
 [controlled-component-docs]: https://facebook.github.io/react/docs/forms.html#controlled-components

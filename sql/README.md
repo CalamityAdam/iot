@@ -10,7 +10,8 @@
 
 [assessment-prep-2]: https://github.com/appacademy/assessment-prep#assessment-2
 
-### Materials (67 min)
+### Materials (82 min)
++ :book: [Nontechnical Overview of SQL][sql-nontech] (15 min)
 + :book: [Programming Paradigms][paradigms] (5 min)
 + :book: SQL Fundamentals
   + [SQL For The Impatient][sql-intro] (20 min)
@@ -33,6 +34,7 @@
 [case]: http://www.postgresqltutorial.com/postgresql-case/
 [coalesce]: http://www.postgresqltutorial.com/postgresql-coalesce/
 [postgres-setup]: readings/setup.md
+[sql-nontech]: readings/sql_nontech.md
 
 ### Homeworks (80 min)
 + Complete [SQL Bolt Tutorial][sql-bolt] sections 1 - 12 (80 min)
@@ -52,7 +54,7 @@
 [allies-2]: https://medium.com/@hadrad1000/how-do-i-ally-being-an-ally-to-women-in-technology-73b70fb86a98
 [social-justice]: https://modelviewculture.com/pieces/getting-started-in-techs-social-justice-movement
 
-### Projects (Solo in SF)
+### Projects
 + [SQL Zoo][sqlzoo-readme]
 
 [sqlzoo-readme]: projects/sqlzoo
@@ -93,13 +95,6 @@
 
 [plays-orm]: homeworks/plays
 
-### Additional Resources
-+ [PostgreSQL Tutorial][postgresql]
-  + Familiarize yourself with Section 2 - 12, but don't try to remember
-    it all. Keep this for future reference.
-
-[postgresql]: http://www.postgresqltutorial.com/
-
 ### Study Hall 9 - 10am
 
 ### Projects
@@ -111,7 +106,9 @@
 
 ## w3d3
 
-### Materials (93 min)
+### Materials (108 min)
+* :book: [Nontechnical Overview of Rails][rails-nontech] (15 min)
+
 :closed_lock_with_key: `go_video_go`
 + :movie_camera: [Starting a new Rails Project][rails-intro-video] (7 min)
 + :movie_camera: [Migrations][migrations-video] (14 min)
@@ -133,6 +130,7 @@
 [indices-video]: https://vimeo.com/167799431
 [css-inherits]: https://vimeo.com/151190179
 [css-reset]: https://vimeo.com/151190181
+[rails-nontech]: ../rails/readings/rails_nontech.md
 
 ### Homeworks (45 min)
 + [Intro to Rails][intro-rails-homework] (45 min)
@@ -238,7 +236,6 @@
 [class-instance-variables]: readings/class-instance-variables.md
 [meta-send]: demos/send.rb
 [meta-macros]: demos/macros.rb
-[sql-nontech]: readings/sql_nontech.md
 [css-flex-video]: https://vimeo.com/170512344
 [css-display-types]: ../html-css/readings/display.md
 

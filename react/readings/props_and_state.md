@@ -92,7 +92,7 @@ class WordInput extends React.Component {
     return (
       <div>
         <input onChange={this.linkState('word')} value={this.state.word}/>
-        <span>The word is: {this.state.word}<span>
+        <span>The word is: {this.state.word}</span>
       </div>
     );
   }

@@ -16,9 +16,11 @@ The beginning of Front-End Development.
 
 #### Materials
 
++ :book: [CSS Nontechnical Overview][css-nontech] (20 min)
 + :book: [Overview of HTML/CSS Curriculum][html-css-overview] (2 min)
 + :book: [An Introduction to HTML][html-intro]
 
+[css-nontech]: readings/css_nontech.md
 [html-css-overview]: readings/overview.md
 [html-intro]: readings/introduction.md
 

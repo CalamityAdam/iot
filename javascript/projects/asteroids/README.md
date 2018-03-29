@@ -6,7 +6,7 @@
 methods and attributes
 + Be able to include JavaScript in a web page
   + Know how Webpack works
-  + Know how to test JavaScript code using `window.x = x` 
+  + Know how to test JavaScript code using `window.x = x`
 + Know how to render information from JavaScript objects on a page
   + Know how to draw on a web page using Canvas
 
@@ -50,7 +50,7 @@ classes/sourcefiles:
 inheritance is a main focus of today's project. Because ES6 class syntax
 obscures how prototypal inheritance works, and has some incompatibilities with
 the instructions below, avoid using it while working today. After the project is
-over, review both the ES5 and ES6 solutions to see how they differ. Ask your TA
+over, review both the Prototypal Syntax and Class Syntax solutions to see how they differ. Ask your TA
 for a more nuanced explanation of this if you need more information.
 
 ## A Refresher on Vectors
@@ -81,15 +81,24 @@ distance function:
 
 ## Phase 0: `index.html`
 
-Write a mostly empty HTML file for your game to run in. Open your `index.html`
+Create an `index.html` file for your game to run in. In the body of this file, add a `<canvas id="game-canvas">` tag with sensible default width and height properties. Open your `index.html`
 in  your browser and use the browser's JavaScript console to test your code  as
 you go.
 
-Don't forget to [webpack][browser-modules] your modules.
+## Phase 1: `asteroids.js` ( your entry point file )
+
+As stated in the Overview, you will create classes and objects in different files and they will need to interact with one another. When using Javascript in the browser there is no standard, native way to have one file require another. [Webpack][browser-modules] will allow us to use `require` and `module.exports` syntax to import and export our classes and objects from different files.
+
+`asteroids.js` will serve as the entry file for your project. Running `webpack --watch lib/asteroids.js lib/bundle.js` in your terminal will create a `bundle.js` file for you that loads your `asteroids.js` file, any files `asteroids.js` requires, and any files that those files require! Webpack also doesn't add anything to the window without you explicitly declaring it.
+
+Once you've run your webpack command you should be able to locate your `bundle.js` file and add it in a script tag to your `index.html` **below your canvas element** (we'll come back to this point later).
+
+**Test:** Add a `console.log("Webpack is working!")` to your entry point file to make sure you are running webpack correctly.
+
 
 [browser-modules]: ../../readings/browser-modules.md
 
-## Phase I: `MovingObject` and `Asteroid`
+## Phase 2: `MovingObject` and `Asteroid`
 
 ### `MovingObject`
 
@@ -97,7 +106,9 @@ Write a `MovingObject` class in `lib/moving_object.js`.
 
 Store key instance variables:
 
-* 2D `pos`ition. 2D `vel`ocity. `radius` (everything in the game is a circle).
+* 2D `pos`ition.
+* 2D `vel`ocity.
+* `radius` (everything in the game is a circle).
 * `color`
 
 Rather than pass all these as separate arguments, write your `MovingObject`
@@ -109,11 +120,33 @@ const mo = new MovingObject(
 );
 ```
 
+**Test:** Verify that your MovingObject constructor works as expected. In order to access your MovingObject constructor in your browser's console you will need to first export it using `module.exports`, then require `moving_object.js` in your entry file, then declare the constructor function on the window. Look at the snippets below as a guide and then make sure you can create a MovingObject in your console!
+
+```js
+// moving_object.js
+function MovingObject() {
+  // your code
+}
+
+module.exports = MovingObject
+```
+
+```js
+// asteroids.js
+const MovingObject = require("./moving_object.js")
+
+window.MovingObject = MovingObject;
+```
+
 Write a `MovingObect.prototype.draw(ctx)` method. Draw a circle of the appropriate `radius` centered
-at `pos`. Fill it with the appropriate `color`. Refer to the Drunken Circles
+at `pos`. Fill it with the appropriate `color`. Refer to the [Drunken Circles][drunken-circles]
 demo if you need a refresher on Canvas.
 
+**Test:** Make sure you can draw a `MovingObject`.
+
 Write a `MovingObject.prototype.move` method. Increment the `pos` by the `vel`.
+
+[drunken-circles]: ../../demos/drunken_circles/lib/circle.js#L42
 
 ### `Util`
 
@@ -130,11 +163,21 @@ first utility function to it as `Util.inherits = function (childClass,
 parentClass) { ... }`.
 
 **Note:** You should export a POJO (plain old JavaScript object) from Util, not
-a class. We don't need to create instances of `Util`.
+a class or constructor function. We don't need to create instances of `Util`.
 
-```javascript
+```js
 const Util = {
-  inherits: function(childClass, parentClass) {
+  inherits(childClass, parentClass) {
+    //...
+  }
+}
+
+module.exports = Util;
+```
+Below is the same above, but written with ES6 for cleaner syntax.
+```js
+const Util = {
+  inherits: function inherits(childClass, parentClass) {
     //...
   }
 }
@@ -157,12 +200,12 @@ helper functions from the Util object to help you create a random vector.
 ```js
 // Return a randomly oriented vector with the given length.
 const Util = {
-  randomVec: function(length) {
+  randomVec(length) {
     const deg = 2 * Math.PI * Math.random();
     return Util.scale([Math.sin(deg), Math.cos(deg)], length);
   },
   // Scale the length of a vector by the given amount.
-  scale: function(vec, m) {
+  scale(vec, m) {
     return [vec[0] * m, vec[1] * m];
   }
 }
@@ -182,22 +225,23 @@ within `Asteroid`'s constructor function to access the code that sets properties
 such as `this.pos` and `this.vel`. Its the equivalent to calling `super` in a
 class's `#initialize` method in Ruby.
 
+
 **Note:** Invoking an ES2015 class constructor without `new` (such as `MovingObject` with
 `call()`) throws an error. Hence the need to use ES5 syntax for this project.
 
+**Test:** Make sure you can create and draw an Asteroid.
 ### `Game`
 
 `Game` will be in charge of holding all of our moving objects. It will also
 contain the logic for iterating through these objects and calling their
 corresponding `move` methods.
 
-Write an `Game` class in `lib/game.js`. Define the following constants on the
+Write a `Game` class in `lib/game.js`. Define the following constants on the
 `Game` class: `DIM_X`, `DIM_Y`, and `NUM_ASTEROIDS`.
 
 Write a `Game.prototype.addAsteroids` method. Randomly place the asteroids
 within the dimensions of the game grid. You may also wish to write a
-`Game.prototype.randomPosition` method. Store the asteroids in an instance
-variable array `asteroids`. Call `addAsteroids` in your constructor.
+`Game.prototype.randomPosition` method. Store the asteroids as a property of your game instance in an array `asteroids`. Call `addAsteroids` in your constructor.
 
 Write a `Game.prototype.draw(ctx)` method. It should call `clearRect` on the
 `ctx` to wipe down the entire space. Call the `draw` method on each of the
@@ -219,17 +263,12 @@ Define an `GameView` class in `lib/game_view.js`. The `GameView` should store a
 Write a `GameView.prototype.start` method. It should call `setInterval` to call
 `Game.prototype.moveObjects` and `Game.prototype.draw` once every 20ms or so.
 
-### Adding a canvas to `index.html`
+### Back to your entry file
 
-In the body of your HTML file, add a `<canvas id="game-canvas">` tag with the
-width and height you defined in `Game`.
-
-### Create your entry file called `asteroids.js`.
-
-In the file, add an event listener for the `DOMContentLoaded` event. Within the
+In the `asteroids.js`, add an event listener for the [`DOMContentLoaded`][dom-content-loaded] event. Within the
 callback, use `document.getElementById()` to find the canvas element. Call
 `getContext` on the canvas element with "2d" as the argument to extract a canvas
-context.
+context. Now that you're using a `DOMContentLoaded` callback you can safely move your bundle script tag in `index.html` into the `<head>` where it belongs.
 
 Once you have your canvas context, construct a `GameView` object and call
 `GameView.prototype.start`.
@@ -238,9 +277,11 @@ This is your webpack entry point, so start webpack (or restart it, if you're
 already running webpack --watch) with the "asteroids.js" file as your new entry
 point.
 
+[dom-content-loaded]: https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded#Example
+
 Your asteroids should fly around :-)
 
-## Phase IIa: Wrapping Asteroids
+## Phase 2a: Wrapping Asteroids
 
 Currently your asteroids slide off the screen. We'd like to keep everything
 within the dimensions of the game's rectangular view by mapping opposite sides
@@ -256,7 +297,7 @@ each time.
 Check that your `Asteroid`s don't all fly away, but instead wrap like they are
 supposed to.
 
-## Phase IIb: Colliding Asteroids
+## Phase 2b: Colliding Asteroids
 
 A big part of Asteroids is the collision of objects: ships collide with
 asteroids, bullets collide with asteroids. To start, let's implement asteroids
@@ -286,7 +327,7 @@ on both objects.
 We'll change this soon, but we want to have collision and removal logic working.
 **Check that when two asteroids collide, they both go away**.
 
-## Phase IIIa: `Ship`
+## Phase 3a: `Ship`
 
 In `lib/ship.js`, write an `Ship` class; this should be another subclass of
 `MovingObject`. Define `Ship.RADIUS` and `Ship.COLOR` as before. I default
@@ -308,7 +349,7 @@ call `Ship.prototype.relocate`. The `Ship.prototype.relocate` method should
 reset the `Ship`'s position to `game.randomPosition()` and reset velocity to the
 zero vector.
 
-## Phase IIIb: Moving the ship
+## Phase 3b: Moving the ship
 
 Add a `Ship.prototype.power(impulse)`. The impulse should be added to the
 current velocity of the ship.
@@ -323,7 +364,7 @@ your `bindKeyHandlers` method in `GameView.prototype.start`.
 
 [keymaster]: https://github.com/madrobby/keymaster
 
-## Phase IVa: Firing `Bullet`s
+## Phase 4a: Firing `Bullet`s
 
 Write a `Bullet` subclass of `MovingObject`. The idea is that when a
 `Bullet.prototype.collideWith` an `Asteroid`, we'll remove the `Asteroid` from
@@ -349,7 +390,7 @@ Update `GameView.prototype.addKeyBindings` to bind a key to
 
 Write the override of `Bullet.prototype.collideWith`.
 
-## Phase V: Cleaning up objects
+## Phase 5: Cleaning up objects
 
 Your `Bullet` should not wrap like other objects. When it leaves the visible
 grid, it should be removed.
@@ -364,7 +405,7 @@ In `MovingObject.prototype.move`, after updating the position, check if the
 object is out of bounds. If so, either (A) wrap the object if it `isWrappable`
 or (B) call `Game.prototype.remove` if not.
 
-## Phase VI (Bonus): Drawing an image
+## Phase 6 (Bonus): Drawing an image
 
 Often times people want to draw a background image on their game.
 
@@ -379,14 +420,14 @@ img.src = 'myImage.png';
 Note you may have to redraw the background each iteration. You do not need to
 constantly reload the `img`; just make sure to `ctx.drawImage` each frame.
 
-## Phase VII (Bonus): RequestAnimationFrame
+## Phase 7 (Bonus): RequestAnimationFrame
 
 We are going to have our game use `requestAnimationFrame`. Go to the console and
 type this in. Notice that it is the global namespace. It provides a better way
 to do animations. Read more
 [here](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame).
 
-### Phase VIIb: MovingObject
+### Phase 7b: MovingObject
 
 Rewrite your `move` method, this time allowing it to take in a `timeDelta`.
 Increment the `pos` by the `vel * delta`. The delta will be created in the
@@ -395,12 +436,12 @@ GameView's `animate` method based on the time variable provided by
 a value of 1. You can default a value using the logical OR operator `delta =
 delta || 1`.
 
-### Phase VIIc: Game
+### Phase 7c: Game
 
 Refactor your `Game.prototype.moveObjects(delta)` method. It should the `delta`
 to each `Asteroid.prototype.move`.
 
-### Phase VIIa: GameView
+### Phase 7d: GameView
 
 The `GameView` should now store a `lastTime` instance variable. It will be used
 to derive the delta (default it to `0`).

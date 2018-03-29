@@ -35,7 +35,8 @@ mutual specification.
 | --------------------- |:-------------:| ----------------:|
 | ES5                   | 5             |             2009 |
 | ES6 / ECMAScript 2015 | 6             |             2015 |
-| ES7 / ECMAScript 2017 | 7             |             2016 |
+| ES7 / ECMAScript 2016 | 7             |             2016 |
+| ES8 / ECMAScript 2017 | 8             |             2017 |
 
 
 [browser wars]: https://en.wikipedia.org/wiki/Browser_wars

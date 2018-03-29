@@ -1,4 +1,4 @@
-# Full-Stack Design Documents 
+# Full-Stack Design Documents
 
 Welcome to full-stack projects! This is a hectic and exciting time, and it
 represents the culmination of your education at App Academy. Now that you've
@@ -21,7 +21,7 @@ it.
 
 [sample]: https://www.github.com/appacademy/bluebird/wiki
 
-## Fleshing Out the Design Docs
+## Creating Your Design Docs
 
 The Github wiki of your project repo MUST include the following:
 
@@ -41,22 +41,38 @@ must follow the format outlined [here][mvp-features].
 
 [mvp-features]: mvp-list.md
 
-### DB Schema
+### Wireframes
 
-- `schema`
+### React Components with Wireframes
 
-Link to a document outlining the database schema for your app. Build up the
-schema by walking through your app's wireframes. Think carefully about what data
-will be needed for each view and the best way to store that data. Make note
-of any database-level validations and foreign key relationships.
+- `component-hierarchy`
 
-### Routes
+When designing an app, we want to start with the user. To do this, we're
+going to first make our wireframes. Each wireframe should be a basic
+representation of the layout and information presented in a view. We
+should be able to see every view of your website using your wireframes,
+and how each view is reached.
 
-- `routes`
+In conjunction with the wireframes, diagram a tree indicating your
+application's overall component structure.
 
-Link to a page that lists your Rails API endpoints and frontend React Router
-routes. Break these up between HTML and JSON endpoints. Discuss what params,
-if any, will be needed for each route, and what information will be returned.
+Annotate your wireframes. Which React component corresponds to each
+element? Keep grids in mind while drafting your layout.
+
+Discuss how you will nest your components. If components will need
+containers, indicate what state and dispatch props they will need. For
+presentational components, discuss what props and state they will need.
+
+Map out your React Routes with their respective components and paths.
+
+See the sample for an example of this.
+
+**NB**: Your wireframes will be viewed not only by yourself and the App
+Academy staff, but potentially future employers. If you are going to use
+pen and paper, it should look great. Otherwise, we recommend a site like
+[draw.io][draw.io].
+
+[draw.io]: https://www.draw.io/
 
 ### Sample State
 
@@ -66,38 +82,22 @@ Create a basic illustration of your state shape. Think about what information
 you need to store for your app to work, and how best to organize it to minimize
 duplication and maximize ease of access.
 
-### React Components
+### Routes
 
-- `component-hierarchy`
+- `routes`
 
-In conjunction with the wireframes, diagram a tree indicating your
-application's overall component structure.
+Link to a page that lists your Rails API endpoints and frontend React Router
+routes. Break these up between HTML and JSON endpoints. Discuss what params,
+if any, will be needed for each route, and what information will be returned.
 
-Discuss how you will nest your components. If components will need containers,
-indicate what state and dispatch props they will need. For presentational
-components, discuss what props and state they will need.
+### DB Schema
 
-Map out your React Routes with their respective components and paths.
+- `schema`
 
-See the sample for an example of this.
-
-### Wireframes
-
-- `wireframes`
-
-Annotate your wireframes. Which React component corresponds to
-each element? Keep grids in mind while roughly drafting your layout.
-
-Each wireframe should be a basic representation of the layout and information
-presented in a view. Since you will certainly use nested React components,
-clearly indicate the hierarchy in your wireframes. We should be able to see
-every view of your website using your wireframes, and how each view is reached.
-
-**NB**: Your wireframes will be viewed not only by yourself and the App Academy
-staff, but potentially future employers. If you are going to use pen and
-paper, it should look great. Otherwise, we recommend [draw.io][draw.io].
-
-[draw.io]: https://www.draw.io/
+Link to a document outlining the database schema for your app. Build up the
+schema by walking through your app's wireframes. Think carefully about what data
+will be needed for each view and the best way to store that data. Make note
+of any database-level validations and foreign key relationships.
 
 ### Implementation Timeline
 
@@ -105,7 +105,8 @@ This is crucial both here and in the industry. The truth is, one never knows
 how long implementing any particular phase will take. Constraints change.
 Timelines are shortened without warning. An app after any phase must be able
 to stand on its own. We call this building in 'slices' instead of 'layers'. To
-create your timeline, add due dates to each of your milestones on Github.
+create your timeline, add due dates to each feature of your MVP List on
+your project wiki.
 
 ## Submission
 
@@ -115,6 +116,9 @@ comments in issues on the project repo. Be prepared to respond to feedback, and
 keep your wiki up to date as you make progress. Happy hunting!
 
 ## Set up your Design Documents
-[Follow these instructions][fsp-instructions] to set up your Design Docs! You will complete Phases 1 and 2 for homework. You should complete the rest by **9am - W8D1**
+
+[Follow these instructions][fsp-instructions] to set up your Design
+Docs! You will complete Phases 1 and 2 for homework. You should complete
+the rest by **9am - W8D1**
 
 [fsp-instructions]: ./full-stack-project-proposal.md

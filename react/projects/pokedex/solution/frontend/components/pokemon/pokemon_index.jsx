@@ -9,23 +9,25 @@ import PokemonDetailContainer from './pokemon_detail_container';
 import { requestAllPokemon } from '../../actions/pokemon_actions';
 
 class PokemonIndex extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.requestAllPokemon();
   }
 
   render() {
     const { pokemon, loading } = this.props;
 
+    if (loading) { return <LoadingIcon />; }
+
     return (
-      loading ?
-      <LoadingIcon /> :
       <section className="pokedex">
+        <Route exact path="/" component={PokemonFormContainer} />
+        <Route
+          path="/pokemon/:pokemonId"
+          component={PokemonDetailContainer}
+        />
         <ul>
           {pokemon.map(poke => <PokemonIndexItem key={poke.id} pokemon={poke} />)}
         </ul>
-
-        <Route exact path="/" component={PokemonFormContainer} />
-        <Route path="/pokemon/:pokemonId" component={PokemonDetailContainer} />
       </section>
     );
   }

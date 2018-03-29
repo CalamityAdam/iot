@@ -6,7 +6,7 @@ function MovingObject(options) {
   this.radius = options.radius;
   this.color = options.color;
   this.game = options.game;
-};
+}
 
 MovingObject.prototype.collideWith = function collideWith(otherObject) {
   // default do nothing

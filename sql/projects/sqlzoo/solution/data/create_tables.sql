@@ -6213,7 +6213,7 @@ B00000DCI5	The Best of Miss Peggy Lee	Peggy Lee	14.99	1998-10-20	Capitol	3380
 B00000DFTD	FanMail [EXPLICIT LYRICS]	TLC	14.99	1999-02-23	La Face	10660
 B00000DMJG	Double Live [LIVE] [BOX SET]	Garth Brooks	24.49	1998-11-17	Capitol	3073
 B00000F1D3	Believe	Cher	13.99	1998-11-10	\N	1573
-B00000G1IL	...Baby One More Time [ENHANCED CD]	Britney Spears	14.99	1999-01-12	Jive	3735
+B00000G1IL	Baby One More Time [ENHANCED CD]	Britney Spears	14.99	1999-01-12	Jive	3735
 B00000HZEQ	Dusty in Memphis [Deluxe Edition] [EXTRA TRACKS]	Dusty Springfield	14.99	\N	Rhino Records	1054
 B00000IOOE	Millennium	Backstreet Boys	14.99	1999-05-18	Jive	3612
 B00000IOSU	Mirrorball [LIVE]	Sarah McLachlan	13.99	1999-06-15	Arista	300

@@ -6,7 +6,21 @@ import merge from 'lodash/merge';
 
 const todosReducer = (state = {}, action) => {
 
-
+  switch(action.type){
+    case RECEIVE_TODOS:
+      return action.todos;
+    case RECEIVE_TODO:
+      const newTodo = {[action.todo.id]: action.todo};
+      return merge({}, state, newTodo);
+    case REMOVE_TODO:
+      nextState = merge({}, state);
+      delete nextState[action.todo.id];
+      return nextState;
+    case TODO_ERROR:
+      alert(action.error);
+    default:
+      return state;
+  }
 };
 
 export default todosReducer;

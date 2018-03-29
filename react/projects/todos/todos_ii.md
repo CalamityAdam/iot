@@ -30,8 +30,9 @@ that either fire AJAX requests or render the newest application state.
 Let's get started!
 
 * Create a new rails project using `--database=postgresql` and `--skip-turbolinks`
+  * N.B.: we'll skip turbolinks because it prevents full page reloads, which can lead to bugs in your JavaScript frontend
 * Update your `Gemfile` with `pry-rails`, `binding_of_caller`, `better_errors` and `annotate`.
-* As of `Rails 5.1.2`, Rails no longer includes JQuery by default. To allow us to use `$.ajax`, include the following:
+* As of `Rails 5.1.2`, Rails no longer includes jQuery by default. To allow us to use `$.ajax`, include the following:
   * Include `gem 'jquery-rails'` in your `Gemfile`
   * Include `//= require jquery` and `//= require jquery_ujs` in `application.js` above `//= require_tree .`
 
@@ -44,8 +45,8 @@ Let's get started!
     `validates :boolean_field_name, inclusion: { in: [true, false] }`
     at the model level to validate boolean fields.
 * Make sure Postgres is running on your machine
-  * Run `rails db:create`.
-  * Run `rails db:migrate`.
+  * Run `bundle exec rails db:create`.
+  * Run `bundle exec rails db:migrate`.
 
 **Test your setup** - Try creating a couple of todos in your database using the
 Rails console (`rails c`).
@@ -96,18 +97,10 @@ api_todos GET    /api/todos(.:format)     api/todos#index {format: :json}
 * Create a `StaticPagesController` that will serve a `root` view with `<div id="content"></div>`.
 * Update `routes.rb` to `root to: 'static_pages#root'`.
 
-Since Rails 5 doesn't include jQuery for us, we're going to need to do one more thing to get jQuery's `ajax` to work.
-To add jQuery to your project:
-
-1. Add `gem jquery-rails` to your `Gemfile`.
-2. Run `bundle install`.
-3. Add `//= require jquery` and `//= require jquery_ujs` to your `application.js`
-4. If your Rails server was previously running, restart it.
-
 You're almost ready to go!
 
 * Seed your database with a few todos for testing.
-* Start your server (`rails s`) so that it can respond to HTTP requests.
+* Start your server (`bundle exec rails s`) so that it can respond to HTTP requests.
 * Visit [http://localhost:3000/](http://localhost:3000/). It should render your root page.
   * Inspect the page and double check that `<div id="content"></div>` is present.
 
@@ -131,8 +124,8 @@ $.ajax({
 
 ## Phase 2: Putting it all together
 
-Your entire todos project from yesterday will function as the frontend folder for your rails app with some slight modifications.
-You will also need your `package.json` and `webpack.config.js` which should be put in the root folder, but you do not need `index.html`.
+Your entire todos project from yesterday will function as the frontend folder for your Rails app with some slight modifications.
+You will also need your `package.json` and `webpack.config.js`, but you do not need `index.html`. Put your frontend folder, `package.json`, and `webpack.config.js` in the root folder of your Rails app (i.e. at the same level as `app`, `bin`, `config`, etc).
 
 Modify the output path in your webpack config to create bundle in `app/assets/javascripts` rather than the root directory. Take a look at `application.js`: because it includes the line `//= require_tree .` and the bundled file is in `app/assets/javascripts`, the bundled file will be required for you.
 
@@ -164,7 +157,7 @@ so that the caller of the function can handle success and failure however they s
 Let's write our Todo API Util.
 
 * Create a file `util/todo_api_util.js`.
-* Write a function that takes no arguments, makes a request to `api/todos` with a method of `GET`, and returns a promise.
+* Write a function that takes no arguments, makes a request to `api/todos` with a method of `GET`, and returns a promise. Store this function in `const fetchTodos` and export it.
 
 **Test your code** - Try running your function in the console and make sure
 you can resolve the promise by passing a function to `then`.
@@ -196,9 +189,9 @@ store.dispatch((dispatch) => {
 #### Fetching Todos
 
 Let's write an action creator to fetch todos from the server. Inside
-`frontend/actions/todo_actions`, import your `APIUtil`, and export a function `fetchTodos`
+`frontend/actions/todo_actions`, import `*` from your `APIUtil`, and export a function `fetchTodos`
 which returns another function. The returned function should take dispatch as an argument,
-and when invoked, call the `APIUtil` to fetch all todos. Resolve the promise by dispatching
+and when invoked, call `APIUtil.fetchTodos` to fetch all todos. Resolve the promise by dispatching
 your synchronous `receiveTodos()` action.
 
 **NB: Return the resolved promise from the action creator for future flexibility; this allows you to continue chaining calls to `then` in the event that you would like to dispatch further actions from the component.**

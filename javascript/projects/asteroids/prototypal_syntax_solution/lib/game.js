@@ -9,7 +9,7 @@ function Game() {
   this.ships = [];
 
   this.addAsteroids();
-};
+}
 
 Game.BG_COLOR = "#000000";
 Game.DIM_X = 1000;
@@ -30,7 +30,7 @@ Game.prototype.add = function add(object) {
 };
 
 Game.prototype.addAsteroids = function addAsteroids() {
-  for (var i = 0; i < Game.NUM_ASTEROIDS; i++) {
+  for (let i = 0; i < Game.NUM_ASTEROIDS; i++) {
     this.add(new Asteroid({ game: this }));
   }
 };
@@ -70,7 +70,7 @@ Game.prototype.draw = function draw(ctx) {
   ctx.fillStyle = Game.BG_COLOR;
   ctx.fillRect(0, 0, Game.DIM_X, Game.DIM_Y);
 
-  this.allObjects().forEach((object) => {
+  this.allObjects().forEach(function(object) {
     object.draw(ctx);
   });
 };
@@ -81,7 +81,7 @@ Game.prototype.isOutOfBounds = function isOutOfBounds(pos) {
 };
 
 Game.prototype.moveObjects = function moveObjects(delta) {
-  this.allObjects().forEach((object) => {
+  this.allObjects().forEach(function(object) {
     object.move(delta);
   });
 };

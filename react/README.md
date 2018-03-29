@@ -5,11 +5,9 @@
 
 ## w6d5
 
-### :clock10: (SF Only!) Class will start at 10am! :clock10:
-* **Progress Tracker reports are still due at 9am.**
-
-### Materials (126 min)
+### Materials (141 min)
 :closed_lock_with_key: `go_video_go`
+* :book: [Nontechnical Overview of React][react-nontech] (15 min)
 * :book: [NPM][npm_configuration] (15 min)
 * :book: [Webpack][webpack_configuration] (10 min)
 * :book: [ES6 Syntax: Object Destructuring][object_destructuring] (10 min)
@@ -20,8 +18,9 @@
 * :movie_camera: [React: Transpilation][react-transpilation] (8 min)
 * :movie_camera: [React: Functional Components][react-func-comps] (22 min)
 * :movie_camera: [React: Lifecycle Methods][react-lifecycle] (11 min)
-  * :computer: [code from click counter demo][click-demo]
+* :computer: [code from click counter demo][click-demo]
 
+[react-nontech]: readings/react_nontech.md
 [npm_configuration]: readings/npm_configuration.md
 [webpack_configuration]: readings/webpack_configuration.md
 [import_export]: readings/import_export.md
@@ -74,7 +73,8 @@
 
 ## w7d1
 
-### Materials (105 min)
+### Materials (130 min)
+* :book: [Nontechnical Overview of Redux][redux-nontech] (15 min)
 * :book: [Lodash][lodash] (5 min)
 * :book: [Flux and Redux Intro][flux_redux] (10 min)
 * :book: [Store][store] (20 min)
@@ -84,7 +84,6 @@
 * :book: [`connect()`][connect] (15 min)
 * :book: [Containers][containers] (10 min)
 * :book: [Selectors][selectors] (10 min)
-* :book: [Nontechnical Overview of React][react-nontech] (15 min)
 
 [lodash]: readings/lodash.md
 [store]: readings/store.md
@@ -95,7 +94,8 @@
 [connect]: readings/connect.md
 [containers]: readings/containers.md
 [selectors]: readings/selectors.md
-[react-nontech]: readings/react_nontech.md
+[redux-nontech]: readings/redux_nontech.md
+
 
 ### (optional) Fruit Stand App Demo (75 min)
 * :movie_camera: Fruit Stand Demo (75 min)
@@ -125,7 +125,7 @@
 * [Is Ageism In Tech An Under-The-Radar Diversity Issue?][ageism] (5 min)
 * **[Building Accessibility Culture][accessibility]** (8 min)
 * [Building Better Tech Cultures for People with ADHD][adhd] (6 min)
-* **["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness]** (6 min) 
+* **["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness]** (6 min)
 
 [ageism]: https://www.fastcompany.com/3054204/is-ageism-in-tech-an-under-the-radar-diversity-issue
 [accessibility]: https://modelviewculture.com/pieces/building-accessibility-culture
@@ -174,19 +174,17 @@
 
 ## w7d3
 
-### Materials (50 min)
+### Materials (35 min)
 * :book: [Intro to Jbuilder][jbuilder-intro] (5 min)
 * :book: [Jbuilder][jbuilder_docs] (20 min)
 * :book: Normalizing Redux State Shape (from Redux docs)
   * [Normalizing State Shape][normalizing] (5 min)
   * [Updating Normalized Data][updating-normalized] (5 min)
-* :book: [Nontechnical Overview of Redux][redux-nontech] (15 min)
 
 [jbuilder-intro]: readings/intro_to_jbuilder.md
 [jbuilder_docs]: https://github.com/rails/jbuilder
 [normalizing]: http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html
 [updating-normalized]: http://redux.js.org/docs/recipes/reducers/UpdatingNormalizedData.html
-[redux-nontech]: readings/redux_nontech.md
 
 ### Homeworks (105 min)
 * [Giphy Homework][giphy_homework] (90 min)
@@ -209,25 +207,29 @@
 
 ## w7d4
 
-### Materials (26 min)
+### Materials (41 min)
 * :book: [Intro to React Router][react_router_intro]  (15 min)
 * :book: [`<Link>`][link] (5 min)
 * :book: [`<Switch>`][switch] (2 min)
 * :book: [`withRouter`][with_router] (2 min)
 * :book: [`<Redirect>`][redirect] (2 min)
+* :book: [Advanced Containers][advanced-containers] (15 min)
 
 [react_router_intro]: readings/intro_to_react_router.md
 [link]: readings/link.md
 [switch]: readings/switch.md
 [with_router]: readings/with_router.md
 [redirect]: readings/redirect.md
+[advanced-containers]: readings/advanced_containers.md
 
-### Homeworks (45 min)
+### Homeworks (60 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
+* [Full-stack Proposal Prep: Schema][prep-schema]
 * [Full-stack Proposal Prep: State Shape][prep-state-shape] (15 min)
 
 [rainbow_routes]: homeworks/rainbow_routes
 [prep-state-shape]: ../full-stack-project/homeworks/proposal-prep/state-shape.md
+[prep-schema]: ../full-stack-project/homeworks/proposal-prep/schema.md
 
 
 ### Additional Resources

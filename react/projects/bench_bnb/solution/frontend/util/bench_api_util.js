@@ -13,18 +13,18 @@ export const fetchBench = id => (
   })
 );
 
-export const createReview = data => (
+export const createReview = review => (
   $.ajax({
     method: 'POST',
     url: 'api/reviews',
-    data
+    data: { review }
   })
 );
 
-export const createBench = data => (
+export const createBench = bench => (
   $.ajax({
     method: 'POST',
     url: 'api/benches',
-    data
+    data: { bench }
   })
 );

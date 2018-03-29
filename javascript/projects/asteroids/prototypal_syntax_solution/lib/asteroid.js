@@ -9,15 +9,17 @@ const DEFAULTS = {
   SPEED: 4
 };
 
-const Asteroid = function Asteroid(options = {}) {
+function Asteroid(options) {
+  options = options || {};
   options.color = DEFAULTS.COLOR;
   options.pos = options.pos || options.game.randomPosition();
   options.radius = DEFAULTS.RADIUS;
   options.vel = options.vel || Util.randomVec(DEFAULTS.SPEED);
 
   MovingObject.call(this, options);
-};
+}
 
+// Must inherit before adding any properties (usually functions) to the Asteroid prototype
 Util.inherits(Asteroid, MovingObject);
 
 Asteroid.prototype.collideWith = function collideWith(otherObject) {

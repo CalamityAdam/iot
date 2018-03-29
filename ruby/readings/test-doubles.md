@@ -29,7 +29,7 @@ Here an `Order` object needs a `Customer` object; the associated
 a `Customer` object.
 
 ```ruby
-describe Order
+RSpec.describe Order do
   subject(:order) do
     customer = Customer.new(
       :first_name => "Ned",
@@ -80,7 +80,20 @@ outside, interacting objects, such as `Customer`. We could write the
 example above like so:
 
 ```ruby
-describe Order
+#IMPLEMENTATION
+class Order
+    def initialize(customer, product)
+        @customer = customer
+        @product = product
+    end
+
+    def charge_customer
+        @customer.debit_account(@product.cost)
+    end
+end
+
+#RSPEC FILE
+RSpec.describe Order do
   let(:customer) { double("customer") }
   subject(:order) { Order.new(customer) }
 
@@ -130,7 +143,7 @@ part of its functionality, we should test that the proper methods are
 called. To do this, we use method expectations. Here's an example:
 
 ```ruby
-describe Order
+RSpec.describe Order
   let(:customer) { double('customer') }
   let(:product) { double('product', :cost => 5.99) }
   subject(:order) { Order.new(customer, product) }

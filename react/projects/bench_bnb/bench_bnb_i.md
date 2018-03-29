@@ -45,7 +45,7 @@ Refer to [the master checklist][checklist] during Bench BnB and your final proje
   * `babel-core`
   * `babel-loader`
   * `babel-preset-react`
-  * `babel-preset-es2015`
+  * `babel-preset-env`
 * Create a `webpack.config.js` file.
 * Set up your entry file (`bench_bnb.jsx`) to render your app into the `#root` container.
 
@@ -181,9 +181,9 @@ The `sessionReducer` should listen for 1 action type and respond to it like so:
   * `RECEIVE_CURRENT_USER` - sets `currentUser` to the action's user
 
 Your `sessionReducer` should maintain its own default state.
-To do that pass in an object as a default argument to sessionReducer with `currentUser` set to `null` and `errors` set to an empty array.
+To do that pass in an object as a default argument to sessionReducer with `currentUser` set to `null`.
 
-Remember to use both `Object.freeze()` and `Object.assign` or `lodash/merge` to prevent the state from being accidentally mutated.
+Remember to use both `Object.freeze()` and either `Object.assign` or `lodash/merge` to prevent the state from being accidentally mutated.
 
 ### `sessionErrorsReducer`
 
@@ -304,7 +304,7 @@ Define 2 new files at the root of your `frontend/components` folder:
 
 ### The `App` component
 
-Create and export a new **functional component** that renders an `<h1>` tag with "Bench BnB" text.
+Create and export a new **functional component** that renders an `<h1>` tag with "Bench BnB" text - this will eventually hold more, but this is all we need for now.
 It should look something like this:
 
 ```jsx
@@ -402,8 +402,8 @@ If the user **is logged in**, then the `Greeting` should contain:
   * A button to logout
 
 If the user **is not logged in**, then the `Greeting` should contain:
-  * A [`<Link to>`][link-docs] `/#/signup`
-  * A [`<Link to>`][link-docs] `/#/login`
+  * A [`<Link to>`][link-docs] `/signup`
+  * A [`<Link to>`][link-docs] `/login`
 
 Update your `App` component so that it renders the `GreetingContainer` and `<h1>` within a `<header>` tag. It should look like this:
 
@@ -427,19 +427,18 @@ Check that clicking the logout button logs out the current user before moving on
 
 ### `SessionForm` Components
 
-To make our React components modular, we will reuse and render the same form component on login and signup.
+To make our React components modular, we will reuse and render the same presentational form component on login and signup. We'll keep this form component ["dumb"](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0), however, so that it doesn't need to know anything about the container or route rendering it.
 
-* Create a container `SessionFormContainer` and its controlled component `SessionForm`.
+* Create a container `LoginFormContainer`, another container `SignupFormContainer`, and their controlled component `SessionForm`.
 
-#### `SessionFormContainer`
+#### `LoginFormContainer and SignupFormContainer`
 
-The `SessionFormContainer` should provide `SessionForm` with the following props:
+Each of these containers should provide `SessionForm` with the following props:
 + From `mapStateToProps(state, ownProps)`:
-  * `loggedIn` (boolean) - representing whether a `currentUser` exists
   * `errors` (array) - list of errors from the state
-  * `formType` (string): `'login'` or `'signup'` given the current `ownProps.location.pathname`
+  * `formType` (string): `'login'` or `'signup'`, for each respective container
 + From `mapDispatchToProps(dispatch, ownProps)`:
-  * `processForm` (function): dispatching action creators `login` or `signup` given `formType`
+  * `processForm` (function): dispatching action creators `login` or `signup`, again depending on the container
 
 #### `SessionForm`
 
@@ -480,18 +479,18 @@ The `SessionForm` component should be responsible for a number of tasks:
 
     + Pass it as a callback to your form's `onSubmit`.
   * Render a "Log in" or "Sign up" header based on the `formType` prop.
-  * Provide a [`<Link to>`][link-docs] to `/#/signup` or `/#/login`, whichever isn't the current address.
+  * Provide a [`<Link to>`][link-docs] to `/signup` or `/login`, whichever isn't the current address.
   * Render a list of error messages if any are present.
-  * Redirect the user to the `/#/` route if they are logged in.
+  * Redirect the user to the `/` route if they are logged in.
   Don't forget to export the component [`withRouter`][withRouter-docs]!
 
 ### Session Routes
 
 Now it's time to create routes for logging in and signing up.
 
-* Create two new routes in your `App` component for `/#/login` and `/#/signup`.
+* Create two new routes in your `App` component for `/login` and `/signup`.
   * Their paths should be `"/login"` and `"/signup"`.
-  + They should both render the `SessionFormContainer`.
+  + One should render the `LoginFormContainer`, the other the `SignupFormContainer`.
 
 Your `App` should now look a lot like this:
 ```js
@@ -502,8 +501,8 @@ const App = () => (
       <GreetingContainer />
     </header>
 
-    <Route path="/login" component={SessionFormContainer} />
-    <Route path="/signup" component={SessionFormContainer} />
+    <Route path="/login" component={LoginFormContainer} />
+    <Route path="/signup" component={SignupFormContainer} />
   </div>
 )
 ```
@@ -557,21 +556,21 @@ Make sure to use `<%= %>` so that the result of your ruby code is rendered into 
 Inside your erb expression, `render` your jbuilder `_user` partial, passing it the `current_user`.
 Specify the whole path, including `.json.jbuilder`, to prevent rails from automatically looking for a HTML partial.
 Mark your `render` result `html_safe` to avoid escaping certain characters.
-You should get a JS- compatible object to assign to `window.currentUser`.
-Add interpolation around your `window.currentUser=` assignment so that it only runs if someone is logged in.
+You should get a JS-compatible object to assign to `window.currentUser`.
+Add a conditional around your script so that it only runs if someone is logged in.
 You should have something like this:
 
 ```
 <!-- root.html.erb -->
 
-<script type="text/javascript">
-  <% if logged_in? %>
+<% if logged_in? %>
+  <script type="text/javascript">
     window.currentUser = <%= render(
       "api/users/user.json.jbuilder",
       user: current_user
     ).html_safe %>
-  <% end %>
-</script>
+  </script>
+<% end %>
 ```
 
 Log in, refresh your page, and check out your `elements` in the Dev Tools.
@@ -609,7 +608,7 @@ You should stay logged in.
 
 ### Protecting your front-end routes
 
-Let's make sure users can't visit our `"/#/login"` or `"/#/signup"` routes if they are already logged in on the front-end.
+Let's make sure users can't visit our `"/login"` or `"/signup"` routes if they are already logged in on the front-end.
 
 * Let's create a `frontend/util/route_util.jsx` file.
 In it we will define some custom routes. Our goal is to conditionally render either the component or a [`<Redirect>`][redirect-docs] based on whether a user is logged in.
