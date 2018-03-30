@@ -94,8 +94,7 @@ const foo = arg1 => arg2 => arg3 => {
 };
 ```
 
-**NB:** Remember, ES6 arrow functions, unlike normal JS functions, do not create
-a new scope. They are *not* lexically scoped. In other words, `this` means the
+**NB:** Remember, ES6 arrow functions, unlike normal JS functions, are automatically bound to the context (`this`) that existed when they were defined. In other words, `this` means the
 same thing inside an arrow function that it does outside of it.
 
 ## Summary of Higher-Order Functions
