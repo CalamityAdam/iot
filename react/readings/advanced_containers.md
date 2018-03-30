@@ -119,7 +119,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-class EditPostFormContainer extends React.Component {
+class EditPostForm extends React.Component {
   // this is the higher-order component made to handle the fetch
 
   componentDidMount() {
@@ -137,7 +137,7 @@ class EditPostFormContainer extends React.Component {
 }
 
 // now `connect` it to the Redux store
-export default connect(mapStateToProps, mapDispatchToProps)(EditPostFormContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(EditPostForm);
 ```
 The result here is that we can render a `CreatePostFormContainer` wherever we want a form to create a post, and an `EditPostFormContainer` wherever we want to edit a post.
 Both components will render a `PostForm`, but each will have different functions. The `PostForm` also gets to be very simple and make almost no decisions. This helps keep our code DRY and modular.
