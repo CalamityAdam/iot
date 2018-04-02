@@ -37,18 +37,31 @@ describe HashSet do
   end
 
   describe "#remove" do
-    it "should remove an element from the set" do
+    before do
       set.insert(1)
-      set.remove(1)
-      expect(set.include?(1)).to be(false)
     end
-  end
+    
+    context "if the number exists in the set" do
+      before do
+        set.remove(1)
+      end
+      it "should remove an element from the set" do
+        set.insert(1)
+        set.remove(1)
+        expect(set.include?(1)).to be(false)
+      end
 
-  describe "#count" do
-    it "should keep track of how many entries the set has" do
-      expect(set.count).to eq(0)
-      5.times { |i| set.insert(i) }
-      expect(set.count).to eq(5)
+      it "decrements the count" do
+        expect(set.count).to eq(0)
+      end
+    end
+
+    context "if the number doesn't exist in the set" do
+      it "should do nothing when removing an item that hasn't been added" do
+        expect(set.count).to eq(1)
+        set.remove(2)
+        expect(set.count).to eq(1)
+      end
     end
   end
 

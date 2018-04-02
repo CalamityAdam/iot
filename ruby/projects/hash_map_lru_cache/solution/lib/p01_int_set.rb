@@ -80,7 +80,7 @@ class ResizingIntSet
   end
 
   def remove(num)
-    self[num].delete(num)
+    @count -= 1 if self[num].delete(num)
   end
 
   def include?(num)

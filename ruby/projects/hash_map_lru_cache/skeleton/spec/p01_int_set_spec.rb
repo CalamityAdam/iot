@@ -94,18 +94,32 @@ describe ResizingIntSet do
   end
 
   describe "#remove" do
-    it "should remove a number from the set" do
+    before do
       set.insert(1)
-      set.remove(1)
-      expect(set).to_not include(1)
     end
 
-    it "should do nothing when removing an item that hasn't been added" do
-      set.insert(1)
-      expect(set.count).to eq(1)
-      set.remove(2)
-      expect(set.count).to eq(1)
+    context "if the number exists in the set" do
+      before do
+        set.remove(1)
+      end
+      it "should remove a number from the set" do
+        expect(set).to_not include(1)
+      end
+
+      it "decrements the count" do
+        expect(set.count).to eq(0)
+      end
     end
+
+    context "if the number doesn't exist in the set" do
+      it "should do nothing when removing an item that hasn't been added" do
+        expect(set.count).to eq(1)
+        set.remove(2)
+        expect(set.count).to eq(1)
+      end
+    end
+
+
   end
 
   describe "#count" do
