@@ -24,6 +24,7 @@ class HashSet
   def remove(key)
     return nil unless include?(key)
     self[key.hash].delete(key)
+    @count -= 1
   end
 
   private
