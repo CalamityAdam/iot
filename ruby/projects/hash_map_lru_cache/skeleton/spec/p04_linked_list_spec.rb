@@ -26,7 +26,9 @@ describe LinkedList do
   describe "#append" do
     it "appends nodes" do
       empty_list.append(:first, 1)
-      expect(empty_list.empty?).to be false
+      expect(empty_list).to_not be_empty
+      expect(empty_list.first.key).to be(:first)
+      expect(empty_list.last.key).to be(:first)
     end
 
     it "appends nodes in order" do
