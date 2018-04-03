@@ -181,7 +181,7 @@
 
 [assessment-prep-3]: https://github.com/appacademy/assessment-prep#assessment-3
 
-### Materials (103 min)
+### Materials (113 min)
 + :book: [ActiveRecord::Relation][relation] (15 min)
 + :book: [ActiveRecord and Joins][ar-joins] (15 min)
 + :book: [N Plus One][n-plus-one] (20 min)
