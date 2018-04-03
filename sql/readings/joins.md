@@ -55,11 +55,11 @@ WHERE
 ```
 To fire the exact same query using ActiveRecord methods we would write `Comment.joins(:author).where(users: { user_name: 'tamboer' })`.
 
-Let's break this line down. First we start with the `Comment` model. This already tells Active Record that the `FROM` clause of our query should use the `comments` table. Then we call the `joins` method and pass in `:author` as an argument.
+Let's break this line down. First we start with the `Comment` model. This already tells ActiveRecord that the `FROM` clause of our query should use the `comments` table. Then we call the `joins` method and pass in `:author` as an argument.
 
  ***NOTE:*** When you are using the `joins` method you do not pass in the name of a table. Instead, you are passing in the name of an association that has been defined. Since the association has already been defined with a class name, foreign key, and primary key, ActiveRecord can determine exactly how to join your two tables together.
 
- Then finally in our call to the `where` method we pass a hash of `{ users: { user_name: 'tamboer' } }`. We've seen simpler uses of `where` in which we just pass a key-value pair, with the key referencing a column name and the value being the value we want to match. When we pass a nested hash like this, the outermost key is the name of a table and the innermost hash has a key that is a column name in that table. When we have joined two tables together, we want to be specific about which table the column names we are matching come from. We could also replace our original call to `where` with `where("users.user_name = 'tamboer'")`. It's important to note that even though we used the name of the association in our call to `joins` we still use the real name of the table when we are referencing one of its columns.
+ Then finally in our call to the `where` method we pass a hash of `{ users: { user_name: 'tamboer' } }`. We've seen simpler uses of `where` in which we just pass a key-value pair, with the key referencing a column name and the value being the value we want to match. When we pass a nested hash like this, the outermost key is the name of a table and the innermost hash has a key that is a column name in that table. When we join two tables together, we want to be specific about which table the column names we are matching come from. We could also replace our original call to `where` with `where("users.user_name = 'tamboer'")`. It's important to note that even though we used the name of the association in our call to `joins` we still use the real name of the table when we are referencing one of its columns.
 
 ### More complex joins
 If you want to join more than one table to another, the syntax for the `ActiveRecord::Base::joins` method doesn't get much more complicated. If you have a through association defined on a model, it's as simple as just using the name of the association.
@@ -157,10 +157,51 @@ users[0].attributes
 
 First we should note that we have an attribute called `"post_creation_time"` that we can now access on our user objects because that's what we gave as an alias in our call to `select`. Second we should note that users[0] and users[1] both have the attributes of our ruggeri user but they have different values for `post_creation_time`. Don't forget that if we're joining the users table to the posts table it is possible to have two rows that refer to the same user with different posts. In raw SQL the resulting table from selecting * and joining users to posts would look something like this:
 
-id |user_name | first_name | last_name | created_at | updated_at | id | title| body | author_id | created_at | post_creation_time
--------|-------|---------|----------|----------|---------|---------|-----------|-----------|----------|---------|
-1 | ruggeri | Ned | Ruggeri | 2018-04-03 14:39:57.486206 | 2018-04-03 14:39:57.486206 | 1 | First post! | First posting is fun! | 1 | 2018-04-03 14:39:57.563795 | 2018-04-03 14:39:57.563795
-1 | ruggeri | Ned | Ruggeri | 2018-04-03 14:39:57.486206 | 2018-04-03 14:39:57.486206 | 1 | First post! | First posting is fun! | 1 | 2018-04-03 20:04:13.596728 | 2018-04-03 20:04:13.596728
+<table>
+  <tr>
+    <td>id</td>
+    <td>user_name</td>
+    <td>first_name</td>
+    <td>last_name</td>
+    <td>created_at</td>
+    <td>updated_at</td>
+    <td>id</td>
+    <td>title</td>
+    <td>body</td>
+    <td>author_id</td>
+    <td>created_at</td>
+    <td>updated_at</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ruggeri</td>
+    <td>Ned</td>
+    <td>Ruggeri</td>
+    <td>2018-04-03 14:39:57.486206</td>
+    <td>2018-04-03 14:39:57.486206</td>
+    <td>id</td>
+    <td>First post!</td>
+    <td>First posting is fun!</td>
+    <td>1</td>
+    <td>2018-04-03 14:39:57.563795</td>
+    <td>2018-04-03 14:39:57.563795</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ruggeri</td>
+    <td>Ned</td>
+    <td>Ruggeri</td>
+    <td>2018-04-03 14:39:57.486206</td>
+    <td>2018-04-03 14:39:57.486206</td>
+    <td>id</td>
+    <td>First post!</td>
+    <td>First posting is fun!</td>
+    <td>1</td>
+    <td>2018-04-03 20:04:13.596728</td>
+    <td>2018-04-03 20:04:13.596728</td>
+  </tr>
+</table>
+
 
 
 The first row becomes the first element in our ActiveRecord::Relation object and the second row become the second element in our object.
