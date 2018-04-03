@@ -190,22 +190,13 @@ def craiglockhart_and_tollcross
     JOIN
       routes AS end_routes ON start_routes.company = end_routes.company
         AND start_routes.num = end_routes.num
+    JOIN
+      stops AS origin_stops ON origin_stops.id = start_routes.stop_id
+    JOIN
+      stops AS destination_stops ON destination_stops.id = end_routes.stop_id
     WHERE
-      start_routes.stop_id = (
-        SELECT
-          id
-        FROM
-          stops
-        WHERE
-          stops.name = 'Craiglockhart'
-      ) AND end_routes.stop_id = (
-        SELECT
-          id
-        FROM
-          stops
-        WHERE
-          stops.name = 'Tollcross'
-      )
+      origin_stops.name = 'Craiglockhart'
+        AND destination_stops.name = 'Tollcross'
   SQL
 end
 
@@ -225,15 +216,9 @@ def start_at_craiglockhart
         AND start_routes.company = end_routes.company
     JOIN
       stops AS end_route_stops ON end_routes.stop_id = end_route_stops.id
-    WHERE
-      start_routes.stop_id = (
-        SELECT
-          stops.id
-        FROM
-          stops
-        WHERE
-          stops.name = 'Craiglockhart'
-      )
+    JOIN
+      stops AS origin_stops ON origin_stops.id = start_routes.stop_id
+    WHERE origin_stops.name = 'Craiglockhart'
   SQL
 end
 
@@ -261,22 +246,13 @@ def craiglockhart_to_sighthill
     JOIN
       routes AS finish ON from_transfer.company = finish.company
         AND from_transfer.num = finish.num
+    JOIN
+      stops AS origin_stops ON start.stop_id = origin_stops.id
+    JOIN
+      stops AS destination_stops ON finish.stop_id = destination_stops.id
     WHERE
-      start.stop_id = (
-        SELECT
-          id
-        FROM
-          stops
-        WHERE
-          name = 'Craiglockhart'
-      ) AND finish.stop_id = (
-        SELECT
-          id
-        FROM
-          stops
-        WHERE
-          name = 'Sighthill'
-      )
+      origin_stops.name = 'Craiglockhart'
+        AND destination_stops.name = 'Sighthill'
   SQL
 end
 
