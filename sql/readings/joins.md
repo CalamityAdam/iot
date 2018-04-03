@@ -155,12 +155,12 @@ users[0].attributes
  "post_creation_time"=>"2018-04-03 20:04:13.596728"}
 ```
 
-First we should note that we have an attribute called `"post_creation_time"` that we can now access on our user objects because that's what we gave as an alias in our call to `select`. Second we should note that users[0] and users[1] both have the attributes of our ruggeri user but they have different values for `post_creation_time`. Don't forget that if we're joining the users table to the posts table it is possible to have two rows that refer to the same user with different posts. In raw SQL the resulting table from selecting * and joining users to posts would look somehting like this:
+First we should note that we have an attribute called `"post_creation_time"` that we can now access on our user objects because that's what we gave as an alias in our call to `select`. Second we should note that users[0] and users[1] both have the attributes of our ruggeri user but they have different values for `post_creation_time`. Don't forget that if we're joining the users table to the posts table it is possible to have two rows that refer to the same user with different posts. In raw SQL the resulting table from selecting * and joining users to posts would look something like this:
 
-id|user_name|first_name|last_name|created_at|updated_at|id|title|body|author_id|created_at|post_creation_time
--|-|-|-|-|-|-|-|-|-|-|
-1|ruggeri|Ned|Ruggeri|2018-04-03 14:39:57.486206|2018-04-03 14:39:57.486206|1|First post!|First posting is fun!|1|2018-04-03 14:39:57.563795|2018-04-03 14:39:57.563795
-1|ruggeri|Ned|Ruggeri|2018-04-03 14:39:57.486206|2018-04-03 14:39:57.486206|1|First post!|First posting is fun!|1|2018-04-03 20:04:13.596728|2018-04-03 20:04:13.596728
+id |user_name | first_name | last_name | created_at | updated_at | id | title| body | author_id | created_at | post_creation_time
+-------|-------|---------|----------|----------|---------|---------|-----------|-----------|----------|---------|
+1 | ruggeri | Ned | Ruggeri | 2018-04-03 14:39:57.486206 | 2018-04-03 14:39:57.486206 | 1 | First post! | First posting is fun! | 1 | 2018-04-03 14:39:57.563795 | 2018-04-03 14:39:57.563795
+1 | ruggeri | Ned | Ruggeri | 2018-04-03 14:39:57.486206 | 2018-04-03 14:39:57.486206 | 1 | First post! | First posting is fun! | 1 | 2018-04-03 20:04:13.596728 | 2018-04-03 20:04:13.596728
 
 
 The first row becomes the first element in our ActiveRecord::Relation object and the second row become the second element in our object.
