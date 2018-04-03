@@ -183,7 +183,8 @@
 
 ### Materials (103 min)
 + :book: [ActiveRecord::Relation][relation] (15 min)
-+ :book: [ActiveRecord and Joins][ar-joins] (25 min)
++ :book: [ActiveRecord and Joins][ar-joins] (15 min)
++ :book: [N Plus One][n-plus-one] (20 min)
 + :book: [Scopes][scopes] (10 min)
 + :book: [More on Querying][querying-ii] (15 min)
 + :movie_camera: [CSS Float & Clearfix][css-float-video] (18 min)
@@ -192,6 +193,7 @@
 
 [relation]: readings/relation.md
 [ar-joins]: readings/joins.md
+[n-plus-one]: readings/n_plus_one.md
 [scopes]: readings/scopes.md
 [querying-ii]: readings/querying-ii.md
 [css-float-video]: https://vimeo.com/151190182
