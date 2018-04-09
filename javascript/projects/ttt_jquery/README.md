@@ -66,9 +66,7 @@ be sure that the container element has been loaded.
 
 Write a `View.prototype.setupBoard` method; it should make a grid to represent the board.
 Build the grid using an unordered list (`<ul>`). The cells can be represented
-inside the grid using `<li>` elements. By floating the `<li>` elements left and
-giving the `<ul>` a fixed width, the cells will appear on the same line and
-nicely wrap around to form a 3x3 grid. Set a border on the cells to make it look
+inside the grid using `<li>` elements. By giving the `<ul>` a display property of `flex`, giving it a fixed width, and setting `flex-wrap: wrap` the `<li>` elements will appear as a 3x3 grid. (You need to do some quick division or tinkering to figure out how wide the `<li>` elements need to be). Set a border on the cells to make it look
 like a real grid. Style unclicked cells with a gray `background`. Change the
 background to yellow while the user `:hover`s over an unclicked cell.
 

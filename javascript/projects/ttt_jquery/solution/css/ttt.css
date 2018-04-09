@@ -10,12 +10,6 @@ ul {
   list-style: none;
 }
 
-.group:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
 body {
   font-family: sans-serif;
   text-align: center;
@@ -28,13 +22,14 @@ h1 {
 }
 
 ul {
+  display: flex;
+  flex-wrap: wrap;
   margin: 30px auto;
   width: 300px;
   border: 5px solid black;
 }
 
 li {
-  float: left;
   width: 90px;
   height: 90px;
   border: 5px solid black;
