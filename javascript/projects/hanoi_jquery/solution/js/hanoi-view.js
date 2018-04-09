@@ -43,17 +43,15 @@ class View {
   setupTowers() {
     /*
     We're setting up the skeleton for our towers
-    here. It consist of three <ul> elements, all
-    floated left, with each three nested <li>s.
-    Because the <ul>s are floated, we need to
-    add the `.group` class, containing the clearfix,
-    to their parent. The <li> elements all will be
+    here. It consist of three <ul> elements,
+    each with three nested <li>s.
+    We want the <ul>s to be side by side, so their parent
+    `.hanoi` is display: flex. The <li> elements all will be
     invisible by default. Adding a disk class to
     them will make them visible.
     */
 
     this.$el.empty();
-    this.$el.addClass("group");
 
     let $tower, $disk;
 
