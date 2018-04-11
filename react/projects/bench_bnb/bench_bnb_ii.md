@@ -76,7 +76,7 @@ entities: {
 }
 ```
 
-Note that our benches object use each bench's id as a primary key. The `benches` key is also nested under an `entities` key. Even though there are no other `entities` in this app, we're going to practice good convention since most apps you'll build are going to have more than a single entity.
+Note that our benches object use each bench's id as a primary key. The `benches` key is also nested under the `entities` key, where we keep all of our relational data.
 
 ### Action Creators
 
@@ -132,28 +132,24 @@ const benchesReducer = (state = {}, action) => {
 };
 ```
 
+
 ### Entities Reducer
-In this step, we are going to write an `entitiesReducer` that is responsible for combining any of the reducers that hold relational data from our database. This app only has a single entity, `benches`, but again, we will follow convention since most apps worth using will have multiple `entities`.
-
-* Create a file, `reducers/entities_reducer.js` that exports a `entitiesReducer` function.
-* Use `combineReducers` to incorporate the `benchesReducer` into the `entitiesReducer`.
-
-Then add the `entitiesReducer` to your `root_reducer.js`.
+Be sure to add your `benchesReducer` to your `entitiesReducer`.
 
 ```javascript
-// frontend/reducers/root_reducer.jsx
+// frontend/reducers/entities_reducer.js
 
 import { combineReducers } from 'redux';
 
-import entitiesReducer from './entities_reducer';
-import sessionReducer from './session_reducer';
+import benchesReducer from './benches_reducer';
+import usersReducer from './users_reducer';
 
-const rootReducer = combineReducers({
-  entities: entitiesReducer,
-  session: sessionReducer
+const entitiesReducer = combineReducers({
+  users: usersReducer,
+  benches: benchesReducer
 });
 
-export default rootReducer;
+export default entitiesReducer;
 ```
 
 At this point, our default application state should look like this.
@@ -161,13 +157,14 @@ At this point, our default application state should look like this.
 ```js
 {
   session: {
-    currentUser: null,
+    id: null,
   },
   errors: {
     session: []
   },
   entities: {
-    benches: {}
+    benches: {},
+    users: {}
   }
 }
 ```
@@ -491,6 +488,12 @@ In addition to our benches and session, we'll also add a new slice of state to k
         lat: 0.0,
         lng: 0.0
       }
+    },
+    users: {
+      1: {
+        id: 1,
+        username: 'breakfast'
+      }
     }
   },
   filters: {
@@ -499,12 +502,7 @@ In addition to our benches and session, we'll also add a new slice of state to k
   errors: {
     session: []
   }
-  session: {
-    currentUser: {
-      id: 1,
-      username: 'breakfast'
-    }
-  }
+  session: { id: 1 }
 }
 ```
 
