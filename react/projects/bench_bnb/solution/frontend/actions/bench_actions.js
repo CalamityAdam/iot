@@ -15,10 +15,11 @@ export const receiveBench = ({ bench, reviews }) => ({
   reviews,
 });
 
-export const receiveReview = ({ review, average_rating }) => ({
+export const receiveReview = ({ review, average_rating, author }) => ({
   type: RECEIVE_REVIEW,
   review,
   average_rating,
+  author,
 });
 
 export const createReview = review => dispatch => (
