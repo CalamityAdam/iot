@@ -121,16 +121,21 @@ To do this, you can import these functions in your entry file and save them to t
 
 ### State Shape
 
-We want our app state to hold the `current user` which we'll nest under `session`
+We want our app state to hold the id of the current user which we'll nest under `session`.
 
-If no user is signed in, `session.currentUser` is `null`.
-If a user is signed in `session.currentUser` returns information on the user.
-App's state might look something like this:
+If no user is signed in, `session.id` is `null`.
+
+We'll also have a users slice of state where the rest of our current user's information is stored. We'll keep the users slice of state nested under entities with the rest of our relational data.
+
+Our app's state might look something like this:
 
 ```js
 {
+  entities: {
+    users: {}
+  },
   session: {
-    currentUser: null,
+    id: null,
   },
   errors: {
     session: ["Invalid credentials"]
@@ -142,11 +147,16 @@ or this:
 
 ```js
 {
-  session: {
-    currentUser: {
-      id: 1,
-      username: 'breakfast'
+  entities: {
+    users: {
+      1: {
+        id: 1,
+        username: 'breakfast'
+      }
     }
+  },
+  session: {
+    id: 1
   },
   errors: {
     session: []
@@ -154,8 +164,10 @@ or this:
 }
 ```
 
+***NOTE:*** It's important that we keep our current user's information in our entities slice where the information about the rest of our relational data will be. Later on in our project, users will have the ability to write reviews on our benches. In order to display the authors of the reviews, we will want to find the author's information in the users slice of state. Finding the author's information would get complicated if we sometimes had to search in the session slice of state and other times search in the users slice of state. We want a single source of truth for our user data!
+
 By default, no user is signed in.
-Thus `session` should return a `null` `currentUser`.
+Thus `session` should return a `null` `id`.
 
 Hint: Use this default application state as a template for any session information we might receive.
 
@@ -166,30 +178,67 @@ Hint: Use this default application state as a template for any session informati
   * `logout()` (thunk action creator)
   * `signup(user)` (thunk action creator)
   * `receiveCurrentUser(currentUser)` (regular action creator)
+  * `logoutCurrentUser()` (regular action creator)
   * `receiveErrors(errors)` (regular action creator)
 
 + Don't forget to define and export the corresponding action types as well (e.g., `export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER'`).
-+ `logout` won't accept an argument.
++ Neither `logout` nor `logoutCurrentUser` will accept an argument.
 `receiveErrors` will take an array.
-All other action creators accept a user object. On logout success dispatch `receiveCurrentUser(null)` to remove the current user.
+All other action creators accept a user object.
 
 ### `sessionReducer`
 
 + Create a new reducer in a new file `reducers/session_reducer.js` to keep track of our current user.
 
-The `sessionReducer` should listen for 1 action type and respond to it like so:
-  * `RECEIVE_CURRENT_USER` - sets `currentUser` to the action's user
+The `sessionReducer` should listen for 2 action types and respond to them like so:
+  * `RECEIVE_CURRENT_USER` - sets `id` to the action's user.id
+  * `LOGOUT_CURRENT_USER` - sets `id` to null
 
 Your `sessionReducer` should maintain its own default state.
-To do that pass in an object as a default argument to sessionReducer with `currentUser` set to `null`.
+To do that pass in an object as a default argument to sessionReducer with `id` set to `null`.
 
 Remember to use both `Object.freeze()` and either `Object.assign` or `lodash/merge` to prevent the state from being accidentally mutated.
+
+### `usersReducer`
+
++ Create a new reducer in a new file `reducers/users_reducer.js` to keep track of all of our users.
+
+The `usersReducer` should only listen for 1 action type right now and should respond like so:
+  * `RECEIVE_CURRENT_USER` - use merge to add the action's user to the state and set the key to the id of the user. `merge({}, state, { [action.user.id]: action.user })`
+
+### `entitiesReducer`
+
++ Create a new reducer in a new file `reducers/entities_reducer.js` to keep track of all the relational data in our app.
+
+This file will be responsible for combining our reducers that handle relational data.
+
+* Import `combineReducers` from the `redux` library.
+* Also import the `usersReducer` function we just created!
+* The `entitiesReducer` should use `combineReducers` and will only have a single key-value pair for now named `users` which points to the `usersReducer`. We will add more entities reducers to this later.
+* `export default entitiesReducer`.
+
+Your `entitiesReducer` will look something like this:
+
+```javascript
+// frontend/reducers/entities_reducer.jsx
+
+import { combineReducers } from 'redux';
+
+import usersReducer from './users_reducer';
+
+const entitiesReducer = combineReducers({
+  users: usersReducer
+});
+
+export default entitiesReducer;
+```
+
 
 ### `sessionErrorsReducer`
 
 + Create a new reducer in a new file `reducers/session_errors_reducer.js` to keep track of any error messages.
 
-The `sessionErrorsReducer` should listen for 2 action type and respond to it like so:
+The `sessionErrorsReducer` should listen for 2 action types and respond to them like so:
 + `RECEIVE_SESSION_ERRORS` - sets `errors` to the action's errors
 + `RECEIVE_CURRENT_USER` - clears the `errors`
 
@@ -227,14 +276,17 @@ Create a new file, `reducers/root_reducer.js`.
 This file will be responsible for combining our multiple, domain-specific reducers.
 It will export a single `rootReducer`.
 
-Use `combineReducers` to create the `rootReducer` with keys for the `sessionReducer` and `errorsReducer`, similarly to how you created the `errorsReducer`.
+Use `combineReducers` to create the `rootReducer` with keys for the `sessionReducer`, `entitiesReducer`, and `errorsReducer`, similarly to how you created the `entitiesReducer`.
 
 So far, our default application state should look something like this:
 
 ```js
 {
+  entities: {
+    users: {}
+  },
   session: {
-    currentUser: null,
+    id: null,
   },
   errors: {
     session: []
@@ -393,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
 * Create a new react component, `Greeting`, and a container, `GreetingContainer`.
 
 #### `GreetingContainer`
-* `GreetingContainer` passes as `props` to the presentational component `currentUser` from the state and the `logout` action creator.
+* `GreetingContainer` passes as `props` to the presentational component `currentUser` from the state and the `logout` action creator. In order to get the current user's information from our state, we will need to use `state.session.id` to get the id of the current user and then use this id to get the information from `state.entities.users`. It should look something like `state.entities.users[state.session.id]`. You can use object de-structuring in your `mapStateToProps` function to make this look a bit cleaner.
 Set up `mapStateToProps` and `mapDispatchToProps` accordingly.
 
 #### `Greeting`
@@ -594,7 +646,12 @@ Your entry point should now have the following code:
 //...
 let store;
 if (window.currentUser) {
-  const preloadedState = { session: { currentUser: window.currentUser } };
+  const preloadedState = {
+    entities: {
+      users: { [window.currentUser.id]: window.currentUser }
+    },
+    session: { id: window.currentUser.id }
+  };
   store = configureStore(preloadedState);
   delete window.currentUser;
 } else {
@@ -637,7 +694,7 @@ const Auth = ({component: Component, path, loggedIn, exact}) => (
 );
 
 const mapStateToProps = state => {
-  return {loggedIn: Boolean(state.session.currentUser)};
+  return {loggedIn: Boolean(state.session.id)};
 };
 
 export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth));
