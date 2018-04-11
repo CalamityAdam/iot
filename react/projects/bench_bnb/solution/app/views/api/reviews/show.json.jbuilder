@@ -3,7 +3,7 @@ json.review do
 end
 
 json.author do
-  json.extract :id, :username
+  json.partial! '/api/users/user', user: @review.author
 end
 
 json.average_rating @review.bench.average_rating
