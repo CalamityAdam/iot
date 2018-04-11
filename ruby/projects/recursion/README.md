@@ -149,8 +149,6 @@ The binary search algorithm begins by comparing the target value to the value of
 
 Write a recursive [binary search][wiki-binary-search]: `bsearch(array, target)`. **Note that binary search only works on sorted arrays**. Make sure to return the location of the found object (or `nil` if not found!). Hint: you will probably want to use subarrays.
 
-This your first problem which is half a PITA to solve iteratively.
-
 Make sure that these test cases are working:
 
 ```rb
