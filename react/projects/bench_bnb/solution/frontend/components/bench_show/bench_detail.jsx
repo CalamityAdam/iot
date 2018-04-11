@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import ReviewShow from './review_show';
+import ReviewListItemContainer from './review_list_item_container';
 
 const reviewList = (reviews) => (
   reviews.map(review => (
-    <ReviewShow
+    <ReviewListItemContainer
       review={review}
       key={review.id}
     />
