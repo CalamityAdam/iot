@@ -1,4 +1,4 @@
-export const selectBench = ({benches, benchId}) => {
+export const selectBench = ({ benches }, benchId) => {
   return benches[benchId] || { reviewIds: [] };
 };
 

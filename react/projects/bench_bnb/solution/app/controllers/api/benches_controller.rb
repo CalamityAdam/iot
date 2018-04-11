@@ -7,7 +7,7 @@ class Api::BenchesController < ApplicationController
     if params[:minSeating] && params[:maxSeating]
       benches = benches.where(seating: seating_range)
     end
-    
+
     @benches = benches.includes(:reviews, :favorite_users)
     render :index
   end
