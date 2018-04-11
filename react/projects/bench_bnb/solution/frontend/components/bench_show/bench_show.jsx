@@ -7,7 +7,7 @@ import ReviewFormContainer from './review_form_container';
 import { ProtectedRoute } from '../../util/route_util';
 import { ReviewLink } from '../../util/link_util';
 
-const BenchShow = ({ bench, benchId, fetchBench }) => {
+const BenchShow = ({ bench, benchId, fetchBench, reviews }) => {
   const benches = {
     [benchId]: bench
   };
@@ -24,7 +24,7 @@ const BenchShow = ({ bench, benchId, fetchBench }) => {
         />
       </div>
       <div className="right-half bench-details">
-        <BenchDetail bench={bench} />
+        <BenchDetail bench={bench} reviews={reviews} />
         <ReviewLink
           component={ReviewFormContainer}
           to={`/benches/${benchId}/review`}

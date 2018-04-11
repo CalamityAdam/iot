@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 import ReviewShow from './review_show';
 
-const reviewList = (reviews = []) => (
+const reviewList = (reviews) => (
   reviews.map(review => (
     <ReviewShow
       review={review}
@@ -12,7 +12,7 @@ const reviewList = (reviews = []) => (
   ))
 );
 
-const BenchDetail = ({ bench }) => {
+const BenchDetail = ({ bench, reviews }) => {
   return (
     <div>
       <ul className="bench-list">
@@ -26,7 +26,7 @@ const BenchDetail = ({ bench }) => {
       <br/>
       <div className="reviews">
         <h3>Reviews</h3>
-        {reviewList(bench.reviews)}
+        {reviewList(reviews)}
       </div>
     </div>
   );
