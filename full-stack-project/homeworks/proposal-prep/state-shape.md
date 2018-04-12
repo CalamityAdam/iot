@@ -65,6 +65,11 @@ Here's another example from _Bluebird_, our Twitter clone:
         id: 25,
         username: "blue_toucan",
         img_url: "https://cdn.pixabay.com/photo/2015/10/01/16/43/toucan-967334_960_720.jpg"
+      },
+      57: {
+        id: 57,
+        username: "blue_hawk",
+        img_url: "https://cdn.pixabay.com/photo/2018/12/29/03/47/hawk-234999_960_720.jpg"
       }
     }
   },
@@ -75,10 +80,6 @@ Here's another example from _Bluebird_, our Twitter clone:
     login: ["Incorrect username/password combination"],
     chirpForm: ["Chirp body cannot be blank"],
   },
-  session: {
-    id: 57,
-    username: "blue_hawk",
-    img_url: "https://cdn.pixabay.com/photo/2013/12/29/03/47/hawk-234999_960_720.jpg"
-  }
+  session: { id: 57 }
 }
 ```
