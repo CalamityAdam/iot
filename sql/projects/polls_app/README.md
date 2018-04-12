@@ -211,9 +211,7 @@ the number of responses to that answer choice. Hints:
 ActiveRecord. Hints:
 
 * You'll want your `self.answer_choices` association
-* You'll want to use `select`, `joins`, and `group`.
-* You can do a `LEFT OUTER JOIN` if you use a SQL fragment in your
-  `joins`.
+* You'll want to use `select`, `left_outer_joins`, and `group`.
 
 ## Bonus: More Methods
 
