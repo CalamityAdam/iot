@@ -150,7 +150,7 @@
   + for now, always specify `class_name`/`primary_key`/`foreign_key`
 + [Basic][validations] and [Custom][custom-validations] Validations
   + [Miscellaneous][validations-misc]
-+ [ActiveRecord and Indexes][ar-indexing]
++ [ActiveRecord Indexes and Uniqueness][ar-indexing]
 
 [rails-5-updates]: readings/rails-5-updates.md
 [first-rails-project]: readings/first-rails-project.md

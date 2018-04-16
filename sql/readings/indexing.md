@@ -70,6 +70,29 @@ class AddUserIdIndexToConversations < ActiveRecord::Migration[5.1]
 end
 ```
 
-That's all! Run the migration and watch your queries speed up like a rocket ship!
+Indexing can be useful for more than just speeding up our queries, however. 
+If we want to ensure that a column only holds unique values, we can provide the `unique` option to an index.
+
+```ruby
+class MakeUsernamesUnique < ActiveRecord::Migration[5.1]
+  def change
+    add_index :users, :username, unique: true
+  end
+end
+```
+
+We can even ensure the uniqueness of _combinations_ of values, by passing an array instead of a single column name:
+
+```ruby
+class EnsureUnique < ActiveRecord::Migration[5.1]
+  def change
+    add_index :conversations, [:user_id, :title], unique: true
+  end
+end
+```
+
+This ensures that there can be no more than one entry in the `conversations` table with the same `user_id` and `title` - useful if want to allow multiple conversations to have the same title, but not for the same user.
+
+Go on and harness the power of indexing!
 
 [add-index-docs]: http://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/add_index
