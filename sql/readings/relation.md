@@ -81,22 +81,22 @@ Laziness allows us to build complex queries. Let's see an example:
 
 ```ruby
 georges = User.where('first_name = ?', 'George')
-georges.where_values
-# => ["first_name = 'George'"]
+georges.where_values_hash
+# => {first_name: 'George'}
 
 george_harrisons = georges.where('last_name = ?', 'Harrison')
-george_harrisons.where_values
-# => ["first_name = 'George'", "last_name = 'Harrison'"]
+george_harrisons.where_values_hash
+# => {first_name: 'George', last_name: 'Harrison'}
 
 p george_harrisons
 ```
 
 In this somewhat silly example, we call `where` twice. The first call
 to `where` returns a `Relation` which knows to filter by `first_name`
-(the condition is stored in the `where_values` attribute). Next, we
+(the condition is stored in the `where_values_hash` attribute). Next, we
 call `where` on this `Relation`; this produces a new `Relation` object
 which will know to filter by both `first_name` and `last_name` (you
-can see that `where_values` was extended).
+can see that `where_values_hash` was extended).
 
 Note that the additional `where` created a new `Relation`; the
 original `georges` is not changed.
@@ -107,7 +107,7 @@ laziness helps us; it lets us build up a query by chaining query
 methods, none of which are executed until the chain is finished being
 built and evaluated.
 
-Just like `where` has a `where_values` attribute, there are similar
+Just like `where` has a `where_values_hash` attribute, there are similar (private)
 accessors for `includes_values`, `joins_values`, etc. You won't ever
 access the attributes directly, but you can see how `Relation` builds
 up the query by storing each of the conditions. When the `Relation`
