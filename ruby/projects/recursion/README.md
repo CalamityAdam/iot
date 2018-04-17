@@ -103,6 +103,36 @@ Write a recursive and an iterative Fibonacci method. The method should take in a
 
 You shouldn't have to pass any arrays between methods; you should be able to do this just passing a single argument for the number of Fibonacci numbers requested.
 
+### Binary Search
+
+The binary search algorithm begins by comparing the target value to the value of the middle element of the sorted array. If the target value is equal to the middle element's value, then the position is returned and the search is finished. If the target value is less than the middle element's value, then the search continues on the lower half of the array; or if the target value is greater than the middle element's value, then the search continues on the upper half of the array. This process continues, eliminating half of the elements, and comparing the target value to the value of the middle element of the remaining elements - until the target value is either found (and its associated element position is returned), or until the entire array has been searched (and "not found" is returned).
+
+Write a recursive [binary search][wiki-binary-search]: `bsearch(array, target)`. **Note that binary search only works on sorted arrays**. Make sure to return the location of the found object (or `nil` if not found!). Hint: you will probably want to use subarrays.
+
+Make sure that these test cases are working:
+
+```rb
+bsearch([1, 2, 3], 1) # => 0
+bsearch([2, 3, 4, 5], 3) # => 1
+bsearch([2, 4, 6, 8, 10], 6) # => 2
+bsearch([1, 3, 4, 5, 9], 5) # => 3
+bsearch([1, 2, 3, 4, 5, 6], 6) # => 5
+bsearch([1, 2, 3, 4, 5, 6], 0) # => nil
+bsearch([1, 2, 3, 4, 5, 7], 6) # => nil
+```
+
+### Merge Sort
+
+Implement a method [`merge_sort`][wiki-merge-sort] that sorts an `Array`:
+* The base cases are for arrays of length zero or one. Do not use a length-two array as a base case. This is unnecessary.
+* You'll want to write a `merge` helper method to merge the sorted halves.
+* To get a visual idea of how merge sort works, watch [this gif][wiki-merge-gif] and check out [this diagram][merge-diagram].
+
+[wiki-binary-search]: http://en.wikipedia.org/wiki/Binary_search
+[wiki-merge-sort]: http://en.wikipedia.org/wiki/Merge_sort
+[wiki-merge-gif]:https://en.wikipedia.org/wiki/Merge_sort#/media/File:Merge-sort-example-300px.gif
+[merge-diagram]: ../../assets/merge-sort-diagram.png?raw=true
+
 ### Array Subsets
 
 Write a method `subsets` that will return all subsets of an array.
@@ -142,38 +172,6 @@ You can use Ruby's built in [`Array#permutation`][ruby-permutations] method to g
 
 [wiki-permutations]: https://en.wikipedia.org/wiki/Permutation
 [ruby-permutations]:https://ruby-doc.org/core-2.2.0/Array.html#method-i-permutation
-
-### Binary Search
-
-The binary search algorithm begins by comparing the target value to the value of the middle element of the sorted array. If the target value is equal to the middle element's value, then the position is returned and the search is finished. If the target value is less than the middle element's value, then the search continues on the lower half of the array; or if the target value is greater than the middle element's value, then the search continues on the upper half of the array. This process continues, eliminating half of the elements, and comparing the target value to the value of the middle element of the remaining elements - until the target value is either found (and its associated element position is returned), or until the entire array has been searched (and "not found" is returned).
-
-Write a recursive [binary search][wiki-binary-search]: `bsearch(array, target)`. **Note that binary search only works on sorted arrays**. Make sure to return the location of the found object (or `nil` if not found!). Hint: you will probably want to use subarrays.
-
-This your first problem which is half a PITA to solve iteratively.
-
-Make sure that these test cases are working:
-
-```rb
-bsearch([1, 2, 3], 1) # => 0
-bsearch([2, 3, 4, 5], 3) # => 1
-bsearch([2, 4, 6, 8, 10], 6) # => 2
-bsearch([1, 3, 4, 5, 9], 5) # => 3
-bsearch([1, 2, 3, 4, 5, 6], 6) # => 5
-bsearch([1, 2, 3, 4, 5, 6], 0) # => nil
-bsearch([1, 2, 3, 4, 5, 7], 6) # => nil
-```
-
-### Merge Sort
-
-Implement a method [`merge_sort`][wiki-merge-sort] that sorts an `Array`:
-* The base cases are for arrays of length zero or one. Do not use a length-two array as a base case. This is unnecessary.
-* You'll want to write a `merge` helper method to merge the sorted halves.
-* To get a visual idea of how merge sort works, watch [this gif][wiki-merge-gif] and check out [this diagram][merge-diagram].
-
-[wiki-binary-search]: http://en.wikipedia.org/wiki/Binary_search
-[wiki-merge-sort]: http://en.wikipedia.org/wiki/Merge_sort
-[wiki-merge-gif]:https://en.wikipedia.org/wiki/Merge_sort#/media/File:Merge-sort-example-300px.gif
-[merge-diagram]: ../../assets/merge-sort-diagram.png?raw=true
 
 ### Make Change
 
