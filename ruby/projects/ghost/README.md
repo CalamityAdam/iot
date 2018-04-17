@@ -42,6 +42,8 @@ Hash or [Set][set-docs] would be ideal. You can use [this file][ghost-dictionary
 populate your dictionary; it contains only words three letters or longer
 (otherwise we wouldn't have a very interesting game).
 
+💡 ***NOTE:*** Using a Hash or a Set instead of an Array to store our dictionary allows us to very quickly check if the fragment is included in the dictionary. In fact, the amount of time it would take to see if the fragment was included would be independent of how long the dictionary is because these data structures don't require you to examine every element when you are checking for inclusion. If we stored the dictionary just as an array of strings, using the `Array#include?` method would take longer as our array of got longer. Keep in mind that when you are then checking to see if there are any words in the dictionary that can be created by adding another letter to the fragment in your `valid_play?` method, you are potentially looking at every word in the dictionary. Therefore, this operation will not be speed-boosted by our use of a Set or Hash.
+
 [set-docs]: http://ruby-doc.org/stdlib-2.4.2/libdoc/set/rdoc/Set.html
 
 #### `#play_round`

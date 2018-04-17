@@ -10,12 +10,6 @@ ul {
   list-style: none;
 }
 
-.group:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
 body {
   font-family: sans-serif;
   text-align: center;
@@ -28,12 +22,12 @@ h1 {
 }
 
 .hanoi {
+  display: flex;
   margin: 30px auto;
   width: 600px;
 }
 
 ul {
-  float: left;
   width: 180px;
   padding: 0 0 10px 0;
   border-bottom: 10px solid black;
@@ -80,4 +74,3 @@ li.disk-3 {
 .game-over li {
   background: green;
 }
-
