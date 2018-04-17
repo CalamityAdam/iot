@@ -46,7 +46,7 @@ of `email`s and speed up the lookup by `session_token`.
   password when they log in.
   * Be careful setting instance variables in ActiveRecord, you can't
     just set `@password_digest`. In `#password=` use
-    `self.password_digest=`. (`self.___=` calls an `attr_accessor`
+    `self.password_digest=`. (`self.___=` calls a setter method
     defined for us by ActiveRecord, which is the state that is saved by
     `self.save`. While `@___` makes a new instance variable,
     unrelated to `self.save`)
