@@ -382,7 +382,7 @@ you should use the [match operator][match-operator] `=~`, not `==`.
 
 ### Phase Vb: Write the `Router`
 
-* On `#initialize`, setup an empty `@routes` ivar.
+* On `#initialize`, setup an `@routes` ivar as an empty array to store created routes.
 * Write a method `#add_route`, which will construct a `Route` and add
   it to the router's list.
 * Define `#get(pattern, controller_class, action_name)`, `#post(pattern,
