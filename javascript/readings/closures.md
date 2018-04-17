@@ -72,19 +72,24 @@ function isPalindrome(string) {
 Another major use of closures is to create private states. For example:
 
 ```javascript
-function Counter() {
-  let count = 1;
+function createCounter() {
+  let count = 0;
 
-  return () => count++;
+  // here ++count means increment the value of the count variable by 1 and then the count variable is evaluated in the statement.
+  // count++ means the count variable is evaluated in the statement and then the value is incremented by 1. If we used count++ our counter would be off by 1.
+  return () => ++count;
 }
 
-let counter = new Counter();
+let counter = createCounter();
 console.log(counter()); // => 1
 console.log(counter()); // => 2
 counter.count; // undefined
+let counter2 = createCounter();
+console.log(counter2()); // => 1
 ```
+[More info about ++count here ](https://stackoverflow.com/questions/3469885/somevariable-vs-somevariable-in-javascript)
 
-By **closing over** (or **capturing**) the `count` variable, each `Counter` function has private, mutable state that cannot be accessed externally.
+By **closing over** (or **capturing**) the `count` variable, each function that is return from `createCounter` has private, mutable state that cannot be accessed externally.
 
 Compare that implementation against this one:
 
