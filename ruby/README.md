@@ -497,7 +497,7 @@
 
 [lru-cache-hw]: homeworks/lru_cache
 
-### Study Hall 9 - 10am
+### Study Hall 9 - 10am (NY Only)
 
 ### Projects
 
