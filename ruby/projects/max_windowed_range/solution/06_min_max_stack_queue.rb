@@ -6,6 +6,14 @@ class MinMaxStackQueue
     @out_stack = MinMaxStack.new
   end
 
+  def size
+    @in_stack.size + @out_stack.size
+  end
+
+  def empty?
+    @in_stack.empty? && @out_stack.empty?
+  end
+
   def dequeue
     queueify if @out_stack.empty?
     @out_stack.pop
@@ -13,10 +21,6 @@ class MinMaxStackQueue
 
   def enqueue(val)
     @in_stack.push(val)
-  end
-
-  def empty?
-    @in_stack.empty? && @out_stack.empty?
   end
 
   def max
@@ -32,10 +36,6 @@ class MinMaxStackQueue
     mins << @in_stack.min unless @in_stack.empty?
     mins << @out_stack.min unless @out_stack.empty?
     mins.min
-  end
-
-  def size
-    @in_stack.size + @out_stack.size
   end
 
   private

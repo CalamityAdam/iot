@@ -6,12 +6,12 @@ class StackQueue
     @out_stack = MyStack.new
   end
 
-  def empty?
-    @in_stack.empty? && @out_stack.empty?
-  end
-
   def size
     @in_stack.size + @out_stack.size
+  end
+
+  def empty?
+    @in_stack.empty? && @out_stack.empty?
   end
 
   def enqueue(val)

@@ -50,7 +50,7 @@ Think about the time complexity of your method. How many iterations are
 required at each step? What is its overall time complexity in Big-O
 notation?
 
-## Phase 2: Optimized Solution
+### Optimized Solution
 
 It turns out that it is quite costly to calculate the `min` and `max`
 elements of each window. If we use the `min` AND `max` methods built
@@ -82,13 +82,13 @@ time. We will be building the following in order:
   + `MinMaxStack`
   +  `MinMaxStackQueue`
 
-### Phase 2: Queues
+## Phase 2: `MyQueue`
 
-A **queue** is an simple abstract linear data structure where elements are stored in order
-and can be added or removed one at a time. A queue follows **first in,
-first out** (FIFO). Unlike Ruby's Array data structure, most Queue
-implementations do not expose methods to slice or sort the data, or to
-find a specific element. The basic operations are:
+A **queue** is an simple abstract linear data structure where elements
+are stored in order and can be added or removed one at a time. A queue
+follows **first in, first out** (FIFO). Unlike Ruby's Array data structure,
+most Queue implementations do not expose methods to slice or sort the data,
+or to find a specific element. The basic operations are:
 
 - Queue
   - `enqueue`: adds an element to the back of the queue
@@ -96,7 +96,7 @@ find a specific element. The basic operations are:
     returns it
 
 We will also write a `peek` method, which returns the "top" or "next"
-item without actually removing it. We will be using method to "check" __________________
+item without actually removing it.
 
 Queues may be implemented in terms of simpler data structures, such as
 linked lists, but in Ruby you can actually use an Array as the underlying
@@ -114,15 +114,15 @@ class MyQueue
 end
 ```
 
-Implement `enqueue`, `dequeue`, `peek`, `size`, and `empty?` methods on your Queue.
+Implement `peek`, `size`, `empty?`, `enqueue`, and `dequeue` methods on your Queue.
 
-### Phase 3: Stacks
+## Phase 3: `MyStack`
 
 Stacks are another simple linear data structure. Elements are
-also stored in order and can be added or removed one at a time. A stack 
+also stored in order and can be added or removed one at a time. A stack
 is **first in, last out** (FILO). Similar to queues, stack implementations
 do not expose methods to slice or sort the data, or to find a specific element.
-The basic operations are: 
+The basic operations are:
 
 - Stack
   - `push`: adds an element to the top of the stack
@@ -139,46 +139,73 @@ class MyStack
 end
 ```
 
-Implement `pop`, `push`, `peek`, `size`, and `empty?` methods on your Stack.
+Implement `peek`, `size`, `empty?`, `pop` and `push` methods on your Stack.
 
+## Phase 4: `StackQueue`
 
+We want to find the max window range of array in O(n) time, which means each
+window must calculate the `min` and `max` instantly. Every time we move
+the window, we could `enqueue` the next element and `dequeue` the last element.
+However, removing items from `MyQueue` takes O(n) time. As the first element
+of the array is shifted off,the remaining elements will be reassigned in new
+position in memory.
 
------------ the rest of under construction ----------------------
-
-
-
-### Phase 4: MinMaxStackQueue
-
-Next, we're going to implement a queue again, but with a twist: rather
-than use an Array, we will implement it using our `MyStack` class under
-the hood.
+Thus, we're going to implement a queue again, but with a twist: rather than use an
+Array, we will implement it using our `MyStack` class under the hood because
+removing elements `MyStack` takes O(1) time. We still have a queue but with
+the advantages of dequeuing at O(1) time.
 
 Before you start to code this, sit down and talk to your partner about
 how you might implement this. You should not modify your `MyStack`
-class, but use the interface it provides to implement a queue. When
-you're ready, implement this `StackQueue` class with `enqueue`,
-`dequeue`, `size`, and `empty?` methods.
+class, but use the interface it provides to implement a queue.
+
+When you're ready, implement this `StackQueue` class with `size`, `empty?`,`enqueue`,
+and `dequeue` methods.
 
 **Hint**: You will want to use more than one instance of `MyStack`.
 
 **Hint 2**: What if you always pushed onto one stack, and always popped
 from the other? How will these two stacks interact?
 
-**Hint 3**: Think about how a slinky walks down stairs...
+**Hint 3**: Think about how a slinky walks down stairs... As the slinky descends
+down a stair step, the top of a slinky becomes the bottom of the slinky.
 
-Ask your TA if you get stuck!
+**Code Review**: Request for a TA code review at the end of this phase.
 
+## Phase 5: `MinMaxStack`
 
+Moving back to our `MyStack` class, let's modify it so that we always know
+the maximum value in the stack. We could write a `max` method that calls
+`@store.max`. However, this requires us to iterate over every item in the
+`@store` array, which gives us a time complexity of O(n). This isn't good
+enough for us; we want to be able to return the max in constant time (O(1)).
+If we can't iterate over `@store`, how else could we modify the stack to
+get this functionality?
 
+Once you have `max` implemented, it should be easy to add a `min`
+method.
 
+**Hint**: We could store some metadata with the value of each element.
+In other words, we can be storing more information than just the value with
+new element to the store. Think about how to do this and what information to store.
 
+Implement `peek`, `size`, `empty?`, `max`, `min`, `pop`, `push` methods on your
+`MinMaxStack`.
 
+## Phase 6: `MinMaxStackQueue`
 
-### Writing the Optimized Solution
+Similar to `MyStack` (phase 3) was used to build `StackQueue` (phase 4),
+`MinMaxStack` (phase 5) will be used to build a `MinMaxStackQueue`.
 
-Armed with a working MinMaxStackQueue, this problem should be much
+What methods are needed to solve this problem in O(n) time?
+
+## Phase 7: Max Windowed Range
+
+Armed with a working `MinMaxStackQueue`, this problem should be much
 easier. You'll want to follow the same basic approach as above, but use
 your new data structure instead of array slices. As before, return the
 `current_max_range` at the end of the method. Make sure all the test
 cases pass, and that you both understand the time complexity of this
-solution. Then talk to your TA about it and have them review your code!
+solution.
+
+**Code Review**: Request for a TA Code review at the end of this phase.

@@ -42,7 +42,7 @@ class MyQueue
 end
 ```
 
-Implement `enqueue`, `dequeue`, `peek`, `size`, and `empty?` methods on your Queue.
+Implement `peek`, `size`, `empty?`, `enqueue`, and `dequeue` methods on your Queue.
 
 ### MyStack
 
@@ -57,7 +57,8 @@ class MyStack
 end
 ```
 
-Implement `pop`, `push`, `peek`, `size`, and `empty?` methods on your Stack.
+Implement `peek`, `size`, `empty?`, `pop`, and `push`
+methods on your Stack.
 
 ### StackQueue
 
@@ -67,9 +68,9 @@ the hood.
 
 Before you start to code this, sit down and talk to your partner about
 how you might implement this. You should not modify your `MyStack`
-class, but use the interface it provides to implement a queue. When
-you're ready, implement this `StackQueue` class with `enqueue`,
-`dequeue`, `size`, and `empty?` methods.
+class, but use the interface it provides to implement a queue. When you're
+ready, implement this `StackQueue` class with `size`, `empty?`, `enqueue`,
+and `dequeue` methods.
 
 **Hint**: You will want to use more than one instance of `MyStack`.
 

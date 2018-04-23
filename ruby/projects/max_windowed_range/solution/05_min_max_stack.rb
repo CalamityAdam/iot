@@ -5,20 +5,24 @@ class MinMaxStack
     @store = MyStack.new
   end
 
-  def empty?
-    @store.empty?
+  def peek
+    @store.peek[:value] unless empty?
   end
 
-  def min
-    @store.peek[:min] unless empty?
+  def size
+    @store.size
+  end
+
+  def empty?
+    @store.empty?
   end
 
   def max
     @store.peek[:max] unless empty?
   end
 
-  def peek
-    @store.peek[:value] unless empty?
+  def min
+    @store.peek[:min] unless empty?
   end
 
   def pop
@@ -33,10 +37,6 @@ class MinMaxStack
       min: new_min(val),
       value: val
     })
-  end
-
-  def size
-    @store.size
   end
 
   private
