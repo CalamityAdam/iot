@@ -221,6 +221,12 @@
 
 ### Study Hall 9 - 10am (NY only)
 
+### Assessment03 Practice
+
++ [Practice][assessment-prep-3]
+
+[assessment-prep-3]: https://github.com/appacademy/assessment-prep#assessment-3
+
 ### Projects
 + [CSS Float Exercise][css-float-exercise]
 + [Movie Buff][movie-buff]
