@@ -184,7 +184,7 @@ down a stair step, the top of a slinky becomes the bottom of the slinky...
 
 ## Phase 5: `MinMaxStack`
 
-Moving back to our `MyStack` class, let's modify it so that we always know
+Before we move on, let's take a step back to our `MyStack` class. We'll modify it so that we always know
 the maximum value in the stack. We could write a `max` method that calls
 `@store.max`. However, this requires us to iterate over every item in the
 `@store` array, which gives us a time complexity of O(n). This isn't good
@@ -205,7 +205,7 @@ Implement `peek`, `size`, `empty?`, `max`, `min`, `pop`, `push` methods on your
 ## Phase 6: `MinMaxStackQueue`
 
 Similar to `MyStack` (phase 3) was used to build `StackQueue` (phase 4),
-`MinMaxStack` (phase 5) will be used to build a `MinMaxStackQueue`.
+use your `MinMaxStack` (phase 5) to build a `MinMaxStackQueue`.
 
 What methods are needed to solve this problem in O(n) time?
 
