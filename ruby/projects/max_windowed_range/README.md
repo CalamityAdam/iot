@@ -50,39 +50,46 @@ Think about the time complexity of your method. How many iterations are
 required at each step? What is its overall time complexity in Big-O
 notation?
 
-### Optimized Solution
+### Analysis
 
 It turns out that it is quite costly to calculate the `min` and `max`
-elements of each window. If we use the `min` AND `max` methods built
-into Ruby, this costs us `2 * window_size` iterations for each window.
-What if it were possible to calculate `min` and `max` instantaneously
-(in constant time) per window? We can write a data structure to help
-with this.
+elements of each window (each method is an `O(n)` operation). If we use 
+the `min` AND `max` methods built into Ruby, this costs us `2 * window_size` 
+iterations for each window (overall time complexity: `O(n^2)`).
 
-In the naive solution, we consider each window as a slice of the input
-array. On the first iteration, we slice the array from index `0` to
+What's more, in the naive solution, we consider each window as a slice of the 
+input array. On the first iteration, we slice the array from index `0` to
 index `w`. On the second iteration, we slice from `1` to `w + 1`, and so
-forth. However, slicing an array is rather costly. Remember, a new array
-is created when slicing an existing array.
+forth. However, slicing an array is rather costly (again, `O(n)`). 
+Remember, a new array is created when slicing an existing array.
 
-### Overall Plan:
+What if it were possible to calculate `min` and `max` instantaneously
+(in constant time) per window? This would allow us to find the max windowed
+range in `O(n)` time. We can achieve this by writing a custom data structure
+dedicated to solving this specific problem.
 
-Since the window only moves one index at a time, it would be nicer to
-represent it as a `queue`. Every time we move the window, we could
-enqueue the next element and dequeue the last element. However, that
-still leaves us with the problem of expensive `min` and `max` operations.
+### Optimized Solution:
 
-We will be building multiple data structures that will finally lead to
-`MinMaxStackQueue` that will keep track of the `min` and `max` in constant 
-time. We will be building the following in order:
+We will be creating a sequence of data structures that will culminate in a
+`MinMaxStackQueue`, our custom data structure that will keep track of the `min` 
+and `max` in constant time. We will get to the specifics of how it does this 
+in a second.
+
+We will be building the following in order:
 
   + `MyQueue`
   + `MyStack`
   + `StackQueue`
   + `MinMaxStack`
-  +  `MinMaxStackQueue`
+  + `MinMaxStackQueue`
 
 ## Phase 2: `MyQueue`
+
+Since the window only moves one index at a time, it would be nicer to
+represent it as a `queue`. Every time we move the window, we could
+enqueue the next element and dequeue the last element. This would allow
+us to avoid using `Array#slice`, so that we can traverse the array
+in constant time.
 
 A **queue** is an simple abstract linear data structure where elements
 are stored in order and can be added or removed one at a time. A queue
@@ -118,6 +125,16 @@ Implement `peek`, `size`, `empty?`, `enqueue`, and `dequeue` methods on your Que
 
 ## Phase 3: `MyStack`
 
+We want to find the max window range of array in O(n) time, which means we
+cannot make use of `Array#slice`, and each window must calculate the `min` and `max` 
+instantly. Every time we move the window, we `enqueue` the next element and 
+`dequeue` the last element. This solves the problem with `slice`.
+However, removing items from `MyQueue` takes O(n) time. As the first element
+of the array is shifted off,the remaining elements will be reassigned in new
+position in memory. Also, it still leaves us with the problem of expensive 
+`min` and `max` operations. To resolve this, we'll have to make clever use of
+another data structure, the **stack**.
+
 Stacks are another simple linear data structure. Elements are
 also stored in order and can be added or removed one at a time. A stack
 is **first in, last out** (FILO). Similar to queues, stack implementations
@@ -143,32 +160,25 @@ Implement `peek`, `size`, `empty?`, `pop` and `push` methods on your Stack.
 
 ## Phase 4: `StackQueue`
 
-We want to find the max window range of array in O(n) time, which means each
-window must calculate the `min` and `max` instantly. Every time we move
-the window, we could `enqueue` the next element and `dequeue` the last element.
-However, removing items from `MyQueue` takes O(n) time. As the first element
-of the array is shifted off,the remaining elements will be reassigned in new
-position in memory.
-
-Thus, we're going to implement a queue again, but with a twist: rather than use an
+With that done, we're going to implement a queue again, but with a twist: rather than use an
 Array, we will implement it using our `MyStack` class under the hood because
-removing elements `MyStack` takes O(1) time. We still have a queue but with
-the advantages of dequeuing at O(1) time.
+`push`ing and `pop`ping from `MyStack` takes O(1) time. Done properly, we will 
+still have a queue but with the advantages of dequeuing in O(1) time.
 
 Before you start to code this, sit down and talk to your partner about
 how you might implement this. You should not modify your `MyStack`
 class, but use the interface it provides to implement a queue.
 
-When you're ready, implement this `StackQueue` class with `size`, `empty?`,`enqueue`,
-and `dequeue` methods.
+When you're ready, implement this `StackQueue` class with `size`, `empty?`,
+`enqueue`, and `dequeue` methods.
 
 **Hint**: You will want to use more than one instance of `MyStack`.
 
 **Hint 2**: What if you always pushed onto one stack, and always popped
 from the other? How will these two stacks interact?
 
-**Hint 3**: Think about how a slinky walks down stairs... As the slinky descends
-down a stair step, the top of a slinky becomes the bottom of the slinky.
+**Hint 3**: Think about how a slinky walks down stairs. As the slinky descends
+down a stair step, the top of a slinky becomes the bottom of the slinky...
 
 **Code Review**: Request for a TA code review at the end of this phase.
 
@@ -203,7 +213,7 @@ What methods are needed to solve this problem in O(n) time?
 
 Armed with a working `MinMaxStackQueue`, this problem should be much
 easier. You'll want to follow the same basic approach as above, but use
-your new data structure instead of array slices. As before, return the
+our new data structure instead of array slices. As before, return the
 `current_max_range` at the end of the method. Make sure all the test
 cases pass, and that you both understand the time complexity of this
 solution.
