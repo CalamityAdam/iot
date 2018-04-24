@@ -182,11 +182,6 @@
 
 ## w3d4
 
-### Assessment03 Practice
-+ [Practice][assessment-prep-3]
-
-[assessment-prep-3]: https://github.com/appacademy/assessment-prep#assessment-3
-
 ### Materials (113 min)
 + :book: [ActiveRecord::Relation][relation] (15 min)
 + :book: [ActiveRecord and Joins][ar-joins] (15 min)
@@ -219,6 +214,12 @@
 [sql-ternary-logic]: readings/sql-ternary-logic.md
 
 ### Study Hall 9 - 10am (NY only)
+
+### Assessment03 Practice
+
++ [Practice][assessment-prep-3]
+
+[assessment-prep-3]: https://github.com/appacademy/assessment-prep#assessment-3
 
 ### Projects
 + [CSS Float Exercise][css-float-exercise]
