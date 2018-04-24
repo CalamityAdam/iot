@@ -134,11 +134,6 @@ we highly encourage you to read the whole book.
 
 ## w6d1
 
-### Assessment05 Practice
-* [Practice][assessment-prep-5]
-
-[assessment-prep-5]: http://github.com/appacademy/assessment-prep#assessment-5
-
 ### Materials (110 min)
 :closed_lock_with_key: `go_video_go`
 * :movie_camera: [Prototype Chain and Inheritance][proto-inherit-vid] (20 min)
@@ -185,6 +180,12 @@ we highly encourage you to read the whole book.
 
 [asynchronous-js]: readings/asynchronous-js.md
 [client-side-js]: readings/client-side-javascript.md
+
+### Assessment05 Practice
+
+* [Practice][assessment-prep-5]
+
+[assessment-prep-5]: http://github.com/appacademy/assessment-prep#assessment-5
 
 ### Projects  
 * [CSS Friends Phases 7-8][css-friends]
@@ -287,7 +288,7 @@ we highly encourage you to read the whole book.
 ## w6d4
 
 ### Assessment05
-* [Practice Assessment][assessment-prep-5]
+* [Practice][assessment-prep-5]
 
 ### Materials (60 min)
 :closed_lock_with_key: `go_video_go`

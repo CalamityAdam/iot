@@ -137,11 +137,6 @@
 
 ## w1d4
 
-### Assessment01 Practice
-* [Practice][assessment-prep-1]
-
-[assessment-prep-1]: https://github.com/appacademy/assessment-prep#assessment-1
-
 ### Materials (84 min)
 
 :closed_lock_with_key: `go_video_go`
@@ -190,6 +185,13 @@
 [code-academy-git]: https://www.codecademy.com/learn/learn-git
 [git-fix-authorship]: readings/git-fix-authorship.md
 [git-cheatsheet]: http://www.ndpsoftware.com/git-cheatsheet.html
+
+### Assessment01 Practice (We will be taking it in class)
+
+* In-class practice assessment at 9am.  Please bring your own machine if possible.
+* [Practice][assessment-prep-1]
+
+[assessment-prep-1]: https://github.com/appacademy/assessment-prep#assessment-1
 
 ### Projects
 
@@ -395,13 +397,6 @@
 
 ## w2d4
 
-### Assessment02 Practice
-
-* In-class practice assessment at 9am.  Please bring your own machine if possible.  
-* [Practice][assessment-prep-2]
-
-[assessment-prep-2]: https://github.com/appacademy/assessment-prep#assessment-2
-
 ### Materials (76 min)
 
 :closed_lock_with_key: `go_video_go`
@@ -445,6 +440,13 @@
 [merge-sort-visual]: http://www.algomation.com/player?algorithm=551321f6e1b6fa0300aae4d0
 [bubble-sort-visual]: http://www.algomation.com/player?algorithm=541a6ea7a7fe980200089c5e
 [big-o-cheatsheet]: http://bigocheatsheet.com/
+
+### Assessment02 Practice (We will be taking it in class)
+
+* In-class practice assessment at 9am.  Please bring your own machine if possible.
+* [Practice][assessment-prep-2]
+
+[assessment-prep-2]: https://github.com/appacademy/assessment-prep#assessment-2
 
 ### Projects
 
