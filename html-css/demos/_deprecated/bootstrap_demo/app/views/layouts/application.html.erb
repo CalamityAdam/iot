@@ -15,13 +15,13 @@
         Better to get an image in your own app. -->
         &#9776;
       </button>
-      <%= link_to "Bootstrap Demo Project", static_pages_index_url, :class => "navbar-brand"%>
+      <a href="<%= static_pages_index_url %>" class="navbar-brand">Bootstrap Demo Project</a>
     </div>
     <div class="collapse navbar-collapse" id="demo-project-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Home", static_pages_index_url %>
-        <li><%= link_to "About", static_pages_about_url %>
-        <li><%= link_to "Contact", static_pages_contact_url %>
+        <li><a href="<%= static_pages_index_url %>">Home</a>
+        <li><a href="<%= static_pages_about_url %>">About</a>
+        <li><a href="<%= static_pages_contact_url %>">Contact</a>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <%if current_user%>

@@ -50,7 +50,7 @@ The `current_user`’s permissions can then be checked using the `can?` and `can
 ```html
 <!-- views/articles/show.html.erb -->
 <% if can? :update, @article %>
-  <%= link_to "Edit", edit_article_path(@article) %>
+  <a href="<%= edit_article_path(@article) %>">Edit</a>
 <% end %>
 ```
 
