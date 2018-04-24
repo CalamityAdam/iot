@@ -280,6 +280,10 @@
 [context]: https://facebook.github.io/react/docs/context.html
 [local_storage]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 
+### Assessment06 Practice
+
+* [Practice][assessment-prep-6]
+
 ### Projects
 * [BenchBnB][bench_bnb]
 

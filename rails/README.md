@@ -202,9 +202,6 @@
 
 ### Study Hall 9 - 10am
 
-### Assessment04 Practice
-* [Practice][assessment-prep-4]
-
 ### Materials (114 min)
 :closed_lock_with_key: `go_video_go`
 * :movie_camera: [(cc) 14-radio-and-textarea][14-radio-and-textarea] (16 min)
@@ -235,6 +232,10 @@
   * *NB:* `#deliver` has been deprecated in newer versions of Rails, please use `#deliver_now` instead
 
 [action-mailer-video]: https://vimeo.com/168810895
+
+### Assessment04 Practice
+
+* [Practice][assessment-prep-4]
 
 ### Projects
 * **Solo**: [Music App][music-app-project]
