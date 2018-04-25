@@ -252,9 +252,9 @@
 
 [metacorgi-hw]: homeworks/meta_corgis
 
-### Project
+### Projects
 + [CSS Flex Exercise][css-flex-exercise]
-+ **Solo**: [Build Your Own ActiveRecord][build-your-own-ar]
++ [Build Your Own ActiveRecord][build-your-own-ar]
 
 [css-flex-exercise]: ../html-css/micro-projects/flex  
 [build-your-own-ar]: projects/active_record_lite
