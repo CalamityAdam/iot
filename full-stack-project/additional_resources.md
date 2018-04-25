@@ -10,6 +10,7 @@
     * [OmniAuth code demo][omniauth-demo]
   * [CanCan reading][cancan]
 * Tips and tricks for styling your styling your site and adding modals
+  * [React/Redux Modal][modal]
   * [CSS Overview reading][css]
   * [CSS demos code][css-demos]
   * [CSS transforms and transitions video][css-transitions]
@@ -40,6 +41,7 @@
 [omniauth-demo]: https://github.com/appacademy/OmniAuthDevise
 [cancan]: resources/security/cancan.md
 
+[modal]: resources/ModalBnB/README.md
 [css]: resources/styling/css.md
 [css-demos]: https://github.com/appacademy/css-demos
 [css-transitions]: https://vimeo.com/164928587
