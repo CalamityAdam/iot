@@ -2,8 +2,8 @@
 
 <ul>
   <% @capys.each do |capy| %>
-    <li><%= link_to capy.name, capy_url(capy) %></li>
+    <li><a href="<%= capy_url(capy) %>">capy.name</a></li>
   <% end %>
 </ul>
 
-<%= link_to "Create a Capy", new_capy_url %>
+<a href="<%= new_capy_url %>">Create a Capy</a>
