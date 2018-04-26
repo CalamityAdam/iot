@@ -7,6 +7,6 @@
 <h2>My current parties are:</h2>
 <ul>
   <% @capy.parties.each do |party| %>
-    <li><%= link_to party.occasion, party_url(party) %></li>
+    <li><a href="<%= party_url(party) %>">party.occasion</a></li>
   <% end %>
 </ul>
