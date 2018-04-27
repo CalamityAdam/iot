@@ -109,8 +109,5 @@ Active Record, but this gives us an opportunity to practice using Ruby in Jbuild
 Find them and defeat them. _Hint:_ play around with your API in development and
 watch your server logs.
 
-When you've finished with everything, call a TA over and have them check your
-work!
-
 [formatter-link]: https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en
 [docs-link]: https://github.com/rails/jbuilder
