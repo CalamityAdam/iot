@@ -197,8 +197,6 @@ Your cat rental request app is becoming very popular! Your users want
 to be able to login to your app from multiple browsers and devices at
 the same time.
 
-* Once you think you know how to implement this, call your TA over
-  and explain it.
 * Change your app so you can login from multiple devices. (you can
   test this using Chrome incognito).
 * Implement functionality so that logging out from one browser won't

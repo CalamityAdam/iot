@@ -237,12 +237,12 @@ this user:
 * Joining against all the `responses` is unnecessary; we only care
   about the user's responses. JOIN with a subquery on responses.
 * Why would a `WHERE responses.respondent_id = ?` not work at the top
-  level; **talk it over with your TA**.
+  level?
 * Lastly, use a `HAVING` to eliminate those polls where the number of
   questions is not equal to the number of responses.
 
 **Verify this SQL** with `Poll::find_by_sql` to run raw SQL returning
-`Poll` objects. Ask your TA if you don't know how. Then write it in
+`Poll` objects. Ask Google if you don't know how. Then write it in
 ActiveRecord.
 
 You can write an uncompleted polls method too; it should return polls

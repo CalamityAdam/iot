@@ -344,9 +344,6 @@ liked comments and artworks. We also want to be able to call an
 association on comments and artworks to get the users who have liked
 them.
 
-Once you have a plan call over a TA and explain it to them. Then get
-coding!
-
 ## Bonus Phase II: Favorite Artworks
 
 Let's also allow users to favorite artworks. This will require
