@@ -2,7 +2,7 @@
 
 <ul>
   <% @capys.each do |capy| %>
-    <li><a href="<%= capy_url(capy) %>">capy.name</a></li>
+    <li><a href="<%= capy_url(capy) %>"><%= capy.name %></a></li>
   <% end %>
 </ul>
 
