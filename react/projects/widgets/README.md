@@ -23,8 +23,8 @@ Your `widgets.jsx` should have a `DOMContentLoaded` listener that calls
 `ReactDOM.render()` with a `Root` component and a `main` DOM element as the
 hook.
 
-The `Root` component, like all React components, should have a `render` method.
-For now, have your `Root#render` return an empty `<div>`. We will fill this in
+The `Root` component should be a functional component because it won't use internal state or any lifecycle methods.
+For now, have your `Root` return an empty `<div>`. We will fill this in
 with our widget components as we create them.
 
 Note: we won't be using `jQuery` for this project. If you're not sure how to do
@@ -42,8 +42,8 @@ The clock component should display the current date and time, updating every sec
 
 * Start by creating a new file `clock.jsx` in your `frontend` folder and
 defining your `Clock` class there. Remember to export. You
-will require this class from `widgets.jsx` and incorporate it into
-`Root#render`. This is the pattern you will follow for all the widgets.
+will require this class from `widgets.jsx` and incorporate it into the return value of your
+`Root`. This is the pattern you will follow for all the widgets.
 * Create a render method. Give your clock a title in an `<h1>` and check that
 this renders correctly on the page.
 * In the constructor, set the initial state for the time of your clock using `new Date()`.
@@ -219,7 +219,7 @@ name.
 ### Instructions
 
 * Create a new file `autocomplete.jsx` and define your
-  `Autocomplete` class there. Incorporate it into `Root#render`.
+  `Autocomplete` class there. Incorporate it into `Root`.
 * Because your `Autocomplete` widget should be reusable, it mustn't
   define its own list of names. Instead create a list of names in
   `widgets.jsx` and pass them into `Autocomplete` as a prop.

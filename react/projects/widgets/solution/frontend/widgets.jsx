@@ -23,19 +23,17 @@ const Panes = [
   {title: 'three', content: 'Third pane here'}
 ];
 
-class Root extends React.Component {
-  render() {
-    return(
-      <div>
-        <Clock />
-        <Weather />
-        <div className='interactive'>
-          <Tabs panes={Panes} />
-          <AutoComplete names={Names} />
-        </div>
+function Root() {
+  return(
+    <div>
+      <Clock />
+      <Weather />
+      <div className='interactive'>
+        <Tabs panes={Panes} />
+        <AutoComplete names={Names} />
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 document.addEventListener('DOMContentLoaded', () => {
