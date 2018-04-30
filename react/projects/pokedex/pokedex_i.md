@@ -185,14 +185,16 @@ Next we need to configure Webpack to compile our `bundle.js` file.
       extensions: ['.js', '.jsx', '*']
     },
     module: {
-      loaders: [
+      rules: [
         {
           test: /\.jsx?$/,
           exclude: /(node_modules)/,
-          loader: 'babel-loader',
-          query: {
-            presets: ['env', 'react']
-          }
+          use: {
+            loader: 'babel-loader',
+            query: {
+              presets: ['env', 'react']
+            }
+          },
         }
       ]
     },
