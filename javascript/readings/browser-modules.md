@@ -103,9 +103,9 @@ First we need to get a module bundler. There are a few options, but we will use 
 ### Getting Webpack
 We will use `npm` to install Webpack as a command line tool. There will be more information later about how to use `npm`, but for now we just want to get you set up with Webpack.
 
-Running the command `npm install -g webpack` will install and setup Webpack. Webpack is a very powerful (and extensible) tool. We will leverage many of its features as the course goes on, but for now we will just use it to bundle our Javascript source files into one file.
+Running the command `npm install -g webpack webpack-cli` will install and setup Webpack and its command line tools. Webpack is a very powerful (and extensible) tool. We will leverage many of its features as the course goes on, but for now we will just use it to bundle our JavaScript source files into one file.
 
-To do this, navigate to your app directory and run `webpack app.js bundle.js`. Webpack will find the file named `app.js` in the current directory and bundle it up with any files it requires, and any files those files require, until it has all the dependencies it needs. It will output this to a file called `bundle.js`.
+To do this, navigate to your app directory and run `webpack app.js -o bundle.js --mode=development`. Webpack will find the file named `app.js` in the current directory and bundle it up with any files it requires, and any files those files require, until it has all the dependencies it needs. It will output this to a file called `bundle.js`. The `mode` flag tells Webpack to optimize this build for development, rather than production.
 
 Your html file would then have a script tag for the bundled file like:
 `<script src="bundle.js"></script>`
