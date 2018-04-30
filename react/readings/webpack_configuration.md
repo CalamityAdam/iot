@@ -92,8 +92,6 @@ module.exports = {
 You must include the star matcher `'*'` to be able to include files with an explicit extension.
 Otherwise `require('file_name.js')` will cause webpack to look for `file_name.js.js`.
 
-**NB** The star syntax is new to webpack v2. If you are using webpack v1 you will need to include an empty string instead.
-
 # Sample `webpack.config.js`
 
 ```js
@@ -106,11 +104,13 @@ module.exports = {
     filename: './bundle.js',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: [/\.jsx?$/],
         exclude: /(node_modules)/,
-        loader: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+        },
         query: {
           presets: ['env', 'react']
         }
