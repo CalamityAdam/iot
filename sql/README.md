@@ -207,13 +207,13 @@
 
 [sql-ternary-logic]: readings/sql-ternary-logic.md
 
-### Study Hall 9 - 10am (NY only)
-
 ### Assessment03 Practice
 
 + [Practice][assessment-prep-3]
 
 [assessment-prep-3]: https://github.com/appacademy/assessment-prep#assessment-3
+
+### Study Hall 9 - 10am (NY only)
 
 ### Projects
 + [CSS Float Exercise][css-float-exercise]
