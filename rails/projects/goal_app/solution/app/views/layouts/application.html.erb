@@ -26,9 +26,9 @@
         <span id="cheer-limit"><%= current_user.cheer_count %></span>
       </p>
     <% else %>
-      <p><%= link_to "Sign Up", new_user_url %></p>
+      <p><a href="<%= new_user_url %>">Sign Up</a></p>
       <p>or</p>
-      <p><%= link_to "Log In", new_session_url %></p>
+      <p><a href="<%= new_session_url %>">Log In</a></p>
     <% end %>
   </div>
 </header>
