@@ -6,11 +6,14 @@ import merge from 'lodash/merge';
 
 const todosReducer = (state = {}, action) => {
   Object.freeze(state);
-  let nextState;
+  let nextState = {};
 
   switch(action.type){
     case RECEIVE_TODOS:
-      return action.todos;
+      action.todos.forEach( todo => {
+        nextState[todo.id] = todo;
+      });
+      return nextState;
     case RECEIVE_TODO:
       const newTodo = {[action.todo.id]: action.todo};
       return merge({}, state, newTodo);
