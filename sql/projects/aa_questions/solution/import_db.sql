@@ -86,7 +86,7 @@ CREATE TABLE replies (
   author_id INTEGER NOT NULL,
   body TEXT NOT NULL,
   FOREIGN KEY (question_id) REFERENCES questions(id),
-  FOREIGN KEY (parent_reply_id) REFERENCES replies(id)
+  FOREIGN KEY (parent_reply_id) REFERENCES replies(id),
   FOREIGN KEY (author_id) REFERENCES users(id)
 );
 
