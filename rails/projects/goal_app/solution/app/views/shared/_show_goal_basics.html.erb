@@ -2,7 +2,7 @@
 <% completedness = (goal.completed) ? "Complete" : "Ongoing"%>
 
 <li>
-  <%= link_to goal.title, goal_url(goal) %>
+  <a href="<%= goal_url(goal) %>"><%= goal.title %></a>
   <p><i><%= privacy %></i></p>
   <p><i><%= completedness %></i></p>
   <br>

@@ -13,8 +13,8 @@
     <h3><%= @user.username.capitalize %>'s Goals:</h3>
 
     <% if @user == current_user %>
-      <%= link_to "New Goal", new_goal_url %>
-      <%= link_to "My Cheers!", cheers_url %>
+      <a href="<%= new_goal_url %>">New Goal</a>
+      <a href="<%= cheers_url %>">My Cheers!</a>
     <% end %>
 
     <ul>
@@ -28,5 +28,5 @@
 </div>
 
 <div class="all-users">
-  <%= link_to "All Users", users_url %>
+  <a href="<%= users_url %>">All Users</a>
 </div>

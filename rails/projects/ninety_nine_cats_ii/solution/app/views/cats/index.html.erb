@@ -11,7 +11,7 @@
       <div class="cat-index-item">
         <div>
           <img src="http://placekitten.com/g/231/231" >
-          <br /><%= link_to "Rent #{cat.name}", cat_url(cat) %>
+          <br /><a href="<%= cat_url(cat) %>">Rent <%= cat.name %></a>
         </div>
       </div>
     <% end %>
