@@ -10,6 +10,7 @@ worth the effort.
 
 1) Install the [chrome extension][chrome_extension].
 
+<<<<<<< HEAD
 2) Install the node package onto your project.
 
     + For webpack 3.x
@@ -56,10 +57,50 @@ a local file in your browser; your site needs to be running on an HTTP server.
 We could make the fruit stand into a Rails app, but that sounds like overkill
 just to get it on a server.
 
+=======
+2) nstall the node package onto your project.
+
+```Shell
+npm install --save-dev redux-devtools-extension
+```
+
+3) Make the following changes to your `/frontend/store/store.js`.
+
+```diff
+  // frontend/store/store.js
+
+  import { createStore, applyMiddleware } from 'redux';
+  import thunk from 'redux-thunk';
+  import logger from 'redux-logger';
++ import { composeWithDevTools } from 'redux-devtools-extension';
+
+  import rootReducer from '../reducers/root_reducer';
+
+  const configureStore = (preloadedState = {}) => (
+    createStore(
+      rootReducer,
+      preloadedState,
++     composeWithDevTools(applyMiddleware(thunk, logger))
+-     applyMiddleware(thunk, logger)
+    )
+  );
+
+  export default configureStore;
+```
+
+Great job.
+
+## Use
+
+Now that we've set up the Redux dev tools, let's try them out.
+We will use the [fruit stand app][fruit_stand] as an example.
+
+>>>>>>> Update instructions and added more resource links
 1) To install a simple server, run `npm install -g http-server`.
 2) Open the root directory of the fruit stand app and run `http-server`.
 3) In your browser, navigate to `localhost:8080` to see the fruit stand app.
 4) You should see an atom (a nucleus with electrons) icon on your Chrome toolbar,
+<<<<<<< HEAD
 and if you've set up the ev tools correctly it should now be green. Click on it.
 5) When the dev tools open, click one of the buttons on the very bottom left to
 open them in a new window.
@@ -67,6 +108,15 @@ open them in a new window.
     + This will cause actions to be dispatched.
     + You should see those actions popping up in the dev tools.
     + You can click on them to cancel them and you should see the state recalculated in real time.
+=======
+and if you've set up the dev tools correctly it should now be green. Click on it.
+5) When the dev tools open, click one of the buttons on the very bottom left to
+open them in a new window.
+6) Now try adding some fruit.
+  + This will cause actions to be dispatched.
+  + You should see those actions popping up in the dev tools.
+  + You can click on them to cancel them and you should see the state recalculated in real time.
+>>>>>>> Update instructions and added more resource links
 
 The dev tools have some other handy features, so click around and explore!
 
