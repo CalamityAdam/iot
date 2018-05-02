@@ -60,7 +60,7 @@ just to get it on a server.
 2) Open the root directory of the fruit stand app and run `http-server`.
 3) In your browser, navigate to `localhost:8080` to see the fruit stand app.
 4) You should see an atom (a nucleus with electrons) icon on your Chrome toolbar,
-and if you've set up the dev tools correctly it should now be green. Click on it.
+and if you've set up the ev tools correctly it should now be green. Click on it.
 5) When the dev tools open, click one of the buttons on the very bottom left to
 open them in a new window.
 6) Now try adding some fruit.
