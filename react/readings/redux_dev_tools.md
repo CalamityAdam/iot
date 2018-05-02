@@ -53,6 +53,9 @@ Great job.
 Now that we've set up the Redux dev tools, let's try them out.
 We will use the [fruit stand app][fruit_stand] as an example.
 
+**NB**: The Redux Dev Tools do not work if you are simply viewing
+a local file in your browser; your site needs to be running on an HTTP server.
+
 1) To install a simple server, run `npm install -g http-server`.
 2) Open the root directory of the fruit stand app and run `http-server`.
 3) In your browser, navigate to `localhost:8080` to see the fruit stand app.
