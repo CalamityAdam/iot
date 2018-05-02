@@ -29,8 +29,8 @@
 + :movie_camera: [Routes Demo][routes-demo-video] (10 min)
 + :movie_camera: [Basic Controller Demo][basic-controller-demo-video] (15 min)
 + :movie_camera: [RESTful Controller Demo][restful-controller-demo-video] (15 min)
-+ :book: [Routing I: Basics][routing-i]
-+ :book: [Basic Controllers and Strong Params][basic-controllers]
++ :book: [Routing I: Basics][routing-i] (10 min)
++ :book: [Basic Controllers and Strong Params][basic-controllers] (10 min)
 + :book: [Callbacks][callbacks] (5 min)
 + :book: [Delegation][delegation] (5 min)
 + :book: [Contextual Overview of DNS][dns_reading] (5 min)
