@@ -152,6 +152,7 @@ As with previous projects, you will need to set up a `package.json` and a `webpa
 * Run `npm init -y` to initialize your app's `package.json` with the default boilerplate settings.
 * `npm install --save` the following packages:
   * webpack
+  * webpack-cli
   * react
   * react-dom
   * react-router-dom
@@ -163,6 +164,8 @@ As with previous projects, you will need to set up a `package.json` and a `webpa
   * babel-preset-env
   * babel-preset-react
   * lodash
+
+* Add a `"webpack"` script to your `package.json` that runs `webpack --mode=development --watch`.
 
 ### Webpack
 
@@ -227,7 +230,7 @@ Notice that the `entry` key in `webpack.config.js` expects a file called `./fron
 * `import` both the `react` and `react-dom` packages.
 * Add an event listener for `DOMContentLoaded`.
 * In the callback to this listener, try rendering a simple stateless React component to test everything we've written so far.
-* Don't forget to run `webpack --watch` to generate your `bundle.js`.
+* Don't forget to run `npm run webpack` to generate your `bundle.js`.
 
 Your entry file might look like the following:
 
