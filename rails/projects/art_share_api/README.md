@@ -127,7 +127,7 @@ to re-populate your tables with testable data.
 
 Next let's move to the API layer. The API describes how you will
 **expose** your data and specifies how the outside world can interact
-with it. Today we'll be using Chrome's Postman plugin to test our API
+with it. Today we'll be using the Postman web app to test our API
 endpoints. When debugging make sure to reference your Rails server log.
 It will provide you will valuable insight as to what's going wrong.
 

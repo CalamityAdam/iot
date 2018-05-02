@@ -1,4 +1,4 @@
-# Art Share Api
+# Art Share API
 
 We're going to continue building on the API we built in the first
 routes project. Our goal is to build an application to store, share, and
@@ -127,7 +127,7 @@ to re-populate your tables with testable data.
 
 Next let's move to the API layer. The API describes how you will
 **expose** your data and specifies how the outside world can interact
-with it. Today we'll be using Chrome's Postman plugin to test our API
+with it. Today we'll be using the Postman web app to test our API
 endpoints. When debugging make sure to reference your Rails server log.
 It will provide you will valuable insight as to what's going wrong.
 
@@ -143,17 +143,21 @@ and permits each of the user attributes as keys in the nested hash.
 
 * `create` (POST `/users`)
 
-Remember to use `if @user.save` to check if validations passed. On
+Remember to use `if user.save` to check if validations passed. On
 error, this action should render validation errors using
-`@user.errors.full_messages`. Set the status code to indicate error.
+`user.errors.full_messages`. Set the status code to indicate error.
 
-* `destroy` (DELETE `/users:id`)
+* `destroy` (DELETE `/users/:id`)
 
 Finds the user (we can lookup the id in `params[:id]`) and destroys the
-object. Best practice is to render the destroyed user after destroying
-it in the database. Use `dependent: :destroy` in the `artworks` and
-`artwork_shares` associations on `User`. This ensures that the
-associated records are also destroyed.
+object (using the [destroy](http://guides.rubyonrails.org/active_record_basics.html#delete) method on the user instance).
+Best practice is to render the destroyed user after destroying
+it in the database.
+Use `dependent: :destroy` in the `artworks` and
+`artwork_shares` associations on `User`.
+This ensures that the associated records are also destroyed.
+
+**N.B.** There is another ActiveRecord method that removes objects from your database, `delete`; however, this method does not run callbacks such as `dependent: :destroy`, and is therefore not the method we want to use.
 
 * `index` (GET `/users`)
 
@@ -167,7 +171,7 @@ Renders a single user, using the `:id` in `params[:id]`.
 
 Finds the requested user. Use `update` with `user_params` to do a
 mass-assignment update and save. Render validation errors using
-`@user.errors.full_messages`.  *Don't forget the status code!*
+`user.errors.full_messages`.  *Don't forget the status code!*
 
 Now let's move to the `routes.rb` file. You should already have routes
 for the `users` controller from the previous project. Use the `only:`

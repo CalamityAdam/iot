@@ -1,8 +1,8 @@
 # Postman
 
-Postman is a handy Chrome extension we will be using for the next couple days to test our routes and controller actions.
+Postman is a handy web app we will be using for the next couple days to test our routes and controller actions.
 
-The Postman extension should already be installed on all a/A machines, but if you would like to install it on your personal machine, download it [here][download_link].
+The Postman app should already be installed on all a/A machines, but if you would like to install it on your personal machine, download it [here][download_link].
 
 ## Making requests
 

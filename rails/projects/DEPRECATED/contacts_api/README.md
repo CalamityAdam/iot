@@ -146,7 +146,7 @@ Next, move on to creating `ContactsController`. Build the same five
 actions and params helper method. Your code should look very similar,
 but practice this a second time.
 
-Next, use RestClient or Chrome's Postman plugin to test your API. Test
+Next, use RestClient or Postman web app to test your API. Test
 every API endpoint.
 
 **Hint**: For this project, do not write any authentication or
