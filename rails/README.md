@@ -21,7 +21,7 @@
 
 [assessment-prep-3]: http://github.com/appacademy/assessment-prep#assessment-3
 
-### Materials (80 min)
+### Materials (100 min)
 :closed_lock_with_key: `go_video_go`
 + :movie_camera: [What is an API?][api-video] (10 min)
 + :movie_camera: [HTTP Request/Response][http-req-res-video] (5 min)
@@ -29,6 +29,8 @@
 + :movie_camera: [Routes Demo][routes-demo-video] (10 min)
 + :movie_camera: [Basic Controller Demo][basic-controller-demo-video] (15 min)
 + :movie_camera: [RESTful Controller Demo][restful-controller-demo-video] (15 min)
++ :book: [Routing I: Basics][routing-i]
++ :book: [Basic Controllers and Strong Params][basic-controllers]
 + :book: [Callbacks][callbacks] (5 min)
 + :book: [Delegation][delegation] (5 min)
 + :book: [Contextual Overview of DNS][dns_reading] (5 min)
@@ -58,15 +60,7 @@
 [elephant]: https://www.elephantinthevalley.com/
 [bias-product]: https://techcrunch.com/2016/11/16/when-bias-in-product-design-means-life-or-death/
 
-
-### Homeworks (45 min)
-* [Library Controller][library-hw] (45 min)
-
-[library-hw]: homeworks/library
-
 ### Additional Resources
-+ :book: [Routing I: Basics][routing-i]
-+ :book: [Basic Controllers][basic-controllers]
 + :book: [Basic JSON API][basic-json-api]
 + :book: [Routing II: Nested Collections][routing-ii]
 + :book: [Routing III: Adding non-default routes][routing-iii]
