@@ -24,7 +24,9 @@ class CatRentalRequest < ApplicationRecord
 
       # when we approve this request, we reject all other overlapping
       # requests for this cat.
-      overlapping_pending_requests.update_all(status: 'DENIED')
+      overlapping_pending_requests.each do |req|
+        req.update!(status: 'DENIED')
+      end
     end
   end
 
