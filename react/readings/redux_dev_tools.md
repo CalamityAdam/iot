@@ -6,94 +6,68 @@ an action to see a live recalculation of the state as if that action had never
 been dispatched. They require only a few minutes of setup, and can be well
 worth the effort.
 
-The redux dev tools are contained in a custom React component. In the past one
-had to add this component to an app in order to use them. Fortunately, the dev
-tools are now included in a chrome extension which allows them to open in a
-separate window. 
+## Instructions
 
-There are two steps to the setup:
+1) Install the [chrome extension][chrome_extension].
 
-1) Install the chrome extension by visiting [this url][chrome_extension] and following the instructions.
+2) nstall the node package onto your project.
 
-2) Add custom middleware to your store that allows the dev tools to track the state of your app and log any actions you dispatch.
-
-## Redux DevTools Middleware
-
-We will use the [fruit stand app][fruit_stand] as an example.
-The Redux dev tools don't work if you are simply viewing a local file in your browser; your site needs to be running on an HTTP server.
-We could make the fruit stand into a Rails app, but that sounds like overkill just to get it on a server.
-To install a simple server, run `npm install -g http-server`.
-Then open the root directory of the fruit stand app and run `http-server`.
-In your browser, navigate to `localhost:8080` to see the fruit stand app.
-
-To give the Chrome extension access to our Redux state we need to add some middleware to our store.
-The store.js file in the fruit stand app looks like this.
-
-```
-import { createStore } from 'redux';
-import reducer from './reducer.js';
-
-const store = createStore(reducer);
-
-export default Store;
+```Shell
+npm install --save-dev redux-devtools-extension
 ```
 
-To make it accessible to the Redux dev tools, we simply change `createStore` to
+3) Make the following changes to your `/frontend/store/store.js`.
 
-```
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-```
+```diff
+  // frontend/store/store.js
 
-Suppose that instead of just a reducer we were also using preloaded state and middleware.
-Then without dev tools we would have something like this
+  import { createStore, applyMiddleware } from 'redux';
+  import thunk from 'redux-thunk';
+  import logger from 'redux-logger';
++ import { composeWithDevTools } from 'redux-devtools-extension';
 
-```
-const store = createStore(
-  reducer,
-  preloadedState,
-  middleware
-);
-```
+  import rootReducer from '../reducers/root_reducer';
 
-To add dev tools we would change it to
+  const configureStore = (preloadedState = {}) => (
+    createStore(
+      rootReducer,
+      preloadedState,
++     composeWithDevTools(applyMiddleware(thunk, logger))
+-     applyMiddleware(thunk, logger)
+    )
+  );
 
-```
-import { compose } from 'redux';
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const store = createStore(
-  reducer,
-  preloadedState,
-  composeEnhancers(middleware)
-);
+  export default configureStore;
 ```
 
+Great job.
 
 ## Use
 
 Now that we've set up the Redux dev tools, let's try them out.
-You should see an atom (a nucleus with electrons) icon on your Chrome toolbar, and if you've set up the dev tools correctly it should now be green.
+We will use the [fruit stand app][fruit_stand] as an example.
 
-Click on it.
+1) To install a simple server, run `npm install -g http-server`.
+2) Open the root directory of the fruit stand app and run `http-server`.
+3) In your browser, navigate to `localhost:8080` to see the fruit stand app.
+4) You should see an atom (a nucleus with electrons) icon on your Chrome toolbar,
+and if you've set up the dev tools correctly it should now be green. Click on it.
+5) When the dev tools open, click one of the buttons on the very bottom left to
+open them in a new window.
+6) Now try adding some fruit.
+  + This will cause actions to be dispatched.
+  + You should see those actions popping up in the dev tools.
+  + You can click on them to cancel them and you should see the state recalculated in real time.
 
-When the dev tools open, click one of the buttons on the very bottom left to open them in a new window.
-
-Now try adding some fruit.
-
-This will cause actions to be dispatched.
-You should see those actions popping up in the dev tools.
-You can click on them to cancel them and you should see the state recalculated in real time.
 The dev tools have some other handy features, so click around and explore!
-
 
 ## Resources
 
-* [Chrome extension][chrome_extension]
-
-* [Dev tools react component][react_component]
-
+* [Redux Dev Tools - Chrome Extension][chrome_extension]
+* [Redux Dev Tools - Github Page][react_component]
+* [Redux Dev Tools - Demo][redux_demo]
 
 [fruit_stand]: https://github.com/appacademy/curriculum/tree/master/react/demos/fruit_stand_demos/fruit_stand_02
 [chrome_extension]: https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
 [react_component]: https://github.com/gaearon/redux-devtools
+[redux_demo]: http://extension.remotedev.io/#demo 
