@@ -5,19 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch"
+    "start": "webpack --mode=development --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.1.4",
-    "babel-loader": "^6.1.0",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.1.4",
-    "react": "^0.14.2",
-    "react-addons-css-transition-group": "^0.14.6",
-    "react-dom": "^0.14.2",
-    "webpack": "^2.2.1"
+    "react": "^16.3.2",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.3.2",
+    "webpack": "^4.6.0"
   }
 }
