@@ -18,7 +18,7 @@ jQuery][jquery] if you need more info on the jQuery methods you are building.
 
 + Know how to traverse and manipulate the DOM using vanilla JavaScript
 + Be able to create a class to serve as a wrapper for DOM nodes / HTML elements
-  + Understand an HTML page as a tree of DOM nodes 
+  + Understand an HTML page as a tree of DOM nodes
   + Get familiar with some of the properties that HTML elements have
 + Know how to create event listeners using vanilla JavaScript
 
@@ -38,7 +38,7 @@ of your jQuery lite methods by comparing them against the real thing.
 ### Webpack
 
 Create a `/lib` folder where we will store all of our files. Create a file in `/lib`
-called, `main.js` and boot up `webpack --watch lib/main.js lib/jquery_lite.js`.
+called, `main.js` and boot up `webpack --watch lib/main.js -o lib/jquery_lite.js --mode=development`.
 We will source this output file in another`<script>` tag in our html
 file. Go ahead and add that script tag now.
 
