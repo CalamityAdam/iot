@@ -4,18 +4,20 @@ module.exports = {
   context: __dirname,
   entry: "./frontend/widgets.jsx",
   output: {
-    path: path.resolve(__dirname), 
+    path: path.resolve(__dirname),
     filename: "bundle.js"
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'env']
-        }
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          query: {
+            presets: ['env', 'react']
+          }
+        },
       }
     ]
   },
