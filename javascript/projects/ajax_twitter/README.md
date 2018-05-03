@@ -17,7 +17,7 @@
 
 Download the project [skeleton](skeleton.zip?raw=true). Start by running `bundle
 install`. To setup the database, run `rails db:setup` which creates, loads from
-schema and seeds the db in one command. Run `npm run webpack --watch` or `npm run webpack -w` in a
+schema and seeds the db in one command. Run `npm run webpack` in a
 new tab to transpile the JavaScript.
 
 Take a quick look at the `webpack.config.js`. Note that our entry point is
@@ -32,12 +32,12 @@ our HTML, except that Rails compiles them all into a single file for production.
 But unlike Webpack, Rails doesn't intelligently manage dependencies, so you still
 have to be extra careful about the load order.
 
-It's currently only requiring `jquery` and `jquery_ujs`. After these, add 
+It's currently only requiring `jquery` and `jquery_ujs`. After these, add
 `require jquery.serializejson` (for submitting forms) and `require_tree .` (to
 include any files in `app/assets/javascripts`, for instance, our `bundle.js`).
 These are all included through `<script>` tags. Now we shouldn't have to worry
 about compiling our JS files again because Webpack will do it for us as long as we
-remember to webpack (ie. run `npm run webpack` or `npm run webpack --watch`).
+remember to webpack (ie. run `npm run webpack`).
 
 Before writing any code, run `rails s` and familiarize yourself with the
 skeleton!
