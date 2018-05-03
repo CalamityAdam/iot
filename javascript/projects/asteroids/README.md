@@ -89,7 +89,7 @@ you go.
 
 As stated in the Overview, you will create classes and objects in different files and they will need to interact with one another. When using Javascript in the browser there is no standard, native way to have one file require another. [Webpack][browser-modules] will allow us to use `require` and `module.exports` syntax to import and export our classes and objects from different files.
 
-`asteroids.js` will serve as the entry file for your project. Running `webpack --watch lib/asteroids.js lib/bundle.js` in your terminal will create a `bundle.js` file for you that loads your `asteroids.js` file, any files `asteroids.js` requires, and any files that those files require! Webpack also doesn't add anything to the window without you explicitly declaring it.
+`asteroids.js` will serve as the entry file for your project. Running `webpack --watch lib/asteroids.js -o lib/bundle.js --mode=development` in your terminal will create a `bundle.js` file for you that loads your `asteroids.js` file, any files `asteroids.js` requires, and any files that those files require! Webpack also doesn't add anything to the window without you explicitly declaring it.
 
 Once you've run your webpack command you should be able to locate your `bundle.js` file and add it in a script tag to your `index.html` **below your canvas element** (we'll come back to this point later).
 
@@ -274,7 +274,7 @@ Once you have your canvas context, construct a `GameView` object and call
 `GameView.prototype.start`.
 
 This is your webpack entry point, so start webpack (or restart it, if you're
-already running webpack --watch) with the "asteroids.js" file as your new entry
+already running the webpack command provided above) with the "asteroids.js" file as your new entry
 point.
 
 [dom-content-loaded]: https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded#Example
