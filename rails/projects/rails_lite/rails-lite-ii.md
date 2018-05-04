@@ -94,8 +94,10 @@ Triple extra credit if you implement `rails new`.
 
 Time to become a rails guru! Some more awesome `rails_lite` features:
 - Right now your app can't handle "PATCH" or "DELETE" requests. Fix this!
-- Implement `link_to` and `button_to`
+- Implement [link_to][link_to_doc] and [button_to](button_to_doc)
 - Strong params (e.g `require`, `permit`)
 - URL route helpers (e.g. `users_url` instead of `"/users'`)
 
 [rails_csrf_guide]: http://guides.rubyonrails.org/security.html#cross-site-request-forgery-csrf
+[link_to_doc]: https://apidock.com/rails/ActionView/Helpers/UrlHelper/link_to
+[button_to_doc]: https://apidock.com/rails/ActionView/Helpers/UrlHelper/button_to
