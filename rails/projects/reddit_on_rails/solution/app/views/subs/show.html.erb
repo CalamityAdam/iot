@@ -7,13 +7,13 @@
   <b>Description</b>
   <p><%= @sub.description %></p>
 
-  <%= link_to "Make New Post!", new_post_url %>
+  <a href="<%= new_post_url %>">Make New Post!</a>
 
   <ul>
     <% @sub.posts.each do |post| %>
-      <li>(<%= post.votes %>) <%= link_to post.title, post %></li>
+      <li>(<%= post.votes %>) <a href="<%= post %>"><%= post.title %></a></li>
     <% end %>
   </ul>
 
-  <%= link_to "Edit", edit_sub_url(@sub) if @sub.moderator == current_user %>
+  <a href="<%= edit_sub_url(@sub) if @sub.moderator == current_user %>">Edit</a>
 </div>

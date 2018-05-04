@@ -1,5 +1,5 @@
 <p>
-  (<%= comment.votes %>) <%= link_to comment.body, comment_url(comment.id) %>
+  (<%= comment.votes %>) <a href="<%= comment_url(comment.id) %>"><%= comment.body %></a>
 </p>
 
 <ul>

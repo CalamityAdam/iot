@@ -91,7 +91,7 @@ for inputting. Let's take a simple example:
   Option hash passed to a url helper will be used to generate the query
   string.
   -->
-<%= link_to "Add comment", new_comment_url(:post_id => @post.id) %>
+<a href="<%= new_comment_url(:post_id => @post.id) %>">Add comment</a>
 ```
 
 When a user clicks to comment on the `Post`, he is directed to a path like
