@@ -2,21 +2,14 @@
   "name": "ajax_twitter",
   "private": true,
   "scripts": {
-<<<<<<< HEAD
     "postinstall": "webpack --mode=development",
-=======
-    "postinstall":"webpack --mode=development",
->>>>>>> Update AJAX Twitter for Webpack 4
     "webpack": "webpack --mode=development --watch"
   },
   "dependencies": {
     "lodash": "^4.17.4",
     "webpack": "^4.6.0"
-<<<<<<< HEAD
   },
   "devDependencies": {
     "webpack-cli": "^2.1.2"
-=======
->>>>>>> Update AJAX Twitter for Webpack 4
   }
 }
