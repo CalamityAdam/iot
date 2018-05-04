@@ -46,8 +46,6 @@ worth the effort.
       export default configureStore;
     ```
 
-Great job.
-
 ## Use
 
 Now that we've set up the Redux Dev Tools, let's try them out.
