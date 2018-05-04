@@ -1,7 +1,7 @@
 <div class="border">
   <h1>
     (<%= @post.votes %>)
-    <%= link_to @post.title, post_url(@post) %> by
+    <a href="<%= post_url(@post) %>"><%= @post.title %></a> by
     <%= @post.author.name %>
   </h1>
 
@@ -19,13 +19,13 @@
   <b>Subs</b>
   <ul>
     <% @post.subs.each do |sub| %>
-      <li><%= link_to sub.name, sub_url(sub) %></li>
+      <li><a href="<%= sub_url(sub) %>"><%= sub.name %></a></li>
     <% end %>
   </ul>
 
   <h2>Comments</h2>
 
-  <%= link_to "Comment on this post!", new_post_comment_url(@post.id) %>
+  <a href="<%= new_post_comment_url(@post.id) %>">Comment on this post!</a>
   <br><br>
 
   <ul>
@@ -39,5 +39,5 @@
     <% end %>
   </ul>
 
-  <%= link_to "Edit", edit_post_url(@post) if @post.author == current_user %>
+  <a href="<%= edit_post_url(@post) if @post.author == current_user %>">Edit</a>
 </div>
