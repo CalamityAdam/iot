@@ -6,7 +6,7 @@ import merge from 'lodash/merge';
 
 const todosReducer = (state = {}, action) => {
   Object.freeze(state);
-  const nextState = {};
+  let nextState = {};
 
   switch(action.type){
     case RECEIVE_TODOS:
