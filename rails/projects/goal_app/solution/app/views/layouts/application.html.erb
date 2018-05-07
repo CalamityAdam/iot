@@ -20,7 +20,14 @@
   <div class="pull-right">
     <% if current_user %>
       <p>Welcome <%= current_user_name %></p>
-      <%= button_to "Log Out", session_url, method: :delete %>
+      <form action="<%= session_url %>" method="post">
+        <input
+          type="hidden"
+          name="authenticity_token"
+          value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Log Out">
+      </form>
 
       <p>Cheers Remaining:
         <span id="cheer-limit"><%= current_user.cheer_count %></span>

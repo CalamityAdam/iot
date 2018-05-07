@@ -11,7 +11,14 @@
 
   <body>
     <% if logged_in? %>
-      <%= button_to 'Log Out', session_url, method: :delete, class: 'log-out button' %>
+      <form action="<%= session_url %>" method="post" class="log-out button">
+        <input
+          type="hidden"
+          name="authenticity_token"
+          value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Log Out">
+      </form>
     <% end %>
     <%= yield %>
   </body>

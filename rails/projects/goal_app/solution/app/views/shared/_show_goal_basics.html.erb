@@ -10,7 +10,14 @@
   <% if current_user && current_user.id == goal.user_id %>
     <%= render "shared/goal_complete_button", goal: goal %>
     <br>
-    <%= button_to "delete '#{goal.title}' goal", goal_url(goal), method: :delete %>
+    <form action="<%= goal_url(goal) %>" method="post">
+        <input
+          type="hidden"
+          name="authenticity_token"
+          value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="<%= "delete '#{goal.title}' goal" %>">
+      </form>
   <% elsif current_user && !(goal.cheered_by?(current_user)) && current_user.cheer_count > 0 %>
     <%= render "shared/cheer_button", goal: goal %>
   <% end %>

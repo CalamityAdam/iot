@@ -19,7 +19,16 @@
           data-toggle='dropdown'><span class='glyphicon glyphicon-plus'></span>
         </button>
       </li>
-      <li><%= button_to "Sign out", session_url, method: :delete, class: "btn btn-primary navbar-btn" %></li>
+      <li>
+        <form action="<%= session_url %>" method="post" class="btn btn-primary navbar-btn">
+          <input
+            type="hidden"
+            name="authenticity_token"
+            value="<%= form_authenticity_token %>">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Sign out">
+        </form>
+      </li>
     <% else %>
       <li><a href="<%= new_session_url %>">Log in</a></li>
       <li><a href="<%= new_user_url %>">Sign up</a></li>
