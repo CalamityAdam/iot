@@ -12,7 +12,14 @@
     <li>
       <%= cat_link(cat) %>
 
-      <%= button_to "Destroy Cat!", cat_url(cat), method: :delete %>
+      <form action="<%= cat_url(cat) %>" method="post">
+        <input
+          type="hidden"
+          name="authenticity_token"
+          value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Destroy Cat!">
+      </form>
     </li>
   <% end %>
 </ul>

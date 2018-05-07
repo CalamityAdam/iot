@@ -12,8 +12,20 @@
     <br><br>
   </div>
 
-  <%= button_to "Upvote", upvote_post_url(@post) %>
-  <%= button_to "Downvote", downvote_post_url(@post) %>
+  <form action="<%= upvote_comment_url(@comment) %>" method="post">
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+    <input type="submit" value="Upvote">
+  </form>
+  <form action="<%= downvote_comment_url(@comment) %>" method="post">
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+    <input type="submit" value="Downvote">
+  </form>
 
   <br>
   <b>Subs</b>

@@ -3,8 +3,20 @@
   <%= @comment.votes %> upvotes
   <br><br>
 
-  <%= button_to "Upvote", upvote_comment_url(@comment) %>
-  <%= button_to "Downvote", downvote_comment_url(@comment) %>
+  <form action="<%= upvote_comment_url(@comment) %>" method="post">
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+    <input type="submit" value="Upvote">
+  </form>
+  <form action="<%= downvote_comment_url(@comment) %>" method="post">
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+    <input type="submit" value="Downvote">
+  </form>
 
   <b>Reply to this comment:</b>
   <%= render "form", comment: @new_comment %>
