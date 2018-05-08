@@ -182,7 +182,7 @@ items of this unordered list.
 - Add "Subscribe Now" and "Log In" buttons. (Note: use HTML button tags for these elements)
 - Add the gear icon.
   - Use [this list of Font Awesome icon classes][font-awesome] to find the right
-  gear image.
+  gear image. You may want to search "cog" instead of "gear".
   - Use the "Sections" and "Search" buttons defined in the `left-nav` as guides.
 
 A great use for the `layout.scss` stylesheet is to define styling shared by
