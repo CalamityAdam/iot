@@ -1,7 +1,7 @@
 <h1>All The Cats!</h1>
 
 <ul>
-  <li><a href="<%= "", cats_url %>">All</a></li>
+  <li><a href="<%= cats_url %>">All</a></li>
   <% Tag.all.each do |tag| %>
     <li><a href="<%= cats_url(tag: tag.name) %>"><%= tag.name %></a></li>
   <% end %>
