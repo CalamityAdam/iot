@@ -11,13 +11,13 @@ can view and comment on each other's goals, harnessing the power of
 
 ## Learning Goals
 
- * Know how to write model and controller tests using RSpec
- * Know how to write integration tests using Capybara and RSpec
- * Know what and when to test
- * Understand how to test *behavior* rather than *implementation*
- * Learn to develop one feature at a time (the 'slices' approach)
- * Recognize how **concerns** and **polymorphic associations** can
-   _dry_ up your code
+  * Know how to write model and controller tests using RSpec
+  * Know how to write integration tests using Capybara and RSpec
+  * Know what and when to test
+  * Understand how to test *behavior* rather than *implementation*
+  * Learn to develop one feature at a time (the 'slices' approach)
+  * Recognize how **concerns** and **polymorphic associations** can
+    _dry_ up your code
 
 ## Set Up
 
@@ -31,8 +31,8 @@ they can give you false positives in your tests.
 Also, pick a name for your app that is not "goal" or "goals", or
 anything else that will cause a conflict with a model class name.
 
-*You MUST use git* from the beginning with this project.  This means
-`git init` right away, and commit regularly. Try to commit at least after finishing each phase.
+*You MUST use git* from the beginning with this project. Commit regularly.
+Try to commit at least after finishing each phase.
 
 Feel free to consult the [reading on git][git-reading].
 
@@ -45,9 +45,9 @@ Feel free to consult the [reading on git][git-reading].
 
 Today's main focus will be integration tests, but we will write some model and controller specs as an RSpec warm up!
 
- 1. Generate the models and controllers needed for authentication and user creation. If RSpec setup went according to plan, spec files should be generated for you automatically. Do not write out your `User` model just yet - we are going to write this app TDD style!
- 2. Write model specs for `User`. Remember, model specs should test your model's validations, associations, and class scope methods (eg. `User::find_by_credentials`). Use `shoulda-matchers` to write tests for each of the validations in your user model. You won't have any associations written on your user model to begin with; go back and fill these in as you go. Refer to the reading on [RSpec Model Testing](../../readings/rspec-models.md) and last night's homework as needed.
- 3. Next, write controller tests for each action in your `UsersController`. Refer to the [RSpec Controller reading](../../readings/rspec-controllers.md) and last night's homework as needed.
+  1. Generate the models and controllers needed for authentication and user creation. If RSpec setup went according to plan, spec files should be generated for you automatically. Do not write out your `User` model just yet - we are going to write this app TDD style!
+  2. Write model specs for `User`. Remember, model specs should test your model's validations, associations, and class scope methods (eg. `User::find_by_credentials`). Use `shoulda-matchers` to write tests for each of the validations in your user model. You won't have any associations written on your user model to begin with; go back and fill these in as you go. Refer to the reading on [RSpec Model Testing](../../readings/rspec-models.md) and last night's homework as needed.
+  3. Next, write controller tests for each action in your `UsersController`. Refer to the [RSpec Controller reading](../../readings/rspec-controllers.md), [additional gems][rails-5-updates], and last night's homework as needed.
 
 Run your specs and watch them fail. Now, implement `User` and `UsersController` and experience the joy of turning your specs green!
 
@@ -103,6 +103,7 @@ Start filling in the missing test logic, one test at a time.
 
 This is the 'Red, Green, Refactor' approach.
 
+[rails-5-updates]: ../../readings/rails-5-updates.md
 [rspec-setup]: ../../readings/rspec-and-rails-setup.md
 [capybara]: ../../readings/capybara.md
 
