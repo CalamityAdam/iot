@@ -203,8 +203,20 @@ As of version `3.1.1`, `shoulda-matchers` master branch is now compatible!
 
 #### `rails-controller-testing`
 
-Planning on testing your controllers?
-Add this: `gem 'rails-controller-testing'`
+In Rails 4.x, we can test instance variables assigned in a controller#action and which template a particular controller#action renders using `assigns` and `assert_template` methods.
+
+```ruby
+# Rails 4.x
+class ProductsControllerTest < ActionController::TestCase
+  def test_index_template_rendered
+    get :index
+    assert_template :index
+    assert_equal Product.all, assigns(:products)
+  end
+end
+```
+
+In Rails 5.x, these two methods have now been removed from the core and moved to a separate gem `rails-controller-testing`. You must add this gem if you plan on using those two methods.
 
 ### Newly Included Technologies
 
