@@ -186,7 +186,7 @@
 [normalizing]: http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html
 [updating-normalized]: http://redux.js.org/docs/recipes/reducers/UpdatingNormalizedData.html
 
-### Homeworks (105 min)
+### Homeworks (150 min)
 * [Giphy Homework][giphy_homework] (90 min)
 * [Full-stack Proposal Prep: Component Hierarchy with Wireframes][prep-component-hierarchy] (60 min)
 
@@ -222,7 +222,7 @@
 [redirect]: readings/redirect.md
 [advanced-containers]: readings/advanced_containers.md
 
-### Homeworks (60 min)
+### Homeworks (90 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
 * [Full-stack Proposal Prep: Schema][prep-schema] (30 min)
 * [Full-stack Proposal Prep: State Shape][prep-state-shape] (30 min)
@@ -262,7 +262,7 @@
 [preloaded_state]: readings/preloaded_state.md
 [user_authentication]: readings/front_end_auth.md
 
-### Homeworks (60/75 min)
+### Homeworks (90 min)
 * Do the auth part of [A04 Prep][a04_prep] (60 min)
   * Front-end auth (the main concept in BenchBnB Day 1) builds on top of regular Rails backend auth, so make sure you build on a solid base.
   * You'll be surprised how much of it you've forgotten by now. It's normal.
