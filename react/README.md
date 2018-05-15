@@ -188,7 +188,7 @@
 
 ### Homeworks (105 min)
 * [Giphy Homework][giphy_homework] (90 min)
-* [Full-stack Proposal Prep: Component Hierarchy][prep-component-hierarchy] (15 min)
+* [Full-stack Proposal Prep: Component Hierarchy with Wireframes][prep-component-hierarchy] (60 min)
 
 [giphy_homework]: homeworks/giphy
 [prep-component-hierarchy]: ../full-stack-project/homeworks/proposal-prep/component-hierarchy.md
@@ -224,8 +224,8 @@
 
 ### Homeworks (60 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
-* [Full-stack Proposal Prep: Schema][prep-schema]
-* [Full-stack Proposal Prep: State Shape][prep-state-shape] (15 min)
+* [Full-stack Proposal Prep: Schema][prep-schema] (30 min)
+* [Full-stack Proposal Prep: State Shape][prep-state-shape] (30 min)
 
 [rainbow_routes]: homeworks/rainbow_routes
 [prep-state-shape]: ../full-stack-project/homeworks/proposal-prep/state-shape.md
@@ -266,7 +266,7 @@
 * Do the auth part of [A04 Prep][a04_prep] (60 min)
   * Front-end auth (the main concept in BenchBnB Day 1) builds on top of regular Rails backend auth, so make sure you build on a solid base.
   * You'll be surprised how much of it you've forgotten by now. It's normal.
-* [Full-stack Proposal Prep: Routes][prep-routes] (15 min)
+* [Full-stack Proposal Prep: Routes][prep-routes] (30 min)
 
 [a04_prep]: https://github.com/appacademy/assessment-prep#assessment-4
 [prep-routes]: ../full-stack-project/homeworks/proposal-prep/routes.md
