@@ -75,10 +75,11 @@ and action to invoke for each one. Each API endpoint has a conventional meaning:
 create/read/update/destroy a resource. The controllers and their
 actions are the ones actually doing the **CRUD** ing.
 
-Generate your first controller with:
+Create your first controller by navigating to `app/controllers/` and creating a new file called `users_controller.rb`:
 
-```
-$ rails generate controller Users
+```rb
+class UsersController < ApplicationController
+end
 ```
 
 Note that controllers are always plural; a controller manages requests
