@@ -13,8 +13,15 @@
 .currency-option {
   float: right;
   padding-left: 5px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-.rates-list {
-  padding-top: 10px;
+.currency-option:hover {
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
+  padding: 20px;
 }
