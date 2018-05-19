@@ -1,9 +1,9 @@
-const selectCurrency = (baseCurrency, rates) => {
+const selectLocation = (city, jobs) => {
   return {
-    type: "SWITCH_CURRENCY",
-    baseCurrency: baseCurrency,
-    rates: rates
+    type: "SWITCH_LOCATION",
+    city,
+    jobs,
   };
 };
 
-export default selectCurrency;
+export default selectLocation;

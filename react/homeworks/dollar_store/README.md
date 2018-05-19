@@ -6,7 +6,7 @@ be using `Provider` or `connect()`. We will be using the store's three built-in
 methods: `subscribe`, `dispatch`, and `getState`.
 
 Take a look at the [live demo][live-demo] to see the app in action.  Try
-clicking on a currency to see its conversion rates.   
+clicking on a currency to see its conversion rates.
 
 [live-demo]: https://appacademy.github.io/curriculum/currency_demo/
 
