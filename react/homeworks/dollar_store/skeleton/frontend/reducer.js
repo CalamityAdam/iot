@@ -1,6 +1,6 @@
 const initialState = {
-  baseCurrency: "Please select",
-  rates: {}
+  city: "Please Select", 
+  jobs: []
 };
 
 const reducer = (state = initialState, action) => {
