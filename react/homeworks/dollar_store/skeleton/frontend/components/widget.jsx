@@ -1,6 +1,6 @@
 import React from 'react';
-import Currency from './currency';
-import selectCurrency from '../actions';
+import Job from './job';
+import selectLocation from './../actions';
 
 class Widget extends React.Component {
 
@@ -10,62 +10,65 @@ class Widget extends React.Component {
 
     // require this component to re-render whenever the store's state changes
     this.props.store.subscribe(this.forceUpdate);
-    this.currencies = ["USD", "EUR", "CAD", "JPY", "GBP", "CNY"];
-    this.selectCurrency = selectCurrency.bind(this);
+    this.cities = ["San Francisco", "Seattle", "New York", "Austin", "Remote"];
+    this.selectLocation = selectLocation.bind(this);
   }
 
-  fetchRates(currency) {
+  fetchJobListings(city) {
     $.ajax({
-      url: `http://api.fixer.io/latest?base=${currency}`,
+      crossDomain: true,
+      dataType: 'jsonp',
+      url: `https://jobs.github.com/positions.json?location=${city}&markdown=true`,
       type: "GET",
-      dataType: "JSON",
       success: function(resp) {
-
-        // tell the store to update with the new base currency and rates;
-        // use the action creator 'selectCurrency' to build the object to
+        // tell the store to update with the new location and jobs;
+        // use the action creator 'selectLocation' to build the object to
         // be dispatched
-        this.props.store.dispatch(
-          this.selectCurrency(resp.base, resp.rates)
-        );
+        this.props.store.dispatch(this.selectLocation(city, resp))
+
       }.bind(this)
     });
   }
 
   render() {
 
-    // get the store's current state and deconstruct it into 'rates'
-    // and 'baseCurrency' variables
-    const { rates, baseCurrency } = this.props.store.getState();
-
-    const currencyOptions = this.currencies.map( (currency) => (
-        <div onClick={ () => { this.fetchRates(currency) }}
-             key={currency}
+    // get the store's current state and deconstruct it into 'jobs'
+    // and 'city' variables
+    const { city, jobs } = this.props.store.getState();
+    const cityOptions = this.cities.map(city => (
+        <button onClick={ () => { this.fetchJobListings(city) }}
+             key={city}
              className="currency-option">
-          {currency}
-        </div>
+          {city}
+        </button>
       )
     );
 
-    const currencyNames = Object.keys(rates);
-    const currencyRates = currencyNames.map( (currency) => (
-      <Currency name={currency}
-                rate={rates[currency]}
-                key={currency} />
-      )
+    const jobListings = jobs.map(job => (
+      <Job key={job.id}
+            title={job.title}
+            company={job.company}
+            location={job.location}
+            type={job.type}
+            description={job.description}
+            info = {job.url}/>
+    )
     );
 
     return (
       <div>
-        <h1>Currency Exchange Rates</h1>
-        <h3>Base Currency: {baseCurrency}</h3>
+        <h1>Github Job Listings</h1>
+        <h3>City: {city}</h3>
 
         <div className="currency-selector">
-          Get Rates:
-          {currencyOptions}
+          Location:
+          {cityOptions}
         </div>
-        <div className="rates-list">
-          {currencyRates}
-        </div>
+        
+        <h3>{jobListings.length} Job Listings</h3>
+        <ol className="rates-list">
+            {jobListings}
+        </ol>
       </div>
     );
   }
