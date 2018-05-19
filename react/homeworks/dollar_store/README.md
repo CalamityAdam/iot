@@ -51,27 +51,26 @@ Let's start by defining our app's Redux `store`.
 
 The entry file requires our `store` and passes it as a prop to the `Widget`
 component. If you refresh the `index.html` page, you'll see a new webpack error:
-`selectCurrency` is `undefined` in `Widgets`. Let's fix this by creating an
+`selectLocation` is `undefined` in `Widgets`. Let's fix this by creating an
 action creator.
 
 ### Creating an Action Creator
 
 We need an action creator that will build the action object we pass to
 `store.dispatch`. Look in the `Widget` component again. You can see in the
-AJAX's success callback that we're using the `selectCurrency` function to create
+AJAX's success callback that we're using the `selectLocation` function to create
 the action passed to the store's `dispatch` call. Time to write that action
 creator.
 
 Open `frontend/actions.js`. This is where our app's action creators will live.
-Let's define and export a `selectCurrency` function that takes as arguments a
-`baseCurrency` string and a `rates` object. It returns an action (i.e. a POJO)
-with the following keys and values:
+Let's define and export a `selectLocation` function that takes as arguments a
+`city` string and a `jobs` array. It returns an action (i.e. a POJO, plain old javascript object) with the following keys and values:
 
-- `type: "SWITCH_CURRENCY"`
-- `baseCurrency`
-- `rates`
+- `type: "SWITCH_LOCATION"`
+- `city`
+- `jobs`
 
-Set it temporarily on the window (`window.selectCurrency = selectCurrency`) and
+Set it temporarily on the window (`window.selectLocation = selectLocation`) and
 make sure it's working properly in the console before moving on.
 
 ### Creating the `reducer`
@@ -83,7 +82,7 @@ Open `frontend/reducer.js`. As you know from the [reducers reading][reducers-rea
 For our currency widget, our state needs to keep track of two things: a base currency and a collection of corresponding rates. We need to pass some initial/default values in the case that state is not passed in.
 
 ```js
-const initialState = {baseCurrency: "Please select", rates: {}};
+const initialState = {city: "Please Select", jobs: []};
 ```
 
 We currently have defined a dummy reducer which always returns the `initialState`. Now let's build it out by adding a `switch` statement. It's going to start by looking something like this:
@@ -101,17 +100,27 @@ export default reducer;
 
 Don't forget the export statement!
 
-Right now, we're returning the same state that is passed in. What we want to do is see if the `action.type` matches something we expect (e.g. `"SWITCH_CURRENCY"`) and return an updated version of the state accordingly. Add a `case` statement to check for this action type. It should return a new object with the correct properties. We can grab those off the action (i.e. `action.rates` and `action.baseCurrency`).
+Right now, we're returning the same state that is passed in. What we want to do is see if the `action.type` matches something we expect (e.g. `"SWITCH_LOCATION"`) and return an updated version of the state accordingly. Add a `case` statement to check for this action type. It should return a new object with the correct properties. We can grab those off the action (i.e. `action.jobs` and `action.city`).
 
 At this point, we have created a Redux store that dispatches actions and responds to dispatched actions. Let's put the reducer on the window (`window.reducer = reducer`) and then test it out in the browser console. Pass a test case to the reducer and make sure it returns what we're expecting. For example,
 
 ```js
 let action = {
-  type: "SWITCH_CURRENCY",
-  baseCurrency: "test",
-  rates: {"AUD": 3, "USD": 2, "JPY": 5}
+  type: "SWITCH_LOCATION",
+  city: "remote",
+  jobs: [
+    {
+      id: 1,
+      title: "Test Job",
+      company: "Github",
+      type: "Full Time",
+      location: "remote",
+      description: "test description",
+      url: "www.github.com/appacademy"
+    }
+  ]
 };
-reducer(null, action) //=> {baseCurrency: "test", rates: {"AUD": 3, "USD": 2, "JPY": 5}}
+reducer(null, action) //=> {city: "remote", jobs: [{ id: 1, .. }]}
 ```
 
 Perfect! Make sure to remove the reducer from the window once you're done testing it.
@@ -120,4 +129,4 @@ If you refresh the `index.html` page, you should have a working currency convert
 
 ## Phase 2: Bonus!
 
-Add another component that uses the data in the rates `store`.  
+Add another component that uses the data in the rates `store`.
