@@ -1,4 +1,4 @@
-# Dollar Store
+# Job Listing
 
 Today, we're going to finish building out the architecture for a React
 currency-conversion widget to use a Redux store. For this assignment, we won't
