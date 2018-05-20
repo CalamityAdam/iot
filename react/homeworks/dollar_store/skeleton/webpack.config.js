@@ -5,23 +5,25 @@ module.exports = {
   context: __dirname,
   entry: "./frontend/entry.jsx",
   output: {
-    path: path.resolve(__dirname),  
+    path: path.resolve(__dirname),
     filename: "bundle.js"
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: [/\.jsx?$/],
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'env']
-        }
+        test: /\.jsx?$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          query: {
+            presets: ['env', 'react']
+          }
+        },
       }
     ]
   },
   devtool: 'source-map',
   resolve: {
-    extensions: [".js", '.jsx', '*'],
+    extensions: [".js", '.jsx', '*']
   }
 };
