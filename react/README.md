@@ -112,11 +112,11 @@
 [fruit-stand-02-source]: ./demos/fruit_stand_demos/fruit_stand_02
 
 ### Homeworks (50 min)
-- [Dollar Store][dollar_store_hw] (45 min)
+- [Job Listing][job_listing_hw] (45 min)
 - [Selecting a Full-stack Project][selecting-a-fsp] (5 min)
 - Check out the [list of approved full-stack apps][approved-apps]
 
-[dollar_store_hw]: homeworks/dollar_store
+[job_listing_hw]: homeworks/job_listing
 [selecting-a-fsp]:  ../full-stack-project/proposal/selecting-a-fsp.md
 [approved-apps]: ../full-stack-project/proposal/projects-to-clone.md
 
