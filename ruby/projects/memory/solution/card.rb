@@ -1,4 +1,3 @@
-require 'byebug'
 class Card
   VALUES = ("A".."Z").to_a
 
