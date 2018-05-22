@@ -38,7 +38,7 @@ class Widget extends React.Component {
     const cityOptions = this.cities.map(city => (
         <button onClick={ () => { this.fetchJobListings(city) }}
              key={city}
-             className="currency-option">
+             className="job-option">
           {city}
         </button>
       )
@@ -60,13 +60,13 @@ class Widget extends React.Component {
         <h1>Github Job Listings</h1>
         <h3>City: {city}</h3>
 
-        <div className="currency-selector">
+        <div className="location-selector">
           Location:
           {cityOptions}
         </div>
         
         <h3>{jobListings.length} Job Listings</h3>
-        <ol className="rates-list">
+        <ol className="listings-list">
             {jobListings}
         </ol>
       </div>
