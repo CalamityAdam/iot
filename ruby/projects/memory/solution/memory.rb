@@ -73,7 +73,7 @@ class MemoryGame
   attr_reader :board
 end
 
-if $PROGRAM_NAME = __FILE__
+if __FILE__ == $PROGRAM_NAME
   size = ARGV.empty? ? 4 : ARGV.shift.to_i
   MemoryGame.new(ComputerPlayer.new(size), size).play
 end
