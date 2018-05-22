@@ -4,8 +4,6 @@ Download this [skeleton][skeleton]. Update advanced_selectors.css to practice st
 
 [skeleton]: ./skeleton.zip
 
-Also, the solution changes the background position for 'checked' only, but there are three colors in the sprite, so maybe we could add a hover effect as well.
-
 1. Set the `cursor:pointer` and `outline:none` properties for all radio buttons, select elements, and submit buttons.
 2. Style the `background-color` of the submit button gold using the `last-child` selector and give it a darkening hover effect.
 3. Color every other list element in the directions list with a light-grey background.
