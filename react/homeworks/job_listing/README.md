@@ -1,22 +1,22 @@
 # Job Listing
 
 Today, we're going to finish building out the architecture for a React
-currency-conversion widget to use a Redux store. For this assignment, we won't
+job listing widget to use a Redux store. For this assignment, we won't
 be using `Provider` or `connect()`. We will be using the store's three built-in
 methods: `subscribe`, `dispatch`, and `getState`.
 
 Take a look at the [live demo][live-demo] to see the app in action.  Try
-clicking on a currency to see its conversion rates.
+clicking on a location to see the different job listings from Github.
 
-[live-demo]: https://appacademy.github.io/curriculum/currency_demo/
+[live-demo]: https://appacademy.github.io/curriculum/job_listing_demo/
 
 ## Phase 0: Setup
 
-To get started, download the [project skeleton][currency-skeleton].  Make sure to
+To get started, download the [project skeleton][job-skeleton].  Make sure to
 run `npm install` to get all the required node modules. Run `npm start` (a handy npm script we've set up) to start `webpack --watch`. Note, there will
  be webpack errors but we'll work on fixing those right now.
 
-[currency-skeleton]: ./skeleton.zip?raw=true
+[job-skeleton]: ./skeleton.zip?raw=true
 
 Poke around the components in the `frontend/components` folder and get
 acquainted with them, especially the `Widget` component. Notice where we call
@@ -28,11 +28,11 @@ the store's built-in methods throughout:
 
 Now we need to make the actual Redux store so our `Widget` can successfully call all of those!
 
-## Phase 1: Currency Redux Structure
+## Phase 1: Job Listing Redux Structure
 
 Following the Redux pattern, a store should keep track of our application's
-state. This means that when we make our AJAX request to fetch the currency
-rates, it should update the store with its results. This is exactly what the
+state. This means that when we make our AJAX request to fetch job listings,
+it should update the store with its results. This is exactly what the
 `success` callback in our `Widget`'s `$.ajax`' call is trying to do. But right
 now, we don't have a store to dispatch to!
 
@@ -79,7 +79,7 @@ Open `frontend/reducer.js`. As you know from the [reducers reading][reducers-rea
 
 [reducers-reading]: ../../readings/reducers.md
 
-For our currency widget, our state needs to keep track of two things: a base currency and a collection of corresponding rates. We need to pass some initial/default values in the case that state is not passed in.
+For our widget, our state needs to keep track of two things: location and a collection of corresponding job listings. We need to pass some initial/default values in the case that state is not passed in.
 
 ```js
 const initialState = {city: "Please Select", jobs: []};
@@ -125,8 +125,4 @@ reducer(null, action) //=> {city: "remote", jobs: [{ id: 1, .. }]}
 
 Perfect! Make sure to remove the reducer from the window once you're done testing it.
 
-If you refresh the `index.html` page, you should have a working currency converter!
-
-## Phase 2: Bonus!
-
-Add another component that uses the data in the rates `store`.
+If you refresh the `index.html` page, you should have a working job listing app!
