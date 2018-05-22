@@ -251,12 +251,14 @@ template naming convention, which is as follows:
 `"views/#{controller_name}/#{template_name}.html.erb"`. Use
 `ActiveSupport`'s [`#underscore`][underscore] (`require 'active_support/inflector'`)
 method to convert the controller's class name to snake case. We'll be
-lazy and not chop off the `_controller` bit at the end.
+lazy and not chop off the `_controller` bit at the end. Try using the [`File.dirname(__FILE__)`][dirname] and [`File.join`][join] methods to help you construct the path. If we don't use the `File.dirname` method, our path will be inflexible and won't work when we want to publish our rails lite project as a gem! 
 
 Run the `bin/p03_template_server.rb` example and visit `http://localhost:3000`. Then
 run `spec/p03_template_spec.rb` to check your work.
 
 [underscore]: http://api.rubyonrails.org/v4.2/classes/ActiveSupport/Inflector.html#method-i-underscore
+[dirname]: http://ruby-doc.org/core-2.3.1/File.html#method-c-dirname
+[join]: http://ruby-doc.org/core-2.3.1/File.html#method-c-dirname
 
 ## Phase IV: Adding the Session
 
