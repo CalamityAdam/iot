@@ -21,7 +21,7 @@ us solve them!
 ### Tile
 
 Let's implement a Tile class to represent each position on the Sudoku
-board. Each Tile has a **value** and is either **given** or not. You can
+board. Each Tile has a **value** and is either **given** or not. You cannot
 change the value of any Tile unless it was given (that would be
 cheating!) The game would be incredibly frustrating if we didn't have
 some way to distinguish given Tiles from non-givens. You'll want to
