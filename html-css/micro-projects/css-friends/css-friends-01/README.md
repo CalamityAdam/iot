@@ -68,8 +68,7 @@ want large click targets. Make your links `block` elements and add
 padding to them. Also do not forget the hover states, this is important
 and gratifying feedback for the user.
 
-Pixel perfect? Do not move on before calling over a **TA** to check your
-work!
+Pixel perfect? Good!
 
 [ss-01-a]: ../docs/screenshots/01-header-a.png
 [ss-01-b]: ../docs/screenshots/01-header-b.png
