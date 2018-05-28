@@ -1,4 +1,3 @@
-require_relative 'p02_hashing'
 
 class HashSet
   attr_reader :count
