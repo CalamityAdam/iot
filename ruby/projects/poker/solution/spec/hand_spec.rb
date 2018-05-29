@@ -3,6 +3,11 @@ require 'hand'
 require 'card'
 
 describe Hand do
+  # We're making Card instances here and throughout. In general, it's better
+  # to use doubles for instances of any class other than the one currently
+  # being tested. But the Hand class sorts the cards, which uses the Card#<=> 
+  # method. If we used card doubles, we'd need to simulate the behavior of 
+  # Card#<=>, which would be very cumbersome.
   let(:cards) {[
                 Card.new(:spades, :ten),
                 Card.new(:hearts, :five),
