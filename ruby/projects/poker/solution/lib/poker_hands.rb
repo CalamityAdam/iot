@@ -1,4 +1,5 @@
 require_relative './tie_breaker'
+require 'byebug'
 
 module PokerHands
   include TieBreaker
@@ -81,14 +82,20 @@ module PokerHands
   end
 
   def straight?
-    if has_a?(:ace) && has_a?(:two)
-      straight = Card.values[0..3] + [:ace]
-    else
-      low_index = Card.values.index(@cards.first.value)
-      straight = Card.values[low_index..(low_index + 4)]
+    values = @cards.map(&:value)
+    if values.combination(2).none? {|el1, el2| el1 == el2}
+      value_indices = values.map{|el| Card.values.index(el) }
+      max = value_indices.max
+      min = value_indices.min
+      value_indices.delete(max)
+      next_max = value_indices.max
+      if max == min + 4
+        return true
+      elsif values.include?(:ace) && next_max == min + 3
+        return true
+      end
     end
-
-    @cards.map(&:value) == straight
+    false
   end
 
   def three_of_a_kind?

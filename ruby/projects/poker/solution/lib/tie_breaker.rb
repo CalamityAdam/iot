@@ -74,10 +74,21 @@ module TieBreaker
   def compare_set_then_high_card(n, other_hand)
     set_card, other_set_card = set_card(n), other_hand.set_card(n)
     if set_card == other_set_card
-      cards_without(set_card.value).last <=>
-      other_hand.cards_without(set_card.value).last
+      cards_without_set_card = cards_without(set_card.value)
+      other_cards_without_set_card = other_hand.cards_without(set_card.value)
+      values_without_set_card = cards_without_set_card.map(&:value)
+      other_values_without_set_card = other_cards_without_set_card.map(&:value)
+      value_indices = values_without_set_card.map do |el| 
+        Card.values.index(el)
+      end
+      other_value_indices = other_values_without_set_card.map do |el| 
+        Card.values.index(el)
+      end
+      value_indices.max <=> other_value_indices.max
     else
-      set_card <=> other_set_card
+      set_card_index = Card.values.index(set_card.value)
+      other_set_card_index = Card.values.index(other_set_card.value)
+      set_card_index <=> other_set_card_index
     end
   end
 

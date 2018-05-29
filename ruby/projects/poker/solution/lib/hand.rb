@@ -7,7 +7,7 @@ class Hand
 
   def initialize(cards)
     raise 'must have five cards' unless cards.count == 5
-    @cards = cards.sort
+    @cards = cards#.sort
   end
 
   def self.winner(hands)
