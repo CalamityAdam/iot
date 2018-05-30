@@ -1,20 +1,22 @@
 # EXERCISE 1
 class Stack
+  attr_reader :underlying_array
+
   def initialize
-    @stack = []
+    @underlying_array = []
   end
 
-  def add(el)
-    @stack << el
+  def push(el)
+    underlying_array.push(el)
     el
   end
 
-  def remove
-    @stack.pop
+  def pop
+    underlying_array.pop
   end
 
-  def show
-    @stack.dup
+  def peek
+    underlying_array.last
   end
 end
 
@@ -22,21 +24,23 @@ end
 
 # EXERCISE 2
 class Queue
+  attr_reader :underlying_array
+
   def initialize
-    @queue = []
+    @underlying_array = []
   end
 
   def enqueue(el)
-    @queue << el
+    underlying_array.push(el)
     el
   end
 
   def dequeue
-    @queue.shift
+    underlying_array.shift
   end
 
-  def show
-    @queue.dup
+  def peek
+    underlying_array.first
   end
 end
 
@@ -44,28 +48,34 @@ end
 
 # EXERCISE 3
 class Map
+  attr_reader :underlying_array
+
   def initialize
-    @map = []
+    @underlying_array = []
   end
 
-  def assign(key, value)
-    pair_index = @map.index {|pair| pair[0] == key}
-    pair_index ? @map[pair_index][1] = value : @map.push([key, value])
-    [key, value]
+  def set(key, value)
+    pair_index = underlying_array.index {|pair| pair[0] == key}
+    if pair_index
+      underlying_array[pair_index][1] = value
+    else
+      underlying_array.push([key, value])
+    end
+    value
   end
 
-  def lookup(key)
-    @map.each {|pair| return pair[1] if pair[0] == key}
+  def get(key)
+    underlying_array.each {|pair| return pair[1] if pair[0] == key}
     nil
   end
 
-  def remove(key)
-    @map.reject! {|pair| pair[0] == key}
+  def delete(key)
+    underlying_array.reject! {|pair| pair[0] == key}
     nil
   end
 
   def show
-    deep_dup(@map)
+    deep_dup(underlying_array)
   end
 
   private
