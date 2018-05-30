@@ -1,6 +1,6 @@
 # Rails
 
-:link: *[w4d1](#w4d1) :: [w4d2](#w4d2) :: [w4d3](#w4d3) :: [w4d4](#w4d4) :: [w4d5](#w4d5) :: [w5d1](#w5d1) :: [w5d2](#w5d2) :: [w5d3](#w5d3)* :link:
+:link: _[w4d1](#w4d1) :: [w4d2](#w4d2) :: [w4d3](#w4d3) :: [w4d4](#w4d4) :: [w4d5](#w4d5) :: [w5d1](#w5d1) :: [w5d2](#w5d2) :: [w5d3](#w5d3)_ :link:
 
 * [Setup][rails-setup]
 * [Rails API (api.rubyonrails.org)][rails-api]
@@ -17,24 +17,28 @@
 ## w4d1
 
 ### Assessment03
-+ [Practice][assessment-prep-3]
+
+* [Practice][assessment-prep-3]
 
 [assessment-prep-3]: http://github.com/appacademy/assessment-prep#assessment-3
 
 ### Materials (100 min)
-:closed_lock_with_key: `go_video_go`
-+ :movie_camera: [What is an API?][api-video] (10 min)
-+ :movie_camera: [HTTP Request/Response][http-req-res-video] (5 min)
-+ :movie_camera: [Rails Routing][rails-routing-video] (5 min)
-+ :movie_camera: [Routes Demo][routes-demo-video] (10 min)
-+ :movie_camera: [Basic Controller Demo][basic-controller-demo-video] (15 min)
-+ :movie_camera: [RESTful Controller Demo][restful-controller-demo-video] (15 min)
-+ :book: [Routing I: Basics][routing-i] (10 min)
-+ :book: [Basic Controllers and Strong Params][basic-controllers] (10 min)
-+ :book: [Callbacks][callbacks] (5 min)
-+ :book: [Delegation][delegation] (5 min)
-+ :book: [Contextual Overview of DNS][dns_reading] (5 min)
-+ :book: [Testing Routes with Postman][postman] (5 min)
+
+* :book: [Routing I: Basics][routing-i] (10 min)
+* :book: [Basic Controllers and Strong Params][basic-controllers] (10 min)
+* :book: [Callbacks][callbacks] (5 min)
+* :book: [Delegation][delegation] (5 min)
+
+  :closed_lock_with_key: `go_video_go`
+
+* :movie_camera: [What is an API?][api-video] (10 min)
+* :movie_camera: [HTTP Request/Response][http-req-res-video] (5 min)
+* :movie_camera: [Rails Routing][rails-routing-video] (5 min)
+* :movie_camera: [Routes Demo][routes-demo-video] (10 min)
+* :movie_camera: [Basic Controller Demo][basic-controller-demo-video] (15 min)
+* :movie_camera: [RESTful Controller Demo][restful-controller-demo-video] (15 min)
+* :book: [Contextual Overview of DNS][dns_reading] (5 min)
+* :book: [Testing Routes with Postman][postman] (5 min)
 
 [api-video]: https://vimeo.com/168498417
 [http-req-res-video]: https://vimeo.com/168498424
@@ -48,6 +52,7 @@
 [postman]: readings/postman.md
 
 ### Culture
+
 * **[True Diversity is Intersectional][intersectional]** (9 min)
 * [6-Year-Old Girls Already Have Gendered Beliefs About Intelligence][gendered-beliefs] (4 min)
 * [VCs and Female Entrepreneurs][vc-entrepreneurs] (5 min)
@@ -61,19 +66,20 @@
 [bias-product]: https://techcrunch.com/2016/11/16/when-bias-in-product-design-means-life-or-death/
 
 ### Additional Resources
-+ :book: [Basic JSON API][basic-json-api]
-+ :book: [Routing II: Nested Collections][routing-ii]
-+ :book: [Routing III: Adding non-default routes][routing-iii]
-+ :movie_camera: [(cc) 03-basic-rails-routing][03-basic-rails-routing]
-+ :movie_camera: [(cc) 04-strong-params][04-strong-params]
-+ :movie_camera: [(cc) 05-nested-resources][05-nested-resources]
-+ :movie_camera: [(cc) 06-erb-and-views][06-erb-and-views]
-+ :movie_camera: [(cc) 07-basic-forms][07-basic-forms]
-+ :movie_camera: [(cc) 08-form-request-cycle][08-form-request-cycle]
-+ :movie_camera: [(cc) 09-select][09-select]
-+ :movie_camera: [(cc) 10-form-partial][10-form-partial]
-+ :movie_camera: [(cc) 11-form-encoding][11-form-encoding]
-  + :computer: [Code from demos][rails-videos-code]
+
+* :book: [Basic JSON API][basic-json-api]
+* :book: [Routing II: Nested Collections][routing-ii]
+* :book: [Routing III: Adding non-default routes][routing-iii]
+* :movie_camera: [(cc) 03-basic-rails-routing][03-basic-rails-routing]
+* :movie_camera: [(cc) 04-strong-params][04-strong-params]
+* :movie_camera: [(cc) 05-nested-resources][05-nested-resources]
+* :movie_camera: [(cc) 06-erb-and-views][06-erb-and-views]
+* :movie_camera: [(cc) 07-basic-forms][07-basic-forms]
+* :movie_camera: [(cc) 08-form-request-cycle][08-form-request-cycle]
+* :movie_camera: [(cc) 09-select][09-select]
+* :movie_camera: [(cc) 10-form-partial][10-form-partial]
+* :movie_camera: [(cc) 11-form-encoding][11-form-encoding]
+  * :computer: [Code from demos][rails-videos-code]
 
 [routing-i]: readings/routing-part-i.md
 [basic-controllers]: readings/basic-controllers.md
@@ -92,8 +98,9 @@
 [rails-videos-code]: demos/intro_rails_video_demo
 
 ### Projects
-+ [First Routes and Controllers][first-routes]
-+ [Art Share API][artshare-api]
+
+* [First Routes and Controllers][first-routes]
+* [Art Share API][artshare-api]
 
 [first-routes]: projects/first_routes
 [artshare-api]: projects/art_share_api
@@ -101,12 +108,14 @@
 ## w4d2
 
 ### Materials (2 hr, 3 min)
+
 :closed_lock_with_key: `go_video_go`
-+ :movie_camera: [Rails Views: Intro][views-intro] (27 min)
-+ :movie_camera: [Rails Views: Forms][views-forms] (40 min)
-+ :movie_camera: [Rails Views: Partials][views-partials] (36 min)
-+ :movie_camera: [Debugging a Rails Project][views-debugging] (20 min)
-  + :computer: [Code from demos][rails-views-code]
+
+* :movie_camera: [Rails Views: Intro][views-intro] (27 min)
+* :movie_camera: [Rails Views: Forms][views-forms] (40 min)
+* :movie_camera: [Rails Views: Partials][views-partials] (36 min)
+* :movie_camera: [Debugging a Rails Project][views-debugging] (20 min)
+  * :computer: [Code from demos][rails-views-code]
 
 [views-intro]: https://vimeo.com/194372657
 [views-forms]: https://vimeo.com/194376967
@@ -115,6 +124,7 @@
 [rails-views-code]: demos/library_demo
 
 ### Additional Resources
+
 * :book: [Partials][partials]
 * :book: [ERB][erb]
 * :book: [Rails Parameter Conventions][rails-params-conventions]
@@ -131,6 +141,7 @@
 [custom-validations]: ../sql/readings/custom-validations.md
 
 ### Projects
+
 * [99 Cats][99-cats]
 
 [99-cats]: projects/ninety_nine_cats_i
@@ -138,7 +149,9 @@
 ## w4d3
 
 ### Materials (2 hr, 40 min)
+
 :closed_lock_with_key: `go_video_go`
+
 * :movie_camera: [Secure State][auth-secure-state] (11 min)
 * :movie_camera: [Cookies and Authentication][auth-cookies] (17 min)
 * :movie_camera: [Encoding and Encryption][auth-encoding] (19 min)
@@ -165,14 +178,16 @@
 [auth-06-csrf-attack]: https://vimeo.com/93114286
 [auth-07-csrf-protection]: https://vimeo.com/93114288
 [auth-08-csrf-methods]: https://vimeo.com/93114287
-[singular-resources]: readings/singular-resources.md 
+[singular-resources]: readings/singular-resources.md
 
 ### Homeworks (30 min)
+
 * [Rails Auth][rails-auth-homework] (30 min)
 
 [rails-auth-homework]: homeworks/rails-auth
 
 ### Additional Resources
+
 * :book: [Cookies][cookies]
 * :book: [Controllers and State][controllers-and-state]
 * :book: [CSRF and Forms][csrf-and-forms]
@@ -188,6 +203,7 @@
 [error-validation]: readings/validation.md
 
 ### Project
+
 * [99 Cats II: Auth][99-cats-part-ii]
 
 [99-cats-part-ii]: projects/ninety_nine_cats_ii
@@ -197,7 +213,9 @@
 ### Study Hall 9 - 10am
 
 ### Materials (114 min)
+
 :closed_lock_with_key: `go_video_go`
+
 * :movie_camera: [(cc) 14-radio-and-textarea][14-radio-and-textarea] (16 min)
 * :movie_camera: [(cc) 15-helpers][15-helpers] (13 min)
 * :movie_camera: [layouts][layout-video] (10 min)
@@ -217,13 +235,15 @@
 [rails-nontech]: readings/rails_nontech.md
 
 ### Homeworks (30 min)
+
 * [Helpers, Layouts, and Partials][helpers-and-layouts-hw] (30 min)
 
 [helpers-and-layouts-hw]: homeworks/helpers-layouts-mailer
 
 ### Additional Resources
+
 * :movie_camera: [Action Mailer Demo][action-mailer-video] (11 min)
-  * *NB:* `#deliver` has been deprecated in newer versions of Rails, please use `#deliver_now` instead
+  * _NB:_ `#deliver` has been deprecated in newer versions of Rails, please use `#deliver_now` instead
 
 [action-mailer-video]: https://vimeo.com/168810895
 
@@ -232,6 +252,7 @@
 * [Practice][assessment-prep-4]
 
 ### Projects
+
 * **Solo**: [Music App][music-app-project]
 
 [music-app-project]: projects/music_app
@@ -239,6 +260,7 @@
 ## w4d5
 
 ### Materials (30 min)
+
 * :book: [CSS Nontechnical Overview][css-nontech] (20 min)
 * :book: [CSS Responsive Design][css-responsive] (10 min)
 
@@ -246,6 +268,7 @@
 [css-responsive]: ../html-css/readings/responsive_design.md
 
 ### Homeworks (150 min)
+
 * [CSS Curriculum 6: Positioning & Media Queries][css-6] (90 min)
 * [CSS Review][css-review] (60 min)
 
@@ -253,6 +276,7 @@
 [css-review]: ../html-css/projects/css_review
 
 ### Additional Resources
+
 * :movie_camera: [CSS Review][css-review-vid]
 * :book: **(BONUS)** [CSS Transform property][css-transform]
 
@@ -260,6 +284,7 @@
 [css-transform]: http://css-tricks.com/almanac/properties/t/transform/
 
 ### Projects
+
 * [AA Times][aa-times]
 * **(BONUS)** [Google Homepage][google-homepage]
 
@@ -269,7 +294,9 @@
 ## w5d1
 
 ### Materials (1 hr, 41 min)
+
 :closed_lock_with_key: `go_video_go`
+
 * :movie_camera: [Rails Testing: Setup][rails-testing-setup] (15 min)
 * :movie_camera: [Rails Testing: Models][rails-testing-models] (32 min)
 * :movie_camera: [Rails Testing: Factories][rails-testing-factories] (11 min)
@@ -285,6 +312,7 @@
 [rails-demo-testing]: demos/CapybaraParty
 
 ### Homeworks (45 min)
+
 * [Capybara][capybara-hw] (45 min)
 * [Read CSS Friends Intro][css-friends]
 * [CSS Friends Phase 0: Reset][css-friends]
@@ -293,6 +321,7 @@
 [css-friends]: ../html-css/micro-projects/css-friends/
 
 ### Culture
+
 * [Have You Experienced Racism in the Workplace?][racism-stats] (3 min)
 * [Diversity in Tech Remains Elusive][diversity-elusive] (7 min)
 * [Commoditization and Exploitation of Asians in Tech][asian-racism] (11 min)
@@ -306,6 +335,7 @@
 [ai-impulses]: https://www.theguardian.com/inequality/2017/aug/08/rise-of-the-racist-robots-how-ai-is-learning-all-our-worst-impulses
 
 ### Additional Resources
+
 * [Integration Testing][integration-testing]
 * [RSpec and Rails Setup][rspec-setup]
 * [Testing Models][rspec-models]
@@ -323,6 +353,7 @@
 [spring-guard]: readings/guard-spring-setup.md
 
 ### Projects
+
 * [CSS Friends Phase 1][css-friends]
 * [Goal App][goal-app]
 * **(BONUS)** [Appacademy.io Tests][appacademyio-tests]
@@ -335,7 +366,9 @@
 ### Study Hall 9 - 10am
 
 ### Materials (74 min)
+
 :closed_lock_with_key: `go_video_go`
+
 * :movie_camera: [ (cc) 16-tag-ids-setter][16-tag-ids-setter] (22 min)
 * :movie_camera: [ (cc) 17-checkboxes-1][17-checkboxes-1] (12 min)
 * :movie_camera: [ (cc) 18-checkboxes-2][18-checkboxes-2] (11 min)
@@ -354,11 +387,13 @@
 [concerns-reading]: readings/concerns.md
 
 ### Homeworks (30 min)
+
 * [Polymorphism and Concerns][polymorphism-and-concerns-hw] (30 min)
 
 [polymorphism-and-concerns-hw]: homeworks/polymorphism-concerns
 
 ### Additional Resources
+
 * :book: **(BONUS)** [Decorators][decorators]
 * :book: [Checkboxes and Id Setters Reference][checkboxes-id-setters]
 
@@ -366,6 +401,7 @@
 [checkboxes-id-setters]: readings/checkboxes.md
 
 ### Projects
+
 * [CSS Friends Phase 2][css-friends]
 * [RedditClone][reddit-clone]
 
@@ -374,12 +410,15 @@
 ## w5d3
 
 ### Assessment04
+
 * [Practice][assessment-prep-4]
 
 [assessment-prep-4]: https://github.com/appacademy/assessment-prep#assessment-4
 
 ### Materials (85 min)
+
 :closed_lock_with_key: `go_video_go`
+
 * :movie_camera: [Rails Lite Intro][rails-lite-intro-video] (4 min)
 * :movie_camera: [HTTP][http-video] (12 min)
 * :movie_camera: [HTTP Demo][http-demo-video] (4 min)
@@ -397,14 +436,15 @@
 [tcp_ip_reading]: readings/tcp_ip.md
 
 ### Homeworks (45 min)
+
 * Complete [RegexOne][regex-link] (45 min)
 
 [regex-link]: http://regexone.com/
 
 ### Additional Resources
+
 * :movie_camera: [Rack Middleware][middleware-video] (4 min)
-* :movie_camera: [Rack Middleware Demo][middleware-demo-video]
-	* :computer: [demo code][middleware-demo-code] (22 min)
+* :movie_camera: [Rack Middleware Demo][middleware-demo-video] \* :computer: [demo code][middleware-demo-code] (22 min)
 * :movie_camera: [TCP][tcp-video] (15 min)
 * :movie_camera: [DNS][dns-video] (12 min)
 * :movie_camera: [(cc) 00-webserver][00-webserver] (16 min)
@@ -430,6 +470,7 @@
 [class_eval-instance_eval]: readings/instance-eval-class-eval.md
 
 ### Projects (Solo)
+
 * [Rails Lite][rails-lite]
 
 [rails-lite]: projects/rails_lite
