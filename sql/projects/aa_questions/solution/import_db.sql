@@ -1,6 +1,18 @@
+PRAGMA foreign_keys = OFF; -- turn off foreign key constraints so we can drop tables one at a time
+
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS questions;
+DROP TABLE IF EXISTS question_follows;
+DROP TABLE IF EXISTS replies;
+DROP TABLE IF EXISTS question_likes;
+DROP TABLE IF EXISTS tags;
+DROP TABLE IF EXISTS question_tags;
+
+PRAGMA foreign_keys = ON;  -- turn on the foreign key constraints to ensure data integrity
+
 -- USERS
 
-DROP TABLE IF EXISTS users; -- so we can easily reinitialize the db
+
 CREATE TABLE users (
   id INTEGER PRIMARY KEY,
   fname VARCHAR(255) NOT NULL,
@@ -15,7 +27,7 @@ VALUES
 
 -- QUESTIONS
 
-DROP TABLE IF EXISTS questions;
+
 CREATE TABLE questions (
   id INTEGER PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
@@ -28,7 +40,7 @@ CREATE TABLE questions (
 INSERT INTO
   questions (title, body, author_id)
 SELECT
-  "Ned Question", "NED NED NED", users.id
+  "Ned Question", "NED NED NED", 1
 FROM
   users
 WHERE
@@ -55,7 +67,6 @@ WHERE
 
 -- QUESTION_FOLLOWS
 
-DROP TABLE IF EXISTS question_follows;
 CREATE TABLE question_follows (
   id INTEGER PRIMARY KEY,
   user_id INTEGER NOT NULL,
@@ -78,7 +89,7 @@ VALUES
 
 -- REPLIES
 
-DROP TABLE IF EXISTS replies;
+
 CREATE TABLE replies (
   id INTEGER PRIMARY KEY,
   question_id INTEGER NOT NULL,
@@ -111,7 +122,7 @@ VALUES
 
 -- QUESTION_LIKES
 
-DROP TABLE IF EXISTS question_likes;
+
 CREATE TABLE question_likes (
   id INTEGER PRIMARY KEY,
   user_id INTEGER NOT NULL,
@@ -135,7 +146,7 @@ INSERT INTO question_likes (user_id, question_id) VALUES (1, 2);
 
 -- TAGS
 
-DROP TABLE IF EXISTS tags;
+
 CREATE TABLE tags (
   id INTEGER PRIMARY KEY,
   name VARCHAR(255) NOT NULL
@@ -146,7 +157,7 @@ INSERT INTO tags (name) VALUES ("Javascript");
 INSERT INTO tags (name) VALUES ("CSS");
 INSERT INTO tags (name) VALUES ("HTML");
 
-DROP TABLE IF EXISTS question_tags;
+
 CREATE TABLE question_tags (
   id INTEGER PRIMARY KEY,
   question_id INTEGER,
