@@ -516,7 +516,7 @@
 [hash-map]: projects/hash_map_lru_cache
 [css-box-model-exercise]: ../html-css/micro-projects/box_model/
 
-### Additional Bonus Topics
+## Additional Topics
 
 * [Basic cursor input][cursor-demo]
 * [Modules][modules]
