@@ -133,14 +133,14 @@
 * [Containers HTML Exercise][html-containers-exercise]
 * [Recursion exercises][recursion-project]
 * [Word chains][word-chains]
-* **Bonus**: [More Recursion questions][bonus-recursion-practice]
+* **Bonus**: [More Recursion exercises][bonus-recursion-practice]
 * **Bonus**: [Maze solver][maze-project]
 * **Bonus**: Use Ruby to solve the [eight-queens problem][eight-queens]
 
 [html-containers-exercise]: ../html-css/micro-projects/html-containers/
 [recursion-project]: projects/recursion
 [word-chains]:  projects/word_chains
-[bonus-recursion-practice]: https://github.com/appacademy/recursion_exercises
+[bonus-recursion-practice]: projects/more_recursion_exercises
 
 ## w1d4
 
