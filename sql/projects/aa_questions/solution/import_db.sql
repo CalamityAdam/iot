@@ -1,12 +1,10 @@
-PRAGMA foreign_keys = OFF; -- turn off foreign key constraints so we can drop tables one at a time
-
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS questions;
-DROP TABLE IF EXISTS question_follows;
-DROP TABLE IF EXISTS replies;
-DROP TABLE IF EXISTS question_likes;
-DROP TABLE IF EXISTS tags;
 DROP TABLE IF EXISTS question_tags;
+DROP TABLE IF EXISTS question_follows;
+DROP TABLE IF EXISTS question_likes;
+DROP TABLE IF EXISTS replies;
+DROP TABLE IF EXISTS questions;
+DROP TABLE IF EXISTS tags;
+DROP TABLE IF EXISTS users;
 
 PRAGMA foreign_keys = ON;  -- turn on the foreign key constraints to ensure data integrity
 
