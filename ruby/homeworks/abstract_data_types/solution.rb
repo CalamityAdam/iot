@@ -74,8 +74,9 @@ class Map
   end
 
   def delete(key)
+    value = get(key)
     underlying_array.reject! { |pair| pair[0] == key }
-    nil
+    value
   end
 
   def show
