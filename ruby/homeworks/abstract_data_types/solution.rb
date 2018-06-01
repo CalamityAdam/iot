@@ -1,7 +1,5 @@
 # EXERCISE 1
 class Stack
-  attr_reader :underlying_array
-
   def initialize
     @underlying_array = []
   end
@@ -18,14 +16,17 @@ class Stack
   def peek
     underlying_array.last
   end
+
+  private
+
+  attr_reader :underlying_array
+
 end
 
 
 
 # EXERCISE 2
 class Queue
-  attr_reader :underlying_array
-
   def initialize
     @underlying_array = []
   end
@@ -42,20 +43,23 @@ class Queue
   def peek
     underlying_array.first
   end
+
+  private
+
+  attr_reader :underlying_array
+  
 end
 
 
 
 # EXERCISE 3
 class Map
-  attr_reader :underlying_array
-
   def initialize
     @underlying_array = []
   end
 
   def set(key, value)
-    pair_index = underlying_array.index {|pair| pair[0] == key}
+    pair_index = underlying_array.index { |pair| pair[0] == key }
     if pair_index
       underlying_array[pair_index][1] = value
     else
@@ -65,12 +69,12 @@ class Map
   end
 
   def get(key)
-    underlying_array.each {|pair| return pair[1] if pair[0] == key}
+    underlying_array.each { |pair| return pair[1] if pair[0] == key }
     nil
   end
 
   def delete(key)
-    underlying_array.reject! {|pair| pair[0] == key}
+    underlying_array.reject! { |pair| pair[0] == key }
     nil
   end
 
@@ -79,7 +83,10 @@ class Map
   end
 
   private
+
+  attr_reader :underlying_array
+  
   def deep_dup(arr)
     arr.map { |el| el.is_a?(Array) ? deep_dup(el) : el }
-  end
+  end  
 end
