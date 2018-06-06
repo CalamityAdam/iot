@@ -6,13 +6,13 @@ This demo shows how to upload images using React, Paperclip, and AWS S3.
 #### 🚨 **NB:** Important Changes! 🚨
 - The `paperclip` gem currently does not support the newest version of the `aws-sdk` gem. Add this line to your gemfile to specify a lower version: `gem 'aws-sdk', '< 3.0'`.
 - The AWS S3 user interface has changed, please follow this [official demo][aws-bucket-demo] to create a bucket.
-- In a Principal element found in the policy below, the user name is case sensitive. More information about adding [principal-users] to a policy.
+  - In a Principal element found in the policy below, the user name is case sensitive. More information about adding [principal-users] to a policy. More information finding your [aws account id][aws-account-id].
 - You will need to create a policy for each bucket. You can use the following (make sure to use _your_ bucket name!):
 
 ```json
 //Sample Policy
 {
-  "Version": "2018-05-17",
+  "Version": "2012-10-17",
   "Statement": [
     {
       "Sid": "Stmt1420751757000",
@@ -25,7 +25,7 @@ This demo shows how to upload images using React, Paperclip, and AWS S3.
         "arn:aws:s3:::{YOUR-BUCKET-NAME}/*"
       ],
       "Principal": {
-        "AWS": "arn:aws:iam::{your-AWS-account-ID}:user/{your-user-name}"
+        "AWS": "arn:aws:iam::{YOUR-AWS-ACCOUNT-ID}:user/{YOUR-USER-NAME}"
       },
     }
   ]
@@ -40,6 +40,9 @@ This demo shows how to upload images using React, Paperclip, and AWS S3.
 
 [principal-users]:
 https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html
+
+[aws-account-id]:
+https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html#FindingYourAWSId
 
 ## Key Files
 - [application.rb](./config/application.rb)
