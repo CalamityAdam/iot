@@ -18,7 +18,7 @@ Here is a quick guide to git yer app on the interwebs.
     {
       "engines": {
         "node": "8.4.0",
-        "npm": "2.1.x"
+        "npm": "6.1.0"
       },
       "scripts": {
         "postinstall": "webpack"
