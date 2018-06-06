@@ -17,7 +17,7 @@ Here is a quick guide to git yer app on the interwebs.
     // package.json
     {
       "engines": {
-        "node": "4.1.1",
+        "node": "8.4.0",
         "npm": "2.1.x"
       },
       "scripts": {
