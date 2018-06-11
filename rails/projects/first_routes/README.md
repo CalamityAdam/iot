@@ -374,7 +374,7 @@ some_category[inner_inner_hash][key]: 'value'
 something_else: 'aaahhhhh'
 
 <!-- in the query string -->
-'/users?some_category[a_key]=another+key&some_category[a_second_key]=yet+another_value'
+'/users?some_category[a_key]=another+value&some_category[a_second_key]=yet+another+value'
 <!-- ...etc. -->
 ```
 
