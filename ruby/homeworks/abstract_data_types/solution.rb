@@ -1,7 +1,5 @@
 # EXERCISE 1
 class Stack
-  attr_reader :underlying_array
-
   def initialize
     @underlying_array = []
   end
@@ -29,8 +27,6 @@ end
 
 # EXERCISE 2
 class Queue
-  attr_reader :underlying_array
-
   def initialize
     @underlying_array = []
   end
@@ -58,8 +54,6 @@ end
 
 # EXERCISE 3
 class Map
-  attr_reader :underlying_array
-
   def initialize
     @underlying_array = []
   end
