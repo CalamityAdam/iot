@@ -29,56 +29,9 @@ show the data it needs from the redux store.
 
 ## Example
 
-Here's an example for _Bluebird_, a Twitter clone.
+[Here][bluebird]'s an example for _Bluebird_, a Twitter clone.
 
 **NB** Any component ending in `Container` will `connect` its nested
 component to the Redux store.
 
----
-# Bluebird Component Hierarchy
-
-## General
-+ `App`
-  + `NavBar`
-  + `MainPage` (all other Components are rendered inside here)
-  + `Footer`
-
-## Session Form
-+ `SessionFormContainer`
-  + `SessionForm`
-
-![session-form](https://raw.githubusercontent.com/appacademy/bluebird/master/wiki/bluebird_session_page.png)
-
----
-
-## Dashboard / Profile
-+ `ChirpIndexContainer` / `ProfileIndexContainer`
-  + `ChirpIndex` (can be reused!)
-    + `ChirpIndexItem`
-
-![dashboard](https://raw.githubusercontent.com/appacademy/bluebird/master/wiki/bluebird_dashboard_page.png)
-
----
-
-## Chirp Show
-+ `ChirpShowContainer`
-  + `ChirpShow`
-
-![chirp-show](https://raw.githubusercontent.com/appacademy/bluebird/master/wiki/bluebird_show_chirp_page.png)
-
----
-
-## Chirp Form
-+ `ChirpFormContainer`
-  + `ChirpForm`
-
-![chirp-form](https://raw.githubusercontent.com/appacademy/bluebird/master/wiki/bluebird_chirp_form_page.png)
-
----
-
-## User Search
-+ `UserSearchIndexContainer`
-  + `UserSearchIndex`
-    + `UserSearchIndexItem`
-
-![user-search](https://raw.githubusercontent.com/appacademy/bluebird/master/wiki/bluebird_user_search.png)
+[bluebird]: https://github.com/appacademy/bluebird/wiki/component-hierarchy

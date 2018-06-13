@@ -9,46 +9,8 @@ Take some time to research the app you are cloning. While referring to your [MVP
 
 Create an outline of what your app's schema will look like. This should be an exhaustive set of table names, column names, and foreign key relationships for any of the resources your app will need to complete your MVP features.
 
-# Bluebird Sample Schema
+# Example
 
+[Here][bluebird]'s another example from _Bluebird_, our Twitter clone.
 
-
-
-
-# Schema Information
-
-## users
-column name     | data type | details
-----------------|-----------|-----------------------
-id              | integer   | not null, primary key
-username        | string    | not null, indexed, unique
-password_digest | string    | not null
-session_token   | string    | not null, indexed, unique
-
-## chirps
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-body        |  string   | not null
-author_id   | integer   | not null, foreign key (references users), indexed
-parent_chirp_id | integer | foreign key (references chirps), indexed
-
-## hashtags
-column name | data type | details
-------------|-----------|-----------------------
-id | integer | not null, primary key
-slogan | string | not null
-
-## hashtaggings
-column name | data type | details
-------------|-----------|-----------------------
-id | integer | not null, primary key
-chirp_id | integer | not null, foreign key (references chirps), indexed
-hashtag_id | integer | not null, foreign key (references hashtags), indexed
-
-## mentions
-column name | data type | details
-------------|-----------|-----------------------
-id | integer | not null, primary key
-user_id | integer | not null, foreign key (references users), indexed, part of a unique combination index with chirp_id
-chirp_id | integer | not null, foreign key (references chirps), indexed, part of a unique combination index with user_id
+[bluebird]: https://github.com/appacademy/bluebird/wiki/schema
