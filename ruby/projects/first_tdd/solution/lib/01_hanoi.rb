@@ -1,8 +1,6 @@
 class TowersOfHanoiGame
-  attr_reader :stacks
-
-  def initialize(stacks = nil)
-    @stacks = stacks || [[3, 2, 1], [], []]
+  def initialize
+    @stacks = [[3, 2, 1], [], []]
   end
 
   def play
@@ -58,8 +56,13 @@ class TowersOfHanoiGame
     system('clear')
     puts render
   end
+
+  private
+
+  attr_reader :stacks
+  
 end
 
 if $PROGRAM_NAME == __FILE__
-  TowersOfHanoi.new().play
+  TowersOfHanoiGame.new.play
 end
