@@ -54,7 +54,7 @@ each table to play with. We call this '*seeding the database*'.
 After you've written the SQL, don't forget to run the SQL commands and
 create the db - in terminal, run:
 
-```sql
+```sh
 cat import_db.sql | sqlite3 questions.db
 ```
 
