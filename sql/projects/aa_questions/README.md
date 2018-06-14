@@ -54,13 +54,30 @@ each table to play with. We call this '*seeding the database*'.
 After you've written the SQL, don't forget to run the SQL commands and
 create the db - in terminal, run:
 
-```SQL
+```sql
 cat import_db.sql | sqlite3 questions.db
 ```
 
 Now go into your shiny, new sqlite database and try making
 some basic queries to ensure that seeding proceeded as planned.
 Use `sqlite3 questions.db` to open the sqlite3 console with *questions.db* loaded.
+
+**NB** Running `.headers on` and `.mode column` will greatly enhance the readability of the outputs:
+
+```sql
+sqlite> SELECT * FROM questions;
+1|Ned Question|NED NED NED|1
+2|Kush Question|KUSH KUSH KUSH|2
+3|Earl Question|MEOW MEOW MEOW|3
+sqlite> .headers on
+sqlite> .mode column
+sqlite> SELECT * FROM questions;
+id          title         body         author_id
+----------  ------------  -----------  ----------
+1           Ned Question  NED NED NED  1
+2           Kush Questio  KUSH KUSH K  2
+3           Earl Questio  MEOW MEOW M  3
+```
 
 ## Gemfile
 
