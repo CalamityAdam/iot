@@ -152,6 +152,8 @@ An `Album` should:
 * Designate whether it is a `live` or `studio` album
   * HINT: use a boolean paired with a reasonable default value
 * Have the following routes:
+* **This is the first time that we'll be using nested routes in a project. Please make sure your routes for albums exactly match the ones below. Check out [this reading][routing-ii] that you may have missed if the motivation and syntax for creating nested routes is still unclear. Don't hesitate to ask a TA for assistance!**
+* Once you have implemented band creation using the route configuration laid out below, think for a while about what code in your app (specifically in your controllers and views) would need to change to accommodate a create route that was also nested.
 ```
 new_band_album GET    /bands/:band_id/albums/new(.:format)   albums#new
         albums POST   /albums(.:format)                      albums#create
@@ -172,6 +174,8 @@ new_band_album GET    /bands/:band_id/albums/new(.:format)   albums#new
   * Make sure to provide links back to the album's band and make edit/delete buttons visible from the album's `show` page
   * Update the `Band` `show` page to list/link to all of the band's albums and create a new one
 
+* **Request a TA Code review**
+
 ### Tracks
 
 Yet again, follow the same pattern for a new resource, `Tracks`.
@@ -180,7 +184,7 @@ A `Track` should:
 * Belong to an `album` (make sure to also add associations to `Band` and `Album`)
 * Have a `title`, `ord` (track number) and optional `lyrics`
 * Designate whether it is a `regular` or `bonus` track
-* Have the following routes:
+* Have the following routes. **Once again, please make sure the routes you make look exactly like the ones below**:
 ```
 new_album_track GET    /albums/:album_id/tracks/new(.:format) tracks#new
          tracks POST   /tracks(.:format)                      tracks#create
@@ -372,3 +376,4 @@ your models.
 [faker]: https://github.com/stympy/faker
 [poly-assoc]: http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
 [pre-tag]:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre
+[routing-ii]: ../../readings/routing-part-ii.md
