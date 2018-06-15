@@ -112,29 +112,59 @@
 
 ## w3d3
 
-### Materials (193 min)
-+ :book: [Nontechnical Overview of Rails][rails-nontech] (15 min)
-+ :book: [Creating a new Rails project][first-rails-project] (5 min)
-+ :book: [Migrations][ar-migrations] (15 min)
-+ :book: [ORM Review and Intro to Active Record][ar-orm] (10 min)
-+ Associations:  
-  + :book: [`belongs_to` and `has_many`][belongs-to-has-many] (10 min)
-  + :book: [`has_many :through`][has-many-through] (10 min)
-  + :book: [`has_one`][has-one] (5 min)
-+  :book: [Validations][validations] (20 min)
-+  :book: [ActiveRecord Indexes and Uniqueness][ar-indexing] (5 min)
+### Materials (143 min)
+* :book: [Nontechnical Overview of Rails][rails-nontech] (15 min)
 
 :closed_lock_with_key: `go_video_go`
 + :movie_camera: [Starting a new Rails Project][rails-intro-video] (7 min)
++ :book: [Migrations: Overview][ar-migrations-overview] (5 min)
 + :movie_camera: [Migrations][migrations-video] (14 min)
++ :book: [ORM: Overview][ar-orm-overview] (10 min)
 + :movie_camera: [Models][models-video] (8 min)
 + :movie_camera: [Basic Associations (belongs_to, has_many)][associations-video]  (12 min)
 + :movie_camera: [More Associations (has_many through:...)][associations-2-video] (12 min)
++ :book: [Validations: Overview][validations-overview] (15 min)
 + :movie_camera: [Validations][validations-video] (13 min)
++ :book: [Indices: Overview][ar-indexing-overview] (5 min)
 + :movie_camera: [Indices][indices-video] (7 min)
 + :movie_camera: [CSS Inherits][css-inherits] (4 min)
 + :movie_camera: [CSS Reset][css-reset] (16 min)
 + **NB**: Video lectures are using Rails 4, but we will be using Rails 5 everywhere else. If you would like to read about some of the more important differences between Rails 4 and Rails 5, check out [this reading][rails-5-updates].
+
+[rails-intro-video]: https://vimeo.com/167799435
+[migrations-video]: https://vimeo.com/167799434
+[models-video]: https://vimeo.com/167799436
+[associations-video]: https://vimeo.com/167799432
+[associations-2-video]: https://vimeo.com/167799430
+[validations-video]: https://vimeo.com/167799437
+[indices-video]: https://vimeo.com/167799431
+[css-inherits]: https://vimeo.com/151190179
+[css-reset]: https://vimeo.com/151190181
+[rails-nontech]: ../rails/readings/rails_nontech.md
+[ar-migrations-overview]: readings/migrations-overview.md
+[ar-orm-overview]: readings/orm-overview.md
+[validations-overview]: readings/validations-overview.md
+[ar-indexing-overview]: readings/indexing-overview.md
+
+### Homeworks (45 min)
++ [Intro to Rails][intro-rails-homework] (45 min)
+
+[intro-rails-homework]: homeworks/intro_rails
+
+### Additional Resources
++ [Rails 4 vs Rails 5][rails-5-updates]
++ [Creating a new Rails project][first-rails-project]
++ [Migrations][ar-migrations]
++ [ORM Review and Intro to Active Record][ar-orm]
++ Associations:
+  + [`belongs_to` and `has_many`][belongs-to-has-many]
+  + [`has_many :through`][has-many-through]
+  + [`has_one`][has-one]
+  + [Unconventional Associations][unconventional-associations]
+  + for now, always specify `class_name`/`primary_key`/`foreign_key`
++ [Basic][validations] and [Custom][custom-validations] Validations
+  + [Miscellaneous][validations-misc]
++ [ActiveRecord Indexes and Uniqueness][ar-indexing]
 
 [rails-5-updates]: readings/rails-5-updates.md
 [first-rails-project]: readings/first-rails-project.md
@@ -148,28 +178,6 @@
 [custom-validations]: readings/custom-validations.md
 [validations-misc]: readings/validations-misc.md
 [ar-indexing]: readings/indexing.md
-[rails-intro-video]: https://vimeo.com/167799435
-[migrations-video]: https://vimeo.com/167799434
-[models-video]: https://vimeo.com/167799436
-[associations-video]: https://vimeo.com/167799432
-[associations-2-video]: https://vimeo.com/167799430
-[validations-video]: https://vimeo.com/167799437
-[indices-video]: https://vimeo.com/167799431
-[css-inherits]: https://vimeo.com/151190179
-[css-reset]: https://vimeo.com/151190181
-[rails-nontech]: ../rails/readings/rails_nontech.md
-
-### Additional Resources (25 min)
-+ :book: [Rails 4 vs Rails 5][rails-5-updates] (10 min)
-+ :book: [Unconventional Associations][unconventional-associations] (5 min)
-  + for now, always specify `class_name`/`primary_key`/`foreign_key`
-+ :book: [Custom validations][custom-validations] (5 min)
-+ :book: [Miscellaneous validations][validations-misc] (5 min)
-
-### Homeworks (45 min)
-+ [Intro to Rails][intro-rails-homework] (45 min)
-
-[intro-rails-homework]: homeworks/intro_rails
 
 ### Projects
 + [CSS Reset Exercise][css-reset-exercise]
