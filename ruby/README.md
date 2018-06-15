@@ -2,7 +2,7 @@
 
 :link: *[w1d1](#w1d1) :: [w1d2](#w1d2) :: [w1d3](#w1d3) :: [w1d4](#w1d4) :: [w1d5](#w1d5) :: [w2d1](#w2d1) :: [w2d2](#w2d2) :: [w2d3](#w2d3) :: [w2d4](#w2d4) :: [w2d5](#w2d5)* :link:
 
-## Setting up your personal machine 
+## Setting up your personal machine
 *NB: This is optional, but highly recommended. You will need to do this if you plan on doing any work (homeworks, reviewing solutions, etc.) on your personal machines.*
 - [Setting up a Development Environment][dev-setup]
   - Complete Phases 0 & 1
@@ -195,7 +195,8 @@
 
 ### Assessment01 Practice (We will be taking it in class)
 
-* In-class practice assessment at 9am.  Please bring your own machine if possible.
+* In-class practice assessment at 9am.
+  *  Please bring your own machine if possible. **(SF ONLY)**
 * [Practice][assessment-prep-1]
 
 [assessment-prep-1]: https://github.com/appacademy/assessment-prep#assessment-1
@@ -450,7 +451,8 @@
 
 ### Assessment02 Practice (We will be taking it in class)
 
-* In-class practice assessment at 9am.  Please bring your own machine if possible.
+* In-class practice assessment at 9am.
+  *  Please bring your own machine if possible. **(SF ONLY)**
 * [Practice][assessment-prep-2]
 
 [assessment-prep-2]: https://github.com/appacademy/assessment-prep#assessment-2
