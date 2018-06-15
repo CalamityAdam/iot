@@ -14,11 +14,13 @@ Also, when we fetched data from our SQL database, the data was
 returned in generic `Hash` objects. For instance, if our database was
 setup like this:
 
-    > CREATE TABLE cars (make VARCHAR(255), model VARCHAR(255), year INTEGER);
-    > INSERT INTO cars (model, make, year)
-        ("Toyota", "Camry", 1997),
-        ("Toyota", "Land Cruiser", 1989),
-        ("Citroen", "DS", 1969);
+```sql
+  CREATE TABLE cars (make VARCHAR(255), model VARCHAR(255), year INTEGER);
+  INSERT INTO cars (model, make, year)
+    ("Toyota", "Camry", 1997),
+    ("Toyota", "Land Cruiser", 1989),
+    ("Citroen", "DS", 1969);
+```
 
 And we wrote the following ruby code to fetch the data:
 
