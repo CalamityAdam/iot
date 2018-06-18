@@ -121,7 +121,7 @@ Let's see if we can do better.
 * **Don't spend more than 20 minutes working on hashing functions**. Great hashing functions are hard to write. Your goal is to write a good-enough hashing function and move forth to the fun stuff ahead! Call over a TA if needed.
 * **Avoid using byebug inside your hash methods**. The functioning of byebug's internal code will cause this to break since it calls Array#hash.
 * **You may want to refer to the resource on
-[XOR][xor-info]** (`^` in Ruby). XOR is a great tool for hashing because
+[XOR][xor-info]. Please read the intro and section about exclusive or** (`^` in Ruby). XOR is a great tool for hashing because
 it's fast, and it provides a good, nearly uniform output of bits.
 
 A hash function is a sequence of mathematical operations that
@@ -168,7 +168,7 @@ Write hash functions for `Array`, `String`, and `Hash`. Build these up sequentia
 [More reading on hash functions][hash-info].
 
 [hash-info]: https://en.wikipedia.org/wiki/Hash_function
-[xor-info]: http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/BitOp/xor.html
+[xor-info]: https://www.calleerlandsson.com/posts/rubys-bitwise-operators/
 
 ## Phase 3: HashSet
 
