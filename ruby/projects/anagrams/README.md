@@ -26,7 +26,7 @@ Write a method `#first_anagram?` that will generate and store all the possible a
 What is the time complexity of this solution? What happens if you increase the size of the strings?
 
 ## Phase II:
-Write a method `#second_anagram?` that iterates over both strings. As you find letters that appear in both words, delete them one at a time. They are anagrams if both the strings are empty at the end.
+Write a method `#second_anagram?` that iterates over the first string. For each letter in the first string, find the index of that letter in the second string (hint: use `Array#find_index`). If no index is found, return false, otherwise delete the letter from the second string at that index. The two strings are anagrams if the second string is empty at the end of the iteration.
 
 Try varying the length of the input strings. What are the differences between `#first_anagram?` and `#second_anagram?`?
 
