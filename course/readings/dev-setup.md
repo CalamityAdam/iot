@@ -147,6 +147,8 @@ For the purposes of this course, we will be using two database applications: Pos
 ### PostgreSQL
 PostgreSQL is a fast, feature-rich, open-source database application. It is a scalable application that we can use for development and production apps. We will be using PostgreSQL for most of our web-apps.
 
+#### MacOS X
+
 Fortunately for MacOS X, we can use [Postgres.app][postgres-app], which provides the database application and a command line interface (CLI) so we can interact with it. To install Postgres.app, download and follow the installation instructions from the website.
 
 **Though the instructions say it is optional, it is highly recommended to configure your system `$PATH` so that you can use the command line tools.** We will make extensive use of them in the course.
@@ -158,9 +160,13 @@ sudo mkdir -p /etc/paths.d &&
 echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
 ```
 
-**Linux users:** The [Ubuntu wiki][pg-linux] can help. See especially "Alternative Server Setup".
+#### Linux
+
+The [Ubuntu wiki][pg-linux] can help. See especially "Alternative Server Setup".
 
 [pg-linux]: https://help.ubuntu.com/community/PostgreSQL
+
+### After installation
 
 Close and reopen your terminal to gain access to the `psql` command. Let's try it out.
 
