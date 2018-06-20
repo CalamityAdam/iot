@@ -59,13 +59,13 @@ in a system directory where you need superuser permissions to create
 files. You'll read in some places that you should use `sudo gem
 install awesome_print`; **DO NOT DO THIS!**
 
-Instead, setup rbenv (See [our Dotfiles repo][dotfiles] for more
+Instead, setup rbenv (See [the dev environment setup instructions][dev-setup] for more
 details). Once rbenv is installed, there will be no need to use `sudo`
 and you should no longer get this error. However, you must **never** use
 `sudo gem install` with rbenv or you'll wind up with [permissions issues
 again][sudo-with-rbenv].
 
-[dotfiles]: https://github.com/appacademy/dotfiles
+[dev-setup]: https://github.com/appacademy/curriculum/blob/master/course/readings/dev-setup.md
 [sudo-with-rbenv]: http://stackoverflow.com/questions/28846165/permission-error-when-trying-to-install-rails-osx
 
 
