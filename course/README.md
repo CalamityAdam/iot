@@ -16,7 +16,6 @@
 # Resources
 
 * [Development Environment Setup][dev-setup]
-* [AA .dotfiles](https://github.com/appacademy/dotfiles)
 * [Atom Cheat Sheet](readings/atom_cheatsheet.md)
 
 [ruby]: ../ruby

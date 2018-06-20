@@ -121,9 +121,6 @@ return to Pro Git to read the following chapters on your own time:
 * ch6.1-ch6.5
 
 ## Resources
-* You may want to use the AA git config files available in the
-  [aa-dotfiles][aa-dotfiles] repo. At the moment these are fairly
-  basic, but are a good start.
 * [Pro Git][pro-git]
 * How to [generate SSH keys][ssh-guide].
 * A very helpful [reference][git-ref] of common git commands, targeted to
@@ -143,7 +140,6 @@ return to Pro Git to read the following chapters on your own time:
 * [Git Immersion][git-immersion]: A longer tutorial for when you have
   some extra time.
 
-[aa-dotfiles]: https://github.com/app-academy/aa-dotfiles
 [pro-git]: http://git-scm.com/book
 [ssh-guide]: https://help.github.com/articles/generating-ssh-keys
 [git-ignore]: https://github.com/github/gitignore

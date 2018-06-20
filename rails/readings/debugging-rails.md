@@ -58,7 +58,7 @@ available for use.
 
 **NB**: The latest version of `better_errors` requires ruby 2+. If
 your ruby version is not up to snuff
-[upgrade with these instructions][dotfiles].
+[upgrade with these instructions][dev-setup].
 
 So now you can debug your models like a pro, but that's only 1/3 of
 the battle. Being able to debug your controllers is a crucial skill
@@ -149,4 +149,4 @@ things like params are coming in correctly.
 * Check that objects being built via associations are built
   correctly. EG: `current_user.posts.new(post_params)`
 
-[dotfiles]: https://github.com/appacademy/dotfiles
+[dev-setup]: https://github.com/appacademy/curriculum/blob/master/course/readings/dev-setup.md
