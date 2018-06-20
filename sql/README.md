@@ -209,9 +209,11 @@
 [movie-buff-hw]: homeworks/active_record_warmup
 
 ### Additional Resources
++ [Includes vs Joins: When and where to use each?][includes-vs-joins]
 + [Ternary Logic in SQL][sql-ternary-logic]
 
 [sql-ternary-logic]: readings/sql-ternary-logic.md
+[includes-vs-joins]: http://tomdallimore.com/blog/includes-vs-joins-in-rails-when-and-where/
 
 ### Assessment03 Practice
 
