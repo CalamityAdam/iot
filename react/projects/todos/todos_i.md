@@ -111,10 +111,13 @@ export const RECEIVE_TODO = 'RECEIVE_TODO';
 
 This action creator lets our reducer know to reset the list of `todos` and, as
 such, will also need to pass along a new set of `todos`. Write your
-`receiveTodos` action creator so that it accepts an array argument `todos`. It
-should return an action object with a `type` property pointing to
-`RECEIVE_TODOS` and a `todos` property pointing to the `todos` argument you're
-passing in. This represents all of our todos data.
+`receiveTodos` action creator so that it accepts an array argument `todos`. 
+Note this action creater takes a `todos` _array_ as opposed to a `todos` _object_ 
+because that how the backend will send the data to our frontend. It will be the 
+job of the reducer in our frontend to turn this array into an object. The 
+`receiveTodos` action creator should return an action object with a `type` 
+property pointing to `RECEIVE_TODOS` and a `todos` property pointing to the 
+`todos` argument you're passing in. This represents all of our todos data.
 
 #### `receiveTodo`
 
@@ -242,6 +245,9 @@ earlier. Inside of the `todosReducer`, implement the following.
   * The `todos` data in your store should be replaced by the data in
 `action.todos`
   * Do not merge the old `todos` state with the new `todos` coming in
+  * Remember that `action.todos` is an array of todos. Convert this array into
+  an object where the keys are the `id`s of the individual todos and the values
+  are the todos
 * Add another `case` to the `switch` statement to handle `RECEIVE_TODO`
   * This case should return a new state object, either adding the `todo` in the
 `action` to the previous state, or replacing a `todo` in the previous state at
