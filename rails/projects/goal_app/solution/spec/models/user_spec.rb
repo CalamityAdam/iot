@@ -12,7 +12,7 @@ RSpec.describe User, type: :model do
   describe "password encryption" do
     it "does not save passwords to the database" do
       User.create!(username: "mary_mack", password: "abcdef")
-      user = User.find_by_username("mary_mack")
+      user = User.find_by(username: "mary_mack")
       expect(user.password).not_to be("abcdef")
     end
 
