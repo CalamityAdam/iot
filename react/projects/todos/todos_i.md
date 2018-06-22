@@ -113,7 +113,7 @@ This action creator lets our reducer know to reset the list of `todos` and, as
 such, will also need to pass along a new set of `todos`. Write your
 `receiveTodos` action creator so that it accepts an array argument `todos`. 
 Note this action creater takes a `todos` _array_ as opposed to a `todos` _object_ 
-because that how the backend will send the data to our frontend. It will be the 
+because that's how the backend will send the data to our frontend. It will be the 
 job of the reducer in our frontend to turn this array into an object. The 
 `receiveTodos` action creator should return an action object with a `type` 
 property pointing to `RECEIVE_TODOS` and a `todos` property pointing to the 
