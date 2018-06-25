@@ -3,7 +3,7 @@
 
   <ul>
     <% @subs.each do |sub| %>
-      <li><a href="<%= sub %>"><%= sub.name %></a><br></li>
+      <li><a href="<%= sub_url(sub) %>"><%= sub.name %></a><br></li>
     <% end %>
   </ul>
 </div>

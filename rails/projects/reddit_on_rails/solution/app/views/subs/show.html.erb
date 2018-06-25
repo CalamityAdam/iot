@@ -11,9 +11,8 @@
 
   <ul>
     <% @sub.posts.each do |post| %>
-      <li>(<%= post.votes %>) <a href="<%= post %>"><%= post.title %></a></li>
+      <li>(<%= post.votes %>) <a href="<%= post_url(post) %>"><%= post.title %></a></li>
     <% end %>
   </ul>
-
   <a href="<%= edit_sub_url(@sub) if @sub.moderator == current_user %>">Edit</a>
 </div>
