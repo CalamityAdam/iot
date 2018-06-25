@@ -329,20 +329,16 @@ User.where({fname: "Tywin", lname: "Lannister"})
 ```
 Add this to your base class.
 
-### `method_missing` and `find_by`
+### `find_by`
 
-**See the section of [this reading on `method_missing`][method-missing] for more information on this powerful method.**
-
-Using `method_missing`, implement a dynamic `find_by` which allows users to
+Implement a flexible `find_by` which allows users to
 find records with any number of arguments. Let's see an example:
 
 ```ruby
-User.find_by_lname_and_fname("Oberyn", "Martell")
-Question.find_by_title("Who is Jon Snow's mother?")
-Reply.find_by_question_id_and_author_id(3, 1)
+User.find_by(lname: "Oberyn", fname: "Martell")
+Question.find_by(title: "Who is Jon Snow's mother?")
+Reply.find_by(question_id: 3, author_id: 1)
 ```
-
-[method-missing]: ../../readings/metaprogramming.md
 
 ### Improve your `where`
 

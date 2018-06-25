@@ -60,26 +60,24 @@ describe ModelBase do
     end 
   end 
 
-  describe '::method_missing' do 
-    context 'when called on different classes with different method names' do
-      it "searches for the first name of a user" do 
-        search1 = User.find_by_fname("Ned")
-        expect(search1.first).to be_an(User)
-        expect(search1.first.fname).to eq("Ned")
-        expect(search1.count).to eq(1)
-      end 
-      
-      it 'searches for the body of a reply' do
-        reply = Reply.find_by_body("Did you say NOW NOW NOW?")
-        expect(reply.first).to be_an(Reply)
-        expect(reply.first.body).to eq("Did you say NOW NOW NOW?")
-      end 
-      
-      it 'searches for the title of a question' do   
-        question = Question.find_by_title("Ned Question")
-        expect(question.first).to be_an(Question)
-        expect(question.first.title).to eq("Ned Question")
-      end 
+  describe '::find_by' do 
+    it "searches for the first name of a user" do 
+      search1 = User.find_by(fname: "Ned")
+      expect(search1.first).to be_an(User)
+      expect(search1.first.fname).to eq("Ned")
+      expect(search1.count).to eq(1)
+    end 
+    
+    it 'searches for the body of a reply' do
+      reply = Reply.find_by(body: "Did you say NOW NOW NOW?")
+      expect(reply.first).to be_an(Reply)
+      expect(reply.first.body).to eq("Did you say NOW NOW NOW?")
+    end 
+    
+    it 'searches for the title of a question' do   
+      question = Question.find_by(title: "Ned Question")
+      expect(question.first).to be_an(Question)
+      expect(question.first.title).to eq("Ned Question")
     end 
   end 
   
