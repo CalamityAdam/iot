@@ -113,6 +113,12 @@ Make sure outline your MVP features using the following structure when writing y
 * **Bonus**: Messaging
 * **Bonus**: User/host profiles
 
+#### Discord
+* Servers
+* Channels within servers
+* Live Chat
+* Direct Messaging via private servers
+
 #### Etsy
 * Product Listings
 * Shopping Cart
@@ -311,6 +317,12 @@ Make sure outline your MVP features using the following structure when writing y
 * Search
 * **Bonus**: Autocomplete SmartAdd of task properties
 * **Bonus**: Subtasks
+
+### Robinhood
+* Dashboard + Portfolio
+* Asset/Stock Detail
+* Watchlist
+* Asset/Stock Search
 
 #### Slack
 * Live chat

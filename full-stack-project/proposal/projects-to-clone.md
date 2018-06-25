@@ -46,7 +46,7 @@ should think about the following:
 - [Product Hunt](https://www.producthunt.com/)
 - [Quora](http://www.quora.com)
 - [Remember the Milk](https://www.rememberthemilk.com/)
-- [Robin Hood](https://robinhood.com/)
+- [Robinhood](https://robinhood.com/)
 - [Slack](http://www.slack.com)
 - [Soundcloud](http://www.soundcloud.com)
 - [SplitWise](http://www.splitwise.com)
