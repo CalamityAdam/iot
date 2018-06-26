@@ -64,7 +64,7 @@ Here's the whole thing once more as a gif:
 
 ![debugging arrow functions](media/debugging_arrow_functions.gif)
 
-If you want to avoid having to do this over and over again as you're debugging your arrow functions, you can make it a habit to write all of your arrow functions with explicit return statements.
+If you want to avoid having to do this over and over again as you're debugging your arrow functions, you can make it a habit to write all of your arrow functions with explicit return statements. Do be aware, however, that this is a common convention in Redux and you will see it often out in the wild.
 
 [actions]: actions.md
 [arrow-functions]: ../../javascript/readings/fat-arrows.md#syntactic-ambiguity

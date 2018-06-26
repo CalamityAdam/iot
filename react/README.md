@@ -153,7 +153,7 @@
 * [Thunks][thunks] (15 min)
 * [Object.freeze][obj-freeze] (10 min)
 * [Namespacing][namespacing] (5 min)
-* [Debugging arrow functions][debugging-arrow-functions] (5 min)
+* [Debugging arrow functions in Redux][debugging-arrow-functions] (5 min)
 
 [higher_order_functions]: readings/higher_order_functions.md
 [middleware]: readings/middleware.md
