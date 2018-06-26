@@ -51,7 +51,7 @@ Cat.prototype.play = function meow() {
   });
 };
 
-let garfield = new Cat('garfield');
+const garfield = new Cat('garfield');
 garfield.play();
 
 // output
@@ -79,14 +79,14 @@ garfield plays with balloon
 
 Fat arrows implicitly return when they consist of a single expression.
 ```javascript
-let halfMyAge = myAge => myAge / 2;
+const halfMyAge = myAge => myAge / 2;
 halfMyAge(30) === 15; // true
 ```
 
 This doesn't work if the fat arrow uses a block.
 ```javascript
-let halfMyAge = myAge => {
-  let age = myAge;
+const halfMyAge = myAge => {
+  const age = myAge;
   age / 2;
 }
 
@@ -95,8 +95,8 @@ typeof halfMyAge(30) === "undefined"; // true
 
 To return a value from a fat arrow using a block, you must explicitly return.
 ```javascript
-let halfMyAge = myAge => {
-  let age = myAge;
+const halfMyAge = myAge => {
+  const age = myAge;
   return age / 2;
 }
 halfMyAge(30) === 15; // true
@@ -107,7 +107,7 @@ halfMyAge(30) === 15; // true
 ### Syntactic Ambiguity
 
 ```javascript
-let ambiguousFunction = () => {}
+const ambiguousFunction = () => {}
 ```
 
 In Javascript, `{}` can signify either an empty object or an empty block.
@@ -121,7 +121,7 @@ typeof ambiguousFunction() === "undefined"; // true
 To make a single-expression fat arrow return an empty object, wrap it in parentheses:
 
 ```javascript
-clearFunction = () => ({});
+const clearFunction = () => ({});
 typeof clearFunction() === "object"; // true
 ```
 
@@ -129,7 +129,7 @@ typeof clearFunction() === "object"; // true
 
 Fat arrows don't scope like normal functions, so you can't reassign `this`, which is always what it was at the time the fat arrow was declared.
 ```javascript
-let returnName = () => this.name;
+const returnName = () => this.name;
 returnName.call({name: 'Dale Cooper'}) // undefined;
 ```
 
@@ -140,7 +140,7 @@ Fat arrows can't be used as constructors.
 ```javascript
 const FatCat = (name) => this.name = name;
 
-let g = new FatCat("garfield"); // TypeError: FatCat is not a constructor
+const garfield = new FatCat("garfield"); // TypeError: FatCat is not a constructor
 ```
 
 ### No `arguments`
@@ -149,7 +149,7 @@ Because they don't change scope, fat arrows don't have their own [`arguments`][a
 
 ```javascript
 const hasArgs = function() {
-  let noArgs = () => arguments[0];
+  const noArgs = () => arguments[0];
   return noArgs('FakeArg');
 };
 
