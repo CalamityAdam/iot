@@ -160,6 +160,7 @@
 [thunks]: readings/thunks.md
 [obj-freeze]: readings/object_freeze.md
 [namespacing]: readings/rails_router_namespacing.md
+[debugging-arrow-functions]: readings/debugging_arrow_functions.md
 
 ### Homework (55 min)
 * [Submit your tentative Full-Stack Project Proposal][tentative-proposal] (10 min)
