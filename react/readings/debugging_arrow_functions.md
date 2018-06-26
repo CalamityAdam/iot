@@ -34,7 +34,7 @@ const addFruit = fruit => (
 );
 ```
 
-As seen in the `clearFunction` example in [the reading on arrow functions][arrow-function], parentheses can be used to implicitly return objects in ES6. As a result, the above won't work, because we can't put a debugger inside of a return statement.
+As seen in the `clearFunction` example in [the reading on arrow functions][arrow-functions], parentheses can be used to implicitly return objects in ES6. As a result, the above won't work, because we can't put a debugger inside of a return statement.
 
 Instead, in order to put a debugger inside of `addFruit`, we first need to convert it into a function with an explicit return statement:
 
