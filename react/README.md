@@ -147,12 +147,13 @@
 
 ## w7d2
 
-### Materials (60 min)
+### Materials (65 min)
 * [Higher-order Functions][higher_order_functions] (15 min)
 * [Middleware][middleware] (15 min)
 * [Thunks][thunks] (15 min)
 * [Object.freeze][obj-freeze] (10 min)
 * [Namespacing][namespacing] (5 min)
+* [Debugging arrow functions][debugging-arrow-functions] (5 min)
 
 [higher_order_functions]: readings/higher_order_functions.md
 [middleware]: readings/middleware.md
