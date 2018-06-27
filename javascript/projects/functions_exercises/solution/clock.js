@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 class Clock {
   constructor() {
     // 1. Create a Date object.
