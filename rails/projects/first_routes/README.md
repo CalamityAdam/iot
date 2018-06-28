@@ -23,12 +23,23 @@ relationships displayed here.
 
 ## First Routes
 
-To start, generate a new, blank Rails project. **Make sure to use Postgres as your
-database.** You can do this by appending `--database=postgresql` to the end of your
-`rails new project_name` command. When using Postgres, you then need to setup
-the database by running `bundle exec rails db:create`.
+To start, generate a new, blank Rails project. **Make sure to have at least
+Rails 5.2.0 installed.** To see which version of Rails you have installed, run
+`rails -v`. If you have anything less than 5.2.0, run `gem update rails`.
+**Next, make sure to use Postgres as your database.** You can do this by
+appending `--database=postgresql` to the end of your `rails new project_name`
+command. When using Postgres, you then need to setup the database by running
+`bundle exec rails db:create`.
 
-Go to `config/routes.rb` and generate your first routes with:
+By default, Rails protects against cross-site request forgery (CSRF) by checking
+the authenticity of a certain token for POST requests. We won't worry about that
+for now. **Just for this assignment, add the line
+`config.action_controller.default_protect_from_forgery = false` right after
+`config.load_defaults 5.2` in the `config/application.rb` file.** Then you won't
+need to include the authenticity token in your POST params; we'll learn about
+what that means later.
+
+Next, go to `config/routes.rb` and generate your first routes with:
 
 ```ruby
 resources :users
@@ -97,31 +108,14 @@ end
 Controllers inherit from `ApplicationController` which is a controller
 itself, but one that never actually handles any requests directly.
 `ApplicationController` is where you'd put helper methods that you
-want to share across all controllers. Take a look at it (it's right
-there in the `app/controllers` folder):
-
-```ruby
-class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
-end
-```
-
-`ActionController::Base` provides all the bells & whistles that Rails
-controllers have; it's like `ActiveRecord::Base` in that respect.  All
-your controllers will inherit the features it provides since it is in
-the inheritance chain:
+want to share across all controllers. `ActionController::Base` provides 
+all the bells & whistles that Rails controllers have; it's like 
+`ActiveRecord::Base` in that respect.  All your controllers will inherit 
+the features it provides since it is in the inheritance chain:
 
 ```
   UsersController < ApplicationController < ActionController::Base
 ```
-
-`protect_from_forgery` helps protect against cross-site request
-forgery (CSRF) by checking the authenticity of a certain token for
-POST requests. We won't worry about that for now.
-
-**Just for this assignment, comment out `protect_from_forgery`.** Then
-you won't need to include the authenticity token in your POST params;
-we'll learn about what that means later.
 
 Alright, now that we have some routes and a matching controller, we
 have everything we need to start handling requests.
