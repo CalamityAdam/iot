@@ -4,20 +4,20 @@ There are several things you **must** do when beginning every Rails app in the n
 
 ## Create a New App with a Stable Version of Rails
 
-First off, check your Rails version. In this course, we will be using Rails `>= 5.1.2`. Check to see if you have a proper version by running:
+First off, check your Rails version. In this course, we will be using Rails `>= 5.2.0`. Check to see if you have a proper version by running:
 
 ```
 $ rails -v
 Rails X.X.X
 ```
 
-If the returns anything before `Rails 5.1.2`, run:
+If the returns anything before `Rails 5.2.0`, run:
 
 ```
 gem update rails
 ```
 
-Now that you have Rails >= 5.1.2 installed, start your project with the following command:
+Now that you have Rails >= 5.2.0 installed, start your project with the following command:
 
 ```
 # you may have a newer version of Rails installed, so make sure to specify the version
