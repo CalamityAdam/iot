@@ -98,8 +98,10 @@ Build a `SessionsController`:
 
 ### CSRF time!
 
-* Re-enable CSRF protection. Add `protect_from_forgery with:
-  :exception` back to the `ApplicationController`.
+* Re-enable CSRF protection. Remove the line
+  `config.action_controller.default_protect_from_forgery = false` from
+  `config/application.rb`. The default value of
+  `config.action_controller.default_protect_from_forgery` is `true`.
 * Any form that does not upload the `form_authenticity_token` will
   cause Rails to throw an error, because it won't know if the POST
   request is coming "cross-site".
