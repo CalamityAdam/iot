@@ -18,8 +18,9 @@ This project asks you to clone the (now defunct) dress rental website
 First, follow the setup instructions in [Rails setup][rails-setup]!
 
 We won't worry about CSRF attacks today (you're not supposed to know
-what that is yet!). Take a walk on the wild side by commenting out
-`protect_from_forgery` in `app/controllers/application_controller.rb`.
+what that is yet!). Take a walk on the wild side by adding the line
+`config.action_controller.default_protect_from_forgery = false` right underneath
+the line `config.load_defaults 5.2` in `config/application.rb`.
 
 [live-demo]: https://ninetyninecats.herokuapp.com/
 [rails-setup]: ../../readings/rails-setup.md

@@ -1,10 +1,8 @@
 class CatRentalRequest < ApplicationRecord
-  # freeze renders constants immutable
+  # .freeze renders constants immutable
   STATUS_STATES = %w(APPROVED DENIED PENDING).freeze
 
-  # N.B. Remember, Rails 5 automatically validates the presence of
-  # belongs_to associations, so we can leave the validation of cat out here.
-  validates :end_date, :start_date, :status, presence: true
+  validates :cat_id, :end_date, :start_date, :status, presence: true
   validates :status, inclusion: STATUS_STATES
   validate :start_must_come_before_end
   validate :does_not_overlap_approved_request
@@ -21,7 +19,9 @@ class CatRentalRequest < ApplicationRecord
 
       # when we approve this request, we reject all other overlapping
       # requests for this cat.
-      overlapping_pending_requests.update_all(status: 'DENIED')
+      overlapping_pending_requests.each do |req|
+        req.update!(status: 'DENIED')
+      end
     end
   end
 
@@ -43,6 +43,7 @@ class CatRentalRequest < ApplicationRecord
   end
 
   private
+
   def assign_pending_status
     self.status ||= 'PENDING'
   end
@@ -140,7 +141,8 @@ class CatRentalRequest < ApplicationRecord
     return if self.denied?
 
     unless overlapping_approved_requests.empty?
-      errors[:base] << 'Request conflicts with existing approved request'
+      errors[:base] <<
+        'Request conflicts with existing approved request'
     end
   end
 
