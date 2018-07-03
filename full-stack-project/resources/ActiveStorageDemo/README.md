@@ -15,8 +15,8 @@ This demo shows how to upload images using React, Active Storage, and AWS S3.
 - [Form.jsx](./frontend/form.jsx)
 - [storage.yml](./config/storage.yml)
 - [development.rb](./config/environments/development.rb#L31)
-- [production.rb](./config/environments/production.rb)
-- [credentials.yml.enc](./config.credentials.yml.enc)
+- [production.rb](./config/environments/production.rb#L42)
+- [credentials.yml.enc](./config/credentials.yml.enc)
 
 ## Useful Docs
 - [ActiveStorage README](https://github.com/rails/rails/blob/master/activestorage/README.md)
