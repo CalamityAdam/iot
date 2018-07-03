@@ -90,8 +90,8 @@ maps, Cloudinary and AWS.
     * [Video demo][figaro-video]
   * [Cloudinary video demo][cloudinary-video] work with images
     * [Code demo][cloudinary-demo]
-  * [Paperclip and AWS S3 Hosting Demo][paperclip-aws-demo]
-  * [Active Storage and AWS S3 Hosting Demo][active-storage-demo] **(Use this if you're riding rails >= 5.2.0. Paperclip will be soon deprecated)**
+  * [Active Storage and AWS S3 Hosting Demo][active-storage-demo]
+  * [Paperclip and AWS S3 Hosting Demo][paperclip-aws-demo] **(Only resort to Paperclip if you are using Rails < 5.2.0. It will be deprecated soon and its us is not encouraged)**
   * [Google maps][google-maps-demo]
 * **Other tools**
   * [Redux dev tools][redux-dev-tools] view your react state live and

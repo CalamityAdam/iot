@@ -27,10 +27,10 @@ This demo shows how to upload images using React, Active Storage, and AWS S3.
 
 ### Setting up AWS
 
-- The first thing we need to set up is our buckets. This is where amazon will actually store our files. Click on 'S3' and then 'Create Bucket'. We should make a separate bucket for development and production. I would use something like `app-name-dev`, and `app-name-pro`. Set the region to the one closest to you (that's N. Virginia if you're in New York).
+- The first thing we need to set up is our buckets. This is where amazon will actually store our files. Click on 'S3' and then 'Create Bucket'. We should make a separate bucket for development and production. I would use something like `app-name-dev` and `app-name-pro`. Set the region to the one closest to you (that's N. Virginia if you're in New York).
 - Now we have space set aside on AWS, but we don't have permission to access it. We need to create a user, and a policy for them to access your buckets. Go back to the main page and click 'Identity and Access Management' then click 'Users' on the left. We'll make a new user, named whatever you like.
 - You'll be directed to a page with your brand new security credentials, DOWNLOAD AND SAVE THEM NOW, you will not have access to them again. If you do lose them, just delete the user and make a new one.
-- The keys you just saved give you access to your AWS server space, **don't give push them to GitHub, or put them anywhere public!**
+- The keys you just saved give you access to your AWS server space, **don't push them to GitHub, or put them anywhere public!**
 - Now we need to set up the security policy for our new user. This is how they will be allowed to connect. Click 'Attach existing policies directly' and then 'Create Policy'. You can use this sensible default and not worry too much about what it's doing for you (borrrrriing). Remember to switch out bucket-name for your bucket.
 ### User Policy
 ```json
