@@ -205,4 +205,6 @@ object and sending up the wrong header. See more in this [SO post](http://stacko
 ```
 $ heroku config:set RAILS_MASTER_KEY=<your-master-key-here>
 ```
-- Congrats! You did it!
+
+### Default files and seeding
+- Setting a default files and attaching files in your seeds are two things your project might need. Please discuss your implementation ideas for these features with your project manager to see if they have any helpful tips!
