@@ -4,9 +4,16 @@ This demo shows how to upload images using React, Active Storage, and AWS S3.
 ## Demo
 
 
-#### Videos
-- [Part One (active storage, aws)](https://vimeo.com/278084990)
-- [Part Two (uploading files via a react form)](https://vimeo.com/278085119)
+#### Bite Sized Videos
+- [:movie_camera: (Setting up ActiveStorage)](https://vimeo.com/278726984)
+- [:movie_camera: (Setting up S3)](https://vimeo.com/278726994)
+- [:movie_camera: (Handling keys and credentials)](https://vimeo.com/278727014)
+- [:movie_camera: (Uploading a photo)](https://vimeo.com/278727030)
+- [:movie_camera: (Displaying S3 images in React)](https://vimeo.com/278727054)
+- [:movie_camera: (Reading files in React forms)](https://vimeo.com/278727067)
+- [:movie_camera: (Sending files to Rails via React)](https://vimeo.com/278727091)
+- [:movie_camera: (Image preview)](https://vimeo.com/278727103)
+- [:movie_camera: (Validations for attachments)](https://vimeo.com/278727131)
 
 
 ## Key Files
