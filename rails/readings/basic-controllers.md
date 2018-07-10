@@ -143,7 +143,7 @@ A good pattern for controlling which attributes are whitelisted in the
 params hash is writing a helper method to deal with this.  Example:
 
 ```ruby
-class CatController < ActionController::Base
+class CatsController < ActionController::Base
   # Using "Cat.create(params[:cat])" would raise an
   # ActiveModel::ForbiddenAttributes exception because it'd be using
   # mass assignment without an explicit permit step.
