@@ -31,7 +31,7 @@ To help us find paths, we will build a **move tree** . The values in the tree wi
 
 Start by creating an instance variable, `self.root_node` that stores the knight's initial position in an instance of your `PolyTreeNode` class. 
 
-You will be writing an instance method `KnightPathFinder#build_move_tree` to build the move tree, beginning with `self.root_node`. Call this method in `initialize`. You will traverse the move tree whenever `#find_path` is called. **Don't write this yet though**.
+You will be writing an instance method `KnightPathFinder#build_move_tree` to build the move tree, beginning with `self.root_node`. Call this method in `initialize`; You will traverse the move tree whenever `#find_path` is called. **Don't write this yet though**.
 
 ## Phase I: `#new_move_positions`
 
