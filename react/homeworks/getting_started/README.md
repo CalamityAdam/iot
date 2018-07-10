@@ -21,6 +21,7 @@ npm install --save package1 package2 etc
 You'll need the following packages:
 
 - `webpack`
+- `webpack-cli`
 - `react`
 - `react-dom`
 - `babel-core`
