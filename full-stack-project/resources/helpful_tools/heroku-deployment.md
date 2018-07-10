@@ -57,17 +57,32 @@ Here is a quick guide to git yer app on the interwebs.
   * Setup production database with: `heroku run bundle exec rails db:migrate`
   * Optionally, include seed data with: `heroku run bundle exec rails db:seed`
 
-4. **(Optional) Migrate static assets to the Asset Pipeline**
-  * Move assets to `app/assets/`
-  * Images should be in `app/assets/images`
-  * Attach assets to the window in `application.html.erb` or `root.html.erb`
-  * Useful methods
-    * [SASS](https://www.sitepoint.com/an-introduction-to-sass-in-rails/)
-      * `image-url("rails.png")` returns `url(/assets/rails.png)`
-      * `asset-url("rails.png")` returns `url(/assets/rails.png)`
-    * JavaScript (access from any JavaScript file included in application.js)
-      * `image_path("rails.png")`
-      * `asset_path("rails.png")`
+4. ** Migrate static assets to the Asset Pipeline**
+  * Put assets in `app/assets/`
+  * Images should be in `app/assets/images/`
+  * Use the Rails helpers (`image_url` for things in `app/assets/images/`, `asset_url` for anything in `app/assets/`) to generate the URL.
+  * For use in Rails views:
+    ```html
+    <img src="<%= image_url('brent.png') %>" />
+    ```
+  * For use in React:
+    ```html
+    <!-- application.html.erb -->
+    <script type="text/javascript">
+      window.brentURL = "<%= image_url('brent.png') %>"
+    </script>
+    ```
+    ```js
+    // your component
+    render() {
+      render <img src={window.brentURL} />;
+    }
+    ```
+  * For use in [SASS](https://www.sitepoint.com/an-introduction-to-sass-in-rails/)
+    ```scss
+    image-url('brent.png')
+    asset-url('brent.png')
+    ```
 
 ## Common Gotchas
 
