@@ -33,7 +33,7 @@ configuration works.
     todo_redux.jsx
   ```
 
-* Run `npm init -y` and then `npm install --save webpack react react-dom redux react-redux babel-core babel-loader babel-preset-react babel-preset-env lodash` to set up React and Redux
+* Run `npm init -y` and then `npm install --save webpack webpack-cli react react-dom redux react-redux babel-core babel-loader babel-preset-react babel-preset-env lodash` to set up React and Redux
   * This command installs the npm packages that we will be using to create our React/Redux app.
 * Set up your `webpack.config.js` file so that your bundle.js is saved in the root directory of your project. If you need to remind yourself how to set up the file look [here][webpack_setup].
 * Start `webpack --watch`
@@ -111,12 +111,12 @@ export const RECEIVE_TODO = 'RECEIVE_TODO';
 
 This action creator lets our reducer know to reset the list of `todos` and, as
 such, will also need to pass along a new set of `todos`. Write your
-`receiveTodos` action creator so that it accepts an array argument `todos`. 
-Note this action creater takes a `todos` _array_ as opposed to a `todos` _object_ 
-because that's how the backend will send the data to our frontend. It will be the 
-job of the reducer in our frontend to turn this array into an object. The 
-`receiveTodos` action creator should return an action object with a `type` 
-property pointing to `RECEIVE_TODOS` and a `todos` property pointing to the 
+`receiveTodos` action creator so that it accepts an array argument `todos`.
+Note this action creater takes a `todos` _array_ as opposed to a `todos` _object_
+because that's how the backend will send the data to our frontend. It will be the
+job of the reducer in our frontend to turn this array into an object. The
+`receiveTodos` action creator should return an action object with a `type`
+property pointing to `RECEIVE_TODOS` and a `todos` property pointing to the
 `todos` argument you're passing in. This represents all of our todos data.
 
 #### `receiveTodo`

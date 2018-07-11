@@ -14,7 +14,7 @@ list.
   * `bcrypt`
   * `jquery-rails` (When using rails 5.1+)
 * [ ] `bundle install`
-* [ ] When using Rails 5.1+, update your `application.js` manifest to include: 
+* [ ] When using Rails 5.1+, update your `application.js` manifest to include:
   * `//= require jquery`
   * `//= require jquery_ujs`
 * [ ] `git init`
@@ -28,6 +28,7 @@ list.
 * [ ] Create a frontend folder at the root of your project with an entry file inside of it.
 * [ ] `npm install --save`
   * `webpack`
+  * `webpack-cli`
   * `react`
   * `react-dom`
   * `react-router-dom`
@@ -47,4 +48,3 @@ list.
   * Include `devtool: 'source-map'`.
 * [ ] `git commit` again (Verify that your `.gitignore` works).
   * `git push` your skeleton.
-

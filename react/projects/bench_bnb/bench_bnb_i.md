@@ -37,6 +37,7 @@ Refer to [the master checklist][checklist] during Bench BnB and your final proje
 * Run `npm init -y`.
 * Run `npm install --save` the following packages:
   * `webpack`
+  * `webpack-cli`
   * `react`
   * `react-dom`
   * `react-redux`

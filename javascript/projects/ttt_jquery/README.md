@@ -36,7 +36,7 @@ change anything in the Node solution but read and refer to it!
 A brief side note: we'll use Node's `module.exports` and `require`
 to separate our game into digestible modules. Since we can't actually use `require`
 in the browser, we'll use [Webpack][webpack] to bundle our files. Ensure that
-you've installed webpack with `npm install -g webpack`.
+you've installed webpack and webpack-cli with `npm install -g webpack webpack-cli`.
 
 Complete the `require` statements in `main.js` to require `ttt-view` and the
 `game` as dependencies. When webpack processes `main.js` (the entry file), it
@@ -45,8 +45,8 @@ will include all required files within `bundle.js` (the output file).
 Webpack will output the bundled file as `js/bundle.js`, for which we have
 included a script tag in `index.html`.
 
-Open a new terminal tab or window and run `webpack --watch ./js/main.js -o 
-./js/bundle.js --mode=development`. The `--watch` flag directs webpack to 
+Open a new terminal tab or window and run `webpack --watch ./js/main.js -o
+./js/bundle.js --mode=development`. The `--watch` flag directs webpack to
 re-bundle your app whenever you save a bundled file.
 
 [webpack]: ../../readings/browser-modules.md#webpack
