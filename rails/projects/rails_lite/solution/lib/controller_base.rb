@@ -23,7 +23,7 @@ class ControllerBase
 
   # Set the response status code and header
   def redirect_to(url)
-    before_render_or_redirect
+    prepare_render_or_redirect
 
     @res.status = 302
     @res["Location"] = url
@@ -35,7 +35,7 @@ class ControllerBase
   # Set the response's content type to the given type.
   # Raise an error if the developer tries to double render.
   def render_content(content, content_type)
-    before_render_or_redirect
+    prepare_render_or_redirect
 
     @res.write(content)
     @res['Content-Type'] = content_type
