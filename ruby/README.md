@@ -191,7 +191,7 @@
 [aliases]: readings/alias.md
 [code-academy-git]: https://www.codecademy.com/learn/learn-git
 [git-fix-authorship]: readings/git-fix-authorship.md
-[git-cheatsheet]: http://www.ndpsoftware.com/git-cheatsheet.html
+[git-cheatsheet]: https://education.github.com/git-cheat-sheet-education.pdf
 
 ### Assessment01 Practice (We will be taking it in class)
 
