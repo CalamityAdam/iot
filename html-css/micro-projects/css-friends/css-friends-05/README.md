@@ -11,7 +11,7 @@
 
 Create a `.content-header` section and put it at the top inside of the
 `.content` container, above the sidebar and main section. Give it a
-height and use the supplied `../docs/images/cats.jpg` image as a
+height and use the supplied `../images/cats.jpg` as a
 background. Make sure the background image covers the full section.
 
 Add a heading and button and position them absolute at the bottom. To
