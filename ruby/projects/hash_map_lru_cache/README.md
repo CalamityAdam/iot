@@ -173,7 +173,7 @@ Write hash functions for `Array`, `String`, and `Hash`. Build these up sequentia
 ## Phase 3: HashSet
 
 Now that we've got our hashing functions, we can store more than just
-integers. A proper hashing function also ensures that the elements that we store will be evenly distributed amongst our buckets, hopefully keeping our buckets to length <= 1. Our freshly cooked up hashing functions are awesome, but for rest of this project we'll rely on the built-in Ruby hashing functions to minimize the clustering of elements that can occur with our hand-made functions. Let's go ahead and implement a HashSet!
+integers. A proper hashing function also ensures that the elements that we store will be evenly distributed amongst our buckets, hopefully keeping our buckets to length <= 1. Our freshly cooked up hashing functions are awesome, but for the rest of this project we'll rely on the built-in Ruby hashing functions to minimize the clustering of elements that can occur with our hand-made functions. Let's go ahead and implement a HashSet!
 
 This will be a simple improvement on ResizingIntSet. Just hash every
 item before performing any operation on it. This will return an integer,
