@@ -2,13 +2,10 @@ import React from 'react';
 
 class Headers extends React.Component {
   render() {
-    let selected = this.props.selectedPane;
-    let headers = this.props.panes.map((pane, index) => {
-      let title = pane.title;
-      let klass = '';
-      if (index === selected) {
-        klass = 'active';
-      }
+    const selected = this.props.selectedPane;
+    const headers = this.props.panes.map((pane, index) => {
+      const title = pane.title;
+      const klass = index === selected ? 'active' : '';
 
       return (
         <li
@@ -42,7 +39,7 @@ export default class Tabs extends React.Component {
   }
 
   render() {
-    let pane = this.props.panes[this.state.selectedPane];
+    const pane = this.props.panes[this.state.selectedPane];
 
     return (
       <div>

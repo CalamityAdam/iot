@@ -22,7 +22,7 @@ export default class AutoComplete extends React.Component {
     }
 
     this.props.names.forEach(name => {
-      let sub = name.slice(0, this.state.inputVal.length);
+      const sub = name.slice(0, this.state.inputVal.length);
       if (sub.toLowerCase() === this.state.inputVal.toLowerCase()) {
         matches.push(name);
       }
@@ -36,12 +36,12 @@ export default class AutoComplete extends React.Component {
   }
 
   selectName(event) {
-    let name = event.currentTarget.innerText;
+    const name = event.currentTarget.innerText;
     this.setState({inputVal: name});
   }
 
   render() {
-    let results = this.matches().map((result, i) => {
+    const results = this.matches().map((result, i) => {
       return (
         <li key={i} onClick={this.selectName}>{result}</li>
       );
