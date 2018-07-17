@@ -6,7 +6,7 @@ import Clock from './clock';
 import Weather from './weather';
 import Tabs from './tabs';
 
-const Names = [
+const names = [
   'Abba',
   'Barney',
   'Barbara',
@@ -17,7 +17,7 @@ const Names = [
   'Xander'
 ];
 
-const Panes = [
+const panes = [
   {title: 'one', content: 'I am the first'},
   {title: 'two', content: 'Second pane here'},
   {title: 'three', content: 'Third pane here'}
@@ -29,8 +29,8 @@ function Root() {
       <Clock />
       <Weather />
       <div className='interactive'>
-        <Tabs panes={Panes} />
-        <AutoComplete names={Names} />
+        <Tabs panes={panes} />
+        <AutoComplete names={names} />
       </div>
     </div>
   );

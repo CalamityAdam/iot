@@ -11,7 +11,7 @@ class Headers extends React.Component {
         <li
           key={index}
           className={klass}
-          onClick={this.props.onTabChosen.bind(null, index)}>
+          onClick={() => this.props.onTabChosen(index)}>
           {title}{' '}
         </li>
       );
