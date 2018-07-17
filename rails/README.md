@@ -238,39 +238,6 @@
 
 ## w4d5
 
-<<<<<<< HEAD
-=======
-### Materials (30 min)
-* :book: [CSS Nontechnical Overview][css-nontech] (20 min)
-* :book: [CSS Responsive Design][css-responsive] (10 min)
-
-[css-nontech]: ../html-css/readings/css_nontech.md
-[css-responsive]: ../html-css/readings/responsive_design.md
-
-### Homeworks (150 min)
-* [CSS Curriculum 6: Positioning & Media Queries][css-6] (90 min)
-* [CSS Review][css-review] (60 min)
-
-[css-6]: ../html-css/micro-projects/positioning_media_queries/exercise.md
-[css-review]: ../html-css/projects/css_review
-
-### Additional Resources
-* :movie_camera: [CSS Review][css-review-vid]
-* :book: **(BONUS)** [CSS Transform property][css-transform]
-
-[css-review-vid]: https://vimeo.com/214597789
-[css-transform]: http://css-tricks.com/almanac/properties/t/transform/
-
-### Projects
-* [AA Times][aa-times]
-* **(BONUS)** [Google Homepage][google-homepage]
-
-[aa-times]: ../html-css/projects/aa_times
-[google-homepage]: ../html-css/projects/google_homepage
-
-## w5d1
-
->>>>>>> Move w4d1 readings back to underneath videos
 ### Materials (1 hr, 41 min)
 :closed_lock_with_key: `go_video_go`
 * :movie_camera: [Rails Testing: Setup][rails-testing-setup] (15 min)
@@ -291,23 +258,6 @@
 * [Capybara][capybara-hw] (45 min)
 
 [capybara-hw]: homeworks/capybara
-<<<<<<< HEAD
-=======
-[css-friends]: ../html-css/micro-projects/css-friends/
-
-### Culture
-* [Have You Experienced Racism in the Workplace?][racism-stats] (3 min)
-* [Diversity in Tech Remains Elusive][diversity-elusive] (7 min)
-* [Commoditization and Exploitation of Asians in Tech][asian-racism] (11 min)
-* **[The Other Side of Diversity][other-side-diversity]** (11 min)
-* **[How AI is Learning All of Our Worst Impulses][ai-impulses]** (9 min)
-
-[racism-stats]: https://www.comparably.com/guest/culture/tech/all-departments/109-have-you-ever-experienced-racism-in-the-workplace
-[diversity-elusive]: https://modelviewculture.com/pieces/diversity-in-tech-remains-elusive-due-to-racism-lack-of-representation-and-cultural-differences
-[asian-racism]: https://modelviewculture.com/pieces/damaged-karma-commoditization-and-exploitation-of-asians-in-tech
-[other-side-diversity]: https://medium.com/this-is-hard/the-other-side-of-diversity-1bb3de2f053e
-[ai-impulses]: https://www.theguardian.com/inequality/2017/aug/08/rise-of-the-racist-robots-how-ai-is-learning-all-our-worst-impulses
->>>>>>> Move w4d1 readings back to underneath videos
 
 ### Additional Resources
 * [Integration Testing][integration-testing]
@@ -327,10 +277,6 @@
 [spring-guard]: readings/guard-spring-setup.md
 
 ### Projects
-<<<<<<< HEAD
-=======
-* [CSS Friends Phase 1][css-friends]
->>>>>>> Move w4d1 readings back to underneath videos
 * [Goal App][goal-app]
 * **(BONUS)** [Appacademy.io Tests][appacademyio-tests]
 
