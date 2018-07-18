@@ -61,7 +61,7 @@ will also be the entry point for webpack.
 * Render the board using divs or lis with CSS classes. Redraw the board each
 turn.
 * Export the `View` class. In `main.js`, require the exported `View`.
-* Run `webpack` to create `bundle.js`. Be to include it in your html.
+* Run `webpack` to create `bundle.js`. Be sure to include it in your html.
 
 ## Phase III: On your own!
 
