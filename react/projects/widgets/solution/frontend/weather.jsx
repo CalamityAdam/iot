@@ -24,9 +24,7 @@ export default class Weather extends React.Component {
   }
 
   pollWeather(location) {
-    const lat = location.coords.latitude;
-    const long = location.coords.longitude;
-    const url = 'http://api.openweathermap.org/data/2.5/weather?';
+    let url = 'http://api.openweathermap.org/data/2.5/weather?';
     const params = {
       lat: location.coords.latitude,
       lon: location.coords.longitude
