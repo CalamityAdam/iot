@@ -215,8 +215,8 @@ Inside `frontend/actions/todo_actions`, add a new thunk action creator `createTo
 The returned function, when invoked, should call the `APIUtil` to create a todo and resolve the promise by dispatching
 your synchronous `receiveTodo(todo)` action.
 
-* Inside the `todo_list_container.js`, instead of passing in `receiveTodo` in `mapDispatchToProps`,
-pass in `createTodo` and pass it through to `TodoForm`.
+* Inside the `todo_list_container.js`, in `mapDispatchToProps`, pass in `createTodo` and pass it through to `TodoForm`.
+* Leave `receiveTodo` there for now (the `todoListItem` component still depends on it!)
 * Inside the `TodoForm` component, instead of `receiveTodo`, call `createTodo`.
 
 Since we only want to clear the form if the post to the server is successful, clear the form after the promise resolves.
@@ -268,6 +268,8 @@ but we need a different action because we will hit a different route on the back
 Add `APIUtil.updateTodo(todo)` and a new thunk action creator `updateTodo(todo)`
 which dispatches `receiveTodo` upon success and `receiveError` on failure.
 Update `toggleTodo` in `TodoListItem` to use your new action instead of calling `receiveTodo` directly.
+
+Once you have that working, remove `receiveTodo` from `todo_list_container`- you won't be needing it anymore.
 
 #### Deleting Todos
 
