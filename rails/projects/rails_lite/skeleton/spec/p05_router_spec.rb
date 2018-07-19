@@ -144,11 +144,19 @@ describe 'ControllerBase#initialize' do
 
   let(:req) { Rack::Request.new({'rack.input' => {}}) }
   let(:res) { Rack::MockResponse.new('200', {}, []) }
-  let(:cats_controller) { CatsController.new(req, res, { 'key' => 'val' } ) }
+  
+  let(:cats_controller) do 
+    req.update_param('foo', 'bar')
+    CatsController.new(req, res, { 'key' => 'val' } ) 
+  end
 
   context '#initialize' do
     it 'includes route params in the params object' do
       expect(cats_controller.params['key']).to eq('val')
+    end
+    it 'merges route params with the request params' do
+      expect(cats_controller.params['key']).to eq('val')
+      expect(cats_controller.params['foo']).to eq('bar')
     end
   end
 end

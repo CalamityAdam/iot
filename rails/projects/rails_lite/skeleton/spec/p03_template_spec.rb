@@ -27,7 +27,7 @@ describe ControllerBase do
       expect(cats_controller.res['Content-Type']).to eq('text/html')
     end
 
-    it 'shows the proper instance variables in the index view' do
+    it 'passes instance variable bindings to ERB#result' do
       expect(cats_controller.res.body).to include('GIZMO')
       expect(cats_controller.res['Content-Type']).to eq('text/html')
     end
