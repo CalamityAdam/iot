@@ -803,22 +803,18 @@ Modify and add the appropriate API endpoints, actions, reducers, utils, and comp
 When you create a new bench, allow a user to also add a photo.
 We'll do this in two steps.
 
-1. Create a new column in your benches table to store the image url.
-Add a text field in the bench form to allow the user to enter a url.
+1. Set up a bucket on Amazon Web Services S3 (AWS S3) so that each time the user adds an image, we can store our own copy of that image in the cloud.
+
+2. Set up ActiveStorage on our local machine to link up with AWS.
+Add an add-image button in the bench form to allow the user to upload an image.
 Display these pictures on both the show page and the index.
 
-2. Each time the user adds an image, we actually want to store our own copy of that image.
-The image url in your database should point to that copy, rather than the original.
+Your database should point to the copy stored in AWS, rather than the original.
 We don't want to store the image in our database; that would take up too much space.
-Instead will use the web service [Cloudinary][cloudinary-js].
-Remove the url text-field from your form and replace it with an add-image button.
-The button should open the Cloudinary upload_widget which will allow you to drag-and-drop an image or supply a url, and will  return the url for your new copy of the image.
-Checkout the [Cloudinary video][cloudinary-video] and [corresponding code][cloudinary-demo] for details on how to create your own  Cloudinary account and add the widget to your app.
-If step (1) was working properly, you shouldn't have to change your backend at all.
+
+Check out our [Active Storage and AWS S3 Hosting Demo][active-storage-demo] for details on how to create your own Amazon Web Services account and integrate its functionality with your app.
+
 Test that everything works by adding a new bench with an image.
-
- **Note:** Since this site isn't going on Heroku, you can just put the `upload_preset` and `cloud_name` straight into your jsx file; no need to use the Figaro gem.
-
 
 ## BONUSES!
 * When you hover over an index item it should highlight the marker on the map in a different color.
@@ -838,6 +834,4 @@ This should require creating a new reducer.
 [react-history]: https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/history.md
 [URLSearchParams-docs]: https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
 [jquery-ajax]: http://api.jquery.com/jquery.ajax/#jQuery-ajax-settings
-[cloudinary-js]: http://cloudinary.com/documentation/upload_widget
-[cloudinary-video]: https://vimeo.com/164612621
-[cloudinary-demo]: https://github.com/appacademy/react_cloudinary_demo
+[active-storage-demo]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/ActiveStorageDemo
