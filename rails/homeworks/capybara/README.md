@@ -39,6 +39,17 @@ NB: use Atom's ⌘-t shortcut to quickly navigate around your rails project
   Rails.application.routes.default_url_options[:host] = 'domain.com'
 ```
 
+```ruby
+  # rails_helper.rb
+
+  Shoulda::Matchers.configure do |config|
+    config.integrate do |with|
+      with.test_framework :rspec
+      with.library :rails
+    end
+  end
+```
+
 Note: if you're having difficulty getting your config to work, don't hesitate to check out the `spec_helper.rb`, `Gemfile`, and specs from the solutions.
 
 

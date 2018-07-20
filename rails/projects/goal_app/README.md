@@ -24,6 +24,8 @@ can view and comment on each other's goals, harnessing the power of
 Remember to set up your app to use RSpec and Capybara.
 (See the [RSpec Setup][rspec-setup] and [Capybara][Capybara] readings.)
 
+If you want to use shoulda-matchers, you'll need to make sure to include the gem in your Gemfile and update `rails_helper.rb` with some configuration for shoulda-matchers. Check out the [shoulda-matchers documentation][shoulda-matchers-docs]!
+
 Make sure that none of the gems `web-console`, `binding_of_caller`, or
 `better_errors` is included in the `:test` group in your Gemfile, as
 they can give you false positives in your tests.
@@ -36,6 +38,7 @@ Try to commit at least after finishing each phase.
 
 Feel free to consult the [reading on git][git-reading].
 
+[shoulda-matchers-docs]: https://github.com/thoughtbot/shoulda-matchers#rspec
 [git-reading]: ../../../ruby/readings/git-summary.md
 [git-add]:  ../../../ruby/readings/git-add.md
 
