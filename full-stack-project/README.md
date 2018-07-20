@@ -86,10 +86,8 @@ before W9D5)
   * [Understanding the asset pipeline][asset-pipeline]
 * **Web services**
   * [Figaro gem][figaro] securely store api keys. Necessary for google
-maps, Cloudinary and AWS.
+maps and AWS.
     * [Video demo][figaro-video]
-  * [Cloudinary video demo][cloudinary-video] work with images
-    * [Code demo][cloudinary-demo]
   * [Active Storage and AWS S3 Hosting Demo][active-storage-demo]
   * [Paperclip and AWS S3 Hosting Demo][paperclip-aws-demo] **(Only resort to Paperclip if you are using Rails < 5.2.0. It will be deprecated soon and its us is not encouraged)**
   * [Google maps][google-maps-demo]
@@ -109,8 +107,6 @@ resources][additional-resources].
 [figaro-video]: https://vimeo.com/164602277
 [active-storage-demo]: resources/ActiveStorageDemo
 [paperclip-aws-demo]: resources/cdns/file_upload_demo
-[cloudinary-video]: https://vimeo.com/164612621
-[cloudinary-demo]: https://github.com/appacademy/react_cloudinary_demo
 [google-maps-demo]: https://github.com/appacademy/curriculum/tree/master/react/demos/react_map_demo
 [redux-dev-tools]: https://github.com/appacademy/curriculum/blob/c280e51a978c9a67243a2bb2d5f4650d9f53d387/react/readings/redux_dev_tools.md
 [redux-dev-tools-video]: https://vimeo.com/194738174

@@ -68,7 +68,7 @@ document in NoSQL might look like this, then:
   email: "alexa@gmail.com",
   password_digest: "Ke&63h1z$mK9jd37n",
   featured_photo: {
-    url: "https://www.cloudinary.com/09348128",
+    url: "https://imgur.com/FRK6meX",
     caption: "best pizza ever"
   }
 }
