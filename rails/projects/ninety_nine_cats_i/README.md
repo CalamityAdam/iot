@@ -42,7 +42,7 @@ include:
     ```
   * Write an `#age` method that uses `birth_date` to calculate age.
     You will find some useful methods for this in the [Ruby `Date`
-    docs][date-docs]. Also be sure to check out the [Rails docs][time-ago].
+    docs][date-docs]. Also be sure to check out the [Rails docs][time-ago]. (Hint: ActionView DateHelpers is a `module` that needs to be `included` in the Cat model class if you want access to these methods.)
 * `color`
   * We'll require the user to choose from a standard set of colors, so
     add an `:inclusion` validation to the model. We'll need to access
