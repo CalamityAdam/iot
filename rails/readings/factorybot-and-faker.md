@@ -116,14 +116,14 @@ We'll see more examples soon, but, first, let's get set up.
   end
   ```
 
-  Run `bundle install` to install the `faker` and `factory_girl` gems.
+  Run `bundle install` to install the `faker` and `factory_bot_rails` gems.
 
 3. Add the following line at the end of your `config.generators` block
     inside of the `config/application.rb` file:
 
 
 ```ruby
-  g.fixture_replacement :factory_girl, dir: 'spec/factories'
+  g.fixture_replacement :factory_bot_rails, dir: 'spec/factories'
 ```
 
 You should now have the following in your `config/application.rb` file:
@@ -138,7 +138,7 @@ config.generators do |g|
     routing_specs: false,
     controller_specs: true,
     request_specs: false
-  g.fixture_replacement :factory_girl, dir: 'spec/factories'
+  g.fixture_replacement :factory_bot_rails, dir: 'spec/factories'
 end
 ```
 
@@ -341,9 +341,9 @@ end
 In the RSpec test, you can now
 [generate or build multiple records][mult-records].
 
-[passing-block]: https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md#lazy-attributes
-[seqs]: https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md#sequences
-[mult-records]: https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md#building-or-creating-multiple-records
+[passing-block]: https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md#lazy-attributes
+[seqs]: https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md#sequences
+[mult-records]: https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md#building-or-creating-multiple-records
 
 ### Models with Associations
 
