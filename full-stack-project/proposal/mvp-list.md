@@ -318,7 +318,7 @@ Make sure outline your MVP features using the following structure when writing y
 * **Bonus**: Autocomplete SmartAdd of task properties
 * **Bonus**: Subtasks
 
-### Robinhood
+#### Robinhood
 * Dashboard + Portfolio
 * Asset/Stock Detail
 * Watchlist
