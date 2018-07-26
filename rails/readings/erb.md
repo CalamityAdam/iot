@@ -16,7 +16,7 @@ templates are pretty simple:
 
 For example:
 
-```html+erb
+```erb
 <b>Names of all the people</b>
 <ul>
   <% ['Tom', 'Dick', 'Harry'].each do |name| %>
@@ -32,7 +32,7 @@ written using the output embedding tag `<%= %>`. Output functions like
 `print` or `puts` won't work with ERB templates. So this would be
 wrong:
 
-```html+erb
+```erb
 <!-- WRONG -->
 Hi, Mr. <% puts "Frodo" %>
 ```
@@ -47,7 +47,7 @@ user will never know you are using ERB.
 Say you want to comment out some broken Ruby code in your ERB file
 that's throwing an error:
 
-```html+erb
+```erb
 <!-- <%= my_broken_ruby_code %> -->
 ```
 
@@ -58,7 +58,7 @@ run and will still cause errors.
 
 To stop the code from running, simply add a `#`. So:
 
-```html+erb
+```erb
 <%#= my_broken_ruby_code %>
 ```
 
@@ -91,7 +91,7 @@ class ProductsController < ApplicationController
 end
 ```
 
-```html+erb
+```erb
 <!-- app/views/products/index.html.erb -->
 <h1>All the products!</h1>
 <ul>
@@ -117,7 +117,7 @@ about the two most commonly used helper methods provided by Rails.
 You may have seen `link_to` around before; it generates the HTML code
 for a link. Here's a few uses:
 
-```html+erb
+```erb
 <%= link_to 'Cat Pictures', "http://cashcats.biz" %>
 <a href="http://cashcats.biz">Cat Pictures</a> <!-- output -->
 
@@ -130,7 +130,7 @@ When a user clicks on an anchor tag, a `GET` request is issued. If you
 want to issue a `POST`, `PATCH`, or `DELETE` request, you can use a
 button and specify the method:
 
-```html+erb
+```erb
 <%= button_to 'Delete comment', comment_url(@comment), method: :delete %>
 <form action="<%= comment_url(@comment) %>"  method="POST"> <!-- equivalent to the above -->
   <input type="hidden" value="delete" name="_method" />

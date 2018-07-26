@@ -89,12 +89,12 @@ method on a model or a collection of models:
 Then in your view, you can access methods from the decorator just like you
 access regular model methods. Here are some examples:
 
-```html+erb
+```erb
 <form action="<%= @cat.form_url %>" method="post" accept-charset="utf-8"
       enctype="multipart/form-data">
 ```
 
-```html+erb
+```erb
 <select name="cat[color]" id="cat_color">
   <option></option>
   <% @cat.color_options.each do |value, name| %>
@@ -105,7 +105,7 @@ access regular model methods. Here are some examples:
 </select>
 ```
 
-```html+erb
+```erb
 <input type="submit" value="<%= @cat.submit_text %>">
 ```
 

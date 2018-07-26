@@ -150,7 +150,7 @@ downloading it (disposition should be attachment to do that).
 
 Finally, let's update our `SecretsController#show` action:
 
-```html+erb
+```erb
 <!-- app/views/secrets/show.html.erb -->
 Secret: <%= @secret.body %>
 <br>

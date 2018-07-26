@@ -38,7 +38,7 @@ end
 
 You can then use these helpers in all your views:
 
-```html+erb
+```erb
 <!-- app/views/cats/show.html.erb -->
 <p>
   How can one not like <%= highlight "cats" %>? They are my favorite!
@@ -63,7 +63,7 @@ something in `app/helpers/user_helpers` will be available in a
 
 Rails escapes all HTML when it prints out content in ERB tags.
 
-```html+erb
+```erb
 <%= '<p>This paragraph tag will be escaped</p>' %>
 <!--
 Outputs: &lt;p&gt;This paragraph tag will be escaped&lt;/p&gt;
@@ -89,7 +89,7 @@ Fortunately, Rails added a `.html_safe` method to the String class,
 which lets us bypass the escaping. Any string marked `html_safe` will
 not be escaped when inserted into a view.
 
-```html+erb
+```erb
 <%= '<p>This will NOT be escaped</p>'.html_safe %>
 <!--
 Outputs: <p>This will NOT be escaped</p>
@@ -150,7 +150,7 @@ end
 
 Alright, let's do it!
 
-```html+erb
+```erb
 <%= long_quote("_whytheluckystiff") do %>
   <p>
     All you need to know thus far is that Ruby is basically built from

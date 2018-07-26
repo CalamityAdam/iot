@@ -216,7 +216,7 @@ is totally okay that this doesn't set a password column.
 
 Then our views:
 
-```html+erb
+```erb
 <!-- app/views/users/new.html.erb -->
 <h1>Create User</h1>
 

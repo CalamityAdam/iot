@@ -234,7 +234,7 @@ will move the cursor into the associated input tag.
 Sometimes you want data to be sent to the server, but do not want the
 user to select it. This is the purpose of the `hidden` tag.
 
-```html+erb
+```erb
 <form action="http://99cats.com/cats" method="post">
   <input type="hidden" name="redirect_to" value="<%= request.original_url %>">
 

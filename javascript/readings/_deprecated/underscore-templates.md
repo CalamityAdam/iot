@@ -90,7 +90,7 @@ Using the template like this involves a four step process:
 Because ERB and underscore templates are so similar, they can get in
 each other's way. For instance, this won't work:
 
-```html+erb
+```erb
 <!-- app/views/widgets/show.html.erb -->
 <h1><%= @widget.name %></h1>
 
@@ -116,7 +116,7 @@ because this is JS code and not Ruby, ERB errors out.
 We can fix him. We have the technology. Just use `<%%` which "escapes"
 the `%` sign:
 
-```html+erb
+```erb
 <!-- app/views/widgets/show.html.erb -->
 <h1><%= @widget.name %></h1>
 

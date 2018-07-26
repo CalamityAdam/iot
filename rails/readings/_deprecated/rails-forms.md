@@ -19,7 +19,7 @@ class BlogEntriesController < ActionController
 end
 ```
 
-```html+erb
+```erb
 <!-- app/views/blog_entries/new.html.erb -->
 <%= form_for(@blog_entry) do |f| %>
   <%= f.label :title %>

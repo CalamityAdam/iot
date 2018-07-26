@@ -13,7 +13,7 @@ associated objects.
 The `simple_form` gem removes some of the gruntwork of setting up
 forms. It is meant to replace `form_for` like so:
 
-```html+erb
+```erb
 <%= simple_form_for(@user) do |f| %>
   <%= f.input :user_name %>
   <%= f.input :password %>
@@ -25,7 +25,7 @@ SimpleForm will try to guess the appropriate input type: for instance,
 a `string` column in your model will correspond to a `text` input
 tag. You may override this with `:as`:
 
-```html+erb
+```erb
 <%= simple_form_for(@user) do |f| %>
   <%= f.input :user_name %>
   <%= f.input :password %>
@@ -47,7 +47,7 @@ with Bootstrap.
 
 The power of SimpleForm comes from its handling of collections:
 
-```html+erb
+```erb
 <%= simple_form_for(@user) do |f| %>
   <%= f.input :name %>
   <%= f.input :home_city_id, :collection => City.all, :label_method => :name, :value_method => :id %>
@@ -135,7 +135,7 @@ find a way for the form to upload an attribute value for
 
 SimpleForm makes this, ehm, simple.
 
-```html+erb
+```erb
 <%= simple_form_for(@user) do |f| %>
   <%= f.input :name %>
   <%= f.input :visited_city_ids,
@@ -289,7 +289,7 @@ See http://stackoverflow.com/a/4783112
 For convenience, simple form offers a method that takes care of
 associations for us:
 
-```html+erb
+```erb
 <%= simple_form_for(@user) do |f| %>
   <%= f.association :home_city %> <!-- generates select box -->
   <%= f.association :visited_cities, :as => :check_boxes %> <!-- generates check boxes -->

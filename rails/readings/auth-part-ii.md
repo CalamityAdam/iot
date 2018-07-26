@@ -35,7 +35,7 @@ Add a `session` resource to the routes file. Generate a
 `SessionsController`. Write a `new` form so that the user can fill out
 their username/password:
 
-```html+erb
+```erb
 <!-- app/views/sessions/new.html.erb -->
 
 <h1>Log in!</h1>
@@ -121,7 +121,7 @@ login. Let's fix that.
 
 Make a very simple `show` view for your `UsersController`.
 
-```html+erb
+```erb
 <!-- app/views/users/show.html.erb -->
 <h1><%= @user.username %></h1>
 
@@ -264,7 +264,7 @@ We haven't written any logout functionality, nor do we ever tell the
 user who they are logged in as. Let's fix that by editing the
 application's layout:
 
-```html+erb
+```erb
 <!-- app/views/layouts/application.html.erb -->
 
 <!-- ... -->

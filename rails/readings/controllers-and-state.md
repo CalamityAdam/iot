@@ -180,7 +180,7 @@ This flash notice is available for the current **and** next controller and view 
 use. Let's modify `views/layouts/application.html.erb` (the template
 that every template is rendered in) to display notices.
 
-```html+erb
+```erb
 <!-- in views/layouts/application.html.erb -->
 <!-- `Object#try` is a Rails addition which will try to call the
       method if the object isn't `nil`.  -->

@@ -10,7 +10,7 @@ also load site-wide JavaScript in the layout.
 Layouts live in `app/views/layouts`; here's the default
 `application.html.erb` layout:
 
-```html+erb
+```erb
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +36,7 @@ view currently being rendered is inserted (see above).
 
 You can also create a layout with multiple yielding regions:
 
-```html+erb
+```erb
 <html>
   <head>
   <%= yield :head %>
@@ -55,7 +55,7 @@ The `content_for` method allows you to insert content into a named
 `yield` block in your layout. For example, this view would work with
 the layout that you just saw:
 
-```html+erb
+```erb
 <% content_for :head do %>
   <title>A simple page</title>
 <% end %>
@@ -66,7 +66,7 @@ the layout that you just saw:
 The result of rendering this page into the supplied layout would be
 this HTML:
 
-```html+erb
+```erb
 <html>
   <head>
     <title>A simple page</title>

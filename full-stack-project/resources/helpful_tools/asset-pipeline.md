@@ -168,7 +168,7 @@ You should not hard-code links to `/assets/application.js` (or
 `.css`). The names of precompiled assets contain an inserted
 **fingerprint** which is not predictable. For instance, don't do this:
 
-```html+erb
+```erb
 <head>
   <!-- noooo! -->
   <link href="/assets/application.css" type="text/css">

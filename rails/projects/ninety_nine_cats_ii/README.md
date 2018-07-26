@@ -128,7 +128,7 @@ any data they want.
 
 In this case, if we embed a tag:
 
-```html+erb
+```erb
 <input name="cat[user_id]" type="hidden" value="<%= current_user.id %>">
 ```
 

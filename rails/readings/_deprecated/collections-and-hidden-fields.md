@@ -24,7 +24,7 @@ typically done with an HTML `select` tag:
 
 `FormBuilder#collection_select` provides a way:
 
-```html+erb
+```erb
 <%= form_for(@cat) do |f| %>
   <!-- ... -->
   
@@ -46,7 +46,7 @@ these options will upload the associated value ("brown", "black", "blue").
 Say we want to select the owner for a `Cat`; `Cat` has an attribute,
 `owner_id`. We may do this:
 
-```html+erb
+```erb
 <%= form_for(@cat) do |f| %>
   <!-- ... -->
   
@@ -60,7 +60,7 @@ This will present `User#full_name` to the user; the value uploaded is the
 `User`'s id. Because this is common, `FormBuilder#collection_select` helps
 out:
 
-```html+erb
+```erb
 <%= form_for(@cat) do |f| %>
   <!-- ... -->
   
@@ -79,7 +79,7 @@ values and text names.
 Hidden fields are used to store attributes that the user is not responsible
 for inputting. Let's take a simple example:
 
-```html+erb
+```erb
 <!-- app/views/post/show.html.erb -->
 <h1><%= @post.title %></h1>
 
@@ -108,7 +108,7 @@ end
 
 This will store the post id in the `Comment` object. Here's the form:
 
-```html+erb
+```erb
 <%= form_for(@comment) do |f| %>
   <%= f.hidden_field :post_id %>
   <%= f.text_area :body %>

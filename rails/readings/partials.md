@@ -10,7 +10,7 @@ different views, so they also help us keep our code DRY.
 To render a partial as part of a view, you use the `render` method
 within the view:
 
-```html+erb
+```erb
 <h1>Page title</h1>
 
 <p>
@@ -28,7 +28,7 @@ distinguish them from regular views, even though they are referred to
 without the underscore. This holds true even when you're pulling in a
 partial from another folder:
 
-```html+erb
+```erb
 <%= render "shared/footer" %>
 ```
 
@@ -42,7 +42,7 @@ subroutines: as a way to move details out of a view so that you can
 grasp what's going on more easily. For example, you might have a view
 that looked like this:
 
-```html+erb
+```erb
 <%= render "shared/ad_banner" %>
 
 <h1>Products</h1>
@@ -65,7 +65,7 @@ them even more powerful and flexible. For example, you can use this
 technique to reduce duplication between new and edit pages, while
 still keeping a bit of distinct content:
 
-```html+erb
+```erb
 <!-- app/views/user/new.html.erb -->
 <%= render "form", user: @user, action: :new %>
 
@@ -89,7 +89,7 @@ still keeping a bit of distinct content:
 It is typical to have to render model objects often. Here's the long
 way:
 
-```html+erb
+```erb
 <% @cats.each do |cat| %>
   <%= render "cat", cat: cat %>
 <% end %>
@@ -97,7 +97,7 @@ way:
 
 There is a shorthand for this:
 
-```html+erb
+```erb
 <% @cats.each do |cat| %>
   <%= render cat %>
 <% end %>
@@ -109,7 +109,7 @@ then render the template, setting a variable named `cat` inside the
 partial, so that you can use a more semantically meaningful name
 within:
 
-```html+erb
+```erb
 <!-- app/views/shared/_cat.html.erb -->
 <ul>
   <li>Name: <%= cat.name %></li>
@@ -127,7 +127,7 @@ As seen above, partials are very useful in rendering collections. Just
 like there is a shortcut to render a model object, you can also easily
 render an array of model objects:
 
-```html+erb
+```erb
 <%= render @cats %>
 ```
 
@@ -140,7 +140,7 @@ setting the `cat` local variable as before.
 
 Partials, like regular views, have access to controller instance variables. You could do the following:
 
-```html+erb
+```erb
 <!-- app/views/user/new.html.erb -->
 <!-- controller has set `@user` -->
 <%= render "form" %>

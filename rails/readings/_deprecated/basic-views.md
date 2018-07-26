@@ -51,7 +51,7 @@ render. This will tell Rails to look for the template
 user. **Instance variables set in the controller will be made
 available to the view template:**
 
-```html+erb
+```erb
 <!-- app/views/books/index.html.erb -->
 <h1>Listing Books</h1>
 

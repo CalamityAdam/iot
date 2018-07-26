@@ -2,7 +2,7 @@
 
 You've been learning how to write forms. Here's a tricky form:
 
-```html+erb
+```erb
 <!-- this is a form on my www.appacademy.io -->
 <form action="https://www.facebook.com/pages/appacademy/like"
       method="post">
@@ -48,7 +48,7 @@ will expect the client to **also upload the authenticity token in the
 params**. If we were Facebook engineers writing Rails (oh no! they use
 PHP!), we could do this:
 
-```html+erb
+```erb
 <!-- this is a form on www.facebook.com -->
 <form action="pages/appacademy/like" method="post">
   <input type="hidden"
