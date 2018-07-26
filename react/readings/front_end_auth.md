@@ -101,7 +101,7 @@ AJAX requests:
   * signup
   * login
   * logout
-,
+
 ## Middleware
 
 We will continue to use thunk middleware to handle asynchronous actions.
@@ -151,7 +151,7 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
 
 // access the Redux state to check if the user is logged in
 const mapStateToProps = state => {
-  return { loggedIn: Boolean(state.session.currentUser) };
+  return { loggedIn: Boolean(state.session.id) };
 }
 
 // connect Auth to the redux state
@@ -234,7 +234,16 @@ it to `configureStore`
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
-    const preloadedState = { session: { currentUser: window.currentUser } };
+    const { currentUser } = window;
+    const { id } = currentUser;
+    const preloadedState = { 
+      entitities: {
+        users: {
+          [id]: currentUser
+        }
+      }
+      session: { id }
+      };
     store = configureStore(preloadedState);
 
     // Clean up after ourselves so we don't accidentally use the
