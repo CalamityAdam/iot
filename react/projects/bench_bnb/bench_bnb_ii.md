@@ -288,7 +288,7 @@ This should cause both the `BenchMap` and the `BenchIndex` to be rendered on the
 
 ### Attach a Google Map to `BenchMap`
 
-* Read [the google maps documentation][google-map-doc].
+* Read [the Google Maps documentation][google-map-doc].
 * Get a new API key for a JavaScript Google Map.
 * Add a script tag (including your API key) to your `application.html.erb`
   * When including the google script tag, be sure to put it above `yield` and remove the `async defer` bit.

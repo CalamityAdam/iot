@@ -85,8 +85,8 @@ before W9D5)
   * [Deploying to Heroku][heroku-deployment]
   * [Understanding the asset pipeline][asset-pipeline]
 * **Web services**
-  * [Figaro gem][figaro] securely store api keys. Necessary for google
-maps and AWS.
+  * [Figaro gem][figaro] securely store api keys. Necessary for Google
+Maps and AWS.
     * [Video demo][figaro-video]
   * [Active Storage and AWS S3 Hosting Demo][active-storage-demo]
   * [Paperclip and AWS S3 Hosting Demo][paperclip-aws-demo] **(Only resort to Paperclip if you are using Rails < 5.2.0. It will be deprecated soon and its us is not encouraged)**
