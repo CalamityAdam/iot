@@ -30,14 +30,14 @@ The new parts:
 
 ```js
 const _nullUser = {
-  currentUser: null
+  id: null
 };
 
 const sessionReducer = (state = _nullUser, action) => {
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
-      const currentUser = action.currentUser;
-      return merge({}, { currentUser });
+      const { id } = action.currentUser;
+      return merge({}, { id });
     case LOGOUT:
       return _nullUser;
     default:
@@ -46,7 +46,9 @@ const sessionReducer = (state = _nullUser, action) => {
 };
 ```
 
-The `currentUser` property will be used to show things like a custom welcome message and the profile picture.
+The `id` property will be used to identify our `currentUser` from the `users` slice of state. We can use this information to show things like a custom welcome message and the profile picture. 
+
+**A note on state shape:** We *could* store all of the currentUser data in our `session` property, but this could get messy whenever we want to change data related to `currentUser`, since we'll have to update state data in two places (`entities.users` and `session`). Instead, we'll maintain a single source of truth for our user data in `entities.users`, and access relevant data for the `currentUser` using the `id` we store in `session`.
 
 ## `Session Errors Reducer`
 ```js
@@ -99,7 +101,7 @@ AJAX requests:
   * signup
   * login
   * logout
-
+,
 ## Middleware
 
 We will continue to use thunk middleware to handle asynchronous actions.
