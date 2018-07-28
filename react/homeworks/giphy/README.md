@@ -54,7 +54,7 @@ state shape. We know that we want to display giphy results
 returned by an AJAX request. This means we will probably want a `giphys`
 slice of the state that holds a collection of `giphy` objects.
 
-```.js
+```js
 the state shape will be here
 {
   giphys: [
