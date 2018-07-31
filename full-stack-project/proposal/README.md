@@ -62,7 +62,7 @@ duplication and maximize ease of access.
 
 - `frontend-routes`
 
-Link to a page that lists yourfrontend React Router routes. Discuss what
+Link to a page that lists your frontend React Router routes. Discuss what
 components will be rendered at those routes.
 
 ### Backend Routes
