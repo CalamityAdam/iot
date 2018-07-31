@@ -188,12 +188,12 @@
 [normalizing]: http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html
 [updating-normalized]: http://redux.js.org/docs/recipes/reducers/UpdatingNormalizedData.html
 
-### Homeworks (150 min)
+### Homeworks (120 min)
 * [Giphy Homework][giphy_homework] (90 min)
-* [Full-stack Proposal Prep: Component Hierarchy with Wireframes][prep-component-hierarchy] (60 min)
+* [Full-stack Proposal Prep: Schema][prep-schema] (30 min)
 
-[giphy_homework]: https://github.com/appacademy/curriculum/tree/master/react/homeworks/giphy
-[prep-component-hierarchy]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/component-hierarchy.md
+[giphy_homework]: homeworks/giphy
+[prep-schema]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/schema.md
 
 ### Additional Resources
 * :book: [Redux Developer Tools][redux_dev_tools]
@@ -224,14 +224,12 @@
 [redirect]: https://github.com/appacademy/curriculum/tree/master/react/readings/redirect.md
 [advanced-containers]: https://github.com/appacademy/curriculum/tree/master/react/readings/advanced_containers.md
 
-### Homeworks (90 min)
+### Homeworks (60 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
-* [Full-stack Proposal Prep: Schema][prep-schema] (30 min)
 * [Full-stack Proposal Prep: State Shape][prep-state-shape] (30 min)
 
 [rainbow_routes]: https://github.com/appacademy/curriculum/tree/master/react/homeworks/rainbow_routes
 [prep-state-shape]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/state-shape.md
-[prep-schema]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/schema.md
 
 
 ### Additional Resources
@@ -264,14 +262,12 @@
 [preloaded_state]: https://github.com/appacademy/curriculum/tree/master/react/readings/preloaded_state.md
 [user_authentication]: https://github.com/appacademy/curriculum/tree/master/react/readings/front_end_auth.md
 
-### Homeworks (90 min)
+### Homeworks (60 min)
 * Do the auth part of [A04 Prep][a04_prep] (60 min)
   * Front-end auth (the main concept in BenchBnB Day 1) builds on top of regular Rails backend auth, so make sure you build on a solid base.
   * You'll be surprised how much of it you've forgotten by now. It's normal.
-* [Full-stack Proposal Prep: Routes][prep-routes] (30 min)
 
 [a04_prep]: https://github.com/appacademy/assessment-prep#assessment-4
-[prep-routes]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/routes.md
 
 ### Additional Resources
 * :book: [Rails/React/Redux Configuration Checklist][checklist]
@@ -301,11 +297,13 @@
 
 [react_map_demo]: https://github.com/appacademy/curriculum/tree/master/react/demos/react_map_demo
 
-### Homework (5.5 hrs)
+### Homework (2.5 hrs)
 * [UX/UI Layout Practice][uxhw] (30 min)
-* Submit your [full-stack project proposal][full_stack_project_proposal] (5 hrs)
+* Submit your complete [full-stack project proposal][full_stack_project_proposal] (120 min)
+  * This will also include your [frontend and backend routes][prep-routes]
   * **Due by 9am on Monday w8d1**
 
+[prep-routes]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/routes.md
 [full_stack_project_proposal]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/proposal/full-stack-project-proposal.md
 [uxhw]: https://github.com/appacademy/curriculum/tree/master/react/homeworks/ux
 

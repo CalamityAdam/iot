@@ -41,38 +41,14 @@ must follow the format outlined [here][mvp-features].
 
 [mvp-features]: mvp-list.md
 
-### Wireframes
+### DB Schema
 
-### React Components with Wireframes
+- `schema`
 
-- `component-hierarchy`
-
-When designing an app, we want to start with the user. To do this, we're
-going to first make our wireframes. Each wireframe should be a basic
-representation of the layout and information presented in a view. We
-should be able to see every view of your website using your wireframes,
-and how each view is reached.
-
-In conjunction with the wireframes, diagram a tree indicating your
-application's overall component structure.
-
-Annotate your wireframes. Which React component corresponds to each
-element? Keep grids in mind while drafting your layout.
-
-Discuss how you will nest your components. If components will need
-containers, indicate what state and dispatch props they will need. For
-presentational components, discuss what props and state they will need.
-
-Map out your React Routes with their respective components and paths.
-
-See the sample for an example of this.
-
-**NB**: Your wireframes will be viewed not only by yourself and the App
-Academy staff, but potentially future employers. If you are going to use
-pen and paper, it should look great. Otherwise, we recommend a site like
-[draw.io][draw.io].
-
-[draw.io]: https://www.draw.io/
+Link to a document outlining the database schema for your app. Build up the
+schema by walking through your app's wireframes. Think carefully about what data
+will be needed for each view and the best way to store that data. Make note
+of any database-level validations and foreign key relationships.
 
 ### Sample State
 
@@ -82,22 +58,19 @@ Create a basic illustration of your state shape. Think about what information
 you need to store for your app to work, and how best to organize it to minimize
 duplication and maximize ease of access.
 
-### Routes
+### Frontend Routes and Components
 
-- `routes`
+- `frontend-routes`
 
-Link to a page that lists your Rails API endpoints and frontend React Router
-routes. Break these up between HTML and JSON endpoints. Discuss what params,
-if any, will be needed for each route, and what information will be returned.
+Link to a page that lists your frontend React Router routes. Discuss what
+components will be rendered at those routes.
 
-### DB Schema
+### Backend Routes
 
-- `schema`
+- `backend-routes`
 
-Link to a document outlining the database schema for your app. Build up the
-schema by walking through your app's wireframes. Think carefully about what data
-will be needed for each view and the best way to store that data. Make note
-of any database-level validations and foreign key relationships.
+Link to a page that lists your Rails API endpoints. Break these up between
+HTML and JSON endpoints. 
 
 ### Implementation Timeline
 
