@@ -23,8 +23,9 @@ documents, in which you carefully plan out the app you are going to build.
 These are your _full-stack design documents_. Important deadline for the
 design documents:
 
-  * **W7D3**: Design Docs Prep: [Component Hierarchy Homework][component]
+  * **W7D3**: Design Docs Prep: [Schema][schema]
   * **W7D4**: Design Docs Prep: [State Shape Homework][state-shape]
+<<<<<<< HEAD
   * **W7D5**: Design Docs Prep: [Routes Homework][routes]
   * **W8D1**: Submit your full-stack design docs by 9am
     * [Full-stack design document instructions][fsp]
@@ -34,6 +35,18 @@ design documents:
 [component]: homeworks/proposal-prep/component-hierarchy.md
 [state-shape]: homeworks/proposal-prep/state-shape.md
 [routes]: homeworks/proposal-prep/routes.md
+=======
+  * **W8D1**: 
+    * Design Docs Prep: [Routes Homework][routes]
+    * Submit your complete full-stack design docs by 9am
+      * [Full-stack design document instructions][fsp]
+      * [MVP Checklist][mvp-checklist]
+      * [Sample Design Docs][sample-design-docs]
+
+[schema]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/schema.md
+[state-shape]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/state-shape.md
+[routes]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/routes.md
+>>>>>>> 629896a0... CUR-557 Slim down full-stack proposal instructions
 
 [fsp]: proposal/
 [sample-design-docs]: https://www.github.com/appacademy/bluebird/wiki
