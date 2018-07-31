@@ -24,7 +24,7 @@ Remove the bullets from list items, strip the default styling from form
 input elements by setting their appearance to none (see [here][appearance-info]), and show the little
 pointer hand on buttons to make it obvious you can click.
 
-[ss-00-a]: ../docs/screenshots/00-reset-a.png
+[ss-00-a]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/docs/screenshots/00-reset-a.png
 [live-00]: http://appacademy.github.io/css-friends/solution/00-reset.html
 
 [t-reset]: https://github.com/appacademy/css-demos/#user-agent-styles

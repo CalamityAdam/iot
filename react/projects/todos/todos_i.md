@@ -662,10 +662,10 @@ That's it! Try making some todos or steps and then refreshing the page. Do the c
   * Add a time when a 'todo' is due
     * Sort by due date
 
-[store_reading]: ../../readings/store.md
-[components_reading]: ../../readings/containers.md
-[connect_reading]: ../../readings/connect.md
-[props_and_state_reading]: ../../readings/props_and_state.md
-[selector_reading]: ../../readings/selectors.md
+[store_reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/store.md
+[components_reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/containers.md
+[connect_reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/connect.md
+[props_and_state_reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/props_and_state.md
+[selector_reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/selectors.md
 [demo]: https://aa-todos.herokuapp.com/
 [local-storage]: https://localstorage.com/

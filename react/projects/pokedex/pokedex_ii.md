@@ -391,7 +391,7 @@ Let's practice that now!
 
 Style your app to look like the [live demo][live-demo]. Our HTML/CSS [curriculum][html-css-curriculum], the [Complete Guide to Flexbox][flexbox-guide], and the internet are good resources if you get stuck! :art:
 
-[html-css-curriculum]: ../../../html-css#htmlcss-curriculum
+[html-css-curriculum]: https://github.com/appacademy/curriculum/tree/master/html-css
 [flexbox-guide]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 ## Phase 9: Loading Spinner
@@ -415,7 +415,7 @@ However, you can also Google "css spinner" to find another spinner to implement!
   * When a request is made, change the loading state to `true`, when the data is received, change the state to `false`
 * Change your `PokemonIndex` and `PokemonDetail` components to render the spinner if the loading state is `true`
 
-[pokeball-css]: ./skeleton/app/assets/stylesheets/loading-pokeball.scss
+[pokeball-css]: https://github.com/appacademy/curriculum/blob/master/react/projects/pokedex/skeleton/app/assets/stylesheets/loading-pokeball.scss
 
 ## Phase 10: Bootstrap Poketypes
 

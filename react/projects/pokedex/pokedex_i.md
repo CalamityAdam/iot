@@ -21,7 +21,7 @@ Get yourself oriented.
 * Open up the rails console (`rails c`) to see what's in the database.
 * Start up the rails server (`rails s`) and visit the root url.
 
-[skeleton-zip]: ./skeleton.zip?raw=true
+[skeleton-zip]: https://github.com/appacademy/curriculum/blob/master/react/projects/pokedex/skeleton.zip?raw=true
 
 ### API Namespace
 

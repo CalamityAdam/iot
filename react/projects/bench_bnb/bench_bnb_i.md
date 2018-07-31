@@ -709,5 +709,5 @@ Import your `AuthRoute` into `App.jsx` and update the login and signup routes to
 
 Continue to [Part 2](./bench_bnb_ii.md).
 
-[rails]: ../../../rails#readings-after-you-finish-all-videos
-[authRoutes]: ../../readings/front_end_auth.md#protected-and-auth-routes
+[rails]: https://github.com/appacademy/curriculum/tree/master/rails#readings-after-you-finish-all-videos
+[authRoutes]: https://github.com/appacademy/curriculum/blob/master/react/readings/front_end_auth.md#protected-and-auth-routes
