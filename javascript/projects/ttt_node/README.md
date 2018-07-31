@@ -22,5 +22,5 @@ completionCallback)`).
 ## Bonus
 * Build an AI for your game. Try to make it unbeatable.
 
-[ruby-ttt]: ruby_ttt.md
-[node-ttt]: ../hanoi_node
+[ruby-ttt]: https://github.com/appacademy/curriculum/blob/master/javascript/projects/ttt_node/ruby_ttt.md
+[node-ttt]: https://github.com/appacademy/curriculum/blob/master/javascript/projects/ttt_node/hanoi_node

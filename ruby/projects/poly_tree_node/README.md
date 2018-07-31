@@ -5,7 +5,7 @@ If you need a refresher on algorithms and data structures, refer to the
 
 Estimated time: 2hrs
 
-[intro-algos]: ../../readings/intro-algorithms-and-data-structures.md
+[intro-algos]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/intro-algorithms-and-data-structures.md
 
 ## Learning Goals
 
@@ -104,5 +104,5 @@ Write `add_child(child_node)` and `remove_child(child_node)` methods. These meth
 
 [wiki-data-structure]: http://en.wikipedia.org/wiki/Data_structure
 [wiki-algorithm]: http://en.wikipedia.org/wiki/Algorithm
-[tree-node-rspec]: ./skeleton.zip?raw=true
-[overriding-inspect]: ../../readings/overriding_inspect.md
+[tree-node-rspec]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/poly_tree_node/skeleton.zip?raw=true
+[overriding-inspect]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/overriding_inspect.md

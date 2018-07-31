@@ -95,8 +95,8 @@ Add uniqueness and presence [validations][validations-reading]. Without
 these, people might go about creating user accounts without emails. We
 cannot tolerate such misbehavior.
 
-[indexing-reading]: ../../readings/indexing.md
-[validations-reading]: ../../readings/validations.md
+[indexing-reading]: https://github.com/appacademy/curriculum/blob/master/sql/readings/indexing.md
+[validations-reading]: https://github.com/appacademy/curriculum/blob/master/sql/readings/validations.md
 [add-index-docs]: http://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/add_index
 
 ### Recap

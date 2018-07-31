@@ -69,7 +69,7 @@ keep things clean:
 I wrote `initialize`, `guess`, and `alert_invalid_guess` methods. You'll
 probably want each `Player` to have a `name`, as well.
 
-[ghost-dictionary]: ./dictionary.txt
+[ghost-dictionary]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/ghost/dictionary.txt
 
 ## Phase 2: Playing a Full Game
 

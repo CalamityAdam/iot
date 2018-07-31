@@ -96,7 +96,7 @@ Once you've run your webpack command you should be able to locate your `bundle.j
 **Test:** Add a `console.log("Webpack is working!")` to your entry point file to make sure you are running webpack correctly.
 
 
-[browser-modules]: ../../readings/browser-modules.md
+[browser-modules]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/browser-modules.md
 
 ## Phase 2: `MovingObject` and `Asteroid`
 
@@ -146,7 +146,7 @@ demo if you need a refresher on Canvas.
 
 Write a `MovingObject.prototype.move` method. Increment the `pos` by the `vel`.
 
-[drunken-circles]: ../../demos/drunken_circles/lib/circle.js#L42
+[drunken-circles]: https://github.com/appacademy/curriculum/blob/master/javascript/demos/drunken_circles/lib/circle.js#L42
 
 ### `Util`
 

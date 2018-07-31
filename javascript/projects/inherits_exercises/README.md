@@ -57,4 +57,4 @@ And finally, take a look at [our answers][inherits-answer]. Make sure you thorou
 understand what both solutions do. You'll be writing an `inherits` method again
 for Asteroids.
 
-[inherits-answer]: ../inherits_exercises/solution/inherits.js
+[inherits-answer]: https://github.com/appacademy/curriculum/blob/master/javascript/projects/inherits_exercises/inherits_exercises/solution/inherits.js

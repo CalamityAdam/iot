@@ -6,7 +6,7 @@ between two points in a maze.
 Here's an example [maze][maze1]. It has an 'S' for the start point,
 and an 'E' for an end point.
 
-[maze1]: mazes/maze1.txt
+[maze1]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/maze_solver/mazes/maze1.txt
 
 You should write a program that will read in the maze, try to explore
 a path through it to the end, and then print out a completed path
@@ -16,7 +16,7 @@ user.
 Make your program run as a command line script, taking in the name of
 a maze file on the command line.
 
-[maze1-soln]: mazes/maze1-soln.txt
+[maze1-soln]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/maze_solver/mazes/maze1-soln.txt
 
 Your path through the maze should not be self-intersecting, of course.
 

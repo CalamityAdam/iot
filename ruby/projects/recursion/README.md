@@ -64,8 +64,8 @@ Make sure you can trace from the very beginning to the very end in these example
 
 How many examples do you need to walk through to be confident that it works?
 
-[Simple Examples]: ../../readings/testing-small.md
-[Breaking into parts]: ../../readings/breaking-into-parts.md
+[Simple Examples]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/testing-small.md
+[Breaking into parts]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/breaking-into-parts.md
 
 ### Deep dup
 
@@ -131,7 +131,7 @@ Implement a method [`merge_sort`][wiki-merge-sort] that sorts an `Array`:
 [wiki-binary-search]: http://en.wikipedia.org/wiki/Binary_search
 [wiki-merge-sort]: http://en.wikipedia.org/wiki/Merge_sort
 [wiki-merge-gif]:https://en.wikipedia.org/wiki/Merge_sort#/media/File:Merge-sort-example-300px.gif
-[merge-diagram]: ../../assets/merge-sort-diagram.png?raw=true
+[merge-diagram]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/recursion/assets/merge-sort-diagram.png?raw=true
 
 ### Array Subsets
 

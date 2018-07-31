@@ -24,7 +24,7 @@ refer to the [reading on test doubles][doubles-reading] for help creating unit t
 
 [five-card-draw]: http://en.wikipedia.org/wiki/Five-card_draw
 [betterspecs]: http://betterspecs.org
-[doubles-reading]: ../../readings/test-doubles.md
+[doubles-reading]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/test-doubles.md
 [poker-hands]: http://en.wikipedia.org/wiki/List_of_poker_hands
 
 ## Design

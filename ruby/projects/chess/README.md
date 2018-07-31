@@ -10,9 +10,9 @@ You must split your program into multiple files. Use [`require_relative`][requir
 
 Don't forget to keep using Git. Look back at [Thursday's instructions][minesweeper] and read the Git portions again if you need a reminder. Committing and branching are important habits for any kind of software developer.
 
-[chess-uml]: ../../assets/Chess_Diagram.png
+[chess-uml]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/chess/assets/Chess_Diagram.png
 [require_relative]: http://www.ruby-doc.org/core-2.1.2/Kernel.html#method-i-require_relative
-[minesweeper]: ../minesweeper/
+[minesweeper]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/chess/minesweeper/
 
 ## Learning Goals
 
@@ -164,11 +164,11 @@ After completing each phase of the project, please remember to go back and make 
 
 [cursor-demo]: http://github.com/rglassett/ruby-cursor-game
 [wiki-chess]: http://en.wikipedia.org/wiki/Chess
-[recursion-exercises]: ../recursion/
+[recursion-exercises]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/chess/recursion/
 [colorize-gem]: https://github.com/fazibear/colorize
 [wiki-chess-unicode]: http://en.wikipedia.org/wiki/Chess_symbols_in_Unicode
-[cursor]: cursor.rb?raw=true
+[cursor]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/chess/cursor.rb?raw=true
 [process-exit]: http://ruby-doc.org/core-2.2.0/Process.html#method-c-exit
-[modules]: ../../readings/modules.md
+[modules]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/modules.md
 [case statements]: http://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-case
 [singleton]: http://ruby-doc.org/stdlib-1.9.3/libdoc/singleton/rdoc/Singleton.html

@@ -16,7 +16,7 @@ Download the [`skeleton`][skeleton] and fill in the corresponding file with each
 The `index.html` file already has each of the `.js` script files included, so you need not worry about editing it.
 Simply `open index.html` and your code should be available from the Chrome Console (`CMD-ALT-i` to open).
 
-[skeleton]: ./skeleton.zip
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/javascript/projects/intro_js_exercises/skeleton.zip
 
 ## Phase 1: Arrays
 
@@ -234,6 +234,6 @@ So a course could meet `['mon', 'wed', 'fri']` during block #1.
 
 Though we will be relying on Rails for most of our data modeling going forward, there are times when model logic is best handled on the frontend. In this case we may find it beneficial to use OOP to aid us in that abstraction.
 
-[oo-js]: ../../readings/object-oriented-js.md
+[oo-js]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/object-oriented-js.md
 
 ## You are the hero of your own story! Move on to the next exercise. :smiley_cat:

@@ -6,4 +6,4 @@ Go back through the days solutions and use `Benchmark` to verify the **Big-O** p
 
 [benchmark-docs]:
 http://ruby-doc.org/stdlib-2.1.2/libdoc/benchmark/rdoc/Benchmark.html
-[sorting-demo]: ../../demos/sorting_demo/sorting_demo.rb#L58-L67
+[sorting-demo]: https://github.com/appacademy/curriculum/blob/master/ruby/demos/sorting_demo/sorting_demo.rb#L58-L67

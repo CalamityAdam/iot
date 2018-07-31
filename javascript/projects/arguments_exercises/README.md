@@ -80,7 +80,7 @@ passed when the bound function is called.
 
 Once you've done that, write a second version using the `...` [rest operator][rest-op].
 
-[rest-op]: ../../readings/arguments.md#rest-parameters-es6
+[rest-op]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/arguments.md#rest-parameters-es6
 
 ## `curriedSum`
 
