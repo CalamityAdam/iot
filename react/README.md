@@ -299,9 +299,9 @@
 
 [react_map_demo]: demos/react_map_demo
 
-### Homework (1.5 hrs)
+### Homework (2.5 hrs)
 * [UX/UI Layout Practice][uxhw] (30 min)
-* Submit your complete [full-stack project proposal][full_stack_project_proposal] (60 min)
+* Submit your complete [full-stack project proposal][full_stack_project_proposal] (120 min)
   * This will also include your [frontend and backend routes][prep-routes]
   * **Due by 9am on Monday w8d1**
 
