@@ -10,7 +10,7 @@ You must split your program into multiple files. Use [`require_relative`][requir
 
 Don't forget to keep using Git. Look back at [Thursday's instructions][minesweeper] and read the Git portions again if you need a reminder. Committing and branching are important habits for any kind of software developer.
 
-[chess-uml]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/chess/assets/Chess_Diagram.png
+[chess-uml]: https://github.com/appacademy/curriculum/blob/master/ruby/assets/Chess_Diagram.png
 [require_relative]: http://www.ruby-doc.org/core-2.1.2/Kernel.html#method-i-require_relative
 [minesweeper]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/chess/minesweeper/
 

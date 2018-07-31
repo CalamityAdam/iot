@@ -19,7 +19,7 @@ As you work through the project, revisit this diagram at each phase and
 discuss with your pair how the code you've written so far fits into the
 relationships displayed here.
 
-![rails diagram](https://github.com/appacademy/curriculum/blob/master/rails/projects/first_routes/assets/rails_diagram.png)
+![rails diagram](https://github.com/appacademy/curriculum/blob/master/rails/assets/rails_diagram.png)
 
 ## First Routes
 

@@ -131,7 +131,7 @@ Implement a method [`merge_sort`][wiki-merge-sort] that sorts an `Array`:
 [wiki-binary-search]: http://en.wikipedia.org/wiki/Binary_search
 [wiki-merge-sort]: http://en.wikipedia.org/wiki/Merge_sort
 [wiki-merge-gif]:https://en.wikipedia.org/wiki/Merge_sort#/media/File:Merge-sort-example-300px.gif
-[merge-diagram]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/recursion/assets/merge-sort-diagram.png?raw=true
+[merge-diagram]: https://raw.githubusercontent.com/appacademy/curriculum/master/ruby/assets/merge-sort-diagram.png?raw=true
 
 ### Array Subsets
 
@@ -171,7 +171,7 @@ You can use Ruby's built in [`Array#permutation`][ruby-permutations] method to g
 ```
 
 [wiki-permutations]: https://en.wikipedia.org/wiki/Permutation
-[ruby-permutations]:https://ruby-doc.org/core-2.2.0/Array.html#method-i-permutation
+[ruby-permutations]: https://ruby-doc.org/core-2.2.0/Array.html#method-i-permutation
 
 ### Make Change
 
@@ -207,4 +207,4 @@ Make sure you and your partner understand each line before moving on.
 * [Wikipedia: Recursion][wiki-recursion]
 
 
-[wiki-recursion]:http://en.wikipedia.org/wiki/Recursion_(computer_science)
+[wiki-recursion]: http://en.wikipedia.org/wiki/Recursion_(computer_science)

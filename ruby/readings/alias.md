@@ -51,4 +51,4 @@ I add shell aliases frequently enough that, somewhat recursively, I added an
 alias to open my shell configuration file, so that I can easily add a new alias:
 `alias bp='atom ~/.bash_profile'`.
 
-[bash-profile]: https://github.com/appacademy/curriculum/blob/master/ruby/course/assets/bash_profile
+[bash-profile]: https://github.com/appacademy/curriculum/blob/master/course/assets/bash_profile
