@@ -61,5 +61,5 @@ background, main, and accent. You can get inspiration from [colourlovers][colors
 [onenote]: https://www.onenote.com/
 [asana]: https://asana.com/
 
-[screenshots]: ./screenshots
-[skeleton]: ./skeleton.zip?raw=true
+[screenshots]: https://github.com/appacademy/curriculum/blob/master/react/homeworks/ux/screenshots
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/react/homeworks/ux/skeleton.zip?raw=true

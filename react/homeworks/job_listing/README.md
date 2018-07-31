@@ -16,7 +16,7 @@ To get started, download the [project skeleton][job-skeleton].  Make sure to
 run `npm install` to get all the required node modules. Run `npm start` (a handy npm script we've set up) to start `webpack --watch`. Note, there will
  be webpack errors but we'll work on fixing those right now.
 
-[job-skeleton]: ./skeleton.zip?raw=true
+[job-skeleton]: https://github.com/appacademy/curriculum/blob/master/react/homeworks/job_listing/skeleton.zip?raw=true
 
 Poke around the components in the `frontend/components` folder and get
 acquainted with them, especially the `Widget` component. Notice where we call
@@ -77,7 +77,7 @@ make sure it's working properly in the console before moving on.
 
 Open `frontend/reducer.js`. As you know from the [reducers reading][reducers-reading], a reducer is a function that takes in the current `state` and an `action`, and returns an updated state based on the action type.
 
-[reducers-reading]: ../../readings/reducers.md
+[reducers-reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md
 
 For our widget, our state needs to keep track of two things: location and a collection of corresponding job listings. We need to pass some initial/default values in the case that state is not passed in.
 

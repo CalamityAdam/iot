@@ -113,6 +113,6 @@ Do the same for the `Red only` link. Everything should be working now.
 Compare your work to the solution and make sure the behavior is the
 same. Time to celebrate! :tada: :rainbow: :tada:
 
-[zip-skeleton]: ./skeleton.zip?raw=true
-[with-router]: ../../readings/with_router.md
-[intro]: ../../readings/intro_to_react_router.md
+[zip-skeleton]: https://github.com/appacademy/curriculum/blob/master/react/homeworks/rainbow_routes/skeleton.zip?raw=true
+[with-router]: https://github.com/appacademy/curriculum/blob/master/react/readings/with_router.md
+[intro]: https://github.com/appacademy/curriculum/blob/master/react/readings/intro_to_react_router.md

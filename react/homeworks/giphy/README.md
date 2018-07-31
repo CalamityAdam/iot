@@ -6,7 +6,7 @@ Giphy search tool. When a user enters a search term, the app should
 use the Giphy API to render an index of the results. Here's a
 screenshot of the completed project:
 
-![screenshot](./giphy_screenshot.png)
+![screenshot](https://github.com/appacademy/curriculum/blob/master/react/homeworks/giphy/giphy_screenshot.png)
 
 ## Phase 0: Setup
 
@@ -21,7 +21,7 @@ folder that has a simple stylesheet made for you.
 * Run `npm install`
 * Run `npm start` to start `webpack --watch`
 
-[skeleton]: ./skeleton.zip?raw=true
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/react/homeworks/giphy/skeleton.zip?raw=true
 
 ## Component Overview
 

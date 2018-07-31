@@ -39,7 +39,8 @@ def write_to_file(file_name, project, mod)
                         # (^\[(.|-)+\]\:\s(?!http).*)
     snippets += text.scan(/(\[(\w|\s)+\]\((\w|\.|\/|\-)+\))/)
     snippets.flatten!
-# debugger
+debugger
+p text
     snippets.each do |snip|
 
         no_proj_string = "https://github.com/appacademy/curriculum/blob/master/#{mod}/"
@@ -78,10 +79,10 @@ def write_to_file(file_name, project, mod)
         end
        debugger if new_link == nil
 
-        a = text.gsub!(snip, new_link)
-        # p a
+        a = text.gsub(snip, new_link)
+        p a
     end
-    File.open(file_name, "w") {|file| file.puts text }
+    # File.open(file_name, "w") {|file| file.puts text }
     # this should do the actual overwriting to the file
 end
 
