@@ -58,13 +58,19 @@ Create a basic illustration of your state shape. Think about what information
 you need to store for your app to work, and how best to organize it to minimize
 duplication and maximize ease of access.
 
-### Routes
+### Frontend Routes and Components
 
-- `routes`
+- `frontend-routes`
 
-Link to a page that lists your Rails API endpoints and frontend React Router
-routes. Break these up between HTML and JSON endpoints. Discuss what params,
-if any, will be needed for each route, and what information will be returned.
+Link to a page that lists yourfrontend React Router routes. Discuss what
+components will be rendered at those routes.
+
+### Backend Routes
+
+- `backend-routes`
+
+Link to a page that lists your Rails API endpoints. Break these up between
+HTML and JSON endpoints. 
 
 ### Implementation Timeline
 

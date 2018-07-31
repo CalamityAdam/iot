@@ -25,12 +25,11 @@ design documents:
 
   * **W7D3**: Design Docs Prep: [Schema][schema]
   * **W7D4**: Design Docs Prep: [State Shape Homework][state-shape]
-  * **W8D1**: 
+  * **W8D1**:  Submit your complete full-stack design docs by 9am
     * Design Docs Prep: [Routes Homework][routes]
-    * Submit your complete full-stack design docs by 9am
-      * [Full-stack design document instructions][fsp]
-      * [MVP Checklist][mvp-checklist]
-      * [Sample Design Docs][sample-design-docs]
+    * [Full-stack design document instructions][fsp]
+    * [MVP Checklist][mvp-checklist]
+    * [Sample Design Docs][sample-design-docs]
 
 [schema]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/schema.md
 [state-shape]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/state-shape.md

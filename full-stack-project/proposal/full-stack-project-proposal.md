@@ -45,7 +45,8 @@ Create these pages:
 * MVP List
 * Database Schema
 * Sample State
-* Routes
+* Frontend Routes and Components
+* Backend Routes
 
 On the home page, create links to each of these pages.
 
