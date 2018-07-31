@@ -43,11 +43,11 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_pri
 https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html#FindingYourAWSId
 
 ## Key Files
-- [application.rb](./config/application.rb)
-- [tweet.rb](./app/models/tweet.rb)
-- [_tweet.json.jbuilder](./app/views/api/tweets/_tweet.json.jbuilder)
-- [TweetApi.js](./frontend/utils/TweetApi.js)
-- [TweetForm.jsx](./frontend/components/TweetForm.jsx)
+- [application.rb](https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/cdns/file_upload_demo/config/application.rb)
+- [tweet.rb](https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/cdns/file_upload_demo/app/models/tweet.rb)
+- [_tweet.json.jbuilder](https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/cdns/file_upload_demo/app/views/api/tweets/_tweet.json.jbuilder)
+- [TweetApi.js](https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/cdns/file_upload_demo/frontend/utils/TweetApi.js)
+- [TweetForm.jsx](https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/cdns/file_upload_demo/frontend/components/TweetForm.jsx)
 
 ## Useful Docs
 - [Paperclip](https://github.com/thoughtbot/paperclip#paperclip)

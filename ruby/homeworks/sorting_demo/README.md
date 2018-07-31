@@ -4,7 +4,7 @@ It should be clear now that for any moderately large inputs, algorithms
 that run in `O(n*lg(n))` time will significantly outperform those that run
 in `O(n^2)`.
 
-![time_complexity](./compareNlogNQuadratic.png)
+![time_complexity](https://github.com/appacademy/curriculum/blob/master/ruby/homeworks/sorting_demo/compareNlogNQuadratic.png)
 
 While one of the goals of algorithm analysis is to stay agnostic of implementation details, let's briefly take a look at what this means in practice. In this demo we'll look at a timed comparison of Merge Sort and Bubble Sort for randomized array inputs of varying sizes.
 

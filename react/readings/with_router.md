@@ -25,4 +25,4 @@ export default withRouter(Header)
 
 * [withRouter](https://reacttraining.com/react-router/web/api/withRouter)
 
-[react-router-intro]: ./intro_to_react_router.md
+[react-router-intro]: https://github.com/appacademy/curriculum/blob/master/react/readings/intro_to_react_router.md

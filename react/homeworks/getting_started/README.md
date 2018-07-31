@@ -49,5 +49,5 @@ In the generated `package.json`:
 Run `npm run webpack` in your terminal, then open `index.html`. Congratulations:
 you're up and running!
 
-[readings-list]: ../../README.md#readings-48-min
-[skeleton]: skeleton.zip?raw=true
+[readings-list]: https://github.com/appacademy/curriculum/blob/master/react/homeworks/getting_started/md#readings-48-min
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/react/homeworks/getting_started/skeleton.zip?raw=true

@@ -4,14 +4,14 @@ In this demo we have implemented Login and Signup modals in our BenchBnB solutio
 
 ## Key Files
 
-- [modal_actions.js](./frontend/actions/modal_actions.js)
-- [app.jsx](./frontend/components/app.jsx)
-- [greeting_container.js](./frontend/components/greeting/greeting_container.js)
-- [greeting.jsx](./frontend/components/greeting/greeting.jsx)
-- [modal.jsx](./frontend/components/modal/modal.jsx)
-- [login_form_container.jsx](./frontend/components/session_form/login_form_container.jsx)
-- [session_form.jsx](./frontend/components/session_form/session_form.jsx)
-- [modal_reducer.js](./frontend/reducers/modal_reducer.js)
+- [modal_actions.js](https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/ModalBnB/frontend/actions/modal_actions.js)
+- [app.jsx](https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/ModalBnB/frontend/components/app.jsx)
+- [greeting_container.js](https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/ModalBnB/frontend/components/greeting/greeting_container.js)
+- [greeting.jsx](https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/ModalBnB/frontend/components/greeting/greeting.jsx)
+- [modal.jsx](https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/ModalBnB/frontend/components/modal/modal.jsx)
+- [login_form_container.jsx](https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/ModalBnB/frontend/components/session_form/login_form_container.jsx)
+- [session_form.jsx](https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/ModalBnB/frontend/components/session_form/session_form.jsx)
+- [modal_reducer.js](https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/ModalBnB/frontend/reducers/modal_reducer.js)
 
 ## Concept
 
@@ -32,9 +32,9 @@ Our new state shape will look like this:
   }
 }
 ```
-In order to accomplish this we add a modal key pointing to the `modalReducer` inside of our call to `combineReducers` in [ui_reducer.js](./frontend/reducers/ui_reducer.js).
+In order to accomplish this we add a modal key pointing to the `modalReducer` inside of our call to `combineReducers` in [ui_reducer.js](https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/ModalBnB/frontend/reducers/ui_reducer.js).
 
-The modal reducer will respond to two actions, `OPEN_MODAL` and `CLOSE_MODAL`. `OPEN_MODAL` will set our modal slice to a string, `CLOSE_MODAL` will reset our modal slice to be null. Check out [modal_actions.js](./frontend/actions/modal_actions.js) to see the action creators and constants we use.
+The modal reducer will respond to two actions, `OPEN_MODAL` and `CLOSE_MODAL`. `OPEN_MODAL` will set our modal slice to a string, `CLOSE_MODAL` will reset our modal slice to be null. Check out [modal_actions.js](https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/ModalBnB/frontend/actions/modal_actions.js) to see the action creators and constants we use.
 
 ## React
 ```js

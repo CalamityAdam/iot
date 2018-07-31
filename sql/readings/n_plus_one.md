@@ -1,6 +1,6 @@
 This reading refers heavily to the [JoinsDemo][joins-demo]. Please download the zip file and follow along as you read.  
 
-[joins-demo]: ../demos/joins_demo
+[joins-demo]: https://github.com/appacademy/curriculum/blob/master/sql/demos/joins_demo
 
 ## Schema overview:
 

@@ -141,7 +141,7 @@ Does this look familiar? It's [object destructuring][obj-destructuring]! We're
 just extracting the data that's been exported from the other file and assigning
 it to a distinct variable to use in our current file.
 
-[obj-destructuring]: ./object_destructuring.md
+[obj-destructuring]: https://github.com/appacademy/curriculum/blob/master/react/readings/object_destructuring.md
 
 We can give default, unnamed exports any name we want when importing them.  But
 with named exports, the import names have to exactly match.  If we want all the

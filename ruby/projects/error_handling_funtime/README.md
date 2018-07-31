@@ -68,8 +68,8 @@ Raising errors for invalid arguments can ensure that our code is used the way we
 * [Skorks on exceptions][skorks-exceptions]
 * [Ruby Patterns][Ruby-Patterns]
 
-[skeleton]:./skeleton.zip
+[skeleton]: https://github.com/appacademy/curriculum/tree/master/ruby/projects/error_handling_funtime/skeleton.zip
 [exception-types]:https://ruby-doc.org/core-2.2.0/Exception.html
-[error-reading]:../../readings/errors.md
+[error-reading]: https://github.com/appacademy/curriculum/tree/master/ruby/readings/errors.md
 [skorks-exceptions]:http://www.skorks.com/2009/09/ruby-exceptions-and-exception-handling/
 [Ruby-Patterns]:https://github.com/adomokos/DesignPatterns-Ruby/

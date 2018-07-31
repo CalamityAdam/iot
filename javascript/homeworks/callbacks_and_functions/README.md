@@ -105,4 +105,4 @@ We can use `call` and `apply` to change the identity of `this`. Test out `Noodle
 
 After you finish the homework, or if you get stuck on one of the problems, you can view the solutions [here][solution].
 
-[solution]: ./solution.js
+[solution]: https://github.com/appacademy/curriculum/blob/master/javascript/homeworks/callbacks_and_functions/solution.js

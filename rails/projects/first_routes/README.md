@@ -19,7 +19,7 @@ As you work through the project, revisit this diagram at each phase and
 discuss with your pair how the code you've written so far fits into the
 relationships displayed here.
 
-![rails diagram](../../assets/rails_diagram.png)
+![rails diagram](https://github.com/appacademy/curriculum/blob/master/rails/projects/first_routes/assets/rails_diagram.png)
 
 ## First Routes
 
@@ -493,4 +493,4 @@ While you're at it, try refactoring the `params[...].permit(...)`
 stuff into its own method. If you need an example, check out the
 [controllers reading][strong-params-example].
 
-[strong-params-example]: ../../readings/basic-controllers.md#drying-out-strong-parameters
+[strong-params-example]: https://github.com/appacademy/curriculum/blob/master/rails/readings/basic-controllers.md#drying-out-strong-parameters

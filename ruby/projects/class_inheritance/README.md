@@ -2,7 +2,7 @@
 
 This mini-project will apply the skills you learned in last night's  [inheritance reading][inheritance].
 
-[inheritance]: ../../readings/inheritance.md
+[inheritance]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/inheritance.md
 
 Estimated time: 45min.
 

@@ -138,7 +138,7 @@ band      GET    /bands/:id(.:format)                   bands#show
   * Create each view after finishing the controller action that would render it
   * Test as you go! Remember, we can use [Postman][postman-reading] to test `POST`, `PATCH` and `DELETE` actions prior to building our form views
 
-[postman-reading]: ../../readings/postman.md
+[postman-reading]: https://github.com/appacademy/curriculum/blob/master/rails/readings/postman.md
 
 ### Albums
 
@@ -318,7 +318,7 @@ they sign up.
   use [ActiveRecord's toggle method][ar-toggle] to elegantly flip the
   value of a boolean attribute.
 
-[actionmailer-curriculum]:  ../../readings/mailing-1.md
+[actionmailer-curriculum]: https://github.com/appacademy/curriculum/blob/master/rails/readings/mailing-1.md
 [adding-routes-rails-guides]: http://guides.rubyonrails.org/v3.2.13/routing.html#adding-more-restful-actions
 [ar-toggle]: http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-toggle
 
@@ -376,4 +376,4 @@ your models.
 [faker]: https://github.com/stympy/faker
 [poly-assoc]: http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
 [pre-tag]:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre
-[routing-ii]: ../../readings/routing-part-ii.md
+[routing-ii]: https://github.com/appacademy/curriculum/blob/master/rails/readings/routing-part-ii.md

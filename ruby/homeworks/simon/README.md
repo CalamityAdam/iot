@@ -20,5 +20,5 @@ Now go run those specs!
 When you're finished, check out the [solution][solution].
 
 [simon]: http://www.freesimon.org/
-[skeleton]: skeleton.zip?raw=true
-[solution]: solution
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/ruby/homeworks/simon/skeleton.zip?raw=true
+[solution]: https://github.com/appacademy/curriculum/blob/master/ruby/homeworks/simon/solution

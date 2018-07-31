@@ -183,7 +183,7 @@ function call**.
 
 ## The ES6 Solution
 
-ES6 provides an elegant solution to callback scoping issues through [Arrow Functions](fat-arrows.md).
+ES6 provides an elegant solution to callback scoping issues through [Arrow Functions](https://github.com/appacademy/curriculum/blob/master/javascript/readings/fat-arrows.md).
 
 ## References
 

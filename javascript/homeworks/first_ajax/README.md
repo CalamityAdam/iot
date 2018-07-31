@@ -39,5 +39,5 @@ Make sure you can answer the following questions:
 5.  How could we use different HTTP methods in our request?
 
 [weather-api-signup]: http://home.openweathermap.org/users/sign_up
-[simple-ajax-example]: ../../readings/simple-ajax-example.md
-[skeleton]: ./skeleton.zip?raw=true
+[simple-ajax-example]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/simple-ajax-example.md
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/javascript/homeworks/first_ajax/skeleton.zip?raw=true

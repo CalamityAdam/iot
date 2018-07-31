@@ -43,5 +43,5 @@ Complete the challenges in order.
 
 ### Have fun!
 
-[wacky-zip]: ./skeleton.zip?raw=true
+[wacky-zip]: https://github.com/appacademy/curriculum/blob/master/javascript/homeworks/wacky_painter/skeleton.zip?raw=true
 [wacky-project-intro-video]: https://vimeo.com/162618262

@@ -5,7 +5,7 @@
 - [Setting up a Development Environment][dev-setup]
   - Complete Phase 2 
 
-[dev-setup]: ../course/readings/dev-setup.md#phase-2-backend-development
+[dev-setup]: https://github.com/appacademy/curriculum/tree/master/course/readings/dev-setup.md#phase-2-backend-development
 
 ## w3d1
 
@@ -30,17 +30,17 @@
   + [COALESCE][coalesce] (5 min)
 + :book: [PostgreSQL Setup][postgres-setup] (10 min)
 
-[paradigms]: readings/paradigms.md
-[sql-intro]: readings/sql-intro.md
+[paradigms]: https://github.com/appacademy/curriculum/tree/master/sql/readings/paradigms.md
+[sql-intro]: https://github.com/appacademy/curriculum/tree/master/sql/readings/sql-intro.md
 [visual-joins]: https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/
-[self]: readings/self-joins.md
-[sql-formatting]: readings/formatting.md
+[self]: https://github.com/appacademy/curriculum/tree/master/sql/readings/self-joins.md
+[sql-formatting]: https://github.com/appacademy/curriculum/tree/master/sql/readings/formatting.md
 [subquery]: https://sqlbolt.com/topic/subqueries
-[null]: readings/null.md
+[null]: https://github.com/appacademy/curriculum/tree/master/sql/readings/null.md
 [case]: http://www.postgresqltutorial.com/postgresql-case/
 [coalesce]: http://www.postgresqltutorial.com/postgresql-coalesce/
-[postgres-setup]: readings/setup.md
-[sql-nontech]: readings/sql_nontech.md
+[postgres-setup]: https://github.com/appacademy/curriculum/tree/master/sql/readings/setup.md
+[sql-nontech]: https://github.com/appacademy/curriculum/tree/master/sql/readings/sql_nontech.md
 
 ### Homeworks (80 min)
 + Complete [SQL Bolt Tutorial][sql-bolt] sections 1 - 12 (80 min)
@@ -63,7 +63,7 @@
 ### Projects
 + [SQL Zoo][sqlzoo-readme]
 
-[sqlzoo-readme]: projects/sqlzoo
+[sqlzoo-readme]: https://github.com/appacademy/curriculum/tree/master/sql/projects/sqlzoo
 
 ### Project Solutions
 + [Video solution to Julie Andrews query][julie-andrews-vid]
@@ -90,16 +90,16 @@
 [build-db-video]: https://vimeo.com/167593816
 [orm-intro-video]: https://vimeo.com/167805228
 [orm-demo-video]: https://vimeo.com/167672029
-[sqlite3]: readings/sqlite3.md
-[heredocs]: readings/heredocs.md
+[sqlite3]: https://github.com/appacademy/curriculum/tree/master/sql/readings/sqlite3.md
+[heredocs]: https://github.com/appacademy/curriculum/tree/master/sql/readings/heredocs.md
 [xkcd-bobby-tables]: http://xkcd.com/327/
 [css-display-video]: https://vimeo.com/151190176
-[css-display]: ../html-css/readings/display.md
+[css-display]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/display.md
 
 ### Homeworks (35 min)
 + [Plays-Playwrights ORM][plays-orm] (35 min)
 
-[plays-orm]: homeworks/plays
+[plays-orm]: https://github.com/appacademy/curriculum/tree/master/sql/homeworks/plays
 
 ### Study Hall 9 - 10am
 
@@ -107,8 +107,8 @@
 + [CSS Display Exercise][css-display-exercise]
 + [AA Questions][aa-questions]
 
-[css-display-exercise]: ../html-css/micro-projects/display_box_model
-[aa-questions]: projects/aa_questions
+[css-display-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/display_box_model
+[aa-questions]: https://github.com/appacademy/curriculum/tree/master/sql/projects/aa_questions
 
 ## w3d3
 
@@ -140,16 +140,16 @@
 [indices-video]: https://vimeo.com/167799431
 [css-inherits]: https://vimeo.com/151190179
 [css-reset]: https://vimeo.com/151190181
-[rails-nontech]: ../rails/readings/rails_nontech.md
-[ar-migrations-overview]: readings/migrations-overview.md
-[ar-orm-overview]: readings/orm-overview.md
-[validations-overview]: readings/validations-overview.md
-[ar-indexing-overview]: readings/indexing-overview.md
+[rails-nontech]: https://github.com/appacademy/curriculum/tree/master/rails/readings/rails_nontech.md
+[ar-migrations-overview]: https://github.com/appacademy/curriculum/tree/master/sql/readings/migrations-overview.md
+[ar-orm-overview]: https://github.com/appacademy/curriculum/tree/master/sql/readings/orm-overview.md
+[validations-overview]: https://github.com/appacademy/curriculum/tree/master/sql/readings/validations-overview.md
+[ar-indexing-overview]: https://github.com/appacademy/curriculum/tree/master/sql/readings/indexing-overview.md
 
 ### Homeworks (45 min)
 + [Intro to Rails][intro-rails-homework] (45 min)
 
-[intro-rails-homework]: homeworks/intro_rails
+[intro-rails-homework]: https://github.com/appacademy/curriculum/tree/master/sql/homeworks/intro_rails
 
 ### Additional Resources
 + [Rails 4 vs Rails 5][rails-5-updates]
@@ -166,27 +166,27 @@
   + [Miscellaneous][validations-misc]
 + [ActiveRecord Indexes and Uniqueness][ar-indexing]
 
-[rails-5-updates]: readings/rails-5-updates.md
-[first-rails-project]: readings/first-rails-project.md
-[ar-migrations]: readings/migrations.md
-[ar-orm]: readings/orm.md
-[belongs-to-has-many]: readings/belongs-to-has-many.md
-[has-many-through]: readings/has-many-through.md
-[has-one]: readings/has-one.md
-[unconventional-associations]: readings/unconventional-associations.md
-[validations]: readings/validations.md
-[custom-validations]: readings/custom-validations.md
-[validations-misc]: readings/validations-misc.md
-[ar-indexing]: readings/indexing.md
+[rails-5-updates]: https://github.com/appacademy/curriculum/tree/master/sql/readings/rails-5-updates.md
+[first-rails-project]: https://github.com/appacademy/curriculum/tree/master/sql/readings/first-rails-project.md
+[ar-migrations]: https://github.com/appacademy/curriculum/tree/master/sql/readings/migrations.md
+[ar-orm]: https://github.com/appacademy/curriculum/tree/master/sql/readings/orm.md
+[belongs-to-has-many]: https://github.com/appacademy/curriculum/tree/master/sql/readings/belongs-to-has-many.md
+[has-many-through]: https://github.com/appacademy/curriculum/tree/master/sql/readings/has-many-through.md
+[has-one]: https://github.com/appacademy/curriculum/tree/master/sql/readings/has-one.md
+[unconventional-associations]: https://github.com/appacademy/curriculum/tree/master/sql/readings/unconventional-associations.md
+[validations]: https://github.com/appacademy/curriculum/tree/master/sql/readings/validations.md
+[custom-validations]: https://github.com/appacademy/curriculum/tree/master/sql/readings/custom-validations.md
+[validations-misc]: https://github.com/appacademy/curriculum/tree/master/sql/readings/validations-misc.md
+[ar-indexing]: https://github.com/appacademy/curriculum/tree/master/sql/readings/indexing.md
 
 ### Projects
 + [CSS Reset Exercise][css-reset-exercise]
 + [Associations Exercise][associations-exercise]
 + [URL Shortener][url-shortener]
 
-[css-reset-exercise]: ../html-css/micro-projects/css_reset
-[associations-exercise]: projects/associations_exercise
-[url-shortener]: projects/url_shortener
+[css-reset-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/css_reset
+[associations-exercise]: https://github.com/appacademy/curriculum/tree/master/sql/projects/associations_exercise
+[url-shortener]: https://github.com/appacademy/curriculum/tree/master/sql/projects/url_shortener
 
 ## w3d4
 
@@ -200,27 +200,27 @@
 + :movie_camera: [CSS Grid System][css-grid-video] (15 min)
 + :book: [CSS Float & Clearfix][css-float] (5 min)
 
-[relation]: readings/relation.md
-[ar-joins]: readings/joins.md
-[n-plus-one]: readings/n_plus_one.md
-[scopes]: readings/scopes.md
-[querying-ii]: readings/querying-ii.md
+[relation]: https://github.com/appacademy/curriculum/tree/master/sql/readings/relation.md
+[ar-joins]: https://github.com/appacademy/curriculum/tree/master/sql/readings/joins.md
+[n-plus-one]: https://github.com/appacademy/curriculum/tree/master/sql/readings/n_plus_one.md
+[scopes]: https://github.com/appacademy/curriculum/tree/master/sql/readings/scopes.md
+[querying-ii]: https://github.com/appacademy/curriculum/tree/master/sql/readings/querying-ii.md
 [css-float-video]: https://vimeo.com/151190182
 [css-grid-video]: https://vimeo.com/170320160
-[css-float]: ../html-css/readings/floats_clear_fix.md
+[css-float]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/floats_clear_fix.md
 
 ### Homeworks (60 min)
 + [Movie Buff in Training][movie-buff-hw] (30 min)
 + [N+1 Buster][n1-buster] (30 min)
 
-[n1-buster]: homeworks/n_1_buster
-[movie-buff-hw]: homeworks/active_record_warmup
+[n1-buster]: https://github.com/appacademy/curriculum/tree/master/sql/homeworks/n_1_buster
+[movie-buff-hw]: https://github.com/appacademy/curriculum/tree/master/sql/homeworks/active_record_warmup
 
 ### Additional Resources
 + [Includes vs Joins: What's the difference?][includes-vs-joins]
 + [Ternary Logic in SQL][sql-ternary-logic]
 
-[sql-ternary-logic]: readings/sql-ternary-logic.md
+[sql-ternary-logic]: https://github.com/appacademy/curriculum/tree/master/sql/readings/sql-ternary-logic.md
 [includes-vs-joins]: http://tomdallimore.com/blog/includes-vs-joins-in-rails-when-and-where/
 
 ### Assessment03 Practice
@@ -236,9 +236,9 @@
 + [Movie Buff][movie-buff]
 + [Polls][polls-app]
 
-[css-float-exercise]: ../html-css/micro-projects/float
-[movie-buff]: projects/movie_buff
-[polls-app]: projects/polls_app
+[css-float-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/float
+[movie-buff]: https://github.com/appacademy/curriculum/tree/master/sql/projects/movie_buff
+[polls-app]: https://github.com/appacademy/curriculum/tree/master/sql/projects/polls_app
 
 ## w3d5
 
@@ -251,23 +251,23 @@
 + :movie_camera: [CSS Flexbox][css-flex-video] (19 min)
 + :book: [CSS Display Types][css-display-types] (10 min)
 
-[metaprogramming]: readings/metaprogramming.md
-[class-instance-variables]: readings/class-instance-variables.md
-[meta-send]: demos/send.rb
-[meta-macros]: demos/macros.rb
+[metaprogramming]: https://github.com/appacademy/curriculum/tree/master/sql/readings/metaprogramming.md
+[class-instance-variables]: https://github.com/appacademy/curriculum/tree/master/sql/readings/class-instance-variables.md
+[meta-send]: https://github.com/appacademy/curriculum/tree/master/sql/demos/send.rb
+[meta-macros]: https://github.com/appacademy/curriculum/tree/master/sql/demos/macros.rb
 [css-flex-video]: https://vimeo.com/170512344
-[css-display-types]: ../html-css/readings/display.md
+[css-display-types]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/display.md
 
 ### Homework (30 min)
 + [Metacorgis][metacorgi-hw] (30 min)
 
-[metacorgi-hw]: homeworks/meta_corgis
+[metacorgi-hw]: https://github.com/appacademy/curriculum/tree/master/sql/homeworks/meta_corgis
 
 ### Projects
 + [CSS Flex Exercise][css-flex-exercise]
 + [Build Your Own ActiveRecord][build-your-own-ar]
 
-[css-flex-exercise]: ../html-css/micro-projects/flex  
-[build-your-own-ar]: projects/active_record_lite
+[css-flex-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/flex  
+[build-your-own-ar]: https://github.com/appacademy/curriculum/tree/master/sql/projects/active_record_lite
 
 ### :joy_cat: **Happy Hour!** :joy_cat:

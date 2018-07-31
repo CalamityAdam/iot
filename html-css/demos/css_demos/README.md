@@ -1,6 +1,6 @@
 # CSS Demos
 
-![Breaking A Layout Into Boxes](./lectures/navbar.gif?raw=true)
+![Breaking A Layout Into Boxes](https://github.com/appacademy/curriculum/tree/master/html-css/demos/css_demos/lectures/navbar.gif?raw=true)
 
 ## Lectures
 Watch these! The password is `go_video_go`
@@ -32,20 +32,20 @@ Watch these! The password is `go_video_go`
 [11-css-positioning]: https://vimeo.com/album/3732382/video/151190184
 [12-css-glasses]: https://vimeo.com/album/3732382/video/151190185
 
-[00-css-intro-html]: ./lectures/00-css-intro.html
-[01-css-syntax-html]: ./lectures/01-css-syntax.html
-[02-css-display-html]: ./lectures/02-css-display.html
-[03-css-box-model-inline-html]: ./lectures/03-css-box-model-inline.html
-[03-css-box-model-html]: ./lectures/03-css-box-model.html
-[04-css-margin-html]: ./lectures/04-css-margin.html
-[05-css-inherit-html]: ./lectures/05-css-inherit.html
-[06-css-reset-html]: ./lectures/06-css-reset.html
-[07-css-pseudo-html]: ./lectures/07-css-pseudo.html
-[08-css-float-html]: ./lectures/08-css-float.html
-[09-css-grid-html]: ./lectures/09-css-grid.html
-[10-css-navbar-html]: ./lectures/10-css-navbar.html
-[11-css-positioning-html]: ./lectures/11-css-positioning.html
-[12-css-glasses-html]: ./lectures/12-css-glasses.html
+[00-css-intro-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/00-css-intro.html
+[01-css-syntax-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/01-css-syntax.html
+[02-css-display-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/02-css-display.html
+[03-css-box-model-inline-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/03-css-box-model-inline.html
+[03-css-box-model-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/03-css-box-model.html
+[04-css-margin-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/04-css-margin.html
+[05-css-inherit-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/05-css-inherit.html
+[06-css-reset-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/06-css-reset.html
+[07-css-pseudo-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/07-css-pseudo.html
+[08-css-float-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/08-css-float.html
+[09-css-grid-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/09-css-grid.html
+[10-css-navbar-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/10-css-navbar.html
+[11-css-positioning-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/11-css-positioning.html
+[12-css-glasses-html]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/12-css-glasses.html
 
 
 ## Demos
@@ -99,30 +99,30 @@ Watch these! The password is `go_video_go`
 - **[Google][google-demo]** ([code][google-code]):
   A replication of Google's home page.
 
-[box-code]: ./box.html
-[box-sizing-code]: ./box-sizing.html
-[form-code]: ./form.html
-[modal-code]: ./modal.html
-[table-code]: ./table.html
-[toggle-code]: ./toggle.html
-[sprite-code]: ./sprite.html
-[carousel-simple-code]: ./carousel-simple.html
-[carousel-advanced-code]: ./carousel-advanced.html
-[center-code]: ./center.html
-[click-code]: ./click.html
-[page-code]: ./page.html
-[positioning-code]: ./positioning.html
-[post-code]: ./post.html
-[tag-code]: ./tag.html
-[input-code]: ./input.html
-[tooltip-code]: ./tooltip.html
-[triangle-code]: ./triangle.html
-[thumbnails-code]: ./thumbnails.html
-[single-code]: ./single.html
-[checkbox-code]: ./checkbox.html
-[responsive-code]: ./responsive.html
-[vertical-code]: ./vertical.html
-[google-code]: ./google.html
+[box-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/box.html
+[box-sizing-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/box-sizing.html
+[form-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/form.html
+[modal-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/modal.html
+[table-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/table.html
+[toggle-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/toggle.html
+[sprite-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/sprite.html
+[carousel-simple-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/carousel-simple.html
+[carousel-advanced-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/carousel-advanced.html
+[center-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/center.html
+[click-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/click.html
+[page-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/page.html
+[positioning-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/positioning.html
+[post-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/post.html
+[tag-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/tag.html
+[input-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/input.html
+[tooltip-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/tooltip.html
+[triangle-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/triangle.html
+[thumbnails-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/thumbnails.html
+[single-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/single.html
+[checkbox-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/checkbox.html
+[responsive-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/responsive.html
+[vertical-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/vertical.html
+[google-code]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/google.html
 
 [box-demo]: http://appacademy.github.io/css-demos/box.html
 [box-sizing-demo]: http://appacademy.github.io/css-demos/box-sizing.html

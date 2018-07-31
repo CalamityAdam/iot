@@ -538,4 +538,4 @@ Great! We finally have all the params and routing in place. Run the
 Run the integration spec in `spec/p06_integration_spec.rb`. Good work!
 Move on to [Rails Lite II][rails-lite-ii]
 
-[rails-lite-ii]: ./rails-lite-ii.md
+[rails-lite-ii]: https://github.com/appacademy/curriculum/blob/master/rails/projects/rails_lite/rails-lite-ii.md

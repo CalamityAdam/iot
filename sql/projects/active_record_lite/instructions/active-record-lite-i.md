@@ -16,7 +16,7 @@ SQLObject can use (e.g., `all`, `where`)
 
 Download the [skeleton][skeleton].
 
-[skeleton]: ../skeleton.zip?raw=true
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/sql/projects/active_record_lite/skeleton.zip?raw=true
 
 There are specs in it which will guide you through the project. Because
 they're using a database, they run a little slow, so it might be helpful

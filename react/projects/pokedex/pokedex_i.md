@@ -21,7 +21,7 @@ Get yourself oriented.
 * Open up the rails console (`rails c`) to see what's in the database.
 * Start up the rails server (`rails s`) and visit the root url.
 
-[skeleton-zip]: ./skeleton.zip?raw=true
+[skeleton-zip]: https://github.com/appacademy/curriculum/blob/master/react/projects/pokedex/skeleton.zip?raw=true
 
 ### API Namespace
 
@@ -676,9 +676,9 @@ Now you should see your list of pokemon whenever you refresh the page.
 Go ahead and remove all other extraneous action creators, constants, and code snippets used for testing from our entry point if you haven't already.
 **Show a TA that your pokemon React components render before moving on!**
 
-### Continuing to [Part 2](./pokedex_ii.md)
+### Continuing to [Part 2](https://github.com/appacademy/curriculum/blob/master/react/projects/pokedex/pokedex_ii.md)
 Before continuing with second part of Pokedex, complete the steps:
-* Return to and complete the [Jbuilder Bonus](../jbuilder/README.md#bonus)
-* Read tonight's material on [React Router](../../README.md#w7d4)
+* Return to and complete the [Jbuilder Bonus](https://github.com/appacademy/curriculum/blob/master/react/projects/jbuilder/README.md#bonus)
+* Read tonight's material on [React Router](https://github.com/appacademy/curriculum/tree/master/react#w7d4)
 
-Now, proceed to [Part 2](./pokedex_ii.md).
+Now, proceed to [Part 2](https://github.com/appacademy/curriculum/blob/master/react/projects/pokedex/pokedex_ii.md).

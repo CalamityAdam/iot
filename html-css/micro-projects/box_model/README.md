@@ -2,7 +2,7 @@
 
 Download this [skeleton][skeleton]
 
-[skeleton]: ./skeleton.zip
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/box_model/skeleton.zip
 
 The purpose of this exercise is to learn the box model and start developing an
 ability to visualize the structure and organization of HTML elements on a web

@@ -82,5 +82,5 @@ Your `run` method will build the entire set of reachable words. This is wasteful
 
 [quiz]: http://rubyquiz.com/quiz44.html
 [quiz-wayback]: http://web.archive.org/web/20130215052516/http://rubyquiz.com/quiz44.html
-[dictionary]: ./dictionary.txt
+[dictionary]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/word_chains/dictionary.txt
 [ruby-set]: http://ruby-doc.org/stdlib-2.3.1/libdoc/set/rdoc/Set.html

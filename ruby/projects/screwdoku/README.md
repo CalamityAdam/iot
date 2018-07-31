@@ -36,7 +36,7 @@ If you want to print something out, use the debugger instead. Stop the code and 
 
 If you get stuck and need ideas, reference our [debugging cheatsheet][debugging cheatsheet].
 
-[debugging cheatsheet]: ../../readings/debugging_cheatsheet.md
+[debugging cheatsheet]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/debugging_cheatsheet.md
 
 
 ## Instructions
@@ -71,7 +71,7 @@ allowed to be creative.
 
 Check out the `final-level` and `super-evil-level` at the end.
 
-[git-workflow]: ../../readings/git-workflow.md
+[git-workflow]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/git-workflow.md
 
 ### Bonus
 

@@ -367,13 +367,13 @@ Consider adding a `fetching` boolean to state and new sync actions like
   * Sort by due date
   * Item pops up when it is due
 
-[todos-i]: ./todos_i.md
-[todos-i-phase-5]: ./todos_i.md#phase-5
-[store_reading]: ../../readings/store.md
-[thunks_reading]: ../../readings/thunks.md
-[middleware_reading]: ../../readings/middleware.md
-[components_reading]: ../../readings/containers.md
-[connect_reading]: ../../readings/connect.md
-[props_and_state_reading]: ../../readings/props_and_state.md
-[selector_reading]: ../../readings/selectors.md
+[todos-i]: https://github.com/appacademy/curriculum/blob/master/react/projects/todos/todos_i.md
+[todos-i-phase-5]: https://github.com/appacademy/curriculum/blob/master/react/projects/todos/todos_i.md#phase-5
+[store_reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/store.md
+[thunks_reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/thunks.md
+[middleware_reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/middleware.md
+[components_reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/containers.md
+[connect_reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/connect.md
+[props_and_state_reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/props_and_state.md
+[selector_reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/selectors.md
 [demo]: https://aa-todos.herokuapp.com/

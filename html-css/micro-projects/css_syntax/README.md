@@ -2,7 +2,7 @@
 
 Download this [skeleton][skeleton]. Add a new external stylesheet to the assets folder, and add a link tag for it in the html page. Open up the html page in your web browser and use the CSS workflow from Day 1 to begin styling the recipe page with some basic CSS syntax.
 
-[skeleton]: ./skeleton.zip
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css_syntax/skeleton.zip
 
 1. Select the body element and set the `font-family` property to "Arial, sans-serif"
 2. Set the `font-size` to 38px for all H1 elements
@@ -18,4 +18,4 @@ Download this [skeleton][skeleton]. Add a new external stylesheet to the assets 
 
 **Challenge:** Come up with a way to select and style your reviews after they are submitted. For now just some simple font-styling is fine.
 
-Compare your recipe page to [this example](./solution/example.html) and [this stylesheet](./solution/assets/css_syntax.css).
+Compare your recipe page to [this example](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css_syntax/solution/example.html) and [this stylesheet](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css_syntax/solution/assets/css_syntax.css).

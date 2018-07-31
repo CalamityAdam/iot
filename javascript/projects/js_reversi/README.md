@@ -11,7 +11,7 @@
 
 Download the [skeleton][reversi-skeleton].
 
-[reversi-skeleton]: skeleton.zip?raw=true
+[reversi-skeleton]: https://github.com/appacademy/curriculum/blob/master/javascript/projects/js_reversi/skeleton.zip?raw=true
 
 Read the entirety of the project description before starting!
 
@@ -64,4 +64,4 @@ module.exports = Piece;
 returned whenever we `require` it from another file. File dependencies for this
 project are already setup for you.
 
-[module-pattern]: ../../readings/module-pattern.md
+[module-pattern]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/module-pattern.md

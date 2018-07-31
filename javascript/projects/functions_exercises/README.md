@@ -15,9 +15,9 @@ Useful Readings:
 + [`this` and that][this-and-that]
 + [Intro. to Callbacks: File I/O][intro-to-callbacks]
 
-[closures]: ../../readings/closures.md
-[this-and-that]: ../../readings/this-and-that.md
-[intro-to-callbacks]: ../../readings/intro-to-callbacks.md
+[closures]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/closures.md
+[this-and-that]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/this-and-that.md
+[intro-to-callbacks]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/intro-to-callbacks.md
 
 ## Timing is Everything
 

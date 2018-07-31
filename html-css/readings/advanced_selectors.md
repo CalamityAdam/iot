@@ -54,7 +54,7 @@ This example targets the hover state of all submit buttons and uses another adva
 
 In the Chrome Developer Tools we can toggle element state in order to view styles being applied:
 
-![Toggling State in Chrome Developer Tools](../assets/chrome_dev_toggle_state.png)
+![Toggling State in Chrome Developer Tools](https://github.com/appacademy/curriculum/blob/master/html-css/assets/chrome_dev_toggle_state.png)
 
 ## Structural Selectors
 

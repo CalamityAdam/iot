@@ -2,7 +2,7 @@
 
 Review the reading on [object-oriented Javascript][oo-js]. ES2015 provides an alternative syntax for creating object-constructor functions. ES2015 lets us create classes with a more intuitive and Ruby-like syntax. Consider this example:
 
-[oo-js]: ./object-oriented-js.md
+[oo-js]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/object-oriented-js.md
 
 ```javascript
 class Bicycle {

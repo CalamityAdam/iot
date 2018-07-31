@@ -18,7 +18,7 @@ I recommend `import`ing all objects into your JSX files aliased as
 Alright, let's get started!
 
 [live-solution]: http://appacademy.github.io/curriculum/minesweeper/index.html
-[minesweeper-js]: ./solution/minesweeper.js
+[minesweeper-js]: https://github.com/appacademy/curriculum/blob/master/react/projects/react_minesweeper/solution/minesweeper.js
 
 [Live Demo!][live-solution]
 
@@ -145,4 +145,4 @@ and resets the board in the Game's state to the new board.
 
 As a guide, check out the modal demo in the [css demos][css-demos].
 
-[css-demos]: ../../../html-css/demos/css_demos
+[css-demos]: https://github.com/appacademy/curriculum/blob/master/react/projects/react_minesweeper/html-css/demos/css_demos

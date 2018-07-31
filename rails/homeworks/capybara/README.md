@@ -150,7 +150,7 @@ end
 
 Congrats! You are on your way to becoming a master of Capybara! Make sure to review the solutions.
 
-[rspec-rails]: ../../readings/rspec-and-rails-setup.md
+[rspec-rails]: https://github.com/appacademy/curriculum/blob/master/rails/readings/rspec-and-rails-setup.md
 [shoulda-matchers-docs]: https://github.com/thoughtbot/shoulda-matchers
-[capybara]: ../../readings/capybara.md
-[users-solutions]: ../../projects/music_app/solution/spec/models/user_spec.rb
+[capybara]: https://github.com/appacademy/curriculum/blob/master/rails/readings/capybara.md
+[users-solutions]: https://github.com/appacademy/curriculum/blob/master/rails/projects/music_app/solution/spec/models/user_spec.rb

@@ -13,8 +13,8 @@ proposal:
     * [Tentative proposal guidelines][tentative-proposal]
     * [List of approved apps][good-projects]
 
-[tentative-proposal]: proposal/tentative-project-proposal.md
-[good-projects]: proposal/projects-to-clone.md
+[tentative-proposal]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/proposal/tentative-project-proposal.md
+[good-projects]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/proposal/projects-to-clone.md
 
 ## Design Documents
 
@@ -35,9 +35,9 @@ design documents:
 [state-shape]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/state-shape.md
 [routes]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/routes.md
 
-[fsp]: proposal/
+[fsp]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/proposal/
 [sample-design-docs]: https://www.github.com/appacademy/bluebird/wiki
-[mvp-checklist]: proposal/mvp-list.md
+[mvp-checklist]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/proposal/mvp-list.md
 
 ## Project
 
@@ -60,10 +60,10 @@ Material. Learning true CSS now will allow you to easily pick up CSS frameworks
 later. CSS frameworks are a unique skill in themselves and will take just as
 long to learn as normal CSS.
 
-[during-project]: project/during-the-project.md
-[peer-review]: project/peer-review.md
-[production-readme]: project/production-readme.md
-[turn-in-fullstack]: project/turn_in_fullstack.md
+[during-project]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/project/during-the-project.md
+[peer-review]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/project/peer-review.md
+[production-readme]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/project/production-readme.md
+[turn-in-fullstack]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/project/turn_in_fullstack.md
 [jobsearch]: https://github.com/appacademy/job-search-curriculum
 
 ### Plagiarism
@@ -101,16 +101,16 @@ We have lots of extra readings and videos on other topics in [additional
 resources][additional-resources].
 
 [production-ready]: ./resources/helpful_tools/production-ready.md
-[additional-resources]: ./additional_resources.md
-[heroku-deployment]: resources/helpful_tools/heroku-deployment.md
-[figaro]: resources/security/figaro.md
+[additional-resources]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/additional_resources.md
+[heroku-deployment]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/helpful_tools/heroku-deployment.md
+[figaro]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/security/figaro.md
 [figaro-video]: https://vimeo.com/164602277
-[active-storage-demo]: resources/ActiveStorageDemo
-[paperclip-aws-demo]: resources/cdns/file_upload_demo
+[active-storage-demo]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/ActiveStorageDemo
+[paperclip-aws-demo]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/cdns/file_upload_demo
 [google-maps-demo]: https://github.com/appacademy/curriculum/tree/master/react/demos/react_map_demo
 [redux-dev-tools]: https://github.com/appacademy/curriculum/blob/c280e51a978c9a67243a2bb2d5f4650d9f53d387/react/readings/redux_dev_tools.md
 [redux-dev-tools-video]: https://vimeo.com/194738174
-[asset-pipeline]: resources/helpful_tools/asset-pipeline.md
+[asset-pipeline]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/helpful_tools/asset-pipeline.md
 
 ### Bonus
 
@@ -121,9 +121,9 @@ app to add technical depth. Here are a few directions you could take.
   * [Testing][testing]
   * [Accessibility]
 
-[performance-and-scaling]: bonus/performance.md
-[testing]: bonus/testing.md
-[accessibility]: bonus/accessibility.md
+[performance-and-scaling]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/bonus/performance.md
+[testing]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/bonus/testing.md
+[accessibility]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/bonus/accessibility.md
 
 ## Culture
 

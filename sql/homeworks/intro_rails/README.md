@@ -37,8 +37,8 @@ In this project we'll be creating a simple Rails project to model the relationsh
 
 N.B. Refer to the readings often.
 
-[rails-with-pg-reading]: ../../readings/first-rails-project.md
-[migrations-reading]: ../../readings/migrations.md
-[validations-reading]: ../../readings/validations.md
-[associations-reading]: ../../readings/belongs-to-has-many.md
-[orm-reading]: ../../readings/orm.md
+[rails-with-pg-reading]: https://github.com/appacademy/curriculum/blob/master/sql/readings/first-rails-project.md
+[migrations-reading]: https://github.com/appacademy/curriculum/blob/master/sql/readings/migrations.md
+[validations-reading]: https://github.com/appacademy/curriculum/blob/master/sql/readings/validations.md
+[associations-reading]: https://github.com/appacademy/curriculum/blob/master/sql/readings/belongs-to-has-many.md
+[orm-reading]: https://github.com/appacademy/curriculum/blob/master/sql/readings/orm.md

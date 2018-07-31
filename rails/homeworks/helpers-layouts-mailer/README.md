@@ -96,5 +96,5 @@ Finished? Navigate around your site in localhost. Make sure that the main body o
   # config/environments/development.rb
   config.action_mailer.delivery_method = :letter_opener
   ```
-[99-cats-2-solution-zip]: ../../projects/ninety_nine_cats_ii/solution.zip?raw=true
-[mailer-reading-1]: ../../readings/mailing-1.md
+[99-cats-2-solution-zip]: https://github.com/appacademy/curriculum/blob/master/rails/projects/ninety_nine_cats_ii/solution.zip?raw=true
+[mailer-reading-1]: https://github.com/appacademy/curriculum/blob/master/rails/readings/mailing-1.md

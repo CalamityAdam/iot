@@ -4,12 +4,12 @@ Often when working as a front-end developer you'll be collaborating with a
 designer. Most likely they will provide you with a sequence of screenshots and
 specifications for you to convert into neat, maintainable HTML and CSS. Like so:
 
-![aa-times](./solution/docs/screenshots/overall.png)
+![aa-times](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/overall.png)
 
 Download the [`skeleton`][skeleton] to get started on making an App Academy
 clone of [The New York Times homepage](http://nytimes.com)!
 
-[skeleton]:./skeleton.zip?raw=true
+[skeleton] :https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/skeleton.zip?raw=true
 
 ## Learning Goals
 
@@ -131,7 +131,7 @@ Set `img` `width` and `height` properties accordingly.
 
 Study the mockup to get an idea of the app's overall design.
 
-- [Layout Mockup](./solution/docs/screenshots/main_content.jpg)
+- [Layout Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/main_content.jpg)
 
 In order to write "cascading" style sheets, it is important that we pick out
 common design elements and essential layout features. We will use the
@@ -157,10 +157,10 @@ like the header. We can break the header down further into smaller components:
 `main_nav` (with a `masthead` component containing our logo) and `sections_nav`
 (with a `gear_dropdown` component).
 
-- [Main Nav Mockup](./solution/docs/screenshots/main_nav.jpg)
-- [Masthead Mockup](./solution/docs/screenshots/masthead.jpg)
-- [Sections Nav Mockup](./solution/docs/screenshots/sections_nav.jpg)
-- [Gear Dropdown Mockup](./solution/docs/screenshots/gear_dropdown.jpg)
+- [Main Nav Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/main_nav.jpg)
+- [Masthead Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/masthead.jpg)
+- [Sections Nav Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/sections_nav.jpg)
+- [Gear Dropdown Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/gear_dropdown.jpg)
 
 We will style each one of these components in its own stylesheet. **N.B.:**
 Breaking down stylesheets into each component is key to writing maintainable and
@@ -168,7 +168,7 @@ modular stylesheets.
 
 ## Main Nav
 
-[Main Nav Mockup](./solution/docs/screenshots/main_nav.jpg)
+[Main Nav Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/main_nav.jpg)
 
 Compare the provided HTML structure in `/views/shared/_main_nav.html.erb` to the
 mockup. Notice we are missing the HTML for the right-side navigation. Let's add
@@ -210,7 +210,7 @@ elements themselves.
 
 ## Masthead
 
-[Masthead Mockup](./solution/docs/screenshots/masthead.jpg)
+[Masthead Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/masthead.jpg)
 
 Open up `views/shared/_masthead.html.erb`. Pull up the provided
 `components/_masthead.scss` stylesheet next to it using split screen.
@@ -243,7 +243,7 @@ things:
 
 ## Sections Nav
 
-[Sections Nav Mockup](./solution/docs/screenshots/sections_nav.jpg)
+[Sections Nav Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/sections_nav.jpg)
 
 Follow the patterns and coding patterns described above to style the Sections
 Nav component. Define its styles in `stylesheets/components/_sections_nav.scss`
@@ -253,7 +253,7 @@ Sections Nav bar **call over a TA to code review your Header**!
 
 ## Gear Dropdown
 
-[Gear Dropdown Mockup](./solution/docs/screenshots/gear_dropdown.jpg)
+[Gear Dropdown Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/gear_dropdown.jpg)
 
 Take a look at the `app/assets/javascripts/components/dropdown.js` file. Read
 the comments to get an understanding how the script works.
@@ -328,7 +328,7 @@ CSS/HTML is the best way to learn!
 
 ## News Content
 
-[News Content Mockup](./solution/docs/screenshots/main_content.jpg)
+[News Content Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/main_content.jpg)
 
 Copy and paste all the content from `docs/copy/main_content.txt` to
 `views/shared/_main_content.html.erb`. Start by using your newly defined grid
@@ -375,7 +375,7 @@ time and instead use media queries to complete our responsive design. Notice how
 the amount of links in the Sections Nav is too big for smaller screen sizes (ie.
 mobile screens). Let's adjust for mobile!
 
-[Mobile Mockup](./solution/docs/screenshots/mobile.png)
+[Mobile Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/mobile.png)
 
 - Write a media query similar to the one used in the `grid.scss` to hide the
 sections nav at the same viewport width that the columns convert to `100%`.
@@ -388,7 +388,7 @@ Now let's code a Sections Sidebar so that mobile users still have a way of
 navigating all of the different App Academy Times sections. Style it according
 to the mockup.
 
-[Sections Sidebar Mockup](./solution/docs/screenshots/sections_sidebar.jpg)
+[Sections Sidebar Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/sections_sidebar.jpg)
 
 - Copy and paste the HTML from the `sections_nav.html.erb` file into the
 `sections_sidebar.html.erb` file to use as a skeleton and guide.
@@ -470,7 +470,7 @@ above:
 
 # Phase 6: Search Modal
 
-[Search Modal Mockup](./solution/docs/screenshots/search_modal.jpg)
+[Search Modal Mockup](https://github.com/appacademy/curriculum/blob/master/html-css/projects/aa_times/solution/docs/screenshots/search_modal.jpg)
 
 Modals are distinct from dropdowns because they appear to float independently
 over the application. A common characteristic of a modal is also that the app

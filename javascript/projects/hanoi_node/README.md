@@ -83,5 +83,5 @@ Instantiate the `Game` class and play a game. In the completion
 callback, close your `reader` so that Node knows it can exit when the
 game is over.
 
-[ruby-hanoi]: ./ruby_hanoi.md
-[node-io]: ../../readings/intro-to-callbacks.md
+[ruby-hanoi]: https://github.com/appacademy/curriculum/blob/master/javascript/projects/hanoi_node/ruby_hanoi.md
+[node-io]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/intro-to-callbacks.md

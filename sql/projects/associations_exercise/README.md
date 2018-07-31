@@ -14,7 +14,7 @@ active record associations.
 
 Be sure and check out the `db/schema.rb` to see what you are dealing with.
 
-[skeleton]: skeleton.zip?raw=true
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/sql/projects/associations_exercise/skeleton.zip?raw=true
 
 ## Learning Goals
 

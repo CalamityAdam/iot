@@ -53,4 +53,4 @@ First of all, it has super high specificity, so it can only be overridden with
 presentation logic in with JS code. Toggling classes is the clean, best-practice
 way to do this.
 
-[skeleton]: skeleton.zip?raw=true
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/javascript/projects/hanoi_jquery/skeleton.zip?raw=true

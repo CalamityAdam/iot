@@ -41,6 +41,6 @@ For a more detailed look at how to test your ORM, refer to the [ORM Demo][orm-de
 
 Solutions can be found in the [homework solutions folder][solution].  Please wait until you have completed the exercise to check the solutions.  
 
-[skeleton]: skeleton.zip?raw=true
-[solution]: solution
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/sql/homeworks/plays/skeleton.zip?raw=true
+[solution]: https://github.com/appacademy/curriculum/blob/master/sql/homeworks/plays/solution
 [orm-demo-video]: https://vimeo.com/167672029#t=18m24s

@@ -352,4 +352,4 @@ length requirement. In reality, we only need to validate the password
 when it has been changed, which is exactly when `@password` is not
 `nil`.
 
-[video-demo]: ../demos/auth_video_demo
+[video-demo]: https://github.com/appacademy/curriculum/blob/master/rails/demos/auth_video_demo

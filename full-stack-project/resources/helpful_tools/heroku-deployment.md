@@ -119,4 +119,4 @@ Here is a quick guide to git yer app on the interwebs.
 
 Check out our reading on [setting up a custom domain][domains] to find out more.
 
-[domains]: ../expository_readings/domains.md
+[domains]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/expository_readings/domains.md

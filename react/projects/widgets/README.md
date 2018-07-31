@@ -30,7 +30,7 @@ with our widget components as we create them.
 Note: we won't be using `jQuery` for this project. If you're not sure how to do
 something without it, use Google as a resource and ask a TA if needed.
 
-[getting_started]: ../../homeworks/getting_started
+[getting_started]: https://github.com/appacademy/curriculum/blob/master/react/projects/widgets/homeworks/getting_started
 
 ## Phase 2: Clock Widget
 

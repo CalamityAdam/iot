@@ -2,7 +2,7 @@
 
 After you finish the exercises, or if you get stuck on one of the problems, you can view the solutions [here][adt-solutions].
 
-[adt-solutions]: solution.rb
+[adt-solutions]: https://github.com/appacademy/curriculum/blob/master/ruby/homeworks/abstract_data_types/solution.rb
 
 ## Exercise 1 - Stack
 

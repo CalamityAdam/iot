@@ -39,8 +39,8 @@ Try to commit at least after finishing each phase.
 Feel free to consult the [reading on git][git-reading].
 
 [shoulda-matchers-docs]: https://github.com/thoughtbot/shoulda-matchers#rspec
-[git-reading]: ../../../ruby/readings/git-summary.md
-[git-add]:  ../../../ruby/readings/git-add.md
+[git-reading]: https://github.com/appacademy/curriculum/blob/master/rails/projects/goal_app/ruby/readings/git-summary.md
+[git-add]: https://github.com/appacademy/curriculum/blob/master/rails/projects/goal_app/ruby/readings/git-add.md
 
 ## Phase I: User Creation & Login
 
@@ -49,8 +49,8 @@ Feel free to consult the [reading on git][git-reading].
 Today's main focus will be integration tests, but we will write some model and controller specs as an RSpec warm up!
 
  1. Generate the models and controllers needed for authentication and user creation. If RSpec setup went according to plan, spec files should be generated for you automatically. Do not write out your `User` model just yet - we are going to write this app TDD style!
- 2. Write model specs for `User`. Remember, model specs should test your model's validations, associations, and class scope methods (eg. `User::find_by_credentials`). Use `shoulda-matchers` to write tests for each of the validations in your user model. You won't have any associations written on your user model to begin with; go back and fill these in as you go. Refer to the reading on [RSpec Model Testing](../../readings/rspec-models.md) and last night's homework as needed.
- 3. Next, write controller tests for each action in your `UsersController`. Refer to the [RSpec Controller reading](../../readings/rspec-controllers.md) and last night's homework as needed.
+ 2. Write model specs for `User`. Remember, model specs should test your model's validations, associations, and class scope methods (eg. `User::find_by_credentials`). Use `shoulda-matchers` to write tests for each of the validations in your user model. You won't have any associations written on your user model to begin with; go back and fill these in as you go. Refer to the reading on [RSpec Model Testing](https://github.com/appacademy/curriculum/blob/master/rails/readings/rspec-models.md) and last night's homework as needed.
+ 3. Next, write controller tests for each action in your `UsersController`. Refer to the [RSpec Controller reading](https://github.com/appacademy/curriculum/blob/master/rails/readings/rspec-controllers.md) and last night's homework as needed.
  Refer to [rails testing docs][rails-testing-controller-docs] to learn how to pass data in the controller tests.
 
 Run your specs and watch them fail. Now, implement `User` and `UsersController` and experience the joy of turning your specs green!
@@ -109,9 +109,9 @@ Start filling in the missing test logic, one test at a time.
 
 This is the 'Red, Green, Refactor' approach.
 
-[rails-5-updates]: ../../readings/rails-5-updates.md
-[rspec-setup]: ../../readings/rspec-and-rails-setup.md
-[capybara]: ../../readings/capybara.md
+[rails-5-updates]: https://github.com/appacademy/curriculum/blob/master/rails/readings/rails-5-updates.md
+[rspec-setup]: https://github.com/appacademy/curriculum/blob/master/rails/readings/rspec-and-rails-setup.md
+[capybara]: https://github.com/appacademy/curriculum/blob/master/rails/readings/capybara.md
 
 ## Phase II: Goals
 

@@ -3,7 +3,7 @@
 Today you will implement your very own HashMap. If this sounds tricky,
 don't worry – we've provided specs. Download the [skeleton][skeleton] before you start.
 
-[skeleton]: skeleton.zip?raw=true
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/hash_map_lru_cache/skeleton.zip?raw=true
 
 ## Learning Goals
 
@@ -368,4 +368,4 @@ And you did it! Congratulations! Celebrate by getting a **code review**!
 
 ## [Phase Bonus: Dynamic Array][dynamic_array]
 
-[dynamic_array]: dynamic_array.md
+[dynamic_array]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/hash_map_lru_cache/dynamic_array.md

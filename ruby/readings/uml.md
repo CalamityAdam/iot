@@ -10,4 +10,4 @@ A class is usually drawn in UML with three components: a name, a set of attribut
 
 Take a look at this [diagram][chess-diagram] for our chess implementation.
 
-[chess-diagram]: ../assets/Chess_Diagram.png
+[chess-diagram]: https://github.com/appacademy/curriculum/blob/master/ruby/assets/Chess_Diagram.png

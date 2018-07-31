@@ -32,7 +32,7 @@ Lorem ipsum dolor sit <strong>amet, consectetur</strong> adipisicing elit, sed d
 
 This produces:
 
-![Relative top](../assets/images/position-relative.png)
+![Relative top](https://github.com/appacademy/curriculum/blob/master/html-css/assets/images/position-relative.png)
 
 Note that if you don't give any `top`, `bottom`, `left`, or `right`
 properties, `position: relative` does nothing to the element.
@@ -92,7 +92,7 @@ culpa qui officia deserunt mollit anim id est laborum.
 
 This produces:
 
-![Absolute](../assets/images/absolute-nospace.png?raw=true)
+![Absolute](https://github.com/appacademy/curriculum/blob/master/html-css/assets/images/absolute-nospace.png?raw=true)
 
 As you can see, there is text under the absolutely positioned element.
 It acts as if positioned "above" the page.
@@ -140,7 +140,7 @@ h1 {
 
 This produces:
 
-![Relative Absolute](../assets/images/relative-absolute.png?raw=true)
+![Relative Absolute](https://github.com/appacademy/curriculum/blob/master/html-css/assets/images/relative-absolute.png?raw=true)
 
 The absolutely positioned `article` tag is 10px down and 100px right
 of the relatively positioned parent `section` tag.
@@ -199,7 +199,7 @@ culpa qui officia deserunt mollit anim id est laborum.
 
 Produces:
 
-![Basic float](../assets/images/basic-float.png?raw=true)
+![Basic float](https://github.com/appacademy/curriculum/blob/master/html-css/assets/images/basic-float.png?raw=true)
 
 Floating elements are extremely useful for building layouts, as it
 allows us to align elements horizontally. For example, we may float
@@ -229,7 +229,7 @@ section {
 ```
 Produces:
 
-![Float to position](../assets/images/float-position.png?raw=true)
+![Float to position](https://github.com/appacademy/curriculum/blob/master/html-css/assets/images/float-position.png?raw=true)
 
 ## The Float Gotcha
 
@@ -257,7 +257,7 @@ section {
 ```
 Producing:
 
-![The clear problem](../assets/images/clear-problem.png?raw=true)
+![The clear problem](https://github.com/appacademy/curriculum/blob/master/html-css/assets/images/clear-problem.png?raw=true)
 
 Sad! Our `section` tag's blue background doesn't come through. The way
 to fix this is via trick known as the clear fix. We'll use the
@@ -277,7 +277,7 @@ section:after {
 
 We get:
 
-![Clearfix](../assets/images/clearfix.png?raw=true)
+![Clearfix](https://github.com/appacademy/curriculum/blob/master/html-css/assets/images/clearfix.png?raw=true)
 
 The empty string forces our `section` tag to have some height.
 

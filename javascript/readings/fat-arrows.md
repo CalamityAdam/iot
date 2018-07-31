@@ -156,7 +156,7 @@ const hasArgs = function() {
 hasArgs('RealArg') // returns 'RealArg';
 ```
 
-[arguments]: ./arguments.md
+[arguments]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/arguments.md
 
 ### No Names
 

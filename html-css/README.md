@@ -20,15 +20,15 @@ The beginning of Front-End Development.
 + :book: [Overview of HTML/CSS Curriculum][html-css-overview] (2 min)
 + :book: [An Introduction to HTML][html-intro]
 
-[css-nontech]: readings/css_nontech.md
-[html-css-overview]: readings/overview.md
-[html-intro]: readings/introduction.md
+[css-nontech]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/css_nontech.md
+[html-css-overview]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/overview.md
+[html-intro]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/introduction.md
 
 #### Exercise
 
 + [Recipe Page][html-intro-exercise]
 
-[html-intro-exercise]: micro-projects/html-introduction
+[html-intro-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/html-introduction
 
 ### Semantic Containers
 
@@ -38,13 +38,13 @@ A look at containers in HTML and HTML5 semantic elements.
 
 + :book: [Semantic HTML Containers][html-containers]
 
-[html-containers]: readings/containers.md
+[html-containers]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/containers.md
 
 #### Exercise
 
 + [Recipe Containers][html-containers-exercise]
 
-[html-containers-exercise]: micro-projects/html-containers
+[html-containers-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/html-containers
 
 ### Forms
 
@@ -54,13 +54,13 @@ Bringing user input to your HTML with Form and Input elements.
 
 + :book: [Forms][html-forms]
 
-[html-forms]: readings/forms.md
+[html-forms]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/forms.md
 
 #### Exercise
 
 + [Recipe Review Form][html-forms-exercise]
 
-[html-forms-exercise]: micro-projects/html-forms
+[html-forms-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/html-forms
 
 ### Head Section
 
@@ -70,13 +70,13 @@ Providing specific information and loading external files to your webpage.
 
 + :book: [HTML Head Tag][html-head]
 
-[html-head]: readings/head_section.md
+[html-head]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/head_section.md
 
 #### Exercise
 
 + [Recipe Head Section][html-head-exercise]
 
-[html-head-exercise]: micro-projects/html-head_section
+[html-head-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/html-head_section
 
 ## CSS
 
@@ -98,7 +98,7 @@ history and then the Workflow video to learn about the Chrome Developer Tools.
 
 + [Hack Academy][css-intro-exercise]
 
-[css-intro-exercise]: micro-projects/css_intro
+[css-intro-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/css_intro
 
 ### Syntax
 
@@ -113,14 +113,14 @@ selector {
 + :book: [CSS Selectors & Precedence][css-selectors]
 + :movie_camera: [CSS Syntax][css-syntax]
 
-[css-selectors]: readings/css_selectors_precedence.md
+[css-selectors]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/css_selectors_precedence.md
 [css-syntax]: https://vimeo.com/151185331
 
 #### Exercise
 
 + [Recipe Styles][css-syntax-exercise]
 
-[css-syntax-exercise]: micro-projects/css_syntax
+[css-syntax-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/css_syntax
 
 ### Advanced Selectors
 
@@ -130,13 +130,13 @@ Now that we have some understanding of CSS syntax we can take a look at some mor
 
 + :book: [Advanced Selectors][css-adv-selectors]
 
-[css-adv-selectors]: readings/advanced_selectors.md
+[css-adv-selectors]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/advanced_selectors.md
 
 #### Exercise
 
 + [More Recipe Styles][css-adv-selectors-exercise]
 
-[css-adv-selectors-exercise]: micro-projects/advanced_selectors
+[css-adv-selectors-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/advanced_selectors
 
 ### The Box Model
 
@@ -148,13 +148,13 @@ The box model describes how space is calculated with CSS. This model combined wi
 + :book: [Box Model][css-box-reading]
 
 [css-box]: https://vimeo.com/151190177
-[css-box-reading]: readings/box_model.md
+[css-box-reading]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/box_model.md
 
 #### Exercise
 
 + [CSS Box Model Exercise][css-box-exercise]
 
-[css-box-exercise]: micro-projects/box_model
+[css-box-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/box_model
 
 ### Display Property
 
@@ -163,12 +163,12 @@ The box model describes how space is calculated with CSS. This model combined wi
 + :book: [Display Properties][css-display-reading] (Save Flex for day 5)
 
 [css-display-video]: https://vimeo.com/151190176
-[css-display-reading]: readings/display.md
+[css-display-reading]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/display.md
 
 #### Exercise
 + [Recipe Display][css-display-exercise]
 
-[css-display-exercise]: micro-projects/display_box_model
+[css-display-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/display_box_model
 
 ### Inherits & Reset
 
@@ -182,7 +182,7 @@ The box model describes how space is calculated with CSS. This model combined wi
 #### Exercise
 + [CSS Reset Exercise][css-reset-exercise]
 
-[css-reset-exercise]: micro-projects/css_reset
+[css-reset-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/css_reset
 
 ### CSS Float & Clearfix
 
@@ -193,12 +193,12 @@ The box model describes how space is calculated with CSS. This model combined wi
 
 [css-float-video]: https://vimeo.com/151190182
 [css-grid-video]: https://vimeo.com/170320160
-[css-float]: readings/floats_clear_fix.md
+[css-float]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/floats_clear_fix.md
 
 #### Exercise
 + [CSS Float Exercise][css-float-exercise]
 
-[css-float-exercise]: micro-projects/float
+[css-float-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/float
 
 ### CSS Display Types & Flexbox
 
@@ -207,9 +207,9 @@ The box model describes how space is calculated with CSS. This model combined wi
 + :book: [CSS Display Types][css-display-types]
 
 [css-flex-video]: https://vimeo.com/170512344
-[css-display-types]: readings/display.md
+[css-display-types]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/display.md
 
 #### Exercise
 + [CSS Flex Exercise][css-flex-exercise]
 
-[css-flex-exercise]: micro-projects/flex  
+[css-flex-exercise]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/flex  

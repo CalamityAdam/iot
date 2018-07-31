@@ -52,7 +52,7 @@ You can also type
 inside of byebug to get a list of commands that are
 available for use.
 
-[debugging-reading]: ../../ruby/readings/debugger.md
+[debugging-reading]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/debugger.md
 
 ## Better Errors
 

@@ -17,7 +17,7 @@ make sure the project README is current with this style guide's rules.
 * For phases with a smaller number of directions that can't be easily broken up into sections, it's ok to leave out the "Overview", "Steps", and "Recap" headers.
 * Bonus phases are titled "Bonus phase 1: Lorem Ipsum", "Bonus phase 2: Lorem Ipsum".
 * Deep-dive or additional information should be placed in an `Aside`.
-* Always refer to the [project README example](../../sql/projects/url_shortener/README.md).
+* Always refer to the [project README example](https://github.com/appacademy/curriculum/blob/master/sql/projects/url_shortener/README.md).
 
 ## Demo README.md outline
 

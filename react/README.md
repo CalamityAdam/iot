@@ -21,25 +21,25 @@
 * :book: [Props and State][props_and_state]
 * :computer: [code from click counter demo][click-demo]
 
-[react-nontech]: readings/react_nontech.md
-[npm_configuration]: readings/npm_configuration.md
-[webpack_configuration]: readings/webpack_configuration.md
-[import_export]: readings/import_export.md
-[object_destructuring]: readings/object_destructuring.md
-[react_dev_tools]: readings/react_dev_tools.md
+[react-nontech]: https://github.com/appacademy/curriculum/tree/master/react/readings/react_nontech.md
+[npm_configuration]: https://github.com/appacademy/curriculum/tree/master/react/readings/npm_configuration.md
+[webpack_configuration]: https://github.com/appacademy/curriculum/tree/master/react/readings/webpack_configuration.md
+[import_export]: https://github.com/appacademy/curriculum/tree/master/react/readings/import_export.md
+[object_destructuring]: https://github.com/appacademy/curriculum/tree/master/react/readings/object_destructuring.md
+[react_dev_tools]: https://github.com/appacademy/curriculum/tree/master/react/readings/react_dev_tools.md
 [react-intro]: https://vimeo.com/188074204
 [react-transpilation]: https://vimeo.com/188087366
 [react-func-comps]: https://vimeo.com/188090786
 [react-lifecycle]: https://vimeo.com/188093789
-[click-demo]: demos/click-counter
+[click-demo]: https://github.com/appacademy/curriculum/tree/master/react/demos/click-counter
 [thinking_in_react]: https://facebook.github.io/react/docs/thinking-in-react.html
 
 ### Homeworks (75 min)
 - [Getting Started with NPM][getting_started] (30 min)
 - [React Calculator][react_calculator] (45 min)
 
-[getting_started]: homeworks/getting_started
-[react_calculator]: homeworks/calculator
+[getting_started]: https://github.com/appacademy/curriculum/tree/master/react/homeworks/getting_started
+[react_calculator]: https://github.com/appacademy/curriculum/tree/master/react/homeworks/calculator
 
 ### Additional Resources
 * :book: [Babel][babel_configuration]
@@ -52,14 +52,14 @@
 * :book: [Official React Documentation][react_docs]
   * Most Helpful: REFERENCE Section (Left Sidebar)
 
-  [babel_configuration]: readings/babel_configuration.md
-  [intro_to_react]: readings/intro_to_react.md
-  [intro_to_jsx]: readings/intro_to_jsx.md
-  [intro_to_react_components]: readings/intro_to_react_components.md
-  [component_declaration]: readings/component_declaration.md
-  [props_and_state]: readings/props_and_state.md
-  [component_lifecycle]: readings/component_lifecycle.md
-  [synthetic_events]: readings/synthetic_events.md
+  [babel_configuration]: https://github.com/appacademy/curriculum/tree/master/react/readings/babel_configuration.md
+  [intro_to_react]: https://github.com/appacademy/curriculum/tree/master/react/readings/intro_to_react.md
+  [intro_to_jsx]: https://github.com/appacademy/curriculum/tree/master/react/readings/intro_to_jsx.md
+  [intro_to_react_components]: https://github.com/appacademy/curriculum/tree/master/react/readings/intro_to_react_components.md
+  [component_declaration]: https://github.com/appacademy/curriculum/tree/master/react/readings/component_declaration.md
+  [props_and_state]: https://github.com/appacademy/curriculum/tree/master/react/readings/props_and_state.md
+  [component_lifecycle]: https://github.com/appacademy/curriculum/tree/master/react/readings/component_lifecycle.md
+  [synthetic_events]: https://github.com/appacademy/curriculum/tree/master/react/readings/synthetic_events.md
   [react_docs]: https://facebook.github.io/react/docs/getting-started.html
 
 ### Projects
@@ -67,9 +67,9 @@
 * [Widgets][widgets]
 * [Minesweeper][minesweeper]
 
-[css-friends]: ../html-css/micro-projects/css-friends/
-[widgets]: projects/widgets
-[minesweeper]: projects/react_minesweeper
+[css-friends]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/css-friends/
+[widgets]: https://github.com/appacademy/curriculum/tree/master/react/projects/widgets
+[minesweeper]: https://github.com/appacademy/curriculum/tree/master/react/projects/react_minesweeper
 
 ## w7d1
 
@@ -85,16 +85,16 @@
 * :book: [Containers][containers] (10 min)
 * :book: [Selectors][selectors] (10 min)
 
-[lodash]: readings/lodash.md
-[store]: readings/store.md
-[reducers]: readings/reducers.md
-[actions]: readings/actions.md
-[flux_redux]: readings/flux_redux.md
-[provider]: readings/provider.md
-[connect]: readings/connect.md
-[containers]: readings/containers.md
-[selectors]: readings/selectors.md
-[redux-nontech]: readings/redux_nontech.md
+[lodash]: https://github.com/appacademy/curriculum/tree/master/react/readings/lodash.md
+[store]: https://github.com/appacademy/curriculum/tree/master/react/readings/store.md
+[reducers]: https://github.com/appacademy/curriculum/tree/master/react/readings/reducers.md
+[actions]: https://github.com/appacademy/curriculum/tree/master/react/readings/actions.md
+[flux_redux]: https://github.com/appacademy/curriculum/tree/master/react/readings/flux_redux.md
+[provider]: https://github.com/appacademy/curriculum/tree/master/react/readings/provider.md
+[connect]: https://github.com/appacademy/curriculum/tree/master/react/readings/connect.md
+[containers]: https://github.com/appacademy/curriculum/tree/master/react/readings/containers.md
+[selectors]: https://github.com/appacademy/curriculum/tree/master/react/readings/selectors.md
+[redux-nontech]: https://github.com/appacademy/curriculum/tree/master/react/readings/redux_nontech.md
 
 
 ### (optional) Fruit Stand App Demo (75 min)
@@ -106,19 +106,19 @@
     * :computer: [Source code][fruit-stand-02-source]
 
 [fruit-stand-01-live]: http://appacademy.github.io/curriculum/react/fruit_stand_01/index.html
-[fruit-stand-01-source]: ./demos/fruit_stand_demos/fruit_stand_01
+[fruit-stand-01-source]: https://github.com/appacademy/curriculum/tree/master/react/demos/fruit_stand_demos/fruit_stand_01
 [fruit-stand-02-video]: https://vimeo.com/184374712
 [fruit-stand-02-live]: http://appacademy.github.io/curriculum/react/fruit_stand_02/index.html
-[fruit-stand-02-source]: ./demos/fruit_stand_demos/fruit_stand_02
+[fruit-stand-02-source]: https://github.com/appacademy/curriculum/tree/master/react/demos/fruit_stand_demos/fruit_stand_02
 
 ### Homeworks (50 min)
 - [Job Listing][job_listing_hw] (45 min)
 - [Selecting a Full-stack Project][selecting-a-fsp] (5 min)
 - Check out the [list of approved full-stack apps][approved-apps]
 
-[job_listing_hw]: homeworks/job_listing
-[selecting-a-fsp]:  ../full-stack-project/proposal/selecting-a-fsp.md
-[approved-apps]: ../full-stack-project/proposal/projects-to-clone.md
+[job_listing_hw]: https://github.com/appacademy/curriculum/tree/master/react/homeworks/job_listing
+[selecting-a-fsp]:  https://github.com/appacademy/curriculum/tree/master/full-stack-project/proposal/selecting-a-fsp.md
+[approved-apps]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/proposal/projects-to-clone.md
 
 ### Culture
 
@@ -143,7 +143,7 @@
 ### Projects
 * [Todos][todos]
 
-[todos]: projects/todos
+[todos]: https://github.com/appacademy/curriculum/tree/master/react/projects/todos
 
 ## w7d2
 
@@ -155,12 +155,12 @@
 * [Namespacing][namespacing] (5 min)
 * [Debugging arrow functions in Redux][debugging-arrow-functions] (5 min)
 
-[higher_order_functions]: readings/higher_order_functions.md
-[middleware]: readings/middleware.md
-[thunks]: readings/thunks.md
-[obj-freeze]: readings/object_freeze.md
-[namespacing]: readings/rails_router_namespacing.md
-[debugging-arrow-functions]: readings/debugging_arrow_functions.md
+[higher_order_functions]: https://github.com/appacademy/curriculum/tree/master/react/readings/higher_order_functions.md
+[middleware]: https://github.com/appacademy/curriculum/tree/master/react/readings/middleware.md
+[thunks]: https://github.com/appacademy/curriculum/tree/master/react/readings/thunks.md
+[obj-freeze]: https://github.com/appacademy/curriculum/tree/master/react/readings/object_freeze.md
+[namespacing]: https://github.com/appacademy/curriculum/tree/master/react/readings/rails_router_namespacing.md
+[debugging-arrow-functions]: https://github.com/appacademy/curriculum/tree/master/react/readings/debugging_arrow_functions.md
 
 ### Homework (55 min)
 * [Submit your tentative Full-Stack Project Proposal][tentative-proposal] (10 min)
@@ -168,8 +168,8 @@
   * Check out the [list of approved apps][approved-apps]
 * [Middleware Homework][middleware_homework] (45 min)
 
-[tentative-proposal]: ../full-stack-project/proposal/tentative-project-proposal.md
-[middleware_homework]: homeworks/middleware
+[tentative-proposal]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/proposal/tentative-project-proposal.md
+[middleware_homework]: https://github.com/appacademy/curriculum/tree/master/react/homeworks/middleware
 
 ### Projects
 * Continue [Todos][todos]
@@ -183,7 +183,7 @@
   * [Normalizing State Shape][normalizing] (5 min)
   * [Updating Normalized Data][updating-normalized] (5 min)
 
-[jbuilder-intro]: readings/intro_to_jbuilder.md
+[jbuilder-intro]: https://github.com/appacademy/curriculum/tree/master/react/readings/intro_to_jbuilder.md
 [jbuilder_docs]: https://github.com/rails/jbuilder
 [normalizing]: http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html
 [updating-normalized]: http://redux.js.org/docs/recipes/reducers/UpdatingNormalizedData.html
@@ -193,21 +193,19 @@
 * [Full-stack Proposal Prep: Schema][prep-schema] (30 min)
 
 [giphy_homework]: homeworks/giphy
-[prep-component-hierarchy]: ../full-stack-project/homeworks/proposal-prep/component-hierarchy.md
-[prep-schema]: ../full-stack-project/homeworks/proposal-prep/schema.md
-
+[prep-schema]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/schema.md
 
 ### Additional Resources
 * :book: [Redux Developer Tools][redux_dev_tools]
 
-[redux_dev_tools]: readings/redux_dev_tools.md
+[redux_dev_tools]: https://github.com/appacademy/curriculum/tree/master/react/readings/redux_dev_tools.md
 
 ### Projects
 * [Jbuilder][jbuilder_exercise]
 * [Pokedex][pokedex]
 
-[jbuilder_exercise]: projects/jbuilder
-[pokedex]: projects/pokedex
+[jbuilder_exercise]: https://github.com/appacademy/curriculum/tree/master/react/projects/jbuilder
+[pokedex]: https://github.com/appacademy/curriculum/tree/master/react/projects/pokedex
 
 ## w7d4
 
@@ -219,19 +217,19 @@
 * :book: [`<Redirect>`][redirect] (2 min)
 * :book: [Advanced Containers][advanced-containers] (15 min)
 
-[react_router_intro]: readings/intro_to_react_router.md
-[link]: readings/link.md
-[switch]: readings/switch.md
-[with_router]: readings/with_router.md
-[redirect]: readings/redirect.md
-[advanced-containers]: readings/advanced_containers.md
+[react_router_intro]: https://github.com/appacademy/curriculum/tree/master/react/readings/intro_to_react_router.md
+[link]: https://github.com/appacademy/curriculum/tree/master/react/readings/link.md
+[switch]: https://github.com/appacademy/curriculum/tree/master/react/readings/switch.md
+[with_router]: https://github.com/appacademy/curriculum/tree/master/react/readings/with_router.md
+[redirect]: https://github.com/appacademy/curriculum/tree/master/react/readings/redirect.md
+[advanced-containers]: https://github.com/appacademy/curriculum/tree/master/react/readings/advanced_containers.md
 
 ### Homeworks (60 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
 * [Full-stack Proposal Prep: State Shape][prep-state-shape] (30 min)
 
-[rainbow_routes]: homeworks/rainbow_routes
-[prep-state-shape]: ../full-stack-project/homeworks/proposal-prep/state-shape.md
+[rainbow_routes]: https://github.com/appacademy/curriculum/tree/master/react/homeworks/rainbow_routes
+[prep-state-shape]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/state-shape.md
 
 
 ### Additional Resources
@@ -261,8 +259,8 @@
 [frontend_auth_1]: https://vimeo.com/210683007
 [frontend_auth_2]: https://vimeo.com/210683951
 [frontend_auth_3]: https://vimeo.com/210684312
-[preloaded_state]: readings/preloaded_state.md
-[user_authentication]: readings/front_end_auth.md
+[preloaded_state]: https://github.com/appacademy/curriculum/tree/master/react/readings/preloaded_state.md
+[user_authentication]: https://github.com/appacademy/curriculum/tree/master/react/readings/front_end_auth.md
 
 ### Homeworks (60 min)
 * Do the auth part of [A04 Prep][a04_prep] (60 min)
@@ -276,7 +274,7 @@
 * :book: [React Context][context]
 * :book: [`localStorage`][local_storage]
 
-[checklist]: readings/checklist.md
+[checklist]: https://github.com/appacademy/curriculum/tree/master/react/readings/checklist.md
 [context]: https://facebook.github.io/react/docs/context.html
 [local_storage]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 
@@ -287,7 +285,7 @@
 ### Projects
 * [BenchBnB][bench_bnb]
 
-[bench_bnb]: projects/bench_bnb
+[bench_bnb]: https://github.com/appacademy/curriculum/tree/master/react/projects/bench_bnb
 
 ## w8d1
 
@@ -297,7 +295,7 @@
 *	:book: [React Map Demo][react_map_demo] (15 min)
 * :book: [Thinking in React][thinking_in_react] (20 min)
 
-[react_map_demo]: demos/react_map_demo
+[react_map_demo]: https://github.com/appacademy/curriculum/tree/master/react/demos/react_map_demo
 
 ### Homework (2.5 hrs)
 * [UX/UI Layout Practice][uxhw] (30 min)
@@ -305,10 +303,9 @@
   * This will also include your [frontend and backend routes][prep-routes]
   * **Due by 9am on Monday w8d1**
 
-[full_stack_project_proposal]: ../full-stack-project/proposal/full-stack-project-proposal.md
-[uxhw]: homeworks/ux
-[prep-routes]: ../full-stack-project/homeworks/proposal-prep/routes.md
-
+[prep-routes]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/homeworks/proposal-prep/routes.md
+[full_stack_project_proposal]: https://github.com/appacademy/curriculum/tree/master/full-stack-project/proposal/full-stack-project-proposal.md
+[uxhw]: https://github.com/appacademy/curriculum/tree/master/react/homeworks/ux
 
 ### Culture
 * [The Tech Industry is Forcing Gentrification][gentrification] (4 min)
@@ -326,7 +323,7 @@
 ### Additional Resources
 * :book: See [full-stack project curriculum][full_stack_project_curriculum] for additional information and readings related to full-stack projects
 
-[full_stack_project_curriculum]: ../full-stack-project
+[full_stack_project_curriculum]: https://github.com/appacademy/curriculum/tree/master/full-stack-project
 
 ### Projects (Solo)
 * Continue [BenchBnB][bench_bnb]

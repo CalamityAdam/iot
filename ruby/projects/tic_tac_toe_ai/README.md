@@ -22,7 +22,7 @@ Once you've downloaded the files from the repo, check that you can run the specs
 Of course, they should be failing right now. Call your TA over if you
 have problems.
 
-[ttt-skeleton]: ./skeleton.zip?raw=true
+[ttt-skeleton]: https://github.com/appacademy/curriculum/blob/master/ruby/projects/tic_tac_toe_ai/skeleton.zip?raw=true
 
 ## Phase I: `TicTacToeNode`
 

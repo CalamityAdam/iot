@@ -77,4 +77,4 @@ $35.6M in 2010.
 
 + The oldest registered domain name is symbolics.com.
 
-[tcp_ip_reading]: tcp_ip.md
+[tcp_ip_reading]: https://github.com/appacademy/curriculum/blob/master/rails/readings/tcp_ip.md

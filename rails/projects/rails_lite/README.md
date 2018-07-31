@@ -2,8 +2,8 @@
 
 ## Instructions
 
-*	[Part I](rails-lite-i.md)
-*	[Part II](rails-lite-ii.md)
+*	[Part I](https://github.com/appacademy/curriculum/blob/master/rails/projects/rails_lite/rails-lite-i.md)
+*	[Part II](https://github.com/appacademy/curriculum/blob/master/rails/projects/rails_lite/rails-lite-ii.md)
 * [Skeleton](skeleton.zip?raw=true)
 
 ## Using The Specs

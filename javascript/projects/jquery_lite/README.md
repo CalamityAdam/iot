@@ -230,7 +230,7 @@ objA //=> {a: 'a', b: 'b', c: 'c'}
 [jquery-library]: https://developers.google.com/speed/libraries/#jquery
 [document-apis]: https://developer.mozilla.org/en-US/
 [append]: http://api.jquery.com/append/
-[promise-reading]: ../../readings/promises.md
+[promise-reading]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/promises.md
 [promise_doc]: http://www.2ality.com/2014/09/es6-promises-foundations.html
 [htmlelement]: https://developer.mozilla.org/en-US/docs/Web/API/element
 [children]: https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children
@@ -238,6 +238,6 @@ objA //=> {a: 'a', b: 'b', c: 'c'}
 [queryselectorall]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
 [addeventlistener]: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 [removeeventlistener]: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener
-[sample-ajax-request]: ../../readings/simple-ajax-example.md
+[sample-ajax-request]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/simple-ajax-example.md
 [jquery_ajax]: http://api.jquery.com/jquery.ajax/
-[vanilla_javascript]: ../../readings/vanilla_javascript.md
+[vanilla_javascript]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/vanilla_javascript.md

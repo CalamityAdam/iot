@@ -15,7 +15,7 @@ of the image. Then go bonkers styling it using fancy `transform`
 properties like `rotate()` and `translateX()`. Pay attention to
 typography and don't forget to add a tiny `box-shadow`.
 
-[ss-07-a]: ../docs/screenshots/07-online-a.png
+[ss-07-a]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/docs/screenshots/07-online-a.png
 [live-07]: http://appacademy.github.io/css-friends/solution/07-online.html
 
 [t-transform]: https://developer.mozilla.org/en-US/docs/Web/CSS/transform

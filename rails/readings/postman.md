@@ -43,4 +43,4 @@ For this reason, we recommend _not_ testing any routes that redirect or test the
 Happy testing!
 
 [download_link]: https://www.getpostman.com/
-[overview_img]: ../assets/postman_screenshot.jpg
+[overview_img]: https://github.com/appacademy/curriculum/blob/master/rails/assets/postman_screenshot.jpg

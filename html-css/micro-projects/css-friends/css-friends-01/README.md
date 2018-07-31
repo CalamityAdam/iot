@@ -70,8 +70,8 @@ and gratifying feedback for the user.
 
 Pixel perfect? Good!
 
-[ss-01-a]: ../docs/screenshots/01-header-a.png
-[ss-01-b]: ../docs/screenshots/01-header-b.png
+[ss-01-a]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/docs/screenshots/01-header-a.png
+[ss-01-b]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/docs/screenshots/01-header-b.png
 [live-01]: http://appacademy.github.io/css-friends/solution/01-header.html
 
 [t-webfonts]: http://en.wikipedia.org/wiki/Web_typography

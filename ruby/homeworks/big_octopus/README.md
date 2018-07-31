@@ -54,5 +54,5 @@ fast_dance("right-down", new_tiles_data_structure)
 When you're finished, check out [the solutions][octopus-solutions]!
 
 [ddr]: https://en.wikipedia.org/wiki/Dance_Dance_Revolution
-[sorting-demo]: ../sorting_demo
-[octopus-solutions]: solution.rb
+[sorting-demo]: https://github.com/appacademy/curriculum/blob/master/ruby/homeworks/sorting_demo
+[octopus-solutions]: https://github.com/appacademy/curriculum/blob/master/ruby/homeworks/big_octopus/solution.rb

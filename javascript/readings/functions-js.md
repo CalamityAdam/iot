@@ -103,7 +103,7 @@ functions like any other object is fundamental to JavaScript. We will learn more
 and see a more practical example of this when we  discuss [Object-Oriented
 Programming][oop] in JavaScript.
 
-[oop]: object-oriented-js.md
+[oop]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/object-oriented-js.md
 
 ## Passing a function as an argument to another function
 

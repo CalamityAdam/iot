@@ -14,7 +14,7 @@ the presentation of structured documents, like an HTML document. CSS is
 
 ## A Brief History of CSS
 
-![netscape-relic](./netscape96.png)
+![netscape-relic](https://github.com/appacademy/curriculum/blob/master/html-css/readings/netscape96.png)
 Netscape October 20, 1996
 
 - Early 1990's: HTML popularity was increasing and developers were frustrated

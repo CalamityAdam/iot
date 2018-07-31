@@ -124,7 +124,7 @@ with the same id as `self.id`.
 **NB:** Don't forget that you need to use `where.not` here
 because of [SQL ternary logic][sql-ternary-logic].
 
-[sql-ternary-logic]: ../../readings/sql-ternary-logic.md
+[sql-ternary-logic]: https://github.com/appacademy/curriculum/blob/master/sql/readings/sql-ternary-logic.md
 
 #### Step 2: `not_duplicate_response`
 
@@ -138,7 +138,7 @@ validation][custom-validation] method that will ensure that the
 respondent has not already answered it.
 
 [exists?-docs]: http://apidock.com/rails/ActiveRecord/FinderMethods/exists%3F
-[custom-validation]: ../../readings/custom-validations.md
+[custom-validation]: https://github.com/appacademy/curriculum/blob/master/sql/readings/custom-validations.md
 
 ### Author Can't Respond To Own Poll
 

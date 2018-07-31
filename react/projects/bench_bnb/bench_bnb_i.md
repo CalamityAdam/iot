@@ -10,7 +10,7 @@ Check out the live demo [here][live-demo]!
 
 Refer to [the master checklist][checklist] during Bench BnB and your final project.
 
-[checklist]: ../../readings/checklist.md
+[checklist]: https://github.com/appacademy/curriculum/tree/master/react/readings/checklist.md
 
 ### Rails Backend
 
@@ -707,7 +707,7 @@ Import your `AuthRoute` into `App.jsx` and update the login and signup routes to
 
 ---
 
-Continue to [Part 2](./bench_bnb_ii.md).
+Continue to [Part 2](https://github.com/appacademy/curriculum/blob/master/react/projects/bench_bnb/bench_bnb_ii.md).
 
-[rails]: ../../../rails#readings-after-you-finish-all-videos
-[authRoutes]: ../../readings/front_end_auth.md#protected-and-auth-routes
+[rails]: https://github.com/appacademy/curriculum/tree/master/rails#readings-after-you-finish-all-videos
+[authRoutes]: https://github.com/appacademy/curriculum/blob/master/react/readings/front_end_auth.md#protected-and-auth-routes

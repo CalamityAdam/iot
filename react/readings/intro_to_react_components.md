@@ -44,5 +44,5 @@ Javascript for the browser. More on this later, too.
 In order to create React components, you will need to require the `react` and
 `react-dom` packages from [`npm`][npm].
 
-[simple_component]: ../demos/simple_component
-[npm]:./npm_configuration.md
+[simple_component]: https://github.com/appacademy/curriculum/blob/master/react/demos/simple_component
+[npm]: https://github.com/appacademy/curriculum/blob/master/react/readings/npm_configuration.md

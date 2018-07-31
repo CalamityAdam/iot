@@ -123,8 +123,8 @@ const goodReducer = (state = { count: 0 }, action) => {
 
 Note the use of [`Object.freeze()`][object-freeze].  Even though `fruitReducer` doesn't mutate the state, `Object.freeze()` will ensure that state can't be accidentally mutated. Get in the habit of using `Object.freeze` at the top of every reducer you write!  
 
-[object-freeze]: ./object_freeze.md
-[lodash-reading]:./lodash.md
+[object-freeze]: https://github.com/appacademy/curriculum/blob/master/react/readings/object_freeze.md
+[lodash-reading]: https://github.com/appacademy/curriculum/blob/master/react/readings/lodash.md
 
 ## Combining Reducers
 
@@ -311,4 +311,4 @@ You can find more documentation on reducers [here][redux-js].
 
 [redux-js]: http://redux.js.org/docs/basics/Reducers.html
 [why-immutable]: https://github.com/reactjs/redux/issues/758
-[store]: store.md
+[store]: https://github.com/appacademy/curriculum/blob/master/react/readings/store.md

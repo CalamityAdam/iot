@@ -17,7 +17,7 @@ This is the last Rails project before building Rails Lite yourself tomorrow.
 Take a few minutes to talk through the whole request/response cycle with your
 partner before getting started. Feel free to reference this diagram as needed.
 
-![rails diagram](../../assets/rails_diagram.png)
+![rails diagram](https://github.com/appacademy/curriculum/blob/master/rails/projects/reddit_on_rails/assets/rails_diagram.png)
 
 ## Phase I: Auth
 

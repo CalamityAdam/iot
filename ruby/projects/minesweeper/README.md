@@ -203,7 +203,7 @@ is broken. [This ruby-forum.com post][argv-description] explains how
 [argv-description]: https://www.ruby-forum.com/topic/185266#809660
 [keypress]: https://gist.github.com/acook/4190379
 [awesome-sweeper]: http://blog.appacademy.io/post/88410347996/thejaggedhedgehog-minesweeper-today-we-built
-[serialization]:../../readings/serialization.md
-[overriding-inspect]: ../../readings/overriding_inspect.md
+[serialization]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/serialization.md
+[overriding-inspect]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/overriding_inspect.md
 [github-create-repository]: https://help.github.com/articles/creating-a-new-repository/
-[git-authorship-script]: ../../readings/git-fix-authorship.md
+[git-authorship-script]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/git-fix-authorship.md

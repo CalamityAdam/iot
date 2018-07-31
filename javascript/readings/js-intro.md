@@ -86,9 +86,6 @@ The greatest of ease!
 
 **NB: Set up Node before reading further! You'll need it for the examples.**
 
-[node]:
-[server-side-javascript]:./server-side-javascript.md
-
 ## ECMAScript Versions
 
 ECMAScript is the standardized specification that forms the basis for

@@ -199,4 +199,4 @@ it in *Effective Javascript*.
 * `Array.isArray`(ES6+):
   + Class method that accepts one argument and returns a boolean representing whether it is an `Array`.
   
-[good-habits]: ./indentation.md
+[good-habits]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/indentation.md

@@ -18,7 +18,7 @@ homework][npm-webpack]. Rename your entry file to `app.jsx`. Make
 sure you also update this in your webpack config! Run `npm run webpack`
 to keep your bundle up to date.
 
-[npm-webpack]: ../getting_started
+[npm-webpack]: https://github.com/appacademy/curriculum/blob/master/react/homeworks/getting_started
 
 Open `index.html` and make sure you can see 'Hello World' in the
 browser.
@@ -27,7 +27,7 @@ If you were having trouble getting your configuration set up, use
 the [skeleton here][skeleton]. Remember to run `npm install` after
 downloading the skeleton.
 
-[skeleton]: ./skeleton.zip?raw=true
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/react/homeworks/calculator/skeleton.zip?raw=true
 
 
 ## The `Calculator` Component

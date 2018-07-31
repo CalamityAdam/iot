@@ -13,4 +13,4 @@ Please complete the [beginner tutorial on HTML Dog][html-dog-tutorial].  **Skip 
 
 [html-dog-tutorial]: http://www.htmldog.com/guides/html/beginner/
 [mdn-html]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
-[easy-forms-demo]: ../demos/easy_forms_demo
+[easy-forms-demo]: https://github.com/appacademy/curriculum/tree/master/rails/demos/easy_forms_demo
