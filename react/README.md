@@ -301,8 +301,8 @@
 
 ### Homework (1.5 hrs)
 * [UX/UI Layout Practice][uxhw] (30 min)
-* [Full-stack Proposal Prep: Routes][prep-routes] (30 min)
-* Submit your complete [full-stack project proposal][full_stack_project_proposal] (30 min)
+* Submit your complete [full-stack project proposal][full_stack_project_proposal] (60 min)
+  * This will also include your [frontend and backend routes][prep-routes]
   * **Due by 9am on Monday w8d1**
 
 [full_stack_project_proposal]: ../full-stack-project/proposal/full-stack-project-proposal.md
