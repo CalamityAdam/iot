@@ -2,19 +2,19 @@
 
 ## Phases
 
-0. [Reset](./css-friends-00/)
-0. [Header](./css-friends-01/)
-0. [Notifications](./css-friends-02/)
-0. [Layout](./css-friends-03/)
-0. [Footer](./css-friends-04/)
-0. [Cats](./css-friends-05/)
-0. [Sidebar](./css-friends-06/)
-0. [Online](./css-friends-07/)
-0. [Thumbs](./css-friends-08/)
-0. [Forms](./css-friends-09/)
-0. [Posts](./css-friends-10/)
-0. [Icons](./css-friends-11/)
-0. [Modal](./css-friends-12/)
+0. [Reset](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-00/)
+0. [Header](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-01/)
+0. [Notifications](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-02/)
+0. [Layout](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-03/)
+0. [Footer](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-04/)
+0. [Cats](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-05/)
+0. [Sidebar](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-06/)
+0. [Online](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-07/)
+0. [Thumbs](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-08/)
+0. [Forms](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-09/)
+0. [Posts](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-10/)
+0. [Icons](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-11/)
+0. [Modal](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/css-friends-12/)
 
 ## Introduction
 
@@ -81,8 +81,8 @@ For each phase, you should start with the provided `skeleton.zip` file, unzip it
   with more specific selectors. Chrome will show your properties with a
   strike-through, to show which rules apply, and which are overridden.
 
-[specs]: ./docs/SPECIFICATIONS.md
-[shots]: ./docs/screenshots
+[specs]: https://github.com/appacademy/curriculum/blob/master/html-css/css-friends/docs/SPECIFICATIONS.md
+[shots]: https://github.com/appacademy/curriculum/blob/master/html-css/css-friends/docs/screenshots
 [specificity]: http://cssguidelin.es/#specificity
 [test-hover-1]: http://i.stack.imgur.com/IlVMn.png
 [test-hover-2]: http://i.imgur.com/evzZ2.png

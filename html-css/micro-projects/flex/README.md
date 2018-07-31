@@ -2,7 +2,7 @@
 
 Download this [skeleton][skeleton].
 
-[skeleton]: ./skeleton.zip
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/flex/skeleton.zip
 
 Starting from the skeleton, update the the `flex.css` stylesheet. In this exercise, we will be converting yesterday's solution from using floats to using flexbox. Let us begin. 🙏
 
@@ -14,4 +14,4 @@ Starting from the skeleton, update the the `flex.css` stylesheet. In this exerci
 
 Download the [solution][solution] to compare your work to ours.
 
-[solution]: ./solution.zip?raw=true
+[solution]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/flex/solution.zip?raw=true

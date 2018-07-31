@@ -45,8 +45,8 @@ We will use the following subset of [CSS 2.1][css-21] properties. With only thes
 - Finally, enjoy the beauty in the details. A designer's favorite game is Spot The Difference. So-so approximations never suffice, and they will kindly let you know.
 - You can do it!
 
-[specs]: ./SPECIFICATIONS.md
-[shots]: ./screenshots
+[specs]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-warm-up/SPECIFICATIONS.md
+[shots]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-warm-up/screenshots
 [inspector]: https://github.com/jonathanlemuel/css-notes/blob/master/topics/01-browser_inspector/README.md
 [exploded]: http://appacademy.github.io/css-warm-up/exploded/exploded.html
 
@@ -78,7 +78,7 @@ Finally, we note that our header is quite thin compared to the screenshot. There
 Refresh and high-five yourself!
 
 [live-01]: http://appacademy.github.io/css-warm-up/solution/01-header.html
-[ss-01-a]: ./screenshots/01-header-a.png
+[ss-01-a]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-warm-up/screenshots/01-header-a.png
 
 ## Phase 2: Navigation
 
@@ -107,8 +107,8 @@ Finally, to top it off, let's consider the usability of our navigation bar. Woul
 At this point we've covered all basic techniques. Yay! The next two steps will simply be variations of what we've done so far!
 
 [live-02]: http://appacademy.github.io/css-warm-up/solution/02-navigation.html
-[ss-02-a]: ./screenshots/02-navigation-a.png
-[ss-02-b]: ./screenshots/02-navigation-b.png
+[ss-02-a]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-warm-up/screenshots/02-navigation-a.png
+[ss-02-b]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-warm-up/screenshots/02-navigation-b.png
 
 ## Phase 3: Content
 
@@ -128,7 +128,7 @@ Finally, set the `font-size` and `font-weight` on the `.content h1`. Add a botto
 So close!
 
 [live-03]: http://appacademy.github.io/css-warm-up/solution/03-content.html
-[ss-03-a]: ./screenshots/03-content-a.png
+[ss-03-a]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-warm-up/screenshots/03-content-a.png
 
 
 ## Phase 4: Footer
@@ -144,5 +144,5 @@ If you get stuck, here's the list of steps I'd take: Set the width and the backg
 You did it! Pretty cool, right? Now compare your work to my solutions!
 
 [live-04]: http://appacademy.github.io/css-warm-up/solution/04-footer.html
-[ss-04-a]: ./screenshots/04-footer-a.png
-[ss-04-b]: ./screenshots/04-footer-b.png
+[ss-04-a]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-warm-up/screenshots/04-footer-a.png
+[ss-04-b]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-warm-up/screenshots/04-footer-b.png

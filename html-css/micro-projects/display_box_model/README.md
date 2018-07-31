@@ -2,7 +2,7 @@
 
 Download this [skeleton][skeleton]. 
 
-[skeleton]: ./skeleton.zip
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/display_box_model/skeleton.zip
 
 The purpose of this exercise is to learn the box model and the differences between the three primary display properties (block, inline, inline-block). The anchor tags from step 2 are naturally inline elements, which is why act oddly when provided padding. Spacing with margin and padding is vital to mastering CSS design. We also used the `inline-block` property to get practice positioning elements to create a desired layout.
 
@@ -23,4 +23,4 @@ Update box_model.css as follows to practice styling with different display and s
 
 **Challenge:** There is a reason we only gave the aside a `margin-right` of 15px when it should have been 20px to constitute the full 900px of the body. To see what I am talking about, jump into the dev tools, check off the `margin-right` on the aside, and apply a `border-left 1px solid black` on the aside and a `border-left 1px solid black` on the section. Why is there still a space between the borders? Research why and test some corrections.
 
-Compare your results to [this example](./solution/example.html) and [this stylesheet](./solution/assets/box_model.css).
+Compare your results to [this example](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/display_box_model/solution/example.html) and [this stylesheet](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/display_box_model/solution/assets/box_model.css).

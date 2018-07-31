@@ -5,7 +5,7 @@ MODULES = ["ruby", "javascript", "react", "sql", "rails"]
 SUBSECTIONS = ["projects", "homeworks", "readings"]
 
 def filter_project_directories(mod)
-    projects = Dir.entries("#{mod}/homeworks")
+    projects = Dir.entries("#{mod}/micro-projects")
     filtered_projects = projects.select do |project|
                             project unless project.include?(".")
                             #  might need to ignore _deprecated as well
@@ -21,11 +21,11 @@ def find_projects(projects, mod)
 end
 
 def find_readme(project, mod)
-    curr_project_files = Dir.entries("#{mod}/homeworks/#{project}")
+    curr_project_files = Dir.entries("#{mod}/micro-projects/#{project}")
     idx = curr_project_files.index("README.md")
         if idx
             # if there is a readme
-            file_name = "#{mod}/homeworks/#{project}/#{curr_project_files[idx]}"
+            file_name = "#{mod}/micro-projects/#{project}/#{curr_project_files[idx]}"
             write_to_file(file_name, project, mod)
             # snippets += File.read(filename).scan(/]: \.\.?\/[\.\w\/ ?=#-]+/) 
             
@@ -39,13 +39,15 @@ def write_to_file(file_name, project, mod)
                         # (^\[(.|-)+\]\:\s(?!http).*)
     snippets += text.scan(/(\[(\w|\s)+\]\((\w|\.|\/|\-)+\))/)
     snippets.flatten!
-debugger
+# debugger
     snippets.each do |snip|
-
+    # if project == "css-friends"
+    #     debugger
+    # end
         no_proj_string = "https://github.com/appacademy/curriculum/blob/master/#{mod}/"
         # ^^ for non project related items like skeletons etc.
 
-        proj_string = "https://github.com/appacademy/curriculum/blob/master/#{mod}/homeworks/#{project}/"
+        proj_string = "https://github.com/appacademy/curriculum/blob/master/#{mod}/micro-projects/#{project}/"
         # ^^ for project specific items
 
 
@@ -67,10 +69,13 @@ debugger
         end
 
         if flag
-            proj_string = "https://github.com/appacademy/curriculum/blob/master/#{mod}/homeworks/"
+            proj_string = "https://github.com/appacademy/curriculum/blob/master/#{mod}/micro-projects/"
+        end
+        if project == "css-friends"
+            no_proj_string += "css-friends/"
         end
 #    need to figure how to know if end of page or inline
-        no_proj_arr = ["read", "demo", "proj"]
+        no_proj_arr = ["read", "demo", "proj", "docs"]
         if no_proj_arr.include?(new_snip[0..3])
             new_link = prefix + no_proj_string + new_snip
         else
@@ -78,17 +83,18 @@ debugger
         end
        debugger if new_link == nil
 
-        a = text.gsub(snip, new_link)
-        p a
+        a = text.gsub!(snip, new_link)
+        # p a
     end
-    # File.open(file_name, "w") {|file| file.puts text }
+    File.open(file_name, "w") {|file| file.puts text }
     # this should do the actual overwriting to the file
 end
 
 
 def trim_snip(snip)
 
-        letters = ("a".."z")
+        letters = ("a".."z") 
+        cap_letters = ("A".."Z")
         end_idx = snip.index("]")
         lett_idx = end_idx
 
@@ -99,6 +105,7 @@ def trim_snip(snip)
 
         while lett_idx < snip.length
             break if letters.include?(snip[lett_idx])
+            break if cap_letters.include?(snip[lett_idx])
             lett_idx += 1
         end
 
@@ -112,7 +119,8 @@ def trim_snip(snip)
 end
 
 def relative_link_scrub
-    MODULES.each.with_index do |mod, i|
+    # MODULES.each.with_index do |mod, i|
+    mod = "html-css"
         find_projects(filter_project_directories(mod), mod)
         p "------------------------------------"
         p "------------------------------------"
@@ -127,7 +135,7 @@ def relative_link_scrub
         p "------------------------------------"
         p "------------------------------------"
         # break if i > 2
-    end
+    # end
 end
 
 relative_link_scrub

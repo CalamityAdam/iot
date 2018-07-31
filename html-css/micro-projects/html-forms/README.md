@@ -18,5 +18,5 @@ Take [yesterday's solution][prev-solution] from HTML Containers Exercise and add
 
 After coding your recipe page, compare your html to [this example][solution].
 
-[solution]: ./solution.html
-[prev-solution]: ../html-containers/solution.html?raw=true
+[solution]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/html-forms/solution.html
+[prev-solution]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/html-containers/solution.html?raw=true

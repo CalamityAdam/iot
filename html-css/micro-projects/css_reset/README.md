@@ -2,7 +2,7 @@
 
 Download this [skeleton][skeleton]. Work out of `css_reset.css`
 
-[skeleton]: ./skeleton.zip
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css_reset/skeleton.zip
 
 Oh no! We've removed the original reset stylesheet! Time to build our own. :sunglasses:
 
@@ -13,4 +13,4 @@ Oh no! We've removed the original reset stylesheet! Time to build our own. :sung
 5. Make sure images always take up the width of their parents.
 
 
-Compare your recipe page to [this example](./solution/example.html) and [this stylesheet](./solution/assets/css_reset.css).
+Compare your recipe page to [this example](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css_reset/solution/example.html) and [this stylesheet](https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css_reset/solution/assets/css_reset.css).

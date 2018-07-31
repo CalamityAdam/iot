@@ -67,4 +67,4 @@ References](https://dev.w3.org/html5/html-author/charref).
 After coding your recipe page, compare your html to [this
 example][solution].
 
-[solution]: ./solution.html
+[solution]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/html-introduction/solution.html

@@ -17,5 +17,5 @@ Take [yesterday's solution][prev-solution] from HTML Introduction Exercise and a
 
 After coding your recipe page, compare your html to [this example][solution].
 
-[solution]: ./solution.html
-[prev-solution]: ../html-introduction/solution.html?raw=true
+[solution]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/html-containers/solution.html
+[prev-solution]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/html-introduction/solution.html?raw=true

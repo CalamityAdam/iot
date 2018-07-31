@@ -2,7 +2,7 @@
 
 Download this [skeleton][skeleton].
 
-[skeleton]: ./skeleton.zip
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/float/skeleton.zip
 
 Starting from the skeleton, update the the `float.css` stylesheet. In this exercise, we will be updating our navbar to use the `float` property and create a basic fluid grid system for our main content. Let us begin. 🙏
 
@@ -14,4 +14,4 @@ Starting from the skeleton, update the the `float.css` stylesheet. In this exerc
 Download the [solution][solution] to compare your work to ours.
 
 [css-grid-video]: https://vimeo.com/170320160
-[solution]: ./solution.zip?raw=true
+[solution]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/float/solution.zip?raw=true
