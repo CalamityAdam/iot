@@ -44,9 +44,8 @@ Create these pages:
 
 * MVP List
 * Database Schema
-* Routes
 * Sample State
-* Component Hierarchy with Wireframes
+* Routes
 
 On the home page, create links to each of these pages.
 
