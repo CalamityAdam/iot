@@ -61,4 +61,4 @@ people //=> { farmers: {name: 'Young MacDonald' } }
 ```
 
 [obj-freeze]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
-[reducer]: reducers.md
+[reducer]: https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md

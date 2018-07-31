@@ -138,5 +138,5 @@ export default Item;
 And finally, `Item` receives as props a single `item`, rendering that item's
 name and body.
 
-[provider]: ./provider.md
-[connect]: ./connect.md
+[provider]: https://github.com/appacademy/curriculum/blob/master/react/readings/provider.md
+[connect]: https://github.com/appacademy/curriculum/blob/master/react/readings/connect.md

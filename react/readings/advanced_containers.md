@@ -1,6 +1,6 @@
 ## Advanced Containers
 
-While we said [earlier](containers.md) that you should aim to have very few containers, there are exceptions.
+While we said [earlier](https://github.com/appacademy/curriculum/blob/master/react/readings/containers.md) that you should aim to have very few containers, there are exceptions.
 Separating our concerns with presentational and container components allows us to reuse presentational components where it makes sense, rather than duplicating code.
 If a presentational component needs different data in each situation, though, we may need more containers.
 By creating more container components, we can render the same presentational component with each of those containers to suit different needs.

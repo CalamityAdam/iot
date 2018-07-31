@@ -143,4 +143,4 @@ function connect(mapStateToProps, mapDispatchToProps) {
 ```
 
 [docs]: https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
-[provider]: provider.md
+[provider]: https://github.com/appacademy/curriculum/blob/master/react/readings/provider.md

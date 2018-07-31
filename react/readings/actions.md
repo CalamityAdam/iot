@@ -83,5 +83,5 @@ View the official documentation [here][redux-js]
 
 [redux-js]: http://redux.js.org/docs/basics/Actions.html
 
-[store]: store.md
-[reducers]: reducers.md
+[store]: https://github.com/appacademy/curriculum/blob/master/react/readings/store.md
+[reducers]: https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md

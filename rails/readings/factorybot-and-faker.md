@@ -155,7 +155,7 @@ end
 Then you can do things like call `build(:user)` instead of
 `FactoryBot.build(:user)` in your specs.
 
-[rspec-setup]: rspec-and-rails-setup.md
+[rspec-setup]: https://github.com/appacademy/curriculum/blob/master/rails/readings/rspec-and-rails-setup.md
 
 ## Using FactoryBot and Faker
 

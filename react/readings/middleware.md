@@ -17,8 +17,8 @@ asynchronous API requests, but you can also use it for crash reporting, routing,
 and many other applications.
 
 [rack]:../../rails/readings/rack.md
-[action]: ./actions.md
-[reducers]: ./reducers.md
+[action]: https://github.com/appacademy/curriculum/blob/master/react/readings/actions.md
+[reducers]: https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md
 
 ## Applying Middleware to a Redux Store
 

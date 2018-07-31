@@ -112,5 +112,5 @@ Check out the [MDN Documentation][mdn-xhr] for more information.
 [addEventListener]: https://developer.mozilla.org/en-US/docs/Talk:DOM/element.addEventListener
 [appendChild]: https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
 [removeChild]: https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
-[vanilla-user-search]: ../demos/vanilla_user_search.js
+[vanilla-user-search]: https://github.com/appacademy/curriculum/blob/master/javascript/demos/vanilla_user_search.js
 [mdn-xhr]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest

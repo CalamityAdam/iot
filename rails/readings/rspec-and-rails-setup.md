@@ -79,7 +79,7 @@ production:
 (This will be slightly different if you have
 [switched to Postgres][postgres].)
 
-[postgres]: ../../sql/readings/first-rails-project.md#postgres
+[postgres]: https://github.com/appacademy/curriculum/blob/master/sql/readings/first-rails-project.md#postgres
 
 Notice there are three sets of configuration data: one for
 `development`, one for `test`, and one for `production`. When you are
@@ -166,7 +166,7 @@ Haven't had enough fun with setting things up yet? Not to worry. You
 might want to go through [this optional process][guard-spring-setup] to
 setup the gems Guard and Spring to make your TDD flow a lot smoother.
 
-[guard-spring-setup]: ./guard-spring-setup.md
+[guard-spring-setup]: https://github.com/appacademy/curriculum/blob/master/rails/readings/guard-spring-setup.md
 
 ## Resources
  * [RSpec homepage][rspec-home]

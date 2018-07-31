@@ -106,6 +106,6 @@ commit, but there is usually no reason not to.
 When you create a new GitHub repository in the browser, GitHub will provide a
 summary of the commands needed to connect it to a local repository.
 
-For common git commands, check out the [git summary](./git-summary.md).
+For common git commands, check out the [git summary](https://github.com/appacademy/curriculum/blob/master/ruby/readings/git-summary.md).
 
 For more on writing good commit messages, check out [this post](http://chris.beams.io/posts/git-commit/) by Chris Beams.

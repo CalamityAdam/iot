@@ -69,5 +69,5 @@ One final note: You will often see a shorthand syntax for defining
 scopes using the `scope` method. Read more about this and other cool
 stuff like scope chaining in [the docs][scope-docs].
 
-[relation-reading]: relation.md
+[relation-reading]: https://github.com/appacademy/curriculum/blob/master/sql/readings/relation.md
 [scope-docs]: http://apidock.com/rails/ActiveRecord/NamedScope/ClassMethods/scope

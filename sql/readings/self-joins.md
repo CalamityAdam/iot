@@ -62,4 +62,4 @@ JOIN
   employee manager ON manager.id = team_member.manager_id
 ```
 
-[query-pro]: readings/db-stack.md
+[query-pro]: https://github.com/appacademy/curriculum/blob/master/sql/readings/db-stack.md

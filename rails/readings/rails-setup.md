@@ -26,7 +26,7 @@ rails new my_project_name --database=postgresql
 
 When using PostgreSQL, you should also run the command `bundle exec rails db:create` in the terminal before trying to run migrations.  This creates the database for your application.
 
-[setting-up-postgresql]: ../../sql/readings/first-rails-project.md#postgres
+[setting-up-postgresql]: https://github.com/appacademy/curriculum/blob/master/sql/readings/first-rails-project.md#postgres
 
 ## Stop the Loading of Unused Assets
 
