@@ -4,6 +4,5 @@ Ruby includes a Benchmark module in the standard library to test the execution t
 
 Go back through the days solutions and use `Benchmark` to verify the **Big-O** performance of your various solutions. You can find the docs [here][benchmark-docs], and there's an example of how to use it in the [sorting complexity demo][sorting-demo] from the readings.
 
-[benchmark-docs]:
-http://ruby-doc.org/stdlib-2.1.2/libdoc/benchmark/rdoc/Benchmark.html
+[benchmark-docs]: http://ruby-doc.org/stdlib-2.1.2/libdoc/benchmark/rdoc/Benchmark.html
 [sorting-demo]: https://github.com/appacademy/curriculum/blob/master/ruby/demos/sorting_demo/sorting_demo.rb#L58-L67

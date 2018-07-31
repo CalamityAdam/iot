@@ -19,8 +19,8 @@ your [MVPs][mvps], keep these things in mind:
   - Does it need a container to `connect` to the store or can the data
     be passed down from a parent as `props`?
 
-[design-docs]: ../../proposal/full-stack-project-proposal.md
-[mvps]: ../../proposal/mvp-list.md
+[design-docs]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/full-stack-project-proposal.md
+[mvps]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/mvp-list.md
 
 Create a rough-draft of your component hierarchy with wireframes
 (starting from `App`), which will include drawings of every view and a

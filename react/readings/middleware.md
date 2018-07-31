@@ -16,7 +16,7 @@ We will use Redux middleware for logging information about the store and making
 asynchronous API requests, but you can also use it for crash reporting, routing,
 and many other applications.
 
-[rack]:../../rails/readings/rack.md
+[rack]: https://github.com/appacademy/curriculum/blob/master/rails/readings/rack.md
 [action]: https://github.com/appacademy/curriculum/blob/master/react/readings/actions.md
 [reducers]: https://github.com/appacademy/curriculum/blob/master/react/readings/reducers.md
 

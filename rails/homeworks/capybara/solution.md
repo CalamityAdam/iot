@@ -7,6 +7,6 @@ Make sure to review:
 * [Auth Specs][auth-solutions]
 * [UsersController Specs][users-controller-solutions]
 
-[users-solutions]: ../../projects/music_app/solution/spec/models/user_spec.rb
-[auth-solutions]: ../../projects/music_app/solution/spec/features/auth_spec.rb
-[users-controller-solutions]: ../../projects/music_app/solution/spec/controllers/users_controller_spec.rb
+[users-solutions]: https://github.com/appacademy/curriculum/blob/master/rails/projects/music_app/solution/spec/models/user_spec.rb
+[auth-solutions]: https://github.com/appacademy/curriculum/blob/master/rails/projects/music_app/solution/spec/features/auth_spec.rb
+[users-controller-solutions]: https://github.com/appacademy/curriculum/blob/master/rails/projects/music_app/solution/spec/controllers/users_controller_spec.rb

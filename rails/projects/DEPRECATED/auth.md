@@ -147,6 +147,6 @@ you plan to perform lookups on. This will help not only with
 [has-secure-password]:
 https://github.com/rails/rails/blob/3-2-stable/activemodel/lib/active_model/secure_password.rb
 [secure-random-docs]: http://www.ruby-doc.org/stdlib-1.9.3/libdoc/securerandom/rdoc/SecureRandom.html
-[action-mailer-guide]: ../mailers/mailing-1.md
+[action-mailer-guide]: https://github.com/appacademy/curriculum/blob/master/rails/readings/mailing-1.md
 
 [letter-opener-github]: https://github.com/ryanb/letter_opener

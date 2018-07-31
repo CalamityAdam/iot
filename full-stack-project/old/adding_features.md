@@ -7,7 +7,7 @@ For all videos: :closed_lock_with_key: `go_video_go`
 * [Integrating Google Maps with React][google-maps-demo]
 
 [figaro-screencast]: https://vimeo.com/164602277
-[figaro]: ./figaro.md
+[figaro]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/figaro.md
 [google-maps-demo]: https://github.com/appacademy/curriculum/tree/master/react/demos/react_map_demo
 
 ## Helpful React Components
@@ -21,7 +21,7 @@ For all videos: :closed_lock_with_key: `go_video_go`
 * [React-Paginate][react-paginate-github] (pagination)
 * [React-Joyride][react-joyride-github] (application tour/walkthrough [DEMO][react-joyride-demo])
 
-[react-modals]: ./react-modals.md
+[react-modals]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/react-modals.md
 [react-modal-demo]: https://reactcommunity.org/react-modal/bootstrap/
 [react-date-picker-github]: https://github.com/zippyui/react-date-picker
 [react-date-picker-demo]: http://zippyui.com/react-date-picker/
@@ -41,11 +41,11 @@ For all videos: :closed_lock_with_key: `go_video_go`
 * [CanCan authorization][cancan]
 * [Railscasts][auth-railscasts]
 
-[omniauth]: ./omniauth.md
-[omniauth-ii]: ./omniauth-ii.md
-[cancan]: ./cancan.md
-[facebook-login]: ./facebook-login.md
-[auth-railscasts]: ./auth-railscasts.md
+[omniauth]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/omniauth.md
+[omniauth-ii]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/omniauth-ii.md
+[cancan]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/cancan.md
+[facebook-login]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/facebook-login.md
+[auth-railscasts]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/auth-railscasts.md
 [omniauth-devise-demo]: https://github.com/appacademy/OmniAuthDevise
 
 ## Likes
@@ -56,7 +56,7 @@ For all videos: :closed_lock_with_key: `go_video_go`
 ## Emails
 * [Sendgrid][sendgrid]
 
-[sendgrid]: ./sendgrid.md
+[sendgrid]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/sendgrid.md
 
 ## File Upload and Security
 * [:movie_camera: File Upload with AWS (part 1)][AWS-screencast1]
@@ -70,12 +70,11 @@ For all videos: :closed_lock_with_key: `go_video_go`
 
 [cloudinary-screencast]: https://vimeo.com/164612621
 [cloudinary-demo]: https://github.com/appacademy/react_cloudinary_demo
-[security-railscasts]: ./security-railscasts.md
-[filepicker]: ./filepicker.md
-[HTML Escaping]: ./xss.md
+[security-railscasts]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/security-railscasts.md
+[filepicker]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/filepicker.md
+[HTML Escaping]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/xss.md
 [AWS-screencast1]: https://vimeo.com/169111348
 [AWS-screencast2]: https://vimeo.com/169111248
-[AWS-demo]:../demos/file_upload_demo
 
 ## Real-Time Communication
 (eg. notifications, messages, etc.)
@@ -99,10 +98,10 @@ For all videos: :closed_lock_with_key: `go_video_go`
 * React Router [Examples][react-router-examples]
 
 [kaminari-github]: https://github.com/amatsuda/kaminari
-[kaminari-overview]: ./kaminari.md
+[kaminari-overview]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/kaminari.md
 [kaminari-railscast]: http://railscasts.com/episodes/254-pagination-with-kaminari
 [friendly-id-github]: https://github.com/norman/friendly_id
-[friendly-id-overview]: ./friendly-id.md
+[friendly-id-overview]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/friendly-id.md
 [friendly-id-railscast]: http://railscasts.com/episodes/314-pretty-urls-with-friendlyid
 [friendly-kaminari-delayed-demo]: https://github.com/appacademy/friendly-kaminari-demo
 [react-router-examples]:https://github.com/reactjs/react-router/tree/master/examples
@@ -115,10 +114,10 @@ For all videos: :closed_lock_with_key: `go_video_go`
 * :movie_camera: [Delayed Job & Heroku Scheduler Screencast][delayed-job-screencast]
 * [Railscast][delayed-job-railscast]
 
-[sdks]: ./sdks.md
-[delayed-job]: ./delayed-job.md
-[delayed-job-overview]: ./delayed-job-2.md
-[heroku-scheduler]: ./heroku-scheduler.md
+[sdks]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/sdks.md
+[delayed-job]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/delayed-job.md
+[delayed-job-overview]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/delayed-job-2.md
+[heroku-scheduler]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/heroku-scheduler.md
 [delayed-job-screencast]: http://vimeo.com/groups/appacademy/videos/96533711
 [delayed-job-railscast]: http://railscasts.com/episodes/171-delayed-job-revised
 

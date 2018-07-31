@@ -15,19 +15,19 @@ When the sendgrid addon portal is first opened:
 
   **I. Click the "here" link.**
 
-<img src="./assets/sendgrid_3.png" height="150px">
+<img src="https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/assets/sendgrid_3.png" height="150px">
 
   **II. Click the "Configure Account Settings" tab here**
 
-<img src="./assets/sendgrid_4.png" height="350px">
+<img src="https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/assets/sendgrid_4.png" height="350px">
 
   **III. Click the "here" link in the**
 
-<img src="./assets/sendgrid_5.png" height="250px">
+<img src="https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/assets/sendgrid_5.png" height="250px">
 
   **IV. Click the "Update settings" button**
 
-<img src="./assets/sendgrid_6.png" height="350px">
+<img src="https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/assets/sendgrid_6.png" height="350px">
 
 **NB**: You might have to verify your heroku account with CC information,
 but starter is free; they won't charge you, they just want to tempt
@@ -105,13 +105,13 @@ AuthMailer.signup_email(@user).deliver_now
 Good work, you!
 
 [sendgrid-docs]: https://devcenter.heroku.com/articles/sendgrid
-[figaro]: ../security/figaro.md
-[image-1]: ./assets/sendgrid_1.png
-[image-2]: ./assets/sendgrid_2.png
-[image-3]: ./assets/sendgrid_3.png
-[image-4]: ./assets/sendgrid_4.png
-[image-5]: ./assets/sendgrid_5.png
-[image-6]: ./assets/sendgrid_6.png
+[figaro]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/security/figaro.md
+[image-1]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/assets/sendgrid_1.png
+[image-2]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/assets/sendgrid_2.png
+[image-3]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/assets/sendgrid_3.png
+[image-4]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/assets/sendgrid_4.png
+[image-5]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/assets/sendgrid_5.png
+[image-6]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/old/assets/sendgrid_6.png
 
 ## Additional resources
 

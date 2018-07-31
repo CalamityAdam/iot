@@ -8,7 +8,7 @@ This information does not render as content and therefore does not belong in the
 
 The `<title></title>` element displays a title for the webpage:
 
-![Head Section Example](../assets/head-section-app-academy.jpg)
+![Head Section Example](https://github.com/appacademy/curriculum/blob/master/html-css/assets/head-section-app-academy.jpg)
 
 ### MetaData
 

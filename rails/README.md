@@ -8,11 +8,11 @@
 * [Diagram of Rails][rails-diagram]
 * [Rails 4 vs Rails 5][rails-5-updates]
 
-[rails-setup]: readings/rails-setup.md
+[rails-setup]: https://github.com/appacademy/curriculum/tree/master/rails/readings/rails-setup.md
 [rails-api]: http://api.rubyonrails.org/v5.1.3/
 [rails-guides]: http://guides.rubyonrails.org/v5.1.3/
 [rails-diagram]: assets/rails_diagram.png
-[rails-5-updates]: readings/rails-5-updates.md
+[rails-5-updates]: https://github.com/appacademy/curriculum/tree/master/rails/readings/rails-5-updates.md
 
 ## w4d1
 
@@ -42,10 +42,10 @@
 [routes-demo-video]: https://vimeo.com/168499905
 [basic-controller-demo-video]: https://vimeo.com/168501163
 [restful-controller-demo-video]: https://vimeo.com/168505535
-[callbacks]: readings/callbacks.md
-[delegation]: readings/delegation.md
-[dns_reading]: readings/dns.md
-[postman]: readings/postman.md
+[callbacks]: https://github.com/appacademy/curriculum/tree/master/rails/readings/callbacks.md
+[delegation]: https://github.com/appacademy/curriculum/tree/master/rails/readings/delegation.md
+[dns_reading]: https://github.com/appacademy/curriculum/tree/master/rails/readings/dns.md
+[postman]: https://github.com/appacademy/curriculum/tree/master/rails/readings/postman.md
 
 ### Culture
 * **[True Diversity is Intersectional][intersectional]** (9 min)
@@ -75,11 +75,11 @@
 + :movie_camera: [(cc) 11-form-encoding][11-form-encoding]
   + :computer: [Code from demos][rails-videos-code]
 
-[routing-i]: readings/routing-part-i.md
-[basic-controllers]: readings/basic-controllers.md
-[basic-json-api]: readings/basic-json-api.md
-[routing-ii]: readings/routing-part-ii.md
-[routing-iii]: readings/routing-part-iii.md
+[routing-i]: https://github.com/appacademy/curriculum/tree/master/rails/readings/routing-part-i.md
+[basic-controllers]: https://github.com/appacademy/curriculum/tree/master/rails/readings/basic-controllers.md
+[basic-json-api]: https://github.com/appacademy/curriculum/tree/master/rails/readings/basic-json-api.md
+[routing-ii]: https://github.com/appacademy/curriculum/tree/master/rails/readings/routing-part-ii.md
+[routing-iii]: https://github.com/appacademy/curriculum/tree/master/rails/readings/routing-part-iii.md
 [03-basic-rails-routing]: https://vimeo.com/100267303
 [04-strong-params]: https://vimeo.com/100267304
 [05-nested-resources]: https://vimeo.com/100267305
@@ -95,8 +95,8 @@
 + [First Routes and Controllers][first-routes]
 + [Art Share API][artshare-api]
 
-[first-routes]: projects/first_routes
-[artshare-api]: projects/art_share_api
+[first-routes]: https://github.com/appacademy/curriculum/tree/master/rails/projects/first_routes
+[artshare-api]: https://github.com/appacademy/curriculum/tree/master/rails/projects/art_share_api
 
 ## w4d2
 
@@ -122,18 +122,18 @@
 * :book: [Easy Forms Demo][easy-forms-demo]
 * :book: [Custom Validations][custom-validations]
 
-[partials]: readings/partials.md
-[erb]: readings/erb.md
-[html-forms]: readings/html-forms.md
-[rails-params-conventions]: readings/parameter-conventions.md
-[debugging-rails]: readings/debugging-rails.md
+[partials]: https://github.com/appacademy/curriculum/tree/master/rails/readings/partials.md
+[erb]: https://github.com/appacademy/curriculum/tree/master/rails/readings/erb.md
+[html-forms]: https://github.com/appacademy/curriculum/tree/master/rails/readings/html-forms.md
+[rails-params-conventions]: https://github.com/appacademy/curriculum/tree/master/rails/readings/parameter-conventions.md
+[debugging-rails]: https://github.com/appacademy/curriculum/tree/master/rails/readings/debugging-rails.md
 [easy-forms-demo]: demos/easy_forms_demo
-[custom-validations]: ../sql/readings/custom-validations.md
+[custom-validations]: https://github.com/appacademy/curriculum/blob/master/sql/readings/custom-validations.md
 
 ### Projects
 * [99 Cats][99-cats]
 
-[99-cats]: projects/ninety_nine_cats_i
+[99-cats]: https://github.com/appacademy/curriculum/tree/master/rails/projects/ninety_nine_cats_i
 
 ## w4d3
 
@@ -165,12 +165,12 @@
 [auth-06-csrf-attack]: https://vimeo.com/93114286
 [auth-07-csrf-protection]: https://vimeo.com/93114288
 [auth-08-csrf-methods]: https://vimeo.com/93114287
-[singular-resources]: readings/singular-resources.md 
+[singular-resources]: https://github.com/appacademy/curriculum/tree/master/rails/readings/singular-resources.md 
 
 ### Homeworks (30 min)
 * [Rails Auth][rails-auth-homework] (30 min)
 
-[rails-auth-homework]: homeworks/rails-auth
+[rails-auth-homework]: https://github.com/appacademy/curriculum/tree/master/rails/homeworks/rails-auth
 
 ### Additional Resources
 * :book: [Cookies][cookies]
@@ -180,17 +180,17 @@
 * :book: [Auth I: Creating Users][auth-part-i]
 * :book: [Auth II: Sessions][auth-part-ii]
 
-[cookies]: readings/cookies.md
-[controllers-and-state]: readings/controllers-and-state.md
-[csrf-and-forms]: readings/csrf.md
-[auth-part-i]: readings/auth-part-i.md
-[auth-part-ii]: readings/auth-part-ii.md
-[error-validation]: readings/validation.md
+[cookies]: https://github.com/appacademy/curriculum/tree/master/rails/readings/cookies.md
+[controllers-and-state]: https://github.com/appacademy/curriculum/tree/master/rails/readings/controllers-and-state.md
+[csrf-and-forms]: https://github.com/appacademy/curriculum/tree/master/rails/readings/csrf.md
+[auth-part-i]: https://github.com/appacademy/curriculum/tree/master/rails/readings/auth-part-i.md
+[auth-part-ii]: https://github.com/appacademy/curriculum/tree/master/rails/readings/auth-part-ii.md
+[error-validation]: https://github.com/appacademy/curriculum/tree/master/rails/readings/validation.md
 
 ### Project
 * [99 Cats II: Auth][99-cats-part-ii]
 
-[99-cats-part-ii]: projects/ninety_nine_cats_ii
+[99-cats-part-ii]: https://github.com/appacademy/curriculum/tree/master/rails/projects/ninety_nine_cats_ii
 
 ## w4d4
 
@@ -210,16 +210,16 @@
 [14-radio-and-textarea]: http://vimeo.com/100729825
 [15-helpers]: http://vimeo.com/100780885
 [layout-video]: https://vimeo.com/168822741
-[action-mailer]: readings/mailing-1.md
-[view-helpers]: readings/helpers.md
-[view-layouts]: readings/layouts.md
-[view-partials]: readings/partials.md
-[rails-nontech]: readings/rails_nontech.md
+[action-mailer]: https://github.com/appacademy/curriculum/tree/master/rails/readings/mailing-1.md
+[view-helpers]: https://github.com/appacademy/curriculum/tree/master/rails/readings/helpers.md
+[view-layouts]: https://github.com/appacademy/curriculum/tree/master/rails/readings/layouts.md
+[view-partials]: https://github.com/appacademy/curriculum/tree/master/rails/readings/partials.md
+[rails-nontech]: https://github.com/appacademy/curriculum/tree/master/rails/readings/rails_nontech.md
 
 ### Homeworks (30 min)
 * [Helpers, Layouts, and Partials][helpers-and-layouts-hw] (30 min)
 
-[helpers-and-layouts-hw]: homeworks/helpers-layouts-mailer
+[helpers-and-layouts-hw]: https://github.com/appacademy/curriculum/tree/master/rails/homeworks/helpers-layouts-mailer
 
 ### Additional Resources
 * :movie_camera: [Action Mailer Demo][action-mailer-video] (11 min)
@@ -234,7 +234,7 @@
 ### Projects
 * **Solo**: [Music App][music-app-project]
 
-[music-app-project]: projects/music_app
+[music-app-project]: https://github.com/appacademy/curriculum/tree/master/rails/projects/music_app
 
 ## w4d5
 
@@ -257,7 +257,7 @@
 ### Homeworks (45 min)
 * [Capybara][capybara-hw] (45 min)
 
-[capybara-hw]: homeworks/capybara
+[capybara-hw]: https://github.com/appacademy/curriculum/tree/master/rails/homeworks/capybara
 
 ### Additional Resources
 * [Integration Testing][integration-testing]
@@ -268,20 +268,20 @@
 * [Testing with Capybara][capybara]
 * [Spring and Guard Setup][spring-guard]
 
-[integration-testing]: readings/integration-testing.md
-[rspec-setup]: readings/rspec-and-rails-setup.md
-[rspec-models]: readings/rspec-models.md
-[rspec-controllers]: readings/rspec-controllers.md
-[fac-grl-faker]: readings/factorybot-and-faker.md
-[capybara]: readings/capybara.md
-[spring-guard]: readings/guard-spring-setup.md
+[integration-testing]: https://github.com/appacademy/curriculum/tree/master/rails/readings/integration-testing.md
+[rspec-setup]: https://github.com/appacademy/curriculum/tree/master/rails/readings/rspec-and-rails-setup.md
+[rspec-models]: https://github.com/appacademy/curriculum/tree/master/rails/readings/rspec-models.md
+[rspec-controllers]: https://github.com/appacademy/curriculum/tree/master/rails/readings/rspec-controllers.md
+[fac-grl-faker]: https://github.com/appacademy/curriculum/tree/master/rails/readings/factorybot-and-faker.md
+[capybara]: https://github.com/appacademy/curriculum/tree/master/rails/readings/capybara.md
+[spring-guard]: https://github.com/appacademy/curriculum/tree/master/rails/readings/guard-spring-setup.md
 
 ### Projects
 * [Goal App][goal-app]
 * **(BONUS)** [Appacademy.io Tests][appacademyio-tests]
 
-[goal-app]: projects/goal_app
-[appacademyio-tests]: projects/appacademy.io_tests
+[goal-app]: https://github.com/appacademy/curriculum/tree/master/rails/projects/goal_app
+[appacademyio-tests]: https://github.com/appacademy/curriculum/tree/master/rails/projects/appacademy.io_tests
 
 ## w5d1
 
@@ -289,8 +289,8 @@
 * :book: [CSS Nontechnical Overview][css-nontech] (20 min)
 * :book: [CSS Responsive Design][css-responsive] (10 min)
 
-[css-nontech]: ../html-css/readings/css_nontech.md
-[css-responsive]: ../html-css/readings/responsive_design.md
+[css-nontech]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/css_nontech.md
+[css-responsive]: https://github.com/appacademy/curriculum/tree/master/html-css/readings/responsive_design.md
 
 ### Homeworks (170 min)
 * [CSS Curriculum 6: Positioning & Media Queries][css-6] (90 min)
@@ -298,9 +298,9 @@
 * [Read CSS Friends Intro][css-friends]
 * [CSS Friends Phases 0-1][css-friends] (20 min)
 
-[css-6]: ../html-css/micro-projects/positioning_media_queries/exercise.md
-[css-review]: ../html-css/projects/css_review
-[css-friends]: ../html-css/micro-projects/css-friends/
+[css-6]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/positioning_media_queries/exercise.md
+[css-review]: https://github.com/appacademy/curriculum/tree/master/html-css/projects/css_review
+[css-friends]: https://github.com/appacademy/curriculum/tree/master/html-css/micro-projects/css-friends/
 
 ### Additional Resources
 * :movie_camera: [CSS Review][css-review-vid]
@@ -313,8 +313,8 @@
 * [AA Times][aa-times]
 * **(BONUS)** [Google Homepage][google-homepage]
 
-[aa-times]: ../html-css/projects/aa_times
-[google-homepage]: ../html-css/projects/google_homepage
+[aa-times]: https://github.com/appacademy/curriculum/tree/master/html-css/projects/aa_times
+[google-homepage]: https://github.com/appacademy/curriculum/tree/master/html-css/projects/google_homepage
 
 ### Culture
 * [Have You Experienced Racism in the Workplace?][racism-stats] (3 min)
@@ -351,25 +351,25 @@
 [19-checkboxes-3]: http://vimeo.com/100846848
 [20-query-string]: http://vimeo.com/100849678
 [polym-assoc-blurb]: http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
-[concerns-reading]: readings/concerns.md
+[concerns-reading]: https://github.com/appacademy/curriculum/tree/master/rails/readings/concerns.md
 
 ### Homeworks (30 min)
 * [Polymorphism and Concerns][polymorphism-and-concerns-hw] (30 min)
 
-[polymorphism-and-concerns-hw]: homeworks/polymorphism-concerns
+[polymorphism-and-concerns-hw]: https://github.com/appacademy/curriculum/tree/master/rails/homeworks/polymorphism-concerns
 
 ### Additional Resources
 * :book: **(BONUS)** [Decorators][decorators]
 * :book: [Checkboxes and Id Setters Reference][checkboxes-id-setters]
 
-[decorators]: readings/decorators.md
-[checkboxes-id-setters]: readings/checkboxes.md
+[decorators]: https://github.com/appacademy/curriculum/tree/master/rails/readings/decorators.md
+[checkboxes-id-setters]: https://github.com/appacademy/curriculum/tree/master/rails/readings/checkboxes.md
 
 ### Projects
 * [CSS Friends Phase 2][css-friends]
 * [RedditClone][reddit-clone]
 
-[reddit-clone]: projects/reddit_on_rails
+[reddit-clone]: https://github.com/appacademy/curriculum/tree/master/rails/projects/reddit_on_rails
 
 ## w5d3
 
@@ -394,7 +394,7 @@
 [rails-inside-out-video]: https://vimeo.com/161381601
 [rack-video]: https://vimeo.com/161384649
 [rack-demo-video]: https://vimeo.com/161381828
-[tcp_ip_reading]: readings/tcp_ip.md
+[tcp_ip_reading]: https://github.com/appacademy/curriculum/tree/master/rails/readings/tcp_ip.md
 
 ### Homeworks (45 min)
 * Complete [RegexOne][regex-link] (45 min)
@@ -424,12 +424,12 @@
 [00-webserver]: http://vimeo.com/100169899
 [01-protocols]: http://vimeo.com/100169898
 [02-http]: http://vimeo.com/100267302
-[http]: readings/http.md
-[rack]: readings/rack.md
-[middleware]: readings/middleware.md
-[class_eval-instance_eval]: readings/instance-eval-class-eval.md
+[http]: https://github.com/appacademy/curriculum/tree/master/rails/readings/http.md
+[rack]: https://github.com/appacademy/curriculum/tree/master/rails/readings/rack.md
+[middleware]: https://github.com/appacademy/curriculum/tree/master/rails/readings/middleware.md
+[class_eval-instance_eval]: https://github.com/appacademy/curriculum/tree/master/rails/readings/instance-eval-class-eval.md
 
 ### Projects (Solo)
 * [Rails Lite][rails-lite]
 
-[rails-lite]: projects/rails_lite
+[rails-lite]: https://github.com/appacademy/curriculum/tree/master/rails/projects/rails_lite

@@ -82,7 +82,7 @@ Here is a great figure from HTML5 Doctor describing the decision of which semant
 
 Watch the following GIF several times to see how this developer thought through containing each of their HTML Elements:
 
-![Breaking A Layout Into Boxes](../demos/css_demos/lectures/navbar.gif?raw=true)
+![Breaking A Layout Into Boxes](https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos/lectures/navbar.gif)
 
 When looking for the right HTML Element we can always refer back to the great [MDN HTML Elements Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 

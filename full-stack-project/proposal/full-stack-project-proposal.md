@@ -31,7 +31,7 @@ npm-debug.log
 ## Phase 2: Create Your Design Document Files
 
 Your fullstack project design docs are a documentation of your planning
-process in the form of a Github Wiki. Look [here](./) for an explanation
+process in the form of a Github Wiki. Look [here](https://github.com/appacademy/curriculum/tree/master/full-stack-project/proposal) for an explanation
 of each of the design docs below.
 
 Also, see the [sample design docs][sample].
@@ -72,17 +72,16 @@ this, go the 'Settings' tab, and click 'Collaborators'.
 ## Phase 4: During the Project
 
 To see what you'll be doing during the project, take a look at
-[these instructions](../project/during-the-project.md)
+[these instructions](https://github.com/appacademy/curriculum/blob/master/full-stack-project/project/during-the-project.md)
 
-[create_new_repo]: ./assets/create_new_repo.png
-[name_repo]: ./assets/name_repo.png
-[copy_git_url]: assets/copy_git_url.png
+[name_repo]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/name_repo.png
+[copy_git_url]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/copy_git_url.png
 
-[add_project_manager]: assets/add_project_manager.png
+[add_project_manager]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/add_project_manager.png
 
-[create_wiki]: assets/create_wiki.png
-[design-docs-wiki]: assets/proposal_wiki.png
+[create_wiki]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/create_wiki.png
+[design-docs-wiki]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/proposal_wiki.png
 
-[issues]: assets/issues.png
+[issues]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/issues.png
 
-[labels]: assets/labels.png
+[labels]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/labels.png

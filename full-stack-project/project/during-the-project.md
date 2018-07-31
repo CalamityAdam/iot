@@ -101,14 +101,14 @@ closing, and GitHub does the rest when you push to master!
 
 ![GCM resolves issue][gcm_resolves_issue]
 
-[proposal]: ../proposal/full-stack-project-proposal.md
+[proposal]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/full-stack-project-proposal.md
 
-[checklist]: ../proposal/assets/checklist.png
-[create_issues]: ../proposal/assets/create_issues.png
-[pm_feedback]: ../proposal/assets/pm_feedback.png
-[pm_review_issue]: ../proposal/assets/pm_review_issue.png
-[issues_overview]: ../proposal/assets/issues_overview.png
+[checklist]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/checklist.png
+[create_issues]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/create_issues.png
+[pm_feedback]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/pm_feedback.png
+[pm_review_issue]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/pm_review_issue.png
+[issues_overview]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/issues_overview.png
 
 [git_keywords]: https://help.github.com/articles/closing-issues-using-keywords/
 
-[gcm_resolves_issue]: ../proposal/assets/gcm_resolves_issue.png
+[gcm_resolves_issue]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/assets/gcm_resolves_issue.png

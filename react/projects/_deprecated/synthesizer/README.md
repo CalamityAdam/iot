@@ -270,7 +270,7 @@ on how to avoid array mutation ([here][array-mutation-code]'s the code from the 
 [array-mutation]: https://egghead.io/lessons/javascript-redux-avoiding-array-mutations-with-concat-slice-and-spread
 [array-mutation-code]:https://jsbin.com/juseku/1/embed?js
 [union-lodash]: https://lodash.com/docs#union
-[object-freeze]: ../../readings/object_freeze.md
+[object-freeze]: https://github.com/appacademy/curriculum/tree/master/react/readings/object_freeze.md
 
 
 We're almost there. Note that `action.key` references keys that should be included in `NOTE_NAMES`.
@@ -511,7 +511,7 @@ the visual representation of a single note in your piano.
 Cool, you now have the core of your Redux Synthesizer done. Let's start adding
 additional features!
 
-[destructing]: ../../readings/object_destructuring.md
+[destructing]: https://github.com/appacademy/curriculum/tree/master/react/readings/object_destructuring.md
 
 ---
 

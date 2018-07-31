@@ -9,7 +9,7 @@ Gem that wraps communication with said API in an Object Oriented way.
 ### Authentication Tokens
 
 There are many ways to deal with Authentication tokens (as you learned
-earlier, one way being [figaro](./figaro.md)). Remember that you
+earlier, one way being [figaro](https://github.com/appacademy/curriculum/blob/master/full-stack-project/resources/security/figaro.md)). Remember that you
 shouldn't ever commit API tokens to your Github repository. I've heard
 rumors about robotic spiders that crawl Github looking for your API
 keys. Collecting them in order to do bad things at night with their

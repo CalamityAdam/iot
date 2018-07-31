@@ -154,4 +154,4 @@ Write a method `Function.prototype.curry(numArgs)`. This should return a functio
 
 ** Make sure to call a TA to check over your work if you haven't already! **
 
-[spread-op]:../../readings/arguments.md#spread-syntax-es6
+[spread-op]: https://github.com/appacademy/curriculum/blob/master/javascript/readings/arguments.md#spread-syntax-es6

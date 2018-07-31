@@ -7,7 +7,7 @@
     - duplicate the html for your unordered list of anchor links
     - wrap this in a list element and wrap that list element in another ul
     - name the outer ul with a class like "hamburger-dropdown"
-    - select the containing list element and give it a background using this [hamburger](../../assets/images/hamburger.png) file.
+    - select the containing list element and give it a background using this [hamburger](https://github.com/appacademy/curriculum/blob/master/html-css/assets/images/hamburger.png) file.
     - set the width/height and background-size to 50px/50px
     - set the initial display of the hamburger-dropdown to none
     - use a position property on the unordered list within the hamburger-dropdown so that it does not obstruct the flow of the document and it is directly beneath the list element with the hamburger background
@@ -21,4 +21,4 @@
     
 [Live version](http://appacademy.github.io/curriculum/positioning_media_queries.html)
 
-[skeleton]: ./skeleton.zip
+[skeleton]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/positioning_media_queries/skeleton.zip

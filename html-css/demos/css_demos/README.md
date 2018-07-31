@@ -1,6 +1,6 @@
 # CSS Demos
 
-![Breaking A Layout Into Boxes](./lectures/navbar.gif?raw=true)
+![Breaking A Layout Into Boxes](https://github.com/appacademy/curriculum/tree/master/html-css/demos/css_demos/lectures/navbar.gif?raw=true)
 
 ## Lectures
 Watch these! The password is `go_video_go`

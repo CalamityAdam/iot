@@ -15,15 +15,15 @@ This demo shows how to upload images using React, Active Storage, and AWS S3.
 - [:movie_camera: (Image preview)](https://vimeo.com/278727103)
 - [:movie_camera: (Validations for attachments)](https://vimeo.com/278727131)
 
-
+https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/ActiveStorageDemo/app/models
 ## Key Files
-- [post.rb](./app/models/post.rb)
-- [api/posts/index.json.jbuilder](./app/views/api/posts/index.json.jbuilder)
-- [Form.jsx](./frontend/form.jsx)
-- [storage.yml](./config/storage.yml)
-- [development.rb](./config/environments/development.rb#L31)
-- [production.rb](./config/environments/production.rb#L42)
-- [credentials.yml.enc](./config/credentials.yml.enc)
+- [post.rb](https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/ActiveStorageDemo/app/models/post.rb)
+- [api/posts/index.json.jbuilder](https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/ActiveStorageDemo/app/views/api/posts/index.json.jbuilder)
+- [Form.jsx](https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/ActiveStorageDemo/frontend/form.jsx)
+- [storage.yml](https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/ActiveStorageDemo/config/storage.yml)
+- [development.rb](https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/ActiveStorageDemo/config/environments/development.rb#L31)
+- [production.rb](https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/ActiveStorageDemo/config/environments/production.rb#L42)
+- [credentials.yml.enc](https://github.com/appacademy/curriculum/tree/master/full-stack-project/resources/ActiveStorageDemo/config/credentials.yml.enc)
 
 ## Useful Docs
 - [ActiveStorage README](https://github.com/rails/rails/blob/master/activestorage/README.md)

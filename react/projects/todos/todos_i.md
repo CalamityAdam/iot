@@ -40,7 +40,7 @@ configuration works.
 **Test your setup** - Set up your entry file `todo_redux.jsx` to render
 `<h1>Todos App</h1>` into your root page's `#content` container. Open `index.html` and confirm that it worked.
 
-[webpack_setup]: ../../readings/webpack_configuration.md
+[webpack_setup]: https://github.com/appacademy/curriculum/tree/master/react/readings/webpack_configuration.md
 
 ---
 

@@ -60,10 +60,10 @@ If you want to run the source code yourself, follow these instructions:
     + Available for testing on the `window` are the app's Redux `store`, and actions `addOrange` and `addApple`.
 
 
-[zip]: ./fruit_stand_01.zip
+[zip]: https://github.com/appacademy/curriculum/blob/master/react/demos/fruit_stand_demos/fruit_stand_01/fruit_stand_01.zip
 [live-demo]: http://appacademy.github.io/curriculum/react/fruit_stand_01/index.html
-[store-reading]: ../../../readings/store.md
-[store-code]: ./frontend/store.js
-[reducer-code]: ./frontend/reducer.js
-[actions-code]: ./frontend/actions.js
-[fruit-stand-02]: ../fruit_stand_02
+[store-reading]: https://github.com/appacademy/curriculum/tree/master/react/readings/store.md
+[store-code]: https://github.com/appacademy/curriculum/tree/master/react/demos/fruit_stand_demos/fruit_stand_01/frontend/store.js
+[reducer-code]: https://github.com/appacademy/curriculum/tree/master/react/demos/fruit_stand_demos/fruit_stand_01/frontend/reducer.js
+[actions-code]: https://github.com/appacademy/curriculum/tree/master/react/demos/fruit_stand_demos/fruit_stand_01/frontend/actions.js
+[fruit-stand-02]: https://github.com/appacademy/curriculum/tree/master/react/demos/fruit_stand_demos/fruit_stand_02

@@ -27,7 +27,7 @@ culpa qui officia deserunt mollit anim id est laborum.
 
 Produces:
 
-![Basic float](../assets/images/basic-float.png?raw=true)
+![Basic float](https://github.com/appacademy/curriculum/blob/master/html-css/assets/images/basic-float.png)
 
 Floating elements are extremely useful for building layouts, as it
 allows us to align elements horizontally. For example, we may float
@@ -57,7 +57,7 @@ section {
 ```
 Produces:
 
-![Float to position](../assets/images/float-position.png?raw=true)
+![Float to position](https://github.com/appacademy/curriculum/blob/master/html-css/assets/images/float-position.png?raw=true)
 
 ## Clearfix
 
@@ -83,7 +83,7 @@ section {
 ```
 Producing:
 
-![The clear problem](../assets/images/clear-problem.png?raw=true)
+![The clear problem](https://github.com/appacademy/curriculum/blob/master/html-css/assets/images/clear-problem.png?raw=true)
 
 Our `section` tag's blue background doesn't come through. The way to fix this is via a popularized trick known as the clear fix. We'll use the `:after` pseudo-selector to insert an empty string inside the `section` tag. Then we give it the `clear: both` property. which tells the element to fall below any floated elements it would share a line with. Modifying the above CSS with the following:
 
@@ -98,7 +98,7 @@ section:after {
 
 We get:
 
-![Clearfix](../assets/images/clearfix.png?raw=true)
+![Clearfix](https://github.com/appacademy/curriculum/blob/master/html-css/assets/images/clearfix.png?raw=true)
 
 The empty string forces our `section` tag to have some height.
 

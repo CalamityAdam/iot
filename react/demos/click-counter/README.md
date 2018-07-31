@@ -9,4 +9,4 @@ To run:
   plan to make changes to the code
 * Open `index.html` in your browser
 
-[demo-raw]: ../click-counter.zip?raw=true
+[demo-raw]: https://github.com/appacademy/curriculum/blob/master/react/demos/click-counter.zip?raw=true

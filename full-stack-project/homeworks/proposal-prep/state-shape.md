@@ -7,7 +7,7 @@ Again, take some time to research the app you are cloning. While referring to yo
 - What resources will I be fetching from the database?
 - What else do I need to keep track of in my app? (current user info, form errors, loading spinners, sorting strategies for lists, etc.)
 
-[mvps]: ../../proposal/mvp-list.md
+[mvps]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/mvp-list.md
 
 Create an outline of what your app's store will look like. This should be like a store snapshot, with each slice populated with some dummy data. Remember, we want to separate our concerns to keep it simple, so try to avoid putting every slice at the top-level. It is fairly common to create specific top-level reducers to delegate work to nested reducers. Some examples:
 

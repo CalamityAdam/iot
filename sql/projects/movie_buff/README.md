@@ -21,7 +21,7 @@ night][active-record-readings] as well as the [ActiveRecord docs][active-record-
 
 First make sure Postgres is running.
 
-Then download the [skeleton](./skeleton.zip?raw=true). Run `bundle install`
+Then download the [skeleton](https://github.com/appacademy/curriculum/blob/master/sql/projects/movie_buff/skeleton.zip?raw=true). Run `bundle install`
 and `./setup` to populate the database.
 
 If you'd like to run specs for a particular problem,
