@@ -131,7 +131,7 @@ Implement a method [`merge_sort`][wiki-merge-sort] that sorts an `Array`:
 [wiki-binary-search]: http://en.wikipedia.org/wiki/Binary_search
 [wiki-merge-sort]: http://en.wikipedia.org/wiki/Merge_sort
 [wiki-merge-gif]:https://en.wikipedia.org/wiki/Merge_sort#/media/File:Merge-sort-example-300px.gif
-[merge-diagram]: https://raw.githubusercontent.com/appacademy/curriculum/master/ruby/assets/merge-sort-diagram.png?raw=true
+[merge-diagram]: https://github.com/appacademy/curriculum/blob/master/ruby/assets/merge-sort-diagram.png?raw=true
 
 ### Array Subsets
 
