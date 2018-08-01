@@ -145,4 +145,4 @@ and resets the board in the Game's state to the new board.
 
 As a guide, check out the modal demo in the [css demos][css-demos].
 
-[css-demos]: https://github.com/appacademy/curriculum/blob/master/react/projects/react_minesweeper/html-css/demos/css_demos
+[css-demos]: https://github.com/appacademy/curriculum/blob/master/html-css/demos/css_demos

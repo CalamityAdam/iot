@@ -39,8 +39,8 @@ Try to commit at least after finishing each phase.
 Feel free to consult the [reading on git][git-reading].
 
 [shoulda-matchers-docs]: https://github.com/thoughtbot/shoulda-matchers#rspec
-[git-reading]: https://github.com/appacademy/curriculum/blob/master/rails/projects/goal_app/ruby/readings/git-summary.md
-[git-add]: https://github.com/appacademy/curriculum/blob/master/rails/projects/goal_app/ruby/readings/git-add.md
+[git-reading]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/git-summary.md
+[git-add]: https://github.com/appacademy/curriculum/blob/master/ruby/readings/git-add.md
 
 ## Phase I: User Creation & Login
 

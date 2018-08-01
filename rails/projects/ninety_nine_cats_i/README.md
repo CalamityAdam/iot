@@ -64,7 +64,7 @@ include:
 [date-docs]: http://ruby-doc.org/stdlib-2.1.2/libdoc/date/rdoc/Date.html
 [time-ago]: http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-time_ago_in_words
 [limit-docs]: http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/TableDefinition.html#method-i-column
-[validations]: https://github.com/appacademy/curriculum/blob/master/rails/projects/ninety_nine_cats_i/sql/readings/validations.md
+[validations]: https://github.com/appacademy/curriculum/blob/master/sql/readings/validations.md
 
 ### Index/Show Pages
 
@@ -184,7 +184,7 @@ two people at once! We will write a custom validation for this.
  All we need to do is call `#overlapping_approved_requests` and check whether
  any [`#exists?`][exists].
 
-[sql-ternary-logic]: https://github.com/appacademy/curriculum/blob/master/rails/projects/ninety_nine_cats_i/sql/readings/sql-ternary-logic.md
+[sql-ternary-logic]: https://github.com/appacademy/curriculum/blob/master/sql/readings/sql-ternary-logic.md
 [exists]: http://apidock.com/rails/ActiveRecord/FinderMethods/exists%3F
 
 ### Build The Controller & New View

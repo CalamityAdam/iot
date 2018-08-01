@@ -146,7 +146,7 @@ Change your guest index view to only show guests who are between 40
 and 50 years old. Normally we would always do this kind of selection using
 Active Record, but this gives us an opportunity to practice using Ruby in Jbuilder.
 
-[n_plus_one]: https://github.com/appacademy/curriculum/blob/master/react/projects/jbuilder/sql/readings/joins.md#the-n1-selects-problem
+[n_plus_one]: https://github.com/appacademy/curriculum/blob/master/sql/readings/joins.md#the-n1-selects-problem
 [jbuilder-zip]: https://github.com/appacademy/curriculum/blob/master/react/projects/jbuilder/skeleton.zip?raw=true
 [formatter-link]: https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en
 [docs-link]: https://github.com/rails/jbuilder
