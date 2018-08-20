@@ -363,7 +363,9 @@ the containing div correctly.
 file as possible. Selectors such as `h1, h2, img, small, hr, .thumbnail` etc.
 make more sense in the layout file because we will likely reuse them.
 
+{% if user_course.live == 'false' %}
 **Get A TA to Review your page before continuing**
+{% endif %}
 
 ---
 
