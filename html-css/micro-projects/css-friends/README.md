@@ -81,7 +81,7 @@ For each phase, you should start with the provided `skeleton.zip` file, unzip it
   with more specific selectors. Chrome will show your properties with a
   strike-through, to show which rules apply, and which are overridden.
 
-[specs]: https://github.com/appacademy/curriculum/blob/master/html-css/css-friends/docs/SPECIFICATIONS.md
+[specs]: https://github.com/appacademy/curriculum/blob/master/html-css/micro-projects/css-friends/docs/SPECIFICATIONS.md
 [shots]: https://github.com/appacademy/curriculum/blob/master/html-css/css-friends/docs/screenshots
 [specificity]: http://cssguidelin.es/#specificity
 [test-hover-1]: http://i.stack.imgur.com/IlVMn.png
