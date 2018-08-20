@@ -14,14 +14,16 @@ project) relate to and communicate with each other
 + Be able to use CSS to style a web page
   + Be familiar with styling classes versus styling tags
 
-Download the [skeleton][skeleton]. Set up the directory structure as
-before: make `css`, `html` and `js` directories. Remember to load all the
-relevant CSS and JQuery in your `index.html`. Move the provided 'main.js' file
-in your 'js' directory. Download the [hanoi_node solution][hanoi-node] (`View
-Raw`) and put the 'game.js' file from that project into your 'js' folder as
-well. Then require 'game.js' as `HanoiGame` in 'main.js'.
+Download the [skeleton][skeleton]. Make `css` and `src` directories. Move the 
+provided 'index.js' file in your 'src' directory so that webpack can find it.
+Remember to load all the relevant CSS and JQuery in your `index.html`. Download
+the [hanoi_node solution][hanoi-node] (`View Raw`) and put the 'game.js' file
+from that project into your 'src' folder as well. Then require 'game.js' as
+`HanoiGame` in 'main.js'.
 
-Run `webpack --watch ./js/main.js ./js/bundle.js`. Include the resultant bundled file as
+<!-- CHANGE INSTRUCTIONS BELOW HERE -->
+
+Run `webpack --mode=development`. Include the resulting bundled file as
 a `<script>` in `index.html`. To ensure that all's well, add a `console.log()` to
 the `main.js` file and check that it prints in our browser's terminal.
 
