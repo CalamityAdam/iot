@@ -16,6 +16,23 @@ describe LinkedList do
     list
   end
 
+  describe "#initialize" do
+    list = LinkedList.new
+
+    it "creates a head node" do
+      expect(list.instance_variable_get(:@head).class).to be(Node)
+    end
+    it "creates a tail node" do
+      expect(list.instance_variable_get(:@tail).class).to be(Node)
+    end
+    it "sets the next node of head to tail" do
+      expect(list.instance_variable_get(:@head).next).to eq(list.instance_variable_get(:@tail))
+    end
+    it "sets the prev node of tail to head" do
+      expect(list.instance_variable_get(:@tail).prev).to eq(list.instance_variable_get(:@head))
+    end
+  end
+
   describe "#empty" do
     it "checks whether any nodes have been inserted" do
       expect(empty_list.empty?).to be true
