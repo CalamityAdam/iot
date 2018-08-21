@@ -118,6 +118,7 @@ aws:
 secret_key_base: XXXXXX
 
 ```
+- *Remember to restart your server any time you add/update these credentials*
 
 Double check your `s3_region` [here][aws-regions] (scroll down to **API Gateways**).
 
